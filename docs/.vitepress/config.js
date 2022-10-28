@@ -1,0 +1,24 @@
+export default {
+  base:' Smileslime47.github.io',
+  title: '47Saikyo',
+  description: 'Just playing around.',
+
+  themeConfig: {
+    siteTitle: '47‘s Blog',
+    nav: [
+      { text: 'Home', link: '/index.md' },
+      { text: 'MyNotebooks', link: '/Notebooks/Assembly Language Design/汇编语言设计' },
+    ],
+    sidebar: {
+        '/Notebooks/': [
+        {
+          text: 'Notebook',
+          items: [
+            { text: 'Assembly Language Design', link: '/Notebooks/Assembly Language Design/汇编语言设计.md' },
+            { text: 'Operating System Principle', link: '/Notebooks/Operating System Principle/操作系统原理.md' },
+          ]
+        },
+      ],
+    }
+  }
+}

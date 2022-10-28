@@ -1,5 +1,4 @@
 export default {
-  base:'blog/',
   title: '47Saikyo',
   description: 'Just playing around.',
 

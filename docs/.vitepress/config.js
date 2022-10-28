@@ -1,5 +1,5 @@
 export default {
-  base:' /Smileslime47.github.io/',
+  base:' /blog/',
   title: '47Saikyo',
   description: 'Just playing around.',
 

@@ -22,8 +22,11 @@ export default withMermaid({
   themeConfig: {
     siteTitle: '47‘s Blog',
     nav: [
-      { text: 'Home', link: '/index.md' },
+      { text: 'Home', link: '/index' },
+      { text: 'Article', link: '/Article/index' },
       { text: 'MyNotebooks', link: '/Notebooks/Assembly Language Design/汇编语言设计' },
+      { text: 'Translation', link: '/Translation/index' },
+
     ],
     sidebar: {
         '/Notebooks/': [
@@ -35,7 +38,22 @@ export default withMermaid({
           ]
         },
       ],
+      '/Article/': [
+        {
+          text: 'Article',
+          items: [
+          ]
+        },
+      ],
+      '/Translation/': [
+        {
+          text: 'Translation',
+          items: [
+          ]
+        },
+      ],
     },
+
     editLink: {
       pattern: 'https://github.com/Smileslime47/Smileslime47.github.io/tree/main/docs/:path',
       text: 'Edit this page on GitHub'

@@ -35,6 +35,10 @@ export default withMermaid({
           ]
         },
       ],
+    },
+    editLink: {
+      pattern: 'https://github.com/Smileslime47/Smileslime47.github.io/tree/main/docs/:path',
+      text: 'Edit this page on GitHub'
     }
   }
 })

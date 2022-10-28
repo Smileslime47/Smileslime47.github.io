@@ -16,6 +16,8 @@
   "dependencies": {
     "@rollup/plugin-alias": "^4.0.2",
     "markdown-it-katex": "^2.0.3",
+    "markdown-it-mathjax3": "^4.3.2",
+    "mermaid": "^9.1.7",
     "vitepress-plugin-mermaid": "^2.0.8"
   }
 }

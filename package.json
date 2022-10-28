@@ -9,9 +9,9 @@
     "vue": "^3.2.41"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "posts:dev": "vitepress dev posts",
+    "posts:build": "vitepress build posts",
+    "posts:serve": "vitepress serve posts"
   },
   "dependencies": {
     "@rollup/plugin-alias": "^4.0.2",

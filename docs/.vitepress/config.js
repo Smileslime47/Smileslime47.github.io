@@ -1,4 +1,12 @@
-export default {
+import {withMermaid} from "vitepress-plugin-mermaid";
+
+export default withMermaid({
+  markdown: {
+    config: (md) => {
+      md.use(require("markdown-it-katex"));
+    },
+  },
+
   title: '47Saikyo',
   description: 'Just playing around.',
 
@@ -20,4 +28,4 @@ export default {
       ],
     }
   }
-}
+})

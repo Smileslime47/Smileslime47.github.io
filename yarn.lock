@@ -158,6 +158,13 @@
     "@docsearch/css" "3.3.0"
     "algoliasearch" "^4.0.0"
 
+"@rollup/plugin-alias@^4.0.2":
+  "integrity" "sha512-1hv7dBOZZwo3SEupxn4UA2N0EDThqSSS+wI1St1TNTBtOZvUchyIClyHcnDcjjrReTPZ47Faedrhblv4n+T5UQ=="
+  "resolved" "https://repo.huaweicloud.com/repository/npm/@rollup/plugin-alias/-/plugin-alias-4.0.2.tgz"
+  "version" "4.0.2"
+  dependencies:
+    "slash" "^4.0.0"
+
 "@rollup/pluginutils@^4.2.1":
   "integrity" "sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ=="
   "resolved" "https://repo.huaweicloud.com/repository/npm/@rollup/pluginutils/-/pluginutils-4.2.1.tgz"
@@ -1480,7 +1487,7 @@
   "resolved" "https://repo.huaweicloud.com/repository/npm/robust-predicates/-/robust-predicates-3.0.1.tgz"
   "version" "3.0.1"
 
-"rollup@^2.77.0", "rollup@^2.79.1":
+"rollup@^1.20.0||^2.0.0||^3.0.0", "rollup@^2.77.0", "rollup@^2.79.1":
   "integrity" "sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw=="
   "resolved" "https://repo.huaweicloud.com/repository/npm/rollup/-/rollup-2.79.1.tgz"
   "version" "2.79.1"
@@ -1532,6 +1539,11 @@
     "call-bind" "^1.0.0"
     "get-intrinsic" "^1.0.2"
     "object-inspect" "^1.9.0"
+
+"slash@^4.0.0":
+  "integrity" "sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew=="
+  "resolved" "https://repo.huaweicloud.com/repository/npm/slash/-/slash-4.0.0.tgz"
+  "version" "4.0.0"
 
 "source-map-js@^1.0.2":
   "integrity" "sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw=="

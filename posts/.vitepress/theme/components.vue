@@ -33,6 +33,7 @@ onMounted(() => {
       admin: ['Smileslime47'], // GitHub repository 所有者
       labels: ['Gitalk'], // GitHub issue 的标签
       createIssueManually: true, //如果当前页面没有相应的 isssue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
+      proxy: "https://vercel.younglina.top/github_access_token",
     })
     gitment.render('gitalk-page-container')
   }
@@ -41,8 +42,8 @@ onMounted(() => {
 
 <template>
   <Layout>
-    <template #doc-footer-before>
-      <div id="gitalk-container"></div>
+    <template #doc-after>
+      <div id="gitalk-page-container"></div>
     </template>
 
     <template #aside-outline-before>

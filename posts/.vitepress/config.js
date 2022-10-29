@@ -37,6 +37,14 @@ export default withMermaid({
     editLink: {
       pattern: 'https://github.com/Smileslime47/Smileslime47.github.io/tree/main/docs/:path',
       text: 'Edit this page on GitHub'
+    },
+
+    algolia: {
+      apiKey: '599cec31baffa4868cae4e79f180729b',
+      indexName: 'docsearch',
+      searchParameters: {
+        //facetFilters: ['tags:guide,api']
+      }
     }
   }
 })

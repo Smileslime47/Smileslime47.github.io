@@ -12,7 +12,7 @@ const members = [
       { icon: 'github', link: 'https://github.com/Smileslime47' },
     ]
   },
-]
+];
 </script>
 
 <template>

@@ -28,23 +28,26 @@ export default withMermaid({
   //metadata
   title: '47Saikyo',
   description: 'Just playing around.',
+  ignoreDeadLinks: true,
 
   themeConfig: {
     siteTitle: '47‘s Blog',
     nav: myNav,
     sidebar: myBar,
 
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/Smileslime47/' },
+    ],
+
     editLink: {
-      pattern: 'https://github.com/Smileslime47/Smileslime47.github.io/tree/main/docs/:path',
+      pattern: 'https://github.com/Smileslime47/Smileslime47.github.io/tree/main/posts/:path',
       text: 'Edit this page on GitHub'
     },
 
-    algolia: {
-      apiKey: '599cec31baffa4868cae4e79f180729b',
-      indexName: 'docsearch',
-      searchParameters: {
-        //facetFilters: ['tags:guide,api']
-      }
-    }
+    algolia: { 
+      appId: '8J64VVRP8K', 
+      apiKey: 'a18e2f4cc5665f6602c5631fd868adfd', 
+      indexName: 'vitepress' 
+    }, 
   }
 })

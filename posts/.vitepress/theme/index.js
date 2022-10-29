@@ -1,8 +1,8 @@
 // .vitepress/theme/index.js
 import DefaultTheme from 'vitepress/theme'
-import profile from './profile.vue'
+import components from './components.vue'
 
 export default {
   ...DefaultTheme,
-  Layout:profile
+  Layout:components
 }

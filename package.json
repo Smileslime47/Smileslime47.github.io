@@ -5,6 +5,7 @@
   "author": "smile_slime_47",
   "license": "MIT",
   "devDependencies": {
+    "docsearch.js": "^2.6.3",
     "vitepress": "^1.0.0-alpha.26",
     "vue": "^3.2.41"
   },

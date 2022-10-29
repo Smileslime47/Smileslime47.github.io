@@ -38,6 +38,17 @@ const { site } = useData()
   .Home {
     padding: 96px 32px 168px;
   }
+
+  .banner {
+    margin-left: 25vw;
+    margin-right: 25vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    margin:0px;
+  }
 }
 
 .banner {
@@ -45,8 +56,6 @@ const { site } = useData()
   border-radius: 30px;
   border-width: 1px;
   border-style: solid;
-  margin-left: 25vw;
-  margin-right: 25vw;
   background-color: #32323232;
   backdrop-filter: blur(2px);
   min-height: 30vh;

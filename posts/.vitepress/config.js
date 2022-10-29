@@ -50,21 +50,4 @@ export default withMermaid({
       indexName: 'vitepress' 
     }, 
   },
-
-  plugins: [
-    [
-      'vuepress-plugin-comment',
-      {
-        choosen: 'gitalk', 
-        options: {
-          clientID: '308b0c7a6bcdc200a34d',
-          clientSecret: '2104419eb1640d491ba7fc70a1df7903f452148d',
-          repo: 'https://github.com/Smileslime47/Smileslime47.github.io',
-          owner: 'Smileslime47',
-          admin: ['Smileslime47'],
-          distractionFreeMode: false 
-        }
-      }
-    ]
-  ]
 })

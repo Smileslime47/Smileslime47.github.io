@@ -62,6 +62,7 @@ const { site } = useData()
   justify-content: center;
   display: flex;
   flex-direction: column;
+  overflow:hidden;
 }
 
 

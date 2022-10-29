@@ -1,16 +1,27 @@
-import { _catchError } from './diff/catch-error';
-
-/**
- * The `option` object can potentially contain callback functions
- * that are called during various stages of our renderer. This is the
- * foundation on which all our addons like `preact/debug`, `preact/compat`,
- * and `preact/hooks` are based on. See the `Options` type in `internal.d.ts`
- * for a full list of available option hooks (most editors/IDEs allow you to
- * ctrl+click or cmd+click on mac the type definition below).
- * @type {import('./internal').Options}
+/** Global options
+ *	@public
+ *	@namespace options {Object}
  */
-const options = {
-	_catchError
-};
+export default {
 
-export default options;
+	/** If `true`, `prop` changes trigger synchronous component updates.
+	 *	@name syncComponentUpdates
+	 *	@type Boolean
+	 *	@default true
+	 */
+	//syncComponentUpdates: true,
+
+	/** Processes all created VNodes.
+	 *	@param {VNode} vnode	A newly-created VNode to normalize/process
+	 */
+	//vnode(vnode) { }
+
+	/** Hook invoked after a component is mounted. */
+	// afterMount(component) { }
+
+	/** Hook invoked after the DOM is updated with a component's latest render. */
+	// afterUpdate(component) { }
+
+	/** Hook invoked immediately before a component is unmounted. */
+	// beforeUnmount(component) { }
+};

@@ -6,6 +6,9 @@
   "license": "MIT",
   "devDependencies": {
     "docsearch.js": "^2.6.3",
+    "gitalk": "^1.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "vitepress": "^1.0.0-alpha.26",
     "vue": "^3.2.41"
   },

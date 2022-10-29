@@ -10,7 +10,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vitepress": "^1.0.0-alpha.26",
-    "vue": "^3.2.41"
+    "vue": "^3.2.41",
+    "vuepress-plugin-comment": "^0.7.3"
   },
   "scripts": {
     "posts:dev": "vitepress dev posts",

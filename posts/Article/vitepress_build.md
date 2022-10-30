@@ -1,6 +1,9 @@
 ---
 tittle: 搭建 vitepress 静态网站
-date: 2022-10-30
+date: 2022/10/30
+tags: 
+  - 日志
+  - 记录 
 ---
 # 搭建 vitepress 静态网站
 **[Github Repo地址](https://github.com/Smileslime47/Smileslime47.github.io)**
@@ -258,6 +261,25 @@ export default {
   Layout:components
 }
 ```
+
+此外可以在component中引入useData等APi（详见文档）来在组件中调用应用程序数据，如
+```ts
+import { useData } from 'vitepress'
+```
+其定义为
+```ts
+interface VitePressData {
+  site: Ref<SiteData>
+  page: Ref<PageData>
+  theme: Ref<any> // themeConfig from .vitepress/config.js
+  frontmatter: Ref<PageData['frontmatter']>
+  lang: Ref<string>
+  title: Ref<string>
+  description: Ref<string>
+  localePath: Ref<string>
+}
+```
+
 
 ---
 ## 插件配置

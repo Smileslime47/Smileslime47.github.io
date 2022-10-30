@@ -1,12 +1,13 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
 import { VPTeamMembers } from 'vitepress/theme'
+import { useData } from 'vitepress'
 
 import { onMounted } from 'vue'
 import 'gitalk/dist/gitalk.css'
 import Gitalk from 'gitalk'
 
-
+const { frontmatter } = useData()
 const { Layout } = DefaultTheme
 const members = [
   {
@@ -41,6 +42,13 @@ onMounted(() => {
 
 <template>
   <Layout>
+    <template #doc-before>
+      <span style="color:#323232">{{ frontmatter.date }}</span>
+      <span>
+        <span class="tags" v-for="item in frontmatter.tags" :key="item">{{ item }}</span>
+      </span>
+    </template>
+
     <template #doc-after>
       <div id="gitalk-page-container"></div>
     </template>
@@ -50,3 +58,11 @@ onMounted(() => {
     </template>
   </Layout>
 </template>
+
+<style>
+  .tags{
+    border-left:2px solid #082567;
+    padding-left:5px;
+    margin-left:5px;
+  }
+</style>

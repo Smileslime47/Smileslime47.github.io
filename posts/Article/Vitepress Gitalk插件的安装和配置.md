@@ -1,11 +1,11 @@
 ---
-tittle: Vitepress Gitalk评论区插件的安装和配置
+tittle: Vitepress Gitalk评论插件的安装和配置
 date: 2022/10/31
 tags: 
   - Vitepress
   - 记录 
 ---
-# Vitepress Gitalk评论区插件的安装和配置
+# Vitepress Gitalk评论插件的安装和配置
 在Vitepress上配置Gitalk需要自己动手调整，本人在Gitalk后续的配置中参考了参考[这篇文章](https://juejin.cn/post/7146037234527895560)
 
 ---

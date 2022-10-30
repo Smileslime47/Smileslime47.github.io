@@ -4,7 +4,20 @@ import myBar from './sidebar.js';
 //plugin
 import { withMermaid } from "vitepress-plugin-mermaid";
 import mathjax3 from 'markdown-it-mathjax3';
+import AutoNavPlugin from 'vitepress-auto-nav-sidebar';
 const customElements = ['mjx-container'];
+const { nav, sidebar } = AutoNavPlugin({
+  entry:'posts',
+  ignoreFolders: ["node_modules", "assets", "public", ".vitepress", "code", ".obsidian", "utils"], // 需要排除的一些目录
+  ignoreFiles: ['个人简历'], // 需要排除的一些文件
+  dirPrefix: '目录：',
+  filePrefix: '文件：',
+  showNavIcon:false,
+  showSideIcon:true,
+  isCollapse: true,
+  collapsed: true,
+  singleLayerNav:true
+})
 
 export default withMermaid({
   markdown: {
@@ -32,8 +45,8 @@ export default withMermaid({
 
   themeConfig: {
     siteTitle: '47‘s Blog',
-    nav: myNav,
-    sidebar: myBar,
+    nav,
+    sidebar,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Smileslime47/' },

@@ -43,6 +43,7 @@ Gitalk需要一个repo和app来正常工作，由于Gitalk只是依赖于repo的
 |Homepage URL|网站部署域名|
 |Application description|随意|
 |Authorization callback URL|一般直接设置为与Homepage URL相同|
+
 创建完毕后通过`Generate a new client secret`获取一个密钥，将其和Client ID记下来以便后续配置
 
 ---

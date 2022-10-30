@@ -32,7 +32,7 @@ onMounted(() => {
       clientSecret: 'd28ca59ffc98a45310830bad5d48c382a29d7667',// 自己的clientSecret
       admin: ['Smileslime47'], // GitHub repository 所有者
       labels: ['Gitalk'], // GitHub issue 的标签
-      createIssueManually: true, //如果当前页面没有相应的 isssue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
+      createIssueManually: false, //如果当前页面没有相应的 isssue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
     })
     gitment.render('gitalk-page-container')
   }

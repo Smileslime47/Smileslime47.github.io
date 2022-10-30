@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as r}from"./app.25b6e462.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"Article/vitepress_build.md"}'),s={name:"Article/vitepress_build.md"};function a(c,i,o,n,p,_){return t(),r("div")}const m=e(s,[["render",a]]);export{l as __pageData,m as default};

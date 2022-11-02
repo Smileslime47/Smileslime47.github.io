@@ -61,8 +61,11 @@ onMounted(() => {
 
 <style>
   .tags{
-    border-left:2px solid #082567;
-    padding-left:5px;
-    margin-left:5px;
+    border: 2px solid #dde;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    background: #dde;
+    border-radius: 5px;
   }
 </style>

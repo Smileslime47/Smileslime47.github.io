@@ -1,5 +1,5 @@
 ---
-tittle: Vitepress Gitalk评论插件的安装和配置
+tittle: Vitepress Gitalk评论插件
 date: 2022/10/31
 tags: 
   - Vitepress

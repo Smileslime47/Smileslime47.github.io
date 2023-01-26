@@ -11,7 +11,7 @@ const customElements = ['mjx-container'];
 //自动生成侧边栏，在windows环境下会生成绝对路径导致运行后不可见，部署到github上显示正常
 const { nav, sidebar } = AutoNavPlugin({
   entry:'posts',
-  ignoreFolders: ["node_modules", "assets", "public", ".vitepress", "code", ".obsidian", "utils"], // 需要排除的一些目录
+  ignoreFolders: ["Translation","Notebooks","node_modules", "assets", "public", ".vitepress", "code", ".obsidian", "utils"], // 需要排除的一些目录
   ignoreFiles: ['index'], // 需要排除的一些文件
   dirPrefix: '目录：',
   filePrefix: '文件：',

@@ -18,6 +18,76 @@ tags:
 
 我们可以认为，JVM中存在两种对象——实例对象和Class对象，Class对象是对应实例对象的一个**静态蓝图**，在首次实例化一个对象时，我们会先加载并创建一个Class对象，然后以该Class对象为蓝图构建实例对象，此后每次实例化新的同类对象都会调用该Class对象。
 
+## 类加载器
+---
+Class对象的构造函数是**私有的**，无法在外部进行显式调用，也无法显式声明一个Class对象。
+
+但是每个Class对象都有一个classLoader字段绑定构造自己的类加载器，在实际加载时通过classLoader的defineClass方法构造自身
+
+```java
+class Class<T> {
+  ...
+  private final ClassLoader classLoader;
+  ...
+}
+```
+
+考虑到不同class的来源（java核心类、扩展框架、项目自身类等等），JVM在java.lang.ClassLoader中提供了多个classloader，在首次调用一个新类时，根据优先级逐个尝试加载。
+
+### BootstrapClassLoader——引导类加载器
+BootstrapClassLoader用于加载JDK内部的核心类（如java.util.*、java.lang.*等），它属于JVM虚拟机核心的一部分。此外BootstrapClassLoader也是其他所有类加载器的父类，因此也被叫做**根加载器**。
+- BootstrapClassLoader加载的类一般在JAVA_HOME/lib中
+
+### ExtensionClassLoader——扩展类加载器
+ExtensionClassLoader用于加载一些JDK自带的一些标准扩展库，如swing等等，此外ExtensionClassLoader也是其SystemClassLoader父类。
+-ExtensionClassLoader加载的类一般在JAVA_HOME/lib/ext中
+
+### SystemClassLoader——系统类加载器
+SystemClassLoader是面向用户的类加载器，用于在JVM运行Java程序时根据classpath寻找并加载需要调用的包和库，也被叫做AppClassLoader。这一类的类加载器可以通过ClassLoader提供的静态方法getSystemClassLoader()来获取。
+
+### CustomClassLoader——自定类加载器
+自定类加载器往往是AppClassLoader的子类，我们可以通过继承java.lang.ClassLoader来自行构造类加载器。此外在自行构造类加载器时，也可以自行制定父加载器`protected ClassLoader(ClassLoader parent)`，在不指定父加载器时默认继承AppClassLoader，而指定为null则继承BootstrapClassLoader
+
+
+
+## 双亲委派机制（parent-）
+---
+在JVM加载一个新类时，会根据一个优先级逐个调用类加载器，在类加载器接收到加载类的请求时，不会在其对应路径下搜寻该类时，而是先将请求委托给其父类，只有在其父类无法加载该类时才会试图亲自加载。
+
+在程序运行时，类加载器往往按照CustomClassLoader->AppClassLoader->ExtensionClassLoader->BootstrapClassLoader的顺序进行委派，即
+- BootstrapClassLoader首先尝试在JAVA_HOME/lib中寻找对应类，当BootstrapClassLoader无法在路径下找到类时，向回委派给ExtensionClassLoader
+- ExtensionClassLoader尝试在JAVA_HOME/lib/ext中寻找对应类，当ExtensionClassLoader无法在路径下找到类时，向回委派给AppClassLoader
+- AppClassLoader尝试在#CLASSPATH中寻找对应类，当AppClassLoader无法在路径下找到类时，向回委派给CustomClassLoader（如果有）或报错
+
+采用双亲委派保证了类是自顶而下逐级尝试加载的，可以避免类的重复加载，父加载器在搜寻到对应类后可以直接调用。此外可以保证优先调用JDK自身的内部库，防止用户自定义的核心库被恶意调用。
+
+此外由于继承关系，子类加载器可以访问父类加载器加载的类（如JDK核心内部库等），而反之则不然，保证了内部库对于程序的可见性，换句话说即子类加载器加载的类可以访问父类加载器加载的类，而反正则不能
+
+### 缺陷
+JDK的核心内部类提供了多个SPI（Service Provider Interface,服务提供者接口），这些类往往需要第三方类来**实现接口**，最典型的例子就是在JDBC中我们需要通过java.sql.driver的DriverManager来注册驱动，而java.sql.driver是由BootstrapClassLoader加载的，实现该方法的com.mysql.jdbc.Driver则是通过AppClassLoader加载的，为了让BootstrapClassLoader去#CLASSPATH中加载第三方类的方法，我们需要通过**ContextClassLoader——上下文加载器**和Class.forName来实现。
+
+`Thread.currentThread().setContextClassLoader(this.loader)`可以将当前类的类加载器存储至上下文加载器中，并在需要的时候通过`Thread.currentThread().getContextClassLoader()`返回储存的类加载器。
+
+而Class.forName()有一个多参数版本为：
+```
+Class<?> forName(String name, boolean initialize, ClassLoader cl)
+```
+可以通过指定classLoader来调用指定的classLoader解析当前类
+
+那么我们就可以在父级类加载器加载的类的代码中通过上下文加载器来调用子级类加载器，并用子级类加载器来解析实现该接口的第三方类，从而规避双亲委派机制。
+
+## 常量池
+---
+常量池是JVM中的一块**静态内存空间**，编译器在将源码编译为Class文件后，也将**字面量**和**符号引用**以指针链接的形式存入**常量池**中
+- **字面量**包括了
+    - 文本字面量：如String s="123"这种字面量赋值
+    - final类型的成员变量
+- **符号引用**包括了
+    - 类的全限定名，将Java包命名格式中的xxx.xxx.xxx替换为xxx/xxx/xxx的路径格式
+    - 字段名，包括类名称、源文件名、变量名等等
+
+在Java程序运行时，由于Java是**后期绑定/运行时绑定**的，即面向对象程序在编译时不预先解析方法，而是在运行时再去解析，这时候就依赖于常量池中的字段来寻找方法
+
 JDK自带了一个反汇编工具——javap，可以帮助我们分析Class对象的构成
 ```
 javap
@@ -55,18 +125,6 @@ GNU 样式的选项可使用 = (而非空白) 来分隔选项名称
    jar:file:///path/to/MyJar.jar!/mypkg/MyClass.class
    java.lang.Object
 ```
-
-## 常量池
----
-常量池是JVM中的一块**静态内存空间**，编译器在将源码编译为Class文件后，也将**字面量**和**符号引用**以指针链接的形式存入**常量池**中
-- **字面量**包括了
-    - 文本字面量：如String s="123"这种字面量赋值
-    - final类型的成员变量
-- **符号引用**包括了
-    - 类的全限定名，将Java包命名格式中的xxx.xxx.xxx替换为xxx/xxx/xxx的路径格式
-    - 字段名，包括类名称、源文件名、变量名等等
-
-在Java程序运行时，由于Java是**后期绑定/运行时绑定**的，即面向对象程序在编译时不预先解析方法，而是在运行时再去解析，这时候就依赖于常量池中的字段来寻找方法
 
 我们现在有一个Java的helloworld程序，并通过JDK提供的`javap`对其进行反汇编
 ```Java
@@ -112,6 +170,7 @@ public class Main {
 ```
 ```
 > javap -c -v Main.class
+//这里是程序的一些元数据，包括修改日期、长度、源文件等等
   Last modified 2023年3月11日; size 732 bytes
   SHA-256 checksum 3f5aabfe4ea8c85ce7f6f91b4b97154a5440190b09f2ece92c4690f40ffd00e2
   Compiled from "Main.java"
@@ -122,6 +181,8 @@ public class Main
   this_class: #8                          // Main
   super_class: #2                         // java/lang/Object
   interfaces: 0, fields: 2, methods: 3, attributes: 1
+
+//常量池 
 Constant pool:
    #1 = Methodref          #2.#3          // java/lang/Object."<init>":()V
    #2 = Class              #4             // java/lang/Object
@@ -171,6 +232,8 @@ Constant pool:
   #46 = Utf8               <clinit>
   #47 = Utf8               SourceFile
   #48 = Utf8               Main.java
+
+//代码块
 {
   final int i;
     descriptor: I
@@ -236,61 +299,3 @@ Constant pool:
 }
 SourceFile: "Main.java"
 ```
-
-## 类加载器
----
-Class对象的构造函数是**私有的**，无法在外部进行显式调用，也无法显式声明一个Class对象。
-
-但是每个Class对象都有一个classLoader字段绑定构造自己的类加载器，在实际加载时通过classLoader的defineClass方法构造自身
-
-```java
-class Class<T> {
-  ...
-  private final ClassLoader classLoader;
-  ...
-}
-```
-
-考虑到不同class的来源（java核心类、扩展框架、项目自身类等等），JVM在java.lang.ClassLoader中提供了多个classloader，在首次调用一个新类时，根据优先级逐个尝试加载。
-
-### BootstrapClassLoader——引导类加载器
-BootstrapClassLoader用于加载JDK内部的核心类（如java.util.*、java.lang.*等），它属于JVM虚拟机核心的一部分。此外BootstrapClassLoader也是其他所有类加载器的父类，因此也被叫做**根加载器**。
-- BootstrapClassLoader加载的类一般在JAVA_HOME/lib中
-
-### ExtensionClassLoader——扩展类加载器
-ExtensionClassLoader用于加载一些JDK自带的一些标准扩展库，如swing等等，此外ExtensionClassLoader也是其SystemClassLoader父类。
--ExtensionClassLoader加载的类一般在JAVA_HOME/lib/ext中
-
-### SystemClassLoader——系统类加载器
-SystemClassLoader是面向用户的类加载器，用于在JVM运行Java程序时根据classpath寻找并加载需要调用的包和库，也被叫做AppClassLoader。这一类的类加载器可以通过ClassLoader提供的静态方法getSystemClassLoader()来获取。
-
-### CustomClassLoader——自定类加载器
-自定类加载器往往是AppClassLoader的子类，我们可以通过继承java.lang.ClassLoader来自行构造类加载器。此外在自行构造类加载器时，也可以自行制定父加载器`protected ClassLoader(ClassLoader parent)`，在不指定父加载器时默认继承AppClassLoader，而指定为null则继承BootstrapClassLoader
-
-
-
-## 双亲委派机制（parent-）
----
-在JVM加载一个新类时，会根据一个优先级逐个调用类加载器，在类加载器接收到加载类的请求时，不会在其对应路径下搜寻该类时，而是先将请求委托给其父类，只有在其父类无法加载该类时才会试图亲自加载。
-
-在程序运行时，类加载器往往按照CustomClassLoader->AppClassLoader->ExtensionClassLoader->BootstrapClassLoader的顺序进行委派，即
-- BootstrapClassLoader首先尝试在JAVA_HOME/lib中寻找对应类，当BootstrapClassLoader无法在路径下找到类时，向回委派给ExtensionClassLoader
-- ExtensionClassLoader尝试在JAVA_HOME/lib/ext中寻找对应类，当ExtensionClassLoader无法在路径下找到类时，向回委派给AppClassLoader
-- AppClassLoader尝试在#CLASSPATH中寻找对应类，当AppClassLoader无法在路径下找到类时，向回委派给CustomClassLoader（如果有）或报错
-
-采用双亲委派保证了类是自顶而下逐级尝试加载的，可以避免类的重复加载，父加载器在搜寻到对应类后可以直接调用。此外可以保证优先调用JDK自身的内部库，防止用户自定义的核心库被恶意调用。
-
-此外由于继承关系，子类加载器可以访问父类加载器加载的类（如JDK核心内部库等），而反之则不然，保证了内部库对于程序的可见性，换句话说即子类加载器加载的类可以访问父类加载器加载的类，而反正则不能
-
-### 缺陷
-JDK的核心内部类提供了多个SPI（Service Provider Interface,服务提供者接口），这些类往往需要第三方类来**实现接口**，最典型的例子就是在JDBC中我们需要通过java.sql.driver的DriverManager来注册驱动，而java.sql.driver是由BootstrapClassLoader加载的，实现该方法的com.mysql.jdbc.Driver则是通过AppClassLoader加载的，为了让BootstrapClassLoader去#CLASSPATH中加载第三方类的方法，我们需要通过**ContextClassLoader——上下文加载器**和Class.forName来实现。
-
-`Thread.currentThread().setContextClassLoader(this.loader)`可以将当前类的类加载器存储至上下文加载器中，并在需要的时候通过`Thread.currentThread().getContextClassLoader()`返回储存的类加载器。
-
-而Class.forName()有一个多参数版本为：
-```
-Class<?> forName(String name, boolean initialize, ClassLoader cl)
-```
-可以通过指定classLoader来调用指定的classLoader解析当前类
-
-那么我们就可以在父级类加载器加载的类的代码中通过上下文加载器来调用子级类加载器，并用子级类加载器来解析实现该接口的第三方类，从而规避双亲委派机制。

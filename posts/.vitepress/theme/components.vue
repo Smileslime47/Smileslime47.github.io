@@ -16,6 +16,7 @@ const members = [
     title: 'Myself',
     links: [
       { icon: 'github', link: 'https://github.com/Smileslime47' },
+      { icon: 'leetcode', link: 'https://leetcode.cn/u/smile_slime_47/' },
     ]
   },
 ]

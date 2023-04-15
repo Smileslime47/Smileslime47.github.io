@@ -7,6 +7,7 @@
   "devDependencies": {
     "docsearch.js": "^2.6.3",
     "gitalk": "^1.8.0",
+    "patch-package": "^6.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vitepress": "^1.0.0-alpha.26",
@@ -15,7 +16,8 @@
   "scripts": {
     "posts:dev": "vitepress dev posts",
     "posts:build": "vitepress build posts",
-    "posts:serve": "vitepress serve posts"
+    "posts:serve": "vitepress serve posts",
+    "postinstall": "patch-package" 
   },
   "dependencies": {
     "@rollup/plugin-alias": "^4.0.2",

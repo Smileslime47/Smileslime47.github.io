@@ -1,5 +1,5 @@
 # JPEG压缩标准
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。
+本作品采用[知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc/4.0/")进行许可。
 节选并译自：https://en.wikipedia.org/wiki/JPEG
 
 要注意的是，Wikipedia给出的JPEG标准描述仍然有疏漏和错误之处，详细准确的JPEG压缩标准请参考JPEG官方规范标准。

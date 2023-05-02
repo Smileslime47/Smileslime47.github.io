@@ -1,4 +1,3 @@
-#! https://zhuanlan.zhihu.com/p/626160823
 # JPEG编码过程详解
 关于本人JPEG编码器的项目已经上传至Github：https://github.com/Smileslime47/JPEGCompressor
 

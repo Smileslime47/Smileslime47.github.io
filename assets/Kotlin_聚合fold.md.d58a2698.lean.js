@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,a as l}from"./app.0fa445e1.js";const A=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"Kotlin/\u805A\u5408fold.md"}'),p={name:"Kotlin/\u805A\u5408fold.md"},o=l("",12),e=[o];function c(r,t,D,F,y,i){return n(),a("div",null,e)}const b=s(p,[["render",c]]);export{A as __pageData,b as default};

@@ -95,7 +95,6 @@ Class<?> forName(String name, boolean initialize, ClassLoader cl)
 
 ## 常量池
 ---
->这部分打算后面放到专门讲Class的文章
 
 常量池是JVM中的一块**静态内存空间**，编译器在将源码编译为Class文件后，也将**字面量**和**符号引用**以指针链接的形式存入**常量池**中
 - **字面量**包括了

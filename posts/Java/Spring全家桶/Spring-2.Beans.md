@@ -51,3 +51,9 @@ bean可以有多个name，也可以多个bean有相同的name，在调用bean时
 ### lazy-init
 默认为false，当lazy-init设置为true时，即便scope指定bean为单例模式（即singleton），bean对象也会**在调用的时候才创建**，即懒汉模式
 
+### method
+**init-method**
+- 可以传入一个**空参方法**，在bean进行初始化时自动调用该方法
+
+**destroy-method**
+- 可以传入一个**空参方法**，在容器关闭（即对ApplicationContext调用close方法）时自动调用该方法

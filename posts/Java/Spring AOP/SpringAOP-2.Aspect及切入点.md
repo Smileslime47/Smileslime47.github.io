@@ -37,6 +37,15 @@ public class aspect{
 }
 ```
 
+### 切面执行顺序
+在同时包含多个切面时，可能需要调整切面的执行顺序
+
+Spring默认是根据**类名**排序的
+
+当使用注解配置时，可以通过`@Order(int)`来设定切面顺序
+
+当使用XML配置时，可以直接改变配置文件中切面代码的位置来设定顺序
+
 ## 切入点
 ---
 ### @Pointcut
@@ -48,7 +57,7 @@ public class aspect{
 @Component
 @Aspect
 public class aspect{
-    @Pointcut("* org.example..*.*(..)")
+    @Pointcut("execution(* org.example..*.*(..))")
     public void pt1(){}
 }
 ```

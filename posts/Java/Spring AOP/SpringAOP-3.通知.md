@@ -16,11 +16,11 @@
 @Component
 @Aspect
 public class aspect{
-    @Pointcut("* org.example..*.*(..)")
+    @Pointcut("execution(* org.example..*.*(..))")
     public void pt1(){}
 
     @Before("pt1()")
-    public void advice1{
+    public void advice1(){
         ...
     }
 }
@@ -34,23 +34,66 @@ public class aspect{
 @Component
 @Aspect
 public class aspect{
-    @Pointcut("* org.example..*.*(..)")
+    @Pointcut("execution(* org.example..*.*(..))")
     public void pt1(){}
 
     @Around("pt1()")
-    public void around(ProceedingJoinPoint pjp){
+    public Object around(ProceedingJoinPoint pjp){
         System.out.println("Before");
+        Object ans=null;
         try{
-            pjp.proceed();
+            ans=pjp.proceed();
             System.out.println("AfterReturning");
-        }catch(Throwable throable){
+        }catch(Throwable throwable){
             System.out.println("AfterThrowing");
         }finally{
             System.out.println("After");
         }
+        return ans;
     }
 }
 ```
 
 ## 获取切入点信息
 ---
+为了在通知方法中**获取通知点的信息**，我们需要在**通知方法的参数列表**中添加一个`JoinPoint`的类
+- 环绕通知中对应**ProceedingJoinPoint**
+
+在通知方法中调用JoinPoint的方法即可获取到切入点的相关信息
+
+```java
+@Component
+@Aspect
+public class aspect{
+    @Pointcut("execution(* org.example..*.*(..))")
+    public void pt1(){}
+
+    @Before("pt1()")
+    public void advice1(JoinPoint jp){
+        System.out.println(jp.getSignature().getName());
+        ...
+    }
+}
+```
+
+### 获取返回值和抛出的异常
+除在环绕通知中可以通过pjp.proceed()获取方法执行后的返回值和异常外，**AfterReturning和AfterThrowing**通知也可以通过注解参数获取切入点的返回值和异常
+- 除value参数传入切入点外，还有一个`returning`参数和`throwing`参数，用于指明参数列表中的绑定参数
+
+```java
+@Component
+@Aspect
+public class aspect{
+    @Pointcut("execution(* org.example..*.*(..))")
+    public void pt1(){}
+
+    @AfterReturning(value="pt1()",returning="ret")
+    public void advice1(JoinPoint jp,Object ret){
+        System.out.println(jp.getSignature().getName());
+        ...
+    }
+}
+```
+
+则此时advice1中的局部变量**ret**被绑定为切入点方法的返回值
+

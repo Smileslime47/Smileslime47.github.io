@@ -102,5 +102,16 @@ public class aspect{
 }
 ```
 
+## 获取代理对象
+---
+由于JDK和Cglib实现方式的不同，代理对象的获取也会有所不同
+```java
+AnnotationConfigApplicationContext app=new AnnotationConfigApplicationContext(Config.class);
+Controller ctrl= (Controller) app.getBean(ControllerImpl.class);
+ctrl.aPointCut();
+```
+在JDK实现的情况下，上述代码会报错，这是因为JDK的动态代理实现中，代理对象是**实现接口Controller**的另一个**实现类**，和ControllerImpl是并列关系，在这种情况下，应当传入`Controller.class`即接口的Class
 
+而在Cglib下，由于代理对象是**继承自ControllerImpl**的一个子类，因此不会报错
 
+Spring AOP优先使用JDK的动态代理实现，但是由于JDK的动态代理要求被代理对象**必须实现某个接口**，在被代理对象的类并没有实现任何接口时，Spring会自动切换至Cglib实现

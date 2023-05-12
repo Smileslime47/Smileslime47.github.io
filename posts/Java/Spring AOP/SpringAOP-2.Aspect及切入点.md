@@ -1,0 +1,97 @@
+# Aspect 及切入点
+
+## AOP概念
+---
+AOP是基于一系列**Aspect**即切面实现的增强功能，其中定义了许多概念：
+### Joinpoint——连接点
+连接点指在程序中可以被**扩展增强**的代码，通俗地说，就是**可以被增强的部分**
+
+其中Spring AOP仅支持**对方法进行增强**
+
+### Pointcut——切入点
+切入点指在程序中**实际被增强**的代码，即**已经被增强的部分**
+
+### Advice——通知
+通知是指用于**实现增强**的代码
+
+### Target——目标对象
+目标对象是指被增强代码增强的对象
+
+### Aspect——切面
+切面是**切入点和通知的集合**，它是实现增强功能的单元，定义了**在哪里增强**和**如何增强**的具体实现
+
+### Proxy——代理
+在实现增强后，Spring容器并不会返回原始的Bean，而是类似于编译过程中的链接，根据切面和原始Bean合并成一个代理对象，这是基于Java的动态代理实现的
+
+## Aspect Bean
+---
+和Spring一样，切面也可以通过一系列注解实现配置
+### @Aspect
+声明一个类为**切面类**，需要和@Component结合使用
+
+```java
+@Component
+@Aspect
+public class aspect{
+    ...
+}
+```
+
+## 切入点
+---
+### @Pointcut
+在切面中指定一个切点，要注意的是，这个注解是一个**方法注解**
+- 参数传入一个**切点表达式**，指明增强代码的位置
+- 也可以通过切点注解@Annotation指明切点
+
+```java
+@Component
+@Aspect
+public class aspect{
+    @Pointcut("* org.example..*.*(..)")
+    public void pt1(){}
+}
+```
+
+### 切点表达式
+结构：**execution( [访问修饰符] 返回值类型 包名.类名.方法名(参数列表) )**
+- 访问修饰符部分可选
+- 所有参数均可通过通配符(*)代替
+- **包名.类名**表示当前包下某个类
+- **包名..类名**表示当前包及其子包下的类
+- **参数列表**可以填入`..`，表示任意类型、任意个数的参数列表，不填则代表是**空参方法**
+
+### @annotation
+@anootation可以搜寻**使用了特定注解的方法/类**，结合@annotation注解也可以让我们快速的配置切点，但是需要通过**自定义注解**实现功能
+
+```Java
+//自定义切点注解
+@Target({ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface mypt{ }
+```
+
+```Java
+@Component("UserDao")
+public class UserDao{
+    //调用切点注解
+    @mypt
+    public User getUser{
+        ...
+    }
+    ...
+}
+```
+
+```java
+@Component
+@Aspect
+public class aspect{
+    //追踪切点方法
+    @Pointcut("@Annotation(org.example.aspect.mypt)")
+    public void pt1(){}
+}
+```
+
+
+

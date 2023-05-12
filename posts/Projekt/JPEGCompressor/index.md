@@ -33,11 +33,11 @@
 
 ## 展示
 ### 原图（knowledge.bmp）
-![](./res/knowledge.bmp)
+![](https://raw.githubusercontent.com/Smileslime47/JPEGCompressor/main/res/knowledge.bmp)
 ### 输出图（out.jpg）
-![](./res/out.jpg)
+![](https://raw.githubusercontent.com/Smileslime47/JPEGCompressor/main/res/out.jpg)
 ### 压缩比
-![](./res/ratio.png)
+![](https://raw.githubusercontent.com/Smileslime47/JPEGCompressor/main/res/ratio.png)
 
 ## 感谢
 - 张艳. 基于FPGA的JPEG解码算法的研究与实现[D]. 南京理工大学, 2009.
@@ -45,12 +45,3 @@
 - Wikipedia. 霍夫曼编码[EB/OL]. [2023]. https://zh.wikipedia.org/zh-hans/%E9%9C%8D%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81.
 - 黄兢成 . JPEG 中的范式哈夫曼编码[EB/OL]. [2023]. https://zhuanlan.zhihu.com/p/72044095.
 - Tongtong. 写一个简易的 JPEG 解码器[EB/OL]. [2023]. https://www.mrchen.love/Article/ID/66.
-
-## 黑历史
-一些在熵编码步骤遇到的各种神必输出图
-
-![](./res/my-first-output.jpg)
-
-![](./res/first-half-success-output.jpg)
-
-![](./res/luminance.jpg)

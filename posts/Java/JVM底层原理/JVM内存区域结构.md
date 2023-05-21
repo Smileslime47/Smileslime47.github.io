@@ -7,22 +7,23 @@
 <table>
     <tr>
         <td rowspan=2>线程共享</td>
-        <td colspan=3>堆（Heap）</td>
+        <td colspan=4>堆（Heap）</td>
     </tr>
     <tr>
         <td>方法区（Method Area）</td>
         <td>运行时常量池（Runtime Constant Pool）</td>
         <td>字符串常量池（String Constant Pool）</td>
+        <td>JIT缓存</td>
     </tr>
     <tr>
         <td rowspan=3>线程私有</td>
-        <td colspan=3>虚拟机栈（VM Stack）</td>
+        <td colspan=4>虚拟机栈（VM Stack）</td>
     </tr>
     <tr>
-        <td colspan=3>本地方法栈（Native Method Stack）</td>
+        <td colspan=4>本地方法栈（Native Method Stack）</td>
     </tr>
     <tr>
-        <td colspan=3>程序计数器（Program Counter Register）</td>
+        <td colspan=4>程序计数器（Program Counter Register）</td>
     </tr>
 </table>
 
@@ -119,3 +120,5 @@ System.out.println(aa==bb);// true
 - 若不存在键值对，则字符串常量池会创建出一个**字符串值（Byte数组）->字符串对象**的键值对对象
 - 在找到键值对后，JVM会直接返回字符串常量池中的String对象的地址
 - 对于new新建如 `String a=new String("ab")`，String对象仍然会被新建在**堆中**而非字符串常量池，但是**仍然会在字符串常量池中新建对应的键值对**
+
+在JDK 1.7之后，字符串常量池被转移到了堆中，因为字符串仍然属于被经常回收的对象

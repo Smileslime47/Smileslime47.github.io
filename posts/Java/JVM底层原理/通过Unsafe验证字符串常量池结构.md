@@ -124,7 +124,7 @@ System.out.println("b="+b); //b=abc
   - 此时b获取到了对象String(value=byte[]{'a','b','c'})
 
 ### 字符串常量池源码
-```C++
+```C
 oop StringTable::basic_add(int index_arg, Handle string, jchar* name,
                            int len, unsigned int hashValue_arg, TRAPS) {
 
@@ -160,7 +160,7 @@ oop StringTable::basic_add(int index_arg, Handle string, jchar* name,
 }
 ```
 要注意jchar*是C++基于JNI（Java Native Interface），映射到JVM中char的数据结构，在JNI.h中可以发现JVM中数据类型的定义，其实是一系列不同位长的整数类型（https://github.com/luori366/JNI_doc）
-```C++
+```C
 typedef uint8_t         jboolean;       /* unsigned 8 bits，对应Java中的boolean*/
 typedef int8_t          jbyte;          /* signed 8 bits，对应byte */
 typedef uint16_t        jchar;          /* unsigned 16 bits，对应char */

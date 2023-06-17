@@ -22,7 +22,7 @@ mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 ```
 
 除properties外，SpringBoot也支持YML配置，YAML（YML ain't markdown language）/YML是一种非标记语言，采用了相比XML更易读的语法规范，以下是相同内容的XML和YML的配置文件的对比
-```
+```XML
 <student>
     <name>sangeng</name>
     <age>15</age>

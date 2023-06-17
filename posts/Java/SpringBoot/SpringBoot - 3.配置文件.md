@@ -4,7 +4,7 @@ SpringBoot采用**约定优于配置**的原则，对于整合的各种框架，
 
 ## 配置
 SpringBoot的application.properties文件的配置要简单得多，直接采用了**配置项=值**的语法，有更优的可读性
-```XML
+```
 #devtools
 spring.devtools.restart.enabled=true
 spring.devtools.restart.additional-paths=src/main/java
@@ -22,13 +22,13 @@ mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 ```
 
 除properties外，SpringBoot也支持YML配置，YAML（YML ain't markdown language）/YML是一种非标记语言，采用了相比XML更易读的语法规范，以下是相同内容的XML和YML的配置文件的对比
-```XML
+```
 <student>
     <name>sangeng</name>
     <age>15</age>
 </student>
 ```
-```YML
+```
 student:
     name: sangeng
     age: 15
@@ -43,7 +43,7 @@ SpringBoot提供了一些注解可以自动解析YML中的参数
 
 ### @Value
 对于YML文件，如
-```YML
+```
 student:
     name: sangeng
     age: 15
@@ -57,7 +57,7 @@ String name
 
 ### @ConfigurationProperties
 对于对象而言，我们可以通过@ConfigurationProperties让SpringBoot自动解析YML并将其中的内容绑定到对象的字段上，并优先采用byName的匹配原则，并对于集合、对象等复杂数据类型都能自动解析并绑定
-```YML
+```
 student:
     name: sangeng
     age: 15

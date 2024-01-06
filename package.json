@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "treebuild": "node src/script/prebuild-tree.js",
-    "dev": "node src/script/prebuild-tree.js && vite",
-    "build": "node src/script/prebuild-tree.js && vite build"
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",

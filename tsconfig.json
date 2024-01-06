@@ -20,9 +20,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    /* 解决JS兼容问题 */
+    /* 解决JS和Vite的兼容问题 */
     "allowJs": true,
     "noImplicitAny": false,
+    "types": ["vite/client"],
 
     "paths": {
       "~/*": ["./src/*"]

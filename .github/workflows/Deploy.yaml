@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # pull the code
-      - name：Checkout
+      - name: Checkout
         uses: actions/checkout@v3
 
       # install node

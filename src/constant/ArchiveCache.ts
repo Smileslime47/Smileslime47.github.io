@@ -2,6 +2,38 @@ import httpService from "~/server/http.ts";
 import simplify from "~/composables/simplify.ts";
 
 let fileTree:Array<GitSimpleResponse> = []
+let fileMap:Map<string,GitSimpleResponse> = new Map()
+
+export const getFileTree = async () => {
+    await fileTreeInit()
+    return fileTree
+}
+
+export const getFileMap = async () => {
+    if(fileMap.size!==0){
+        return fileMap
+    }
+    if(fileTree.length===0){
+        await getFileTree()
+    }
+    await fileMapInit()
+    return fileMap
+}
+
+export const fileMapInit = async (force: boolean = false) => {
+    if (fileMap.size !== 0 && !force) {
+        return fileMap
+    }
+    if (fileTree.length === 0) {
+        await fileTreeInit()
+    }
+    fileMap=new Map<string, GithubResponse>()
+    fileTree.forEach((rootNode,_)=>{
+        traverseTree(rootNode,(node )=>{
+            fileMap.set(node.path,node)
+        })
+    })
+}
 
 export const fileTreeInit = async (force:boolean = false) => {
     if(fileTree.length!==0 && !force) {
@@ -21,6 +53,7 @@ export const fileTreeInit = async (force:boolean = false) => {
             })
         })
         console.log(fileTree)
+        localStorage.setItem("ArchiveCache",JSON.stringify(fileTree))
     }
 }
 

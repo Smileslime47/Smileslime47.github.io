@@ -8,7 +8,7 @@ import {getFileTree} from "~/constant/ArchiveCache.ts";
 import httpService from "~/server/http.ts";
 import {ElMessage} from "element-plus";
 
-const categoryList = ref([])
+const categoryList = ref([] as GithubResponse[])
 
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
@@ -23,12 +23,12 @@ const sendDebugRequest = () => {
   ).then((response)=>{
     console.log(response)
     ElMessage({
-      message:response,
+      message:response.data,
       type:"success"
     })
   }).catch((error)=>{
     ElMessage({
-      message:error ,
+      message:error.message ,
       type:"warning"
     })
   })
@@ -42,11 +42,11 @@ const clearCache = () => {
   })
 }
 
-fresh(async (route) => {
+fresh(async (_) => {
   let githubArchiveTree = await getFileTree()
   githubArchiveTree.forEach((content,_)=>{
     if(content.type=="dir"){
-      categoryList.value.push(content)
+      categoryList.value.push(content as GithubResponse)
     }
   })
 })
@@ -70,7 +70,7 @@ fresh(async (route) => {
     </el-menu-item>
     <div class="flex-grow"/>
 
-    <el-menu-item v-for="parent in categoryList" @click="routeTo.archive(parent)">
+    <el-menu-item v-for="parent in categoryList as GithubResponse[]" @click="routeTo.archive(parent)">
       <el-text> {{ parent.name }} </el-text>
     </el-menu-item>
 
@@ -82,7 +82,7 @@ fresh(async (route) => {
           alt="githubIcon"
       />
     </el-menu-item>
-    <el-sub-menu index="4" @click="routeTo.debug()">
+    <el-sub-menu index="4">
       <template #title>
         <img
             style="width: 20px"

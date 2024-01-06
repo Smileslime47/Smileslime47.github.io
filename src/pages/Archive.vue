@@ -3,7 +3,7 @@ import Fresh from "~/composables/fresh.ts";
 import {getFileMap} from "~/constant/ArchiveCache.ts";
 import {Ref} from "vue";
 
-const archive:Ref<GithubResponse> = ref({})
+const archive:Ref<GithubResponse> = ref({} as GithubResponse)
 
 Fresh(()=>{
   let path:string = useRoute().params.path as string

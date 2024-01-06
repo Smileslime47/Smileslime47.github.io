@@ -30,6 +30,3 @@
   padding:0 !important;
 }
 </style>
-
-<script setup>
-</script>

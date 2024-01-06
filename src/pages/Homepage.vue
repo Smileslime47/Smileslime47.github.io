@@ -1,14 +1,8 @@
 <script setup lang="ts">
 import "~/assets/fonts/font.css"
-import {ElMessage} from "element-plus";
-import viteIcon from "~/assets/icons/vite.svg"
 const myAvatarUrl=ref("https://avatars.githubusercontent.com/u/77948910?v=4")
 const mdUrl = ref("https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/96px-Markdown-mark.svg.png")
 const viteUrl = ref("https://camo.githubusercontent.com/2e1efd50b61f26c56e82929d735dce115937350e280abac98641c79d765da27c/68747470733a2f2f766974656a732e6465762f6c6f676f2e737667")
-
-const test=()=>{
-  ElMessage("test")
-}
 </script>
 
 <template>

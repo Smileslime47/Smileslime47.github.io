@@ -1,7 +1,11 @@
 span{
-    font-family: "JetBrains Mono", "PingFang SC", serif;
+    font-family: "PingFang SC", "SF Pro", serif;
 }
 
 body{
     margin:0
+}
+
+.el-card{
+    border-radius: 25px !important;
 }

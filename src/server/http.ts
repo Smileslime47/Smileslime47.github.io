@@ -1,6 +1,17 @@
 import axios, {AxiosInstance} from "axios";
 import Constant from "~/constant/Constant.ts";
 
+export const getFileContent = async (url:string) => {
+    httpService.get(url).then((response)=>{
+        let githubResponse = response.data as GitFileResponse
+        if(githubResponse.type!=="file"){
+            return "N/A"
+        }else{
+            return githubResponse.content
+        }
+    })
+}
+
 const httpService:AxiosInstance = axios.create({
     timeout: 10000,              //超时配置
     withCredentials: false,      //跨域携带cookie

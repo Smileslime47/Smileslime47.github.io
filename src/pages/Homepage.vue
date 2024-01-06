@@ -7,16 +7,20 @@ const viteUrl = ref("https://camo.githubusercontent.com/2e1efd50b61f26c56e82929d
 
 <template>
   <div class="hero">
-      <span class="tagline text-blue">
+      <span class="tagline-title text-blue">
         Smile_slime_47
       </span>
       <br/>
-      <span class="tagline text-black" style="margin-top: 20px">
+      <span class="tagline-subtitle text-black" style="margin-top: 20px">
         我的个人博客
       </span>
       <br/>
       <el-button-group style="margin-top:20px">
-        <el-button size="large" plain>关于-></el-button>
+        <el-button
+            size="large"
+            text
+            bg
+            plain>关于-></el-button>
       </el-button-group>
   </div>
 
@@ -24,25 +28,25 @@ const viteUrl = ref("https://camo.githubusercontent.com/2e1efd50b61f26c56e82929d
 
   <div style="text-align: center">
     <div class="card-container">
-        <el-card class="divider">
+        <el-card class="tagcard divider">
           <template #header>
             <span class="card-info text-blue">Web Developer</span>
           </template>
           <span class="card-info text-black">Web-App开发工程师</span>
         </el-card>
-        <el-card class="divider">
+        <el-card class="tagcard divider">
           <template #header>
             <span class="card-info text-blue">Java & Kotlin</span>
           </template>
           <span class="card-info text-black">Java 和 Kotlin 开发者</span>
         </el-card>
-        <el-card class="divider">
+        <el-card class="tagcard divider">
           <template #header>
             <span class="card-info text-blue">Anime</span>
           </template>
           <span class="card-info text-black">我才不是二次元！</span>
         </el-card>
-      <el-card class="divider">
+      <el-card class="tagcard divider">
         <template #header>
           <span class="card-info text-blue">Distributed system</span>
         </template>
@@ -56,7 +60,7 @@ const viteUrl = ref("https://camo.githubusercontent.com/2e1efd50b61f26c56e82929d
   <div style="text-align: center">
     <span style="font-size: 20px">Powered By:</span>
     <div class="card-container">
-        <el-card class="divider" :body-style="{ padding: '0px' }" >
+        <el-card class="powercard divider" :body-style="{ padding: '0px' }" >
           <div class="align-center" style="height: 200px;width: 100%">
             <el-image
                 :src=myAvatarUrl
@@ -70,7 +74,7 @@ const viteUrl = ref("https://camo.githubusercontent.com/2e1efd50b61f26c56e82929d
             </div>
           </div>
         </el-card>
-      <el-card class="divider" :body-style="{ padding: '0px' }" >
+      <el-card class="powercard divider" :body-style="{ padding: '0px' }" >
         <div class="align-center" style="height: 200px;width: 100%">
           <el-image
               :src=viteUrl
@@ -84,7 +88,7 @@ const viteUrl = ref("https://camo.githubusercontent.com/2e1efd50b61f26c56e82929d
           </div>
         </div>
       </el-card>
-      <el-card class="divider" :body-style="{ padding: '0px' }" >
+      <el-card class="powercard divider" :body-style="{ padding: '0px' }" >
         <div class="align-center" style="height: 200px;width: 100%">
           <el-image
               :src=mdUrl
@@ -126,18 +130,26 @@ const viteUrl = ref("https://camo.githubusercontent.com/2e1efd50b61f26c56e82929d
   text-align:center;
   padding:96px 0;
 }
-.tagline{
+.tagline-title{
+  font-weight: bold;
   font-size:76px;
 }
+.tagline-subtitle{
+  font-size:50px;
+}
 .card-info{
-  font-size:20px
+  font-size:20px;
+  width: 200px;
+}
+.tagcard{
+  width: 300px;
+}
+.powercard{
+  width: 200pxw;
 }
 
 .el-space{
   width:60%
-}
-.el-card{
-  max-width:400px;
 }
 .el-button{
   width:150px;

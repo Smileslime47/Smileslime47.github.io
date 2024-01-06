@@ -1,3 +1,3 @@
-interface GitDirResponse extends GithubResponse{
+interface GitDirResponse extends GitSimpleResponse{
     contents:Array<GithubResponse>
 }

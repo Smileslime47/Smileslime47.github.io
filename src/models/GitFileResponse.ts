@@ -1,4 +1,4 @@
-interface GitFileResponse extends GithubResponse{
+interface GitFileResponse extends GitSimpleResponse{
     content:string,
     encode:string,
 }

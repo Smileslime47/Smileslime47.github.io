@@ -4,15 +4,11 @@ import webIcon from "~/assets/icons/web-icon.svg"
 import setIcon from "~/assets/icons/settings.svg"
 import routeTo from "~/route/routeTo.ts";
 import fresh from "~/composables/fresh.ts";
-import {getFileTree} from "~/constant/ArchiveCache.ts";
+import {getFileTree} from "~/global/ArchiveCache.ts";
 import httpService from "~/server/http.ts";
 import {ElMessage} from "element-plus";
 
-const categoryList = ref([] as GithubResponse[])
-
-const handleSelect = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
+const categoryList = ref([] as GitSimpleResponse[])
 const goToGithub = () => {
   window.open("https://github.com/Smileslime47/Smileslime47.github.io")
 }
@@ -34,19 +30,12 @@ const sendDebugRequest = () => {
   })
 }
 
-const clearCache = () => {
-  localStorage.clear()
-  ElMessage({
-    message:"清除完毕，下一次刷新界面会重新请求Archive。",
-    type:"success"
-  })
-}
-
 fresh(async (_) => {
+  categoryList.value = [] as GitSimpleResponse[]
   let githubArchiveTree = await getFileTree()
   githubArchiveTree.forEach((content,_)=>{
     if(content.type=="dir"){
-      categoryList.value.push(content as GithubResponse)
+      categoryList.value.push(content as GitSimpleResponse)
     }
   })
 })
@@ -56,7 +45,6 @@ fresh(async (_) => {
   <el-menu
       mode="horizontal"
       :ellipsis=false
-      @select="handleSelect"
   >
     <el-menu-item index="0" @click="routeTo.home()">
       <el-space>
@@ -92,9 +80,6 @@ fresh(async (_) => {
       </template>
       <el-menu-item index="4-1" @click="sendDebugRequest">
         <el-text>调试按钮</el-text>
-      </el-menu-item>
-      <el-menu-item index="4-2" @click="clearCache">
-        <el-text>清除缓存</el-text>
       </el-menu-item>
     </el-sub-menu>
   </el-menu>

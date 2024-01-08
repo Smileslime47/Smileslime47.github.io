@@ -1,15 +1,14 @@
 import axios, {AxiosInstance} from "axios";
-import Constant from "~/constant/Constant.ts";
+import Constant from "~/global/Constant.ts";
 
-export const getFileContent = async (url:string) => {
-    httpService.get(url).then((response)=>{
-        let githubResponse = response.data as GitFileResponse
-        if(githubResponse.type!=="file"){
-            return "N/A"
-        }else{
-            return githubResponse.content
-        }
+export const getFileContent = async (path:string) => {
+    let res = "N/A"
+    await httpService.get(
+        Constant.RAW_URL+Constant.REPO_URL+path
+    ).then((response)=>{
+        res = response.data
     })
+    return res
 }
 
 const httpService:AxiosInstance = axios.create({

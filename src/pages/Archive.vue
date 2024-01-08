@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Fresh from "~/composables/fresh.ts";
-import {getFileMap} from "~/constant/ArchiveCache.ts";
+import {getFileMap} from "~/global/ArchiveCache.ts";
 import {Ref} from "vue";
 import {getFileContent} from "~/server/http.ts";
 import mdRender from "~/composables/mdRender.ts";
@@ -14,15 +14,6 @@ Fresh((toRoute)=>{
   let path:string = toRoute.params.path as string
   getFileMap().then(async (map) => {
     archive.value = <GithubResponse>map.get(path)
-    console.log(map)
-    console.log(path + "/README.md")
-
-    let key = path + "/README.md"
-
-    console.log(key)
-    console.log(map.has(key))
-    console.log(map.get(key))
-
     if (map.has(getSha(path + "/README.md"))) {
       console.log("has readme!")
       let readeMeObj = map.get(path + "/README.md") as GithubResponse

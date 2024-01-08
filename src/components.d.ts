@@ -29,4 +29,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     TopNavBar: typeof import('./components/navigation/TopNavBar.vue')['default']
   }
+  export interface ComponentCustomProperties {
+    vLoading: typeof import('element-plus/es')['ElLoadingDirective']
+  }
 }

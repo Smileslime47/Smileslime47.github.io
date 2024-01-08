@@ -3,6 +3,7 @@ import "~/assets/fonts/font.css"
 const myAvatarUrl=ref("https://avatars.githubusercontent.com/u/77948910?v=4")
 const mdUrl = ref("https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/96px-Markdown-mark.svg.png")
 const viteUrl = ref("https://camo.githubusercontent.com/2e1efd50b61f26c56e82929d735dce115937350e280abac98641c79d765da27c/68747470733a2f2f766974656a732e6465762f6c6f676f2e737667")
+const msgPackUrl = ref("https://avatars.githubusercontent.com/u/198264?s=200&v=4")
 </script>
 
 <template>
@@ -101,6 +102,20 @@ const viteUrl = ref("https://camo.githubusercontent.com/2e1efd50b61f26c56e82929d
           </div>
         </div>
       </el-card>
+      <el-card class="powercard divider" :body-style="{ padding: '0px' }" >
+        <div class="align-center" style="height: 200px;width: 100%">
+          <el-image
+              :src=msgPackUrl
+              style="width: 100px"
+          />
+        </div>
+        <div style="padding: 14px">
+          <span>Message Pack</span>
+          <div class="bottom">
+            <el-text>基于MsgPack和Github Actions实现的目录结构缓存</el-text>
+          </div>
+        </div>
+      </el-card>
     </div>
   </div>
 </template>
@@ -145,7 +160,7 @@ const viteUrl = ref("https://camo.githubusercontent.com/2e1efd50b61f26c56e82929d
   width: 300px;
 }
 .powercard{
-  width: 200pxw;
+  width: 200px;
 }
 
 .el-space{

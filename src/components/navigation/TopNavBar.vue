@@ -58,7 +58,7 @@ fresh(async (_) => {
     </el-menu-item>
     <div class="flex-grow"/>
 
-    <el-menu-item v-for="parent in categoryList as GithubResponse[]" @click="routeTo.archive(parent)">
+    <el-menu-item v-for="parent in categoryList as GitSimpleResponse[]" @click="routeTo.archive(parent)">
       <el-text> {{ parent.name }} </el-text>
     </el-menu-item>
 

@@ -121,11 +121,6 @@ const msgPackUrl = ref("https://avatars.githubusercontent.com/u/198264?s=200&v=4
 </template>
 
 <style scoped>
-.align-center{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .divider{
   margin:0 10px
 }

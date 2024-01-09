@@ -4,7 +4,7 @@ import Constant from "~/global/Constant.ts";
 export const getFileContent = async (path:string) => {
     let res = "N/A"
     await httpService.get(
-        Constant.RAW_URL+Constant.REPO_URL+path
+        Constant.RAW_URL+Constant.REPO_URL+"/main/"+path
     ).then((response)=>{
         res = response.data
     })

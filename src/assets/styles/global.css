@@ -9,3 +9,13 @@ body{
 .el-card{
     border-radius: 25px !important;
 }
+
+.align-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-width{
+    width:100%
+}

@@ -10,6 +10,8 @@ export const getFileTree = async () => {
     if(fileTree.length===0){
         await fileTreeInit()
     }
+    console.log("tree")
+    console.log(fileTree)
     return fileTree
 }
 
@@ -45,7 +47,7 @@ export const fileMapInit = async (force: boolean = false) => {
     if (fileTree.length === 0) {
         await fileTreeInit()
     }
-    fileMap=new Map<string, GithubResponse>()
+    fileMap=new Map<string, GitSimpleResponse>()
     fileTree.forEach((rootNode,_)=>{
         traverseTree(rootNode,(node )=>{
             fileMap.set(node.path,node)

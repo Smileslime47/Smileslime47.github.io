@@ -1,5 +1,5 @@
-span{
-    font-family: "PingFang SC", "SF Pro", serif;
+span,p,h1,h2,h3,h4,h5,h6{
+    font-family:  "SF Pro", "PingFang SC", sans-serif;
 }
 
 body{

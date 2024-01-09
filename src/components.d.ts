@@ -26,6 +26,8 @@ declare module 'vue' {
     ElText: typeof import('element-plus/es')['ElText']
     ElTree: typeof import('element-plus/es')['ElTree']
     Footer: typeof import('./components/Footer.vue')['default']
+    GitObjCard: typeof import('./components/GitObjCard.vue')['default']
+    GitObjDescription: typeof import('./components/GitObjDescription.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TopNavBar: typeof import('./components/navigation/TopNavBar.vue')['default']

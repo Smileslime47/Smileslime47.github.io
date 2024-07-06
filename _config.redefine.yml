@@ -231,28 +231,34 @@ home:
     position: left # Sidebar position. left, right
     first_item: info # First item in sidebar. menu, info
     announcement: |
-      <i class="fa-brands fa-microsoft"></i> smile_slime_47 [at] outlook [dot] com 
+      希望对你有所帮助！
       </br>
-      <i class="fa-brands fa-google"></i> smiling.slime.47 [at] gmail [dot] com
+      如果想了解更多关于我的事情
       </br>
-      <i class="fa-brands fa-google"></i> business: lyb.compsci [at] gmail [dot] com 
-      </br>
-      <i class="fa-brands fa-qq"></i> 673696351
+      你也可以看看About页面！
+      <hr>
+      <i class="fa-brands fa-qq"></i> Talloran47
       </br>
       <i class="fa-brands fa-weixin"></i> smile_slime_47
       </br>
       <i class="fa-brands fa-telegram"></i> @Smile_slime_47
     show_on_mobile: true # Whether to show sidebar navigation on mobile sheet menu
     links:
-      Categories: 
-        path: /categories 
-        icon: fa-regular fa-folder # can be empty
-      Archives: 
-        path: /archives 
-        icon: fa-regular fa-archive # can be empty
-      Tags: 
-        path: /tags 
-        icon: fa-regular fa-tags # can be empty
+      Outlook(Email):
+        path: mailto:smile_slime_47@outlook.com
+        icon: fa-brands fa-microsoft
+      Gmail(Email):
+        path: mailto:smiling.slime.47@gmail.com
+        icon: fa-brands fa-google
+      Business(Email):
+        path: mailto:lyb.compsci@gmail.com
+        icon: fa-brands fa-google
+      Steam:
+        path: https://steam.47saikyo.moe/
+        icon: fa-brands fa-steam
+      Github:
+        path: https://github.com/Smileslime47/
+        icon: fa-brands fa-github
       # ...... # you can add more
   # Article date format
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.

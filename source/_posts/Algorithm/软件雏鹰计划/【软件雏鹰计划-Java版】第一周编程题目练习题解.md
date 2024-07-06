@@ -1,5 +1,5 @@
 ---
-title: 【软件雏鹰计划-Java版】第一周编程题目练习题解
+title: 1-【软件雏鹰计划-Java版】第一周编程题目练习题解
 date: 2024/04/28
 category: 
     - Algorithm

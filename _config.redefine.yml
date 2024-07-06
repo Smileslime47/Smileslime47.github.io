@@ -120,15 +120,15 @@ home_banner:
   title: 47Saikyo
   # Home banner subtitle
   subtitle:
-    text: [所谓信念，即获得巨大力量的人类之意志。] # subtitle text, array
+    text: ["and in that light, I find deliverance."] # subtitle text, array
     hitokoto:  # 一言配置
       enable: false # Whether to enable hitokoto
       api: https://v1.hitokoto.cn # API URL, can add types, see https://developer.hitokoto.cn/sentence/#%E5%8F%A5%E5%AD%90%E7%B1%BB%E5%9E%8B-%E5%8F%82%E6%95%B0
-    typing_speed: 100 # Typing speed (ms)
-    backing_speed: 80 # Backing speed (ms)
+    typing_speed: 50 # Typing speed (ms)
+    backing_speed: 40 # Backing speed (ms)
     starting_delay: 500 # Start delay (ms)
     backing_delay: 1500 # Backing delay (ms)
-    loop: true # Whether to loop
+    loop: false # Whether to loop
     smart_backspace: true # Whether to smart backspace
   # Color of home banner text
   text_color: 

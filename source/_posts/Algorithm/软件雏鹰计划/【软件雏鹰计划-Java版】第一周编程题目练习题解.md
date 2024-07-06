@@ -29,6 +29,7 @@ mathjax: false
 按ASCII码升序输出所有符合要求的字符序列； 如果没有符合要求的字符，则输出空序列[]。
 
 ### 样例1
+
 ```
 输入：
     2
@@ -51,6 +52,7 @@ mathjax: false
 ```
 
 ### 样例2
+
 ```
 输入：
     2 3
@@ -140,6 +142,7 @@ private static char[] getNTimesCharacter(int nValue, String[] strings) {
 一个字符串，代表最终的呼叫结果
 
 ### 样例1
+
 ```
 输入：
     3 busy
@@ -154,6 +157,7 @@ private static char[] getNTimesCharacter(int nValue, String[] strings) {
 ```
 
 ### 样例2
+
 ```
 输入：
     1 no-response
@@ -165,6 +169,7 @@ private static char[] getNTimesCharacter(int nValue, String[] strings) {
 ```
 
 ### 样例3
+
 ```
 输入：
     1 idle
@@ -242,6 +247,7 @@ private static String calling(String status, List<RegCallOperate> regCallForward
 > 大端序和小端序的输出格式：每个字节以两位16进制数字表示（16进制数中A-F要大写），字节之间以单空格分隔。
 
 ### 样例1
+
 ```
 输入：
     -10 
@@ -255,6 +261,7 @@ private static String calling(String status, List<RegCallOperate> regCallForward
 ```
 
 ### 样例2
+
 ```
 输入：
     4027691818
@@ -266,6 +273,7 @@ private static String calling(String status, List<RegCallOperate> regCallForward
 ```
 
 ### 样例3
+
 ```
 输入：
     1234567890123456789012345678900

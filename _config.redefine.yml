@@ -28,7 +28,7 @@ defaults:
   # Site logo
   logo: 
   # Site avatar
-  avatar: /images/enana.jpg
+  avatar: /images/saya.png
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -202,6 +202,10 @@ navbar:
     About: 
       path: /about
       icon:
+        links:
+    Friends: #取名随意
+        icon: 
+        path: /links/
     # About: 
     #   icon: fa-regular fa-user
     #   submenus:

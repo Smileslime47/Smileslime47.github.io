@@ -1,4 +1,11 @@
-# 剑指 Offer 07. 重建二叉树
+---
+title: 二叉树遍历：剑指 Offer 07. 重建二叉树
+date: 2023/05/13
+category: 
+    - Algorithm
+    - 题单：剑指 Offer
+mathjax: false
+---
 原题地址：https://leetcode.cn/problems/zhong-jian-er-cha-shu-lcof
 
 ## 题解

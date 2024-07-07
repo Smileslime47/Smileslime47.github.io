@@ -1,4 +1,11 @@
-# 剑指 Offer 56 - I. 数组中数字出现的次数
+---
+title: 位运算：剑指 Offer 56 - I. 数组中数字出现的次数
+date: 2023/05/09
+category: 
+    - Algorithm
+    - 题单：剑指 Offer
+mathjax: false
+---
 原题地址：https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/
 
 ## 题解

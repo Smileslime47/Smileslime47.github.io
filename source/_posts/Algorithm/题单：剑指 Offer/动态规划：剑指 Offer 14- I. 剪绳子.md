@@ -1,4 +1,11 @@
-# 剑指 Offer 14- I. 剪绳子
+---
+title: 动态规划：剑指 Offer 14- I. 剪绳子
+date: 2023/05/16
+category: 
+    - Algorithm
+    - 题单：剑指 Offer
+mathjax: true
+---
 原题地址：https://leetcode.cn/problems/jian-sheng-zi-lcof/
 
 ## 题解

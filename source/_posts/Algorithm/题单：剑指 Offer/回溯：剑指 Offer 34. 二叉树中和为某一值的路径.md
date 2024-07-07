@@ -1,4 +1,11 @@
-# 剑指 Offer 34. 二叉树中和为某一值的路径
+---
+title: 回溯：剑指 Offer 34. 二叉树中和为某一值的路径
+date: 2023/05/06
+category: 
+    - Algorithm
+    - 题单：剑指 Offer
+mathjax: false
+---
 原题地址：https://leetcode.cn/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/
 
 ## 题解

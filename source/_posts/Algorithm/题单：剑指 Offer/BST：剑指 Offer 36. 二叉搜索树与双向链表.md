@@ -1,4 +1,11 @@
-# 剑指 Offer 36. 二叉搜索树与双向链表
+---
+title: BST：剑指 Offer 36. 二叉搜索树与双向链表
+date: 2023/05/06
+category: 
+    - Algorithm
+    - 题单：剑指 Offer
+mathjax: false
+---
 原题地址：https://leetcode.cn/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/
 
 ## 题解

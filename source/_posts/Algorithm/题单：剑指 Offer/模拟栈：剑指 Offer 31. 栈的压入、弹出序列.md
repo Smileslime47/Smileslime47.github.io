@@ -1,4 +1,11 @@
-## 剑指 Offer 31. 栈的压入、弹出序列
+---
+title: 模拟栈：剑指 Offer 31. 栈的压入、弹出序列
+date: 2023/05/18
+category: 
+    - Algorithm
+    - 题单：剑指 Offer
+mathjax: false
+---
 原题地址：https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof
 
 ## 题解

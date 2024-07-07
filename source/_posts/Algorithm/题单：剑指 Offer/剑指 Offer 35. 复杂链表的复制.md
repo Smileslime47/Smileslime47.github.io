@@ -1,4 +1,11 @@
-# 剑指 Offer 35. 复杂链表的复制
+---
+title: 剑指 Offer 35. 复杂链表的复制
+date: 2023/04/24
+category: 
+    - Algorithm
+    - 题单：剑指 Offer
+mathjax: false
+---
 原题地址：
 - https://leetcode.cn/problems/fu-za-lian-biao-de-fu-zhi-lcof/
 - https://leetcode.cn/problems/copy-list-with-random-pointer/

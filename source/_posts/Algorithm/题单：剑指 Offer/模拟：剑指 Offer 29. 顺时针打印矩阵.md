@@ -1,4 +1,11 @@
-# 剑指 Offer 29. 顺时针打印矩阵
+---
+title: 模拟：剑指 Offer 29. 顺时针打印矩阵
+date: 2023/05/18
+category: 
+    - Algorithm
+    - 题单：剑指 Offer
+mathjax: false
+---
 原题地址：https://leetcode.cn/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/
 
 ## 题解

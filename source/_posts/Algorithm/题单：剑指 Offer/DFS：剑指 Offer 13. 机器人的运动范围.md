@@ -1,4 +1,11 @@
-# 剑指 Offer 13. 机器人的运动范围
+---
+title: DFS：剑指 Offer 13. 机器人的运动范围
+date: 2023/05/06
+category: 
+    - Algorithm
+    - 题单：剑指 Offer
+mathjax: false
+---
 原题地址：https://leetcode.cn/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/
 
 ## 题解

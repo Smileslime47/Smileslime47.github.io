@@ -1,4 +1,11 @@
-# 剑指 Offer 22. 链表中倒数第k个节点
+---
+title: 双指针：剑指 Offer 22. 链表中倒数第k个节点
+date: 2023/05/05
+category: 
+    - Algorithm
+    - 题单：剑指 Offer
+mathjax: false
+---
 原题地址：https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
 
 ## 题解

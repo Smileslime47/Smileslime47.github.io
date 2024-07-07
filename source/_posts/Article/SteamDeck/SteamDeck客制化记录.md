@@ -228,7 +228,7 @@ EmuDeck采用了对各个模拟器统一管理文件结构的方式，例如，�
 
 NS模拟器需要主机的硬件序列号（即Prod Key）和固件（Firmware），且版本必须对应，举例来说，你在网上找的V18.0.0的prod.key必须安装V18.0.0的firmware才能正常工作
 
-这两个都可以在https://prodkeys.net/d/中找到对应的文件并下载
+这两个都可以在https://prodkeys.net/d/ 中找到对应的文件并下载
 
 参照EmuDeck的文档，可以得知：序列号文件（prod.key）位于Emulation/bios/ryujinx/keys/目录下
 

@@ -8,6 +8,29 @@ categories:
 
 后面也许还会考虑更换硬件（风扇、SSD、摇杆等），会另开文章再说
 
+## 密码库问题
+
+刚进入桌面模式时，可能会弹出一个“KDE试图创建名为kdewallet的密码库”的窗口，如果你不搞定这个的话，大概率之后每次进入桌面模式都会弹出这个窗口
+
+要使用GPG密钥创建密码库，首先你要在开始菜单搜搜并打开Konsole
+
+然后输入该命令
+
+```bash
+gpg --full-generate-key
+```
+
+随后会有几次提示引导你创建密钥（选自[生成新 GPG 密钥 - Github Docs](https://docs.github.com/zh/authentication/managing-commit-signature-verification/generating-a-new-gpg-key)）：
+
+- 在提示时，指定要生成的密钥类型，或按 Enter 键接受默认值。
+- 在提示时，指定要生成的密钥大小，或按 Enter 键接受默认值。
+- 输入密钥的有效时长。 按 Enter 键将指定默认选择，表示该密钥不会过期。 除非你需要过期日期，否则我们建议接受此默认值。
+- 验证您的选择是否正确。
+- 输入您的用户 ID 信息。
+- 输入安全密码。
+
+创建完毕后，回到窗口，选择使用GPG密钥创建密码库，此时你应当能看见刚才创建的密钥了，继续下一步即可解决该问题
+
 ## 游戏兼容性
 
 为了让游戏能在Linux上流畅运行，Valve基于Wine兼容层开发了一个更适用于游戏运行的兼容层——Proton，即便不是SteamDeck，你也可以在你的Linux系统上使用Proton来运行Steam上的游戏，Proton会随着Steam一同安装。

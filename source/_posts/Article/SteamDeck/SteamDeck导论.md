@@ -1,0 +1,167 @@
+---
+title: SteamDeck导论
+date: 2024/07/07
+categories:
+  - Article
+  - SteamDeck
+---
+
+## 概述
+
+首先当你看到这个帖子的时候，应当已经知道了什么是PC平台掌机，以及了解了PC平台掌机的特点并确定自己**有购买这类掌机的需求**
+
+> 如无必要，勿增实体
+
+|传统掌机（以Nintendo Switch、PSV等为代表）|PC平台掌机（以SteamDeck、ROG Ally、Legion Go为代表）|
+|----------------------------------------|------------------------------------------------|
+|大量的独占游戏                           |完全没有独占游戏                                  |
+|**相对PC平台**更少的游戏库               |PC平台的大部分游戏，只要性能支持+系统兼容就可以游玩  |
+|第一方平台的网络服务                      |取决于游戏平台（SteamDeck除外）                   |
+|双端游戏的存档与PC端隔离                  |在外可以玩掌机，在家可以用电脑继续玩               |
+|厂商客制化的操作系统                      |Windows/Linux平台                               |
+|拉胯的性能表现及屏幕素质                  |较好的性能表现及屏幕素质，接近PC体验               |
+|较好的续航，大约为PC掌机的两倍             |较差的续航                                      |
+|用户友好的便携性和重量                     |个头大且较为沉重                                |
+
+总而言之，PC平台掌机适合以下场景的人
+- 明确自己想要玩的游戏以PC平台为主，并不过分纠结某些独占游戏
+- 无法忍受传统掌机拉胯的画面表现，愿意为了性能体验牺牲部分续航和便携性
+- 有一定动手能力和计算机基础，有折腾意愿（搞机）
+
+此外，即便是PC掌机，它也仍然只是一部掌机，一个掌机大小的x86 PC平台的性能释放注定无法超越常规的台式主机，因此请做好各类3A大作无法在PC掌机上流畅运行的心理准备（除非你觉得全低画质30帧的2077是可以接受的）。
+
+## SteamDeck和其他PC平台掌机
+
+和ROG Ally、Legion Go最大的区别是，SteamDeck并没有使用WIndows系统，而是Valve基于ArchLinux和KDE桌面环境定制了一个叫做SteamOS的Linux发行版系统。
+
+> 要注意的是，除了为SteamDeck定制的SteamOS，Valve还推出过一个[基于Debian的SteamOS](https://store.steampowered.com/steamos/buildyourown)，这个发行版并非为SteamDeck定制的，该发行版旨在让你构建一个基于PC平台的客厅游戏主机
+
+SteamOS针对SteamDeck本身做了专门的硬件优化，并且考虑到SteamDeck多样的输入设备（常规手柄+触摸板+背键+触摸屏），也针对SteamDeck的输入设备做了专门的驱动。此外，Linux系统相比Windows天生拥有能耗低、系统简洁的优势，这也是SteamDeck相比其他PC掌机的优势之一。
+
+默认地，SteamDeck是以游戏模式（GameMode）启动的，该模式实际上就是Steam的**大屏幕模式**，在电源菜单里，你可以选择进入桌面模式（DesktopMode），从而进入真实的ArchLinux系统桌面，对于那些了解Linux并且有一定动手能力的人，可以在这里对系统进行更多的操作。
+
+当然，就算你只用游戏模式，SteamDeck也是完全可以游玩的，但是SteamDeck就像早期为发烧而生的小米一样，为极客们留了一扇门。
+
+> Valve知道有的人会想在SteamDeck上刷Windows系统，因此也提供了[Windows系统下的SteamDeck驱动](https://help.steampowered.com/zh-cn/faqs/view/6121-ECCD-D643-BAA8)，快说谢谢G胖
+
+**但是**，SteamOS仍然是Linux系统，很大一部分游戏厂商由于各种各样的因素，并不会针对Linux开发游戏，只会推出Windows版本，因此为了让游戏能在Linux上流畅运行，Valve基于Wine兼容层开发了一个更适用于游戏运行的兼容层——Proton，即便不是SteamDeck，你也可以在你的Linux系统上使用Proton来运行Steam上的游戏，Proton会随着Steam一同安装。
+
+既然是兼容层，Proton运行Windows游戏和Windows系统原生运行相比偶尔还是会有各种微妙的小问题。你可以在[ProtonDB](https://www.protondb.com/)上看到各个游戏对Proton/SteamDeck/Linux的兼容性，这些评测基本来自于玩家社区，并且对于兼容性一般的游戏也会有玩家给出解决方案。
+
+## SteamDeck的不同版本
+
+https://www.steamdeck.com/zh-cn/deck
+
+现在官网展示的SteamDeck有三个版本—— 256G的LCD屏版本、512G的OLED屏版本和1T的OLED屏版本
+
+![](/images/posts/steamdeck-versions.png)
+
+区别可以直接看上图，核心区别在于以下几点，个人建议最好OLED版本起步
+- SSD硬盘容量
+- 屏幕尺寸
+  - LCD是7英寸的屏幕，实际观感是航母级边框的；OLED的就要好很多
+- 屏幕刷新率
+  - LCD最高60Hz；OLED最高90Hz
+  - 这个意义实际上不是特别大，因为SteamDeck的性能很少有游戏能跑到90Hz的刷新率。往往能跑到这个刷新率的游戏对刷新率也不是很敏感
+- LCD的APU是7nm，OLED的APU换成了能耗比更好的6nm
+- LCD是WIFI5，而OLED支持WIFI6E，主要体现在联机和下载的网络速度和稳定性上
+- LCD是40Wh的电池，而OLED是50Wh的，相比之下续航稍微更长一些
+- LCD的充电线只有1.5m，而OLED版则是2.5m
+  - OLED版的充电线缠线难度大大提高了，很难收纳进收纳盒背面的凹槽里
+
+此外，1TB的OLED还有独占启动影片和主题，以及盒子的内衬是可以拆卸的
+- 意义不大，因为启动影片可以直接通过Decky上的插件换自己喜欢的
+
+虽然购买SteamDeck都会送你个人资料，但是**激活次数只有一次**，如果你买的是二手机，那么很大概率和这个个人资料无缘了
+
+### 购买渠道
+
+如果你的IP在美国，那么购买SteamDeck就像在Steam上购买游戏一样简单，他会直接加到你的Steam购物车内
+
+![](/images/posts/steamdeck-steamshipping.png)
+
+SteamDeck官网在亚洲提供的购买渠道是一个叫做Komodo的购买平台，支持支付宝及微信付款
+
+![](/images/posts/steamdeck-payment.png)
+
+如果你有基本的海外购物能力，可以考虑在这两个渠道购买全新机
+
+此外也可以考虑在淘宝代购购买或者在闲鱼购买二手机
+  
+> 如果你不在意个人资料的话，个人更推荐购买二手机，因为SteamDeck的二手机价格相比全新机实在是便宜了太多
+> 加上SteamDeck本身就是一个鼓励你去折腾的机器，全新情怀实际上被削弱了很多
+
+### 我对改装机的态度
+
+无论如何，我都不建议任何人去购买那些**已经装好Decky/EmuDeck插件/刷好Windows双系统**的改装机
+
+对于小白来说，这些都是**极大的不稳定要素**，我见过太多小白不知道系统更新后是要重新执行Decky的安装程序来重新激活Decky的
+- 对于所有不会折腾的小白，我都强烈建议买没经过任何改装的原装机，SteamOS本身的复杂性已经足够劝退一部分小白了，更别提多样化的插件社区和模拟器社区
+
+对于会折腾的人来说，他们想搞这些自然自己也能搞好。根本没必要让别人来替他们装这些东西，而且别人来做的改装，本身也是一个不稳定要素，往往没有自己折腾来的心安
+
+> Steam提供了SteamDeck的[SteamOS恢复镜像](https://help.steampowered.com/faqs/view/1B71-EDF2-EB6D-2BB3)，如果你买到了系统改装机或者折腾坏了，可以通过这个镜像来重做系统
+
+**请不要在你的SteamDeck上刷Windows系统**
+- 首先，游戏掌机就是游戏掌机，不要试图用掌机去完成手机/平板/笔记本的工作
+  - 如果你各个电子设备的职责不明确的话，就会很容易出现买了平板电脑但是发现完全可以被手机/电脑替代的情况
+  - 如果你一定要用SteamDeck刷视频等等，稍微拥有动手能力的你肯定可以轻松地在桌面模式下安装浏览器和其他常用应用（即便我个人是反对这样的）
+- 其次，SteamOS相比Windows系统是**优势而非劣势**，Linux系统天生具有简洁和能耗低的优势，这和掌机本身的需求是契合的，另外，在驱动和兼容层配置得当的情况下，在Linux下游玩游戏的性能表现应当是基本等同于在Windows上原生运行的效果的，我本人日常也会在Manjaro上运行游戏
+
+## 配件
+
+### Tomtoc SteamDeck 收纳包
+
+![](/images/posts/IMG_8474(20240707-185728).JPG)
+
+原装的收纳包实在是太巨大了，如果你想把SteamDeck拿出去在通勤路上游玩的话，原装收纳包绝对不是最优解。
+
+Tomtoc这个包比原装包的厚度薄了一倍，即便放在单肩包里也不会觉得很厚（但是仍然非常长就是了！）
+
+![](/images/posts/IMG_8476.JPG)
+
+Tomtoc还出过一个保护壳，完全就只是为了让SteamDeck放在包里的时候不受伤而已，理论上可以比收纳包更轻薄，具体要不要买就见仁见智了
+
+![](/images/posts/IMG_8479(20240707-190635).JPG)
+
+### 闪魔 SteamDeck AR膜
+
+由于心疼这块OLED屏幕，还是决定给它贴个膜
+
+AR膜说是相比传统膜可以减少屏幕反光，对光游玩的话屏幕不会反光到看不清
+
+本质上仍然是软膜，但是本来我贴膜的核心诉求就是避免划痕，所以完全足够了
+
+### SteamDeck OLED 充电线收纳3D打印件
+
+这个网上有很多卖的，可以让充电线更服帖的放进原装收纳盒的凹槽里
+
+![](/images/posts/IMG_8480.JPG)
+
+![](/images/posts/IMG_8481.JPG)
+
+但是就像我上面说过的，2.5m的充电线缠起来是很痛苦的一件事，相信我，你缠过一次就不会再想缠第二次了
+
+什么？你说日常充电怎么办？SteamDeck用的是标准的45W PD快充，随便拉一个PD的快充线就可以充了，原装充电器在我这里就是放在收纳盒凹槽里吃灰的
+
+### 其他一些配件的链接
+
+这些是在我tb收藏夹里的一些其他SteamDeck配件的链接
+
+以下这些配件我还没有买，所以也不好评价，各位可以见仁见智地进行参考
+
+- [Gulikit谷粒Steamdeck霍尔摇杆电磁摇杆组件掌机配件自研高精度避免漂移维修用A/B型主机通用无需焊接](https://m.tb.cn/h.ghPiZDZ?tk=mN8L30puoO7)
+- [JSAUX几硕steamdeck oled保护壳rog ally保护壳legion go摇杆帽导电握把防滑触摸板贴纸痛贴掌机配件贴套装](https://m.tb.cn/h.ghEWjDw?tk=qE2A30pvk5x)
+- [闪迪Gameplay高速游戏存储卡4K录制Steam Deck掌机游戏机内存卡](https://m.tb.cn/h.gSDhVty?tk=pQg030pFTC3)
+- [WD_BLACK固态硬盘1T SN770 2T游戏PCIe4.0电脑500g西部数据SN770M](https://m.tb.cn/h.gSUDUYc?tk=pNhq30pvc0Z)
+- [Steam Deck 改造风扇 大功率大风量 反转改正转 降温幅度大](https://m.tb.cn/h.ghE3Q59?tk=ZVpK30pv2Fg)
+
+### 关于贴纸和保护套
+
+我觉得SteamDeck本身纯黑色的外观已经足够好看了，加上工程塑料给我的安全感还是满满的，因此暂时还没有购买贴纸和保护套的打算
+
+虽然我还是在上面的链接里给了几个保护壳的链接，也许以后我的想法会变化吧（
+
+## 其他参考资料
+
+无意间刷到的[这个帖子](https://plumz.me/archives/13520/)也对SteamDeck做了详尽的入手指南，有需要也可以参考该贴

@@ -363,7 +363,7 @@ comment:
       clientSecret: a3207c4dd4e522d4c756f282c0e015624e7e938a  # GitHub Application Client Secret
       repo: Smileslime47.github.io  # GitHub repository
       owner: Smileslime47 # GitHub repository owner
-      proxy: # GitHub repository proxy
+      proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token # GitHub repository proxy
     # Twikoo comment system. See https://twikoo.js.org/
     twikoo:
       version: 1.6.10 # Twikoo version, do not modify if you dont know what it is

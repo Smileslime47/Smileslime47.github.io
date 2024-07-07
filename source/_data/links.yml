@@ -1,0 +1,16 @@
+- links_category: 47
+  has_thumbnail: true
+  list: 
+  - name: Smile_slime_47
+    link: https://47saikyo.moe/
+    description: and in that light, I find deliverance.
+    avatar: /images/saya.png
+    thumbnail: https://raw.githubusercontent.com/Smileslime47/Smileslime47.github.io/main/source/images/infinite-strife.jpg
+- links_category: 和它的好朋友们
+  has_thumbnail: false
+  list: 
+  - name: VCode
+    link: https://vcode28629.github.io/
+    description: 日日47
+    avatar: https://avatars.githubusercontent.com/u/36874116?v=4
+    thumbnail: false

@@ -189,23 +189,17 @@ navbar:
   links:
     Home: 
       path: / 
-      icon: 
     Categories: #取名随意
-      icon: 
-      path: /categories/ #链接
+      path: /categories #链接
     Archives: 
       path: /archives 
-      icon: 
     Tags: 
       path: /tags
-      icon: 
     About: 
-      path: /about
-      icon:
-        links:
-    Friends: #取名随意
-        icon: 
-        path: /links/
+      submenus:
+        Me: /about
+        Friends: /links
+        Gallery: /gallery
     # About: 
     #   icon: fa-regular fa-user
     #   submenus:

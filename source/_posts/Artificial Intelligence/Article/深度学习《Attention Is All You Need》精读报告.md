@@ -36,7 +36,7 @@ mathjax: true
 - 换句话说，$h_t$是一个递归函数，接受$h_{t-1}$和t作为参数
 - 按我的理解：**递归模型顺着输入输出序列的符号位置进行因子计算**指输入序列中元素的顺序就代表了因子计算的顺序 —— 如果将输入输出序列（一个测试样例）理解为一个数组的话，那么因子计算就是在对该数组进行正向遍历，从而就有了**位置与步骤对齐**
 
-![Alt text](/images/posts/attention is all you need-1.png)
+![](/images/posts/attention is all you need-1.png)
 - t代表时间步，即计算的顺序
 - h代表隐藏层 —— 神经网络中的参数
 - x和o代表输入和输出
@@ -90,7 +90,7 @@ Transformer 模型整体架构遵循了**基于多重堆叠的自注意力、逐
 > 
 > —— [逐点 - Wikipedia](https://zh.wikipedia.org/wiki/%E9%80%90%E7%82%B9)
 
-![Alt text](/images/posts/attention is all you need-2.png)
+![](/images/posts/attention is all you need-2.png)
 
 通俗的说，以论文原著中英译德机器翻译为例，在上图中，英语（神经网络的输入）从Inputs输入至**编码器**中，德语（神经网络的输出）从Outputs输入至**解码器**中，二者在解码器中进行了交叉，并促使神经网络学习英语和德语的对应关系，并输出结果（Output Probabilities）
 - 基于海量的样本知识进行学习
@@ -148,7 +148,7 @@ attention over the output of the encoder stack）。
 函数的输出是值的加权和
 - 每个值的权重通过查询和相应的键的兼容性函数计算得出（见下节）
 
-![Alt text](/images/posts/attention is all you need-3.png)
+![](/images/posts/attention is all you need-3.png)
 
 #### Scaled Dot-Product Attention
 

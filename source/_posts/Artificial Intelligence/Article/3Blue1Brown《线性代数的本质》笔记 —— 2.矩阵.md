@@ -1,5 +1,5 @@
 ---
-title: 3Blue1Brown《线性代数的本质》笔记 —— 矩阵
+title: 3Blue1Brown《线性代数的本质》笔记 —— 2.矩阵
 author: Liu Yibang
 date: 2024/08/24
 categories: 

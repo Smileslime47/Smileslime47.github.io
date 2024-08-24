@@ -31,16 +31,16 @@ mathjax: true
 $$
 \vec{v} = 
 \begin{bmatrix}
-    -1\\
-    2\\
+    -1\\\\
+    2\\\\
 \end{bmatrix} = -1 \hat{i} + 2 \hat{j} = -1 
 \begin{bmatrix}
-    1\\
-    0\\
+    1\\\\
+    0\\\\
 \end{bmatrix} + 2 
 \begin{bmatrix}
-    0\\
-    1\\
+    0\\\\
+    1\\\\
 \end{bmatrix}
 $$
 
@@ -49,16 +49,16 @@ $$
 $$
 \vec{v} = -1 \hat{i} + 2 \hat{j} = -1 
 \begin{bmatrix}
-    1\\
-    -2\\
+    1\\\\
+    -2\\\\
 \end{bmatrix} + 2 
 \begin{bmatrix}
-    3\\
-    0\\
+    3\\\\
+    0\\\\
 \end{bmatrix} =
 \begin{bmatrix}
-    5\\
-    2\\
+    5\\\\
+    2\\\\
 \end{bmatrix}
 $$
 
@@ -73,8 +73,8 @@ $$
 
 $$
 \begin{bmatrix}
-    0 & -1\\
-    1 & 0\\
+    0 & -1\\\\
+    1 & 0\\\\
 \end{bmatrix}
 $$
 
@@ -82,8 +82,8 @@ $$
 
 $$
 \begin{bmatrix}
-    2 & -2\\
-    1 & -1\\
+    2 & -2\\\\
+    1 & -1\\\\
 \end{bmatrix}
 $$
 
@@ -92,24 +92,24 @@ $$
 $$
 \vec{v} = 
 \begin{bmatrix}
-    1 & 3\\
-    -2 & 0\\
+    1 & 3\\\\
+    -2 & 0\\\\
 \end{bmatrix}
 \begin{bmatrix}
-    -1\\
-    2\\
+    -1\\\\
+    2\\\\
 \end{bmatrix} = -1
 \begin{bmatrix}
-    1\\
-    -2\\
+    1\\\\
+    -2\\\\
 \end{bmatrix} + 2
 \begin{bmatrix}
-    3\\
-    0\\
+    3\\\\
+    0\\\\
 \end{bmatrix} =
 \begin{bmatrix}
-    5\\
-    2\\
+    5\\\\
+    2\\\\
 \end{bmatrix}
 $$
 
@@ -118,24 +118,24 @@ $$
 $$
 \vec{v} = 
 \begin{bmatrix}
-    a & b\\
-    c & d\\
+    a & b\\\\
+    c & d\\\\
 \end{bmatrix}
 \begin{bmatrix}
-    x\\
-    y\\
+    x\\\\
+    y\\\\
 \end{bmatrix} = x
 \begin{bmatrix}
-    a\\
-    c\\
+    a\\\\
+    c\\\\
 \end{bmatrix} + y
 \begin{bmatrix}
-    b\\
-    d\\
+    b\\\\
+    d\\\\
 \end{bmatrix} =
 \begin{bmatrix}
-    ax+by\\
-    cx+dy\\
+    ax+by\\\\
+    cx+dy\\\\
 \end{bmatrix}
 $$
 
@@ -149,8 +149,8 @@ $$
 
 $$
 \begin{bmatrix}
-    0 & -1\\
-    1 & 0\\
+    0 & -1\\\\
+    1 & 0\\\\
 \end{bmatrix}
 $$
 
@@ -158,8 +158,8 @@ $$
 
 $$
 \begin{bmatrix}
-    1 & 1\\
-    0 & 1\\
+    1 & 1\\\\
+    0 & 1\\\\
 \end{bmatrix}
 $$
 
@@ -167,8 +167,8 @@ $$
 
 $$
 \begin{bmatrix}
-    1 & -1\\
-    1 & 0\\
+    1 & -1\\\\
+    1 & 0\\\\
 \end{bmatrix}
 $$
 
@@ -176,26 +176,26 @@ $$
 
 $$
 \begin{bmatrix}
-    1 & 1\\
-    0 & 1\\
+    1 & 1\\\\
+    0 & 1\\\\
 \end{bmatrix}
 \left(
     \begin{bmatrix}
-        0 & -1\\
-        1 & 0\\
+        0 & -1\\\\
+        1 & 0\\\\
     \end{bmatrix}
     \begin{bmatrix}
-        x\\
-        y\\
+        x\\\\
+        y\\\\
     \end{bmatrix}
 \right) =
 \begin{bmatrix}
-    1 & -1\\
-    1 & 0\\
+    1 & -1\\\\
+    1 & 0\\\\
 \end{bmatrix}
 \begin{bmatrix}
-    x\\
-    y\\
+    x\\\\
+    y\\\\
 \end{bmatrix}
 $$
 
@@ -209,16 +209,16 @@ $$
 
 $$
 \begin{bmatrix}
-    1 & 1\\
-    0 & 1\\
+    1 & 1\\\\
+    0 & 1\\\\
 \end{bmatrix}
 \begin{bmatrix}
-    0 & -1\\
-    1 & 0\\
+    0 & -1\\\\
+    1 & 0\\\\
 \end{bmatrix} =
 \begin{bmatrix}
-    1 & -1\\
-    1 & 0\\
+    1 & -1\\\\
+    1 & 0\\\\
 \end{bmatrix}
 $$
 
@@ -226,12 +226,12 @@ $$
 
 $$
 \begin{bmatrix}
-    a & b\\
-    c & d\\
+    a & b\\\\
+    c & d\\\\
 \end{bmatrix}
 \begin{bmatrix}
-    e & f\\
-    g & h\\
+    e & f\\\\
+    g & h\\\\
 \end{bmatrix}
 $$
 
@@ -239,24 +239,24 @@ $$
 
 $$
 \begin{bmatrix}
-    a & b\\
-    c & d\\
+    a & b\\\\
+    c & d\\\\
 \end{bmatrix}
 \begin{bmatrix}
-    e\\
-    g\\
+    e\\\\
+    g\\\\
 \end{bmatrix} = e
 \begin{bmatrix}
-    a\\
-    c\\
+    a\\\\
+    c\\\\
 \end{bmatrix} + g
 \begin{bmatrix}
-    b\\
-    d\\
+    b\\\\
+    d\\\\
 \end{bmatrix} =
 \begin{bmatrix}
-    ae+bg\\
-    ce+dg\\
+    ae+bg\\\\
+    ce+dg\\\\
 \end{bmatrix}
 $$
 
@@ -264,24 +264,24 @@ $$
 
 $$
 \begin{bmatrix}
-    a & b\\
-    c & d\\
+    a & b\\\\
+    c & d\\\\
 \end{bmatrix}
 \begin{bmatrix}
-    f\\
-    h\\
+    f\\\\
+    h\\\\
 \end{bmatrix} = f
 \begin{bmatrix}
-    a\\
-    c\\
+    a\\\\
+    c\\\\
 \end{bmatrix} + h
 \begin{bmatrix}
-    b\\
-    d\\
+    b\\\\
+    d\\\\
 \end{bmatrix} =
 \begin{bmatrix}
-    af+bh\\
-    cf+dh\\
+    af+bh\\\\
+    cf+dh\\\\
 \end{bmatrix}
 $$
 
@@ -289,16 +289,16 @@ $$
 
 $$
 \begin{bmatrix}
-    a & b\\
-    c & d\\
+    a & b\\\\
+    c & d\\\\
 \end{bmatrix}
 \begin{bmatrix}
-    e & f\\
-    g & h\\
+    e & f\\\\
+    g & h\\\\
 \end{bmatrix} =
 \begin{bmatrix}
-    ae+bg & af+bh\\
-    ce+dg & cf+dh\\
+    ae+bg & af+bh\\\\
+    ce+dg & cf+dh\\\\
 \end{bmatrix}
 $$
 

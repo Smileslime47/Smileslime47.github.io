@@ -59,17 +59,11 @@ $$
 \begin{bmatrix}
     1 \\
     2 \\
-\end{bmatrix}
-
-+
-
+\end{bmatrix}+
 \begin{bmatrix}
     3  \\
     -1 \\
-\end{bmatrix}
-
-=
-
+\end{bmatrix}=
 \begin{bmatrix}
     4 \\
     1 \\
@@ -86,19 +80,14 @@ $$
 
 $$
 2
-
 \cdot
-
 \begin{bmatrix}
     3 \\
-    1 \\
-\end{bmatrix}
-
-=
-
+    1
+\end{bmatrix}=
 \begin{bmatrix}
     6 \\
-    2 \\
+    2
 \end{bmatrix}
 $$
 

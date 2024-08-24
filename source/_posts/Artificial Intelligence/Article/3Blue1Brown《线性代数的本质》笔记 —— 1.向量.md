@@ -38,8 +38,8 @@ mathjax: true
 
 $$
 \begin{bmatrix}
-    -2 \\
-    3  \\
+    -2 \\\\
+    3  \\\\
 \end{bmatrix}
 $$
 
@@ -57,16 +57,16 @@ $$
 
 $$
 \begin{bmatrix}
-    1 \\
-    2 \\
+    1\\\\
+    2\\\\
 \end{bmatrix}+
 \begin{bmatrix}
-    3  \\
-    -1 \\
+    3\\\\
+    -1\\\\
 \end{bmatrix}=
 \begin{bmatrix}
-    4 \\
-    1 \\
+    4\\\\
+    1\\\\
 \end{bmatrix}
 $$
 
@@ -79,15 +79,14 @@ $$
 向量数乘即将原向量延长\缩短为原本的n倍，当n为负数时，则说明运算结果的向量方向与原向量相反
 
 $$
-2
-\cdot
+2\cdot
 \begin{bmatrix}
-    3 \\
-    1
+    3\\\\
+    1\\\\
 \end{bmatrix}=
 \begin{bmatrix}
-    6 \\
-    2
+    6\\\\
+    2\\\\
 \end{bmatrix}
 $$
 

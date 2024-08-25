@@ -518,7 +518,7 @@ det
 \right) = (a+b)(c+d) - ac - bd - 2bc = ad - bc
 $$
 
-![Alt text](linear-determinant-1.png)
+![Alt text](/images/posts/linear-determinant-1.png)
 
 当一个由 $\hat{i}$ 和 $\hat{j}$ 围成的正方形（面积为1）被变换成如图所示的平行四边形时，可以结合上图看出平行四边形的面积计算公式
 

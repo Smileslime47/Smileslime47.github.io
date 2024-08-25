@@ -574,13 +574,11 @@ $$
 形如
 
 $$
-\left\{
-    \begin{array}{c}
-        2x+5y+3z=-3\\\\
-        4x+0y+8z=0\\\\
-        1x+3y+0z=2
-    \end{array}
-\right.
+\begin{cases}
+    2x+5y+3z=-3\\\\
+    4x+0y+8z=0\\\\
+    1x+3y+0z=2
+\end{cases}
 $$
 
 的方程组叫做**线性方程组**

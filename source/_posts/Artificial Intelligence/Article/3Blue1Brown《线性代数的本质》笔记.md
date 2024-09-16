@@ -1106,12 +1106,12 @@ $$
 \hat{i}=
 \begin{bmatrix}
     1\\\\
-    0\\\\
+    0
 \end{bmatrix}
 \hat{j}=
 \begin{bmatrix}
     0\\\\
-    1\\\\
+    1
 \end{bmatrix}
 $$
 
@@ -1121,12 +1121,12 @@ $$
 \hat{i_B}=
 \begin{bmatrix}
     2\\\\
-    1\\\\
+    1
 \end{bmatrix}
 \hat{j_B}=
 \begin{bmatrix}
     -1\\\\
-    1\\\\
+    1
 \end{bmatrix}
 $$
 
@@ -1136,7 +1136,7 @@ $$
 \vec{v}=
 \begin{bmatrix}
     -1\\\\
-    2\\\\
+    2
 \end{bmatrix}
 $$
 
@@ -1146,12 +1146,12 @@ $$
 \vec{v}=
 \begin{bmatrix}
     -1\\\\
-    2\\\\
+    2
 \end{bmatrix}=
 -1\hat{i_b}+2\hat{j_b}=
 \begin{bmatrix}
     -4\\\\
-    1\\\\
+    1
 \end{bmatrix}
 $$
 
@@ -1162,15 +1162,15 @@ $$
 -1\hat{i_b}+2\hat{j_b}=
 \begin{bmatrix}
     -1\\\\
-    2\\\\
+    2
 \end{bmatrix}
 \begin{bmatrix}
     2 & 1\\\\
-    -1 & 1\\\\
+    -1 & 1
 \end{bmatrix}=
 \begin{bmatrix}
     -4\\\\
-    1\\\\
+    1
 \end{bmatrix}
 $$
 
@@ -1185,7 +1185,7 @@ $$
 $$
 \begin{bmatrix}
     2 & 1\\\\
-    -1 & 1\\\\
+    -1 & 1
 \end{bmatrix}
 $$
 
@@ -1195,12 +1195,12 @@ $$
 \hat{i_B}=
 \begin{bmatrix}
     2\\\\
-    1\\\\
+    1
 \end{bmatrix}
 \hat{j_B}=
 \begin{bmatrix}
     -1\\\\
-    1\\\\
+    1
 \end{bmatrix}
 $$
 
@@ -1227,7 +1227,7 @@ $$
 $$
 \begin{bmatrix}
     0 & -1\\\\
-    1 & 0\\\\
+    1 & 0
 \end{bmatrix}
 $$
 
@@ -1239,7 +1239,7 @@ $$
 \vec{v}=
 \begin{bmatrix}
     -1\\\\
-    2\\\\
+    2
 \end{bmatrix}
 $$
 
@@ -1250,11 +1250,11 @@ $$
 $$
 \begin{bmatrix}
     2 & 1\\\\
-    -1 & 1\\\\
+    -1 & 1
 \end{bmatrix}
 \begin{bmatrix}
     -1\\\\
-    2\\\\
+    2
 \end{bmatrix}
 $$
 
@@ -1263,15 +1263,15 @@ $$
 $$
 \begin{bmatrix}
     0 & -1\\\\
-    1 & 0\\\\
+    1 & 0
 \end{bmatrix}
 \begin{bmatrix}
     2 & 1\\\\
-    -1 & 1\\\\
+    -1 & 1
 \end{bmatrix}
 \begin{bmatrix}
     -1\\\\
-    2\\\\
+    2
 \end{bmatrix}
 $$
 
@@ -1280,19 +1280,19 @@ $$
 $$
 \begin{bmatrix}
     2 & 1\\\\
-    -1 & 1\\\\
+    -1 & 1
 \end{bmatrix}^{-1}
 \begin{bmatrix}
     0 & -1\\\\
-    1 & 0\\\\
+    1 & 0
 \end{bmatrix}
 \begin{bmatrix}
     2 & 1\\\\
-    -1 & 1\\\\
+    -1 & 1
 \end{bmatrix}
 \begin{bmatrix}
     -1\\\\
-    2\\\\
+    2
 \end{bmatrix}
 $$
 
@@ -1301,7 +1301,7 @@ $$
 $$
 \begin{bmatrix}
     \frac{1}{3} & \frac{-2}{3}\\\\
-    \frac{5}{3} & \frac{-1}{3}\\\\
+    \frac{5}{3} & \frac{-1}{3}
 \end{bmatrix}
 $$
 
@@ -1318,7 +1318,7 @@ $$
 $$
 \begin{bmatrix}
     3 & 1\\\\
-    0 & 2\\\\
+    0 & 2
 \end{bmatrix}
 $$
 
@@ -1358,12 +1358,12 @@ $$
 \begin{bmatrix}
     \lambda & 0 & 0\\\\
     0 & \lambda & 0\\\\
-    0 & 0 & \lambda\\\\
+    0 & 0 & \lambda
 \end{bmatrix}=\lambda
 \begin{bmatrix}
     1 & 0 & 0\\\\
     0 & 1 & 0\\\\
-    0 & 0 & 1\\\\
+    0 & 0 & 1
 \end{bmatrix}=
 \lambda I
 $$
@@ -1386,7 +1386,7 @@ $$
 det\left(
 \begin{bmatrix}
     3-\lambda & 1\\\\
-    0 & 2-lambda\\\\
+    0 & 2-lambda
 \end{bmatrix}
 \right)=(3-\lambda)(2-\lambda)-1·0=0
 $$
@@ -1401,7 +1401,7 @@ $$
 det\left(
 \begin{bmatrix}
     -\lambda & -1\\\\
-    1 & -\lambda\\\\
+    1 & -\lambda
 \end{bmatrix}
 \right)=(-\lambda)(-\lambda)-(-1·1)=\lambda ^2+1=0
 $$
@@ -1418,7 +1418,7 @@ $$
 $$
 \begin{bmatrix}
     3 & 0\\\\
-    0 & 2\\\\
+    0 & 2
 \end{bmatrix}
 $$
 
@@ -1429,23 +1429,23 @@ $$
 $$
 \begin{bmatrix}
     3 & 0\\\\
-    0 & 2\\\\\
+    0 & 2
 \end{bmatrix}^n 
 \begin{bmatrix}
     x\\\\
-    y\\\\
+    y
 \end{bmatrix}=
 \begin{bmatrix}
     3^n & 0\\\\
-    0 & 2^n\\\\\
+    0 & 2^n
 \end{bmatrix}
 \begin{bmatrix}
     x\\\\
-    y\\\\
+    y
 \end{bmatrix}=
 \begin{bmatrix}
     3^n x\\\\
-    2^n y\\\\
+    2^n y
 \end{bmatrix}
 $$
 
@@ -1458,7 +1458,7 @@ $$
 $$
 \begin{bmatrix}
     3 & 1\\\\
-    0 & 2\\\\
+    0 & 2
 \end{bmatrix}
 $$
 
@@ -1468,12 +1468,12 @@ $$
 \vec{a}=
 \begin{bmatrix}
     1\\\\
-    0\\\\
+    0
 \end{bmatrix}
 \vec{b}=
 \begin{bmatrix}
     -1\\\\
-    1\\\\
+    1
 \end{bmatrix}
 $$
 
@@ -1482,19 +1482,19 @@ $$
 $$
 \begin{bmatrix}
     1 & -1\\\\
-    0 & 1\\\\
+    0 & 1
 \end{bmatrix}^{-1}
 \begin{bmatrix}
     3 & 1\\\\
-    0 & 2\\\\
+    0 & 2
 \end{bmatrix}
 \begin{bmatrix}
     1 & -1\\\\
-    0 & 1\\\\
+    0 & 1
 \end{bmatrix}=
 \begin{bmatrix}
     3 & 0\\\\
-    0 & 2\\\\
+    0 & 2
 \end{bmatrix}
 $$
 
@@ -1570,7 +1570,7 @@ $$
     1\\\\
     0\\\\
     0\\\\
-    \dots\\\\
+    \dots
 \end{bmatrix}
 $$
 
@@ -1604,14 +1604,14 @@ $$
     4\\\\
     5\\\\
     1\\\\
-    \vdots\\\\
+    \vdots
 \end{bmatrix}=
 \begin{bmatrix}
     1·4\\\\
     2·5\\\\
     3·1\\\\
     0\\\\
-    \vdots\\\\
+    \vdots
 \end{bmatrix}
 $$
 

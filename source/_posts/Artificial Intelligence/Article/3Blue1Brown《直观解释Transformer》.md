@@ -8,6 +8,10 @@ categories:
 mathjax: true
 ---
 
+> [直观解释Transforme——官方中文](https://www.bilibili.com/video/BV13z421U7cs/)
+>
+> [直观解释注意力机制——官方中文](https://www.bilibili.com/video/BV1TZ421j7Ke/)
+
 3B1B讲深度学习和Transformer的视频也很出名了，国内许多讲相关概念（注意力、词嵌入等等）的文章都会或多或少的引入一些这个系列视频的截图和观点
 
 ## 机器学习

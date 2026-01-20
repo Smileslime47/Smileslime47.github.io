@@ -14,15 +14,15 @@ JNU/Computer Science
 
 ## 开发
 
-一名全栈开发者 && 项目组的架构师（被同事扣的大帽子），主力语言是 Kotlin/Java 服务端及TypeScript前端，工作中也写过 Python。（虽然并不喜欢 Python）
+一名全栈开发者 && 项目组的架构师（被同事扣的大帽子），主力技术栈是 Kotlin/Java 服务端及 TypeScript 前端，工作中也写过 Python（虽然并不喜欢 Python）
 
-目前工作内容主要聚焦于IDE方面相关的技术栈，例如Language Server Protocol、Monaco-Editor、索引算法等等，也开发过面向IDE的MultiAgent系统
+目前工作内容主要聚焦于 IDE 方面相关的技术栈，例如 Language Server Protocol、Monaco-Editor、Antlr、索引算法等等，也开发过面向 IDE 的 MultiAgent 系统
 
-函数式编程爱好者，对编程语言本身的技术也很感兴趣，例如类型系统、闭包、协程、异步等等都，工作之余最大的爱好就是研究各种新的编程思想和范式
+函数式编程爱好者，对编程语言本身的技术也很感兴趣，例如类型系统、闭包、协程、异步等等，工作之余的爱好之一就是研究各种新的编程思想和范式
 
 ## 游戏
 
-SteamID:Smile slime 47
+SteamID: Smile slime 47
 
 不怎么玩各种电子竞技类多人游戏（PVP 游戏）
 
@@ -32,6 +32,7 @@ SteamID:Smile slime 47
 
 ## 音乐
 
-J-Pop、 Vocaloid、Hard Rock
-
-对Hifi也有所涉猎
+- J-Pop
+- Vocaloid
+- Hard Rock
+- 对Hifi也有所涉猎

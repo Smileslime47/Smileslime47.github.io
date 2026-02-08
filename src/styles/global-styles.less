@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');
+@import 'overrides/scrollbar.less';
+@import './variables.less';
+
+:root {
+    --text-main: #434343;
+    --text-secondary: #7b7b7b;
+    --text-muted: #b0b0b0;
+
+    --background-black: #00000;
+    --background-white: #ffffff;
+
+    // 边框与分割线
+    --border-color: #e0e0e0;
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 24px;
+    --border-radius-xl: 32px;
+
+    /* --- 📐 Typography --- */
+    --font-family-heading: 'Zen Maru Gothic', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    --font-family-body: 'M PLUS Rounded 1c', 'PingFang SC', sans-serif;
+    --font-family-code: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #app {
+    .container()
+}
+
+html {
+    font-size: 16px; /* 1rem = 16px */
+    scroll-behavior: smooth; /* 锚点跳转平滑滚动 */
+    /* 这里不需要 overflow，交给 body 管理通常更安全 */
+}
+
+body {
+    /* 字体与颜色继承源头 */
+    font-family: var(--font-family-body), serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-main);
+    line-height: 1.75;
+
+    /* 字体平滑渲染 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+    position: relative;
+}
+

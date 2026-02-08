@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Typography System
+   Designed for: 47-Blog (Clean & Readable)
+   ========================================================================== */
+
+// 1. 基础字重变量 (Mapping to Google Fonts)
+@font-weight-light: 300;
+@font-weight-regular: 400;
+@font-weight-medium: 500;
+@font-weight-bold: 700;
+@font-weight-black: 900;
+
+// 2. 基础字体栈 (引用 CSS 变量，确保动态性)
+@font-heading: var(--font-family-heading, sans-serif);
+@font-body: var(--font-family-body, sans-serif);
+@font-code: var(--font-family-code, monospace);
+
+// ==========================================================================
+// Mixins: Headings (标题系统)
+// 特点：使用展示型字体，行高较紧 (1.2 - 1.3)
+// ==========================================================================
+
+// H1 - 页面主标题 / Hero 文字
+.text-h1() {
+    font-family: @font-heading;
+    font-size: 2.5rem;    // 40px
+    line-height: 1.2;
+    font-weight: @font-weight-bold;
+    letter-spacing: -0.02em; // 大标题稍微收紧字间距更精致
+}
+
+// H2 - 文章章节标题 / 模块标题
+.text-h2() {
+    font-family: @font-heading;
+    font-size: 1.75rem;   // 28px
+    line-height: 1.3;
+    font-weight: @font-weight-bold;
+    letter-spacing: -0.01em;
+}
+
+// H3 - 子章节标题 / 卡片标题
+.text-h3() {
+    font-family: @font-heading;
+    font-size: 1.5rem;    // 24px
+    line-height: 1.4;
+    font-weight: @font-weight-medium;
+}
+
+// H4 - 小标题
+.text-h4() {
+    font-family: @font-heading;
+    font-size: 1.25rem;   // 20px
+    line-height: 1.4;
+    font-weight: @font-weight-medium;
+}
+
+// ==========================================================================
+// Mixins: Body Text (正文系统)
+// 特点：使用阅读型字体，行高宽松 (1.6 - 1.8) 以增加"空气感"
+// ==========================================================================
+
+// Body Large - 导语 / 强调段落
+.text-body-lg() {
+    font-family: @font-body;
+    font-size: 1.125rem;  // 18px
+    line-height: 1.75;
+    font-weight: @font-weight-regular;
+}
+
+// Body Base - 标准正文
+.text-body-base() {
+    font-family: @font-body;
+    font-size: 1rem;      // 16px
+    line-height: 1.75;    // 黄金阅读行高
+    font-weight: @font-weight-regular;
+}
+
+// Body Small - 辅助说明 / 脚注
+.text-body-sm() {
+    font-family: @font-body;
+    font-size: 0.875rem;  // 14px
+    line-height: 1.6;
+    font-weight: @font-weight-regular;
+}
+
+// Caption - 极小字 / 标签 / 日期
+.text-caption() {
+    font-family: @font-body;
+    font-size: 0.75rem;   // 12px
+    line-height: 1.5;
+    font-weight: @font-weight-medium;
+    text-transform: uppercase; // 可选：大写增加装饰感
+    letter-spacing: 0.05em;
+}
+
+// ==========================================================================
+// Mixins: Utilities (工具类)
+// ==========================================================================
+
+// 代码字体
+.text-code() {
+    font-family: @font-code;
+    font-size: 0.9em; // 稍微比正文小一点
+}
+
+// 单行截断 (超出部分显示省略号)
+.text-truncate() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 多行截断 (@lines: 行数)
+.text-clamp(@lines: 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: @lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

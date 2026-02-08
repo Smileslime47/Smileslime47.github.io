@@ -1,4 +1,10 @@
-# Gradle学习笔记 & 一站式入土速成教程
+---
+title: Gradle学习笔记 & 一站式入土速成教程
+date: 2025/011/03
+categories:
+  - DevOps
+  - Gradle
+---
 
 ## 引言
 
@@ -25,6 +31,8 @@
 和Maven不同的是，gradle并不需要下载一个全局的运行时，而是可以仅在项目级别独立维护gradle的发行版，但是在IDEA使用gradle-wrapper创建gradle项目时，IDEA会自动从官方仓库下载（理所当然会被墙），因此需要修改gradle的下载源
 
 在IDEA初始化gradle项目后，在`./gradle/wrapper/gradle-wrapper.properties`处修改`distributionUrl`字段，修改gradle的下载源
+
+我司的链接为：https\://artifactory.cde.huawei.com/artifactory/gradle-distributions/gradle-8.12.1-bin.zip
 
 - 将gradle的版本号修改为对应的版本即可，bin可以按需修改为all
 

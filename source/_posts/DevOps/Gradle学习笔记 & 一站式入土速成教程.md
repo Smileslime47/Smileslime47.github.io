@@ -1,6 +1,6 @@
 ---
 title: Gradle学习笔记 & 一站式入土速成教程
-date: 2025/011/03
+date: 2025/11/03
 categories:
   - DevOps
   - Gradle

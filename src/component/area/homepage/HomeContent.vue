@@ -1,51 +1,57 @@
-<template>
+﻿<template>
   <div class="home-content">
     <aside class="sidebar">
-      <div class="personal-info">
+      <GlassCard class="personal-info">
         <img src="@/assets/enana.jpg" alt="Avatar" class="avatar">
         <h2>47Saikyo</h2>
         <p>A software engineer who loves coding and anime.</p>
-      </div>
+      </GlassCard>
     </aside>
+
     <main class="main-content">
-      <article class="post-card" v-for="post in posts" :key="post.id">
+      <GlassCard
+        v-for="post in posts"
+        :key="post.id"
+        as="article"
+        class="post-card"
+      >
         <img :src="post.image" :alt="post.title" />
         <div class="post-info">
           <h2>{{ post.title }}</h2>
           <p>{{ post.excerpt }}</p>
-          <a :href="post.url">阅读更多</a>
+          <a :href="post.url">Read more</a>
         </div>
-      </article>
+      </GlassCard>
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const posts = ref([
   {
     id: 1,
-    title: '第一篇文章',
-    excerpt: '这是第一篇文章的摘要...',
+    title: 'First post',
+    excerpt: 'This is a short excerpt from the first post...',
     image: 'https://w.wallhaven.cc/full/7p/wallhaven-7p39gy.jpg',
     url: '#',
   },
   {
     id: 2,
-    title: '第二篇文章',
-    excerpt: '这是第二篇文章的摘要...',
+    title: 'Second post',
+    excerpt: 'This is a short excerpt from the second post...',
     image: 'https://w.wallhaven.cc/full/j8/wallhaven-j8pk1w.jpg',
     url: '#',
   },
   {
     id: 3,
-    title: '第三篇文章',
-    excerpt: '这是第三篇文章的摘要...',
+    title: 'Third post',
+    excerpt: 'This is a short excerpt from the third post...',
     image: 'https://w.wallhaven.cc/full/6d/wallhaven-6dowgw.jpg',
     url: '#',
   },
-]);
+])
 </script>
 
 <style scoped lang="less">
@@ -60,12 +66,8 @@ const posts = ref([
 }
 
 .personal-info {
-  background: var(--surface-bg);
-  backdrop-filter: blur(12px);
-  color: var(--surface-title);
-  border: 1px solid var(--surface-border);
   padding: 2rem;
-  border-radius: var(--border-radius-md);
+  color: var(--surface-title);
   text-align: center;
 
   .avatar {
@@ -81,12 +83,8 @@ const posts = ref([
 }
 
 .post-card {
-  background: var(--surface-bg);
-  backdrop-filter: blur(12px);
+  padding: 0;
   color: var(--surface-title);
-  border: 1px solid var(--surface-border);
-  box-shadow: 0 10px 24px var(--surface-shadow);
-  border-radius: var(--border-radius-md);
   margin-bottom: 2rem;
   overflow: hidden;
 

@@ -37,6 +37,11 @@
     z-index: 1000;
     --glass-angle: 180deg;
     --glass-radius: calc(2px + 26px * var(--header-progress, 0));
+    background: linear-gradient(
+        var(--glass-angle, 180deg),
+        rgba(var(--glass-bg-start-rgb), calc(var(--glass-bg-start-alpha) * var(--header-glass-opacity))) 0%,
+        rgba(var(--glass-bg-end-rgb), calc(var(--glass-bg-end-alpha) * var(--header-glass-opacity))) 100%
+    );
     border: 1px solid rgba(var(--glass-border-rgb), calc(0.14 + 0.12 * var(--header-progress, 0)));
     border-top-color: rgba(var(--glass-top-border-rgb), calc(0.2 + 0.32 * var(--header-progress, 0)));
     backdrop-filter: blur(calc(14px + 8px * var(--header-progress, 0)))
@@ -51,8 +56,9 @@
         backdrop-filter 260ms ease, -webkit-backdrop-filter 260ms ease;
 }
 
-.glass-shell--top::before {
-    opacity: calc(0.18 + 0.2 * var(--header-progress, 0));
+.glass-shell--top::before,
+.glass-shell--bottom::before {
+    content: none;
 }
 
 .glass-shell--bottom {

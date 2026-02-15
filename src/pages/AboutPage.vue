@@ -21,7 +21,7 @@ Build a post detail route and render markdown dynamically by slug.
 
 <template>
   <div class="about-page">
-    <section class="about-hero glass-shell">
+    <GlassCard as="section" class="about-hero">
       <p class="eyebrow">Content Page</p>
       <h1>About 47-blog</h1>
       <p class="subtitle">Readable article layout with Markdown support.</p>
@@ -30,11 +30,11 @@ Build a post detail route and render markdown dynamically by slug.
         <span>Markdown</span>
         <span>Glass UI</span>
       </div>
-    </section>
+    </GlassCard>
 
-    <section class="about-card glass-shell">
+    <GlassCard as="section" class="about-card">
       <MarkdownContent :content="aboutMarkdown" />
-    </section>
+    </GlassCard>
   </div>
 </template>
 
@@ -51,10 +51,6 @@ Build a post detail route and render markdown dynamically by slug.
 
 .about-hero {
   width: min(920px, 100%);
-  padding: clamp(18px, 3.6vw, 34px);
-  --glass-radius: 20px;
-  border: 1px solid var(--surface-border);
-  box-shadow: 0 12px 30px var(--surface-shadow);
   background:
     radial-gradient(circle at 90% 10%, rgba(115, 166, 240, 0.18), transparent 36%),
     radial-gradient(circle at 0% 100%, rgba(255, 142, 194, 0.12), transparent 34%),
@@ -100,27 +96,12 @@ h1 {
 
 .about-card {
   width: min(920px, 100%);
-  padding: clamp(18px, 3.6vw, 38px);
-  --glass-radius: 20px;
-  border: 1px solid var(--surface-border);
-  box-shadow: 0 14px 36px var(--surface-shadow);
-  background: var(--surface-bg);
-}
-
-.about-hero::before,
-.about-card::before {
-  opacity: 0.22;
 }
 
 @media (max-width: 768px) {
   .about-page {
     padding-top: 96px;
     gap: 12px;
-  }
-
-  .about-card,
-  .about-hero {
-    --glass-radius: 16px;
   }
 }
 </style>

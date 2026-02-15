@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');
 @import 'overrides/scrollbar.less';
 @import './variables.less';
+@import './themes/dark.less';
+@import './themes/light.less';
 
 :root {
-    color-scheme: dark;
     --text-main: #434343;
     --text-secondary: #7b7b7b;
     --text-muted: #b0b0b0;
@@ -22,100 +23,6 @@
     --font-family-heading: 'Zen Maru Gothic', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
     --font-family-body: 'M PLUS Rounded 1c', 'PingFang SC', sans-serif;
     --font-family-code: 'JetBrains Mono', 'Fira Code', monospace;
-
-    /* Theme: dark (default) */
-    --theme-bg: #0d121a;
-
-    --header-text: #f2f6ff;
-    --header-text-muted: rgba(242, 246, 255, 0.8);
-
-    --footer-text: #d5deef;
-    --footer-text-muted: #c4cfdf;
-
-    --glass-bg-start-rgb: 20, 24, 32;
-    --glass-bg-end-rgb: 20, 24, 32;
-    --glass-bg-start-alpha: 0.44;
-    --glass-bg-end-alpha: 0.3;
-    --glass-highlight-start-rgb: 255, 255, 255;
-    --glass-highlight-mid-rgb: 255, 255, 255;
-    --glass-highlight-start-alpha: 0.2;
-    --glass-highlight-mid-alpha: 0.05;
-    --glass-highlight-opacity: 0.5;
-    --glass-border-rgb: 255, 255, 255;
-    --glass-top-border-rgb: 255, 255, 255;
-    --glass-shadow-rgb: 6, 8, 12;
-    --glass-saturate-start: 130;
-    --glass-saturate-boost: 18;
-
-    --surface-bg: rgba(24, 30, 42, 0.72);
-    --surface-border: rgba(255, 255, 255, 0.14);
-    --surface-shadow: rgba(8, 10, 16, 0.24);
-    --surface-title: #f3f6fc;
-    --surface-text: #d0d9e8;
-    --surface-muted: #a8b6cd;
-    --tag-bg: rgba(255, 255, 255, 0.08);
-    --tag-text: #dfe7f5;
-    --tag-border: rgba(255, 255, 255, 0.2);
-
-    --md-text: #d7dfec;
-    --md-heading: #f2f6fd;
-    --md-link: #9ec5ff;
-    --md-link-hover: #c1dcff;
-    --md-divider: rgba(255, 255, 255, 0.16);
-    --md-inline-code-bg: rgba(255, 255, 255, 0.14);
-    --md-inline-code-text: #f4f8ff;
-    --md-code-bg: #1f2836;
-    --md-code-text: #e7edf8;
-    --md-quote-bg: rgba(255, 255, 255, 0.08);
-    --md-quote-border: rgba(159, 196, 255, 0.82);
-}
-
-html[data-theme='light'] {
-    color-scheme: light;
-    --theme-bg: #f3f6fc;
-
-    --header-text: #1f2e43;
-    --header-text-muted: rgba(31, 46, 67, 0.78);
-
-    --footer-text: #34445c;
-    --footer-text-muted: #3f506a;
-
-    --glass-bg-start-rgb: 252, 254, 255;
-    --glass-bg-end-rgb: 244, 248, 255;
-    --glass-bg-start-alpha: 0.78;
-    --glass-bg-end-alpha: 0.66;
-    --glass-highlight-start-rgb: 255, 255, 255;
-    --glass-highlight-mid-rgb: 255, 255, 255;
-    --glass-highlight-start-alpha: 0.38;
-    --glass-highlight-mid-alpha: 0.18;
-    --glass-highlight-opacity: 0.4;
-    --glass-border-rgb: 118, 138, 168;
-    --glass-top-border-rgb: 255, 255, 255;
-    --glass-shadow-rgb: 40, 58, 84;
-    --glass-saturate-start: 120;
-    --glass-saturate-boost: 14;
-
-    --surface-bg: rgba(248, 250, 255, 0.9);
-    --surface-border: rgba(110, 128, 156, 0.26);
-    --surface-shadow: rgba(8, 10, 16, 0.16);
-    --surface-title: #1f2937;
-    --surface-text: #314158;
-    --surface-muted: #46566f;
-    --tag-bg: rgba(255, 255, 255, 0.56);
-    --tag-text: #2a3d59;
-    --tag-border: rgba(110, 128, 156, 0.28);
-
-    --md-text: #2e3c52;
-    --md-heading: #172235;
-    --md-link: #2c67b0;
-    --md-link-hover: #1f4f8a;
-    --md-divider: rgba(66, 84, 108, 0.22);
-    --md-inline-code-bg: rgba(51, 74, 104, 0.12);
-    --md-inline-code-text: #1f2f44;
-    --md-code-bg: #1f2836;
-    --md-code-text: #e7edf8;
-    --md-quote-bg: rgba(69, 104, 149, 0.1);
-    --md-quote-border: rgba(44, 103, 176, 0.75);
 }
 
 *, *::before, *::after {

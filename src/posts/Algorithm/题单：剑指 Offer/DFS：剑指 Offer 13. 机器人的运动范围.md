@@ -1,7 +1,7 @@
 ---
 title: DFS：剑指 Offer 13. 机器人的运动范围
 date: 2023/05/06
-category: 
+categories: 
     - Algorithm
     - 题单：剑指 Offer
 mathjax: false

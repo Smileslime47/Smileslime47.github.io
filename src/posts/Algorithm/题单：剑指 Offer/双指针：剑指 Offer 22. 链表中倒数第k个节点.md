@@ -1,7 +1,7 @@
 ---
 title: 双指针：剑指 Offer 22. 链表中倒数第k个节点
 date: 2023/05/05
-category: 
+categories: 
     - Algorithm
     - 题单：剑指 Offer
 mathjax: false

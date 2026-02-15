@@ -1,7 +1,7 @@
 ---
 title: 位运算：剑指 Offer 56 - I. 数组中数字出现的次数
 date: 2023/05/09
-category: 
+categories: 
     - Algorithm
     - 题单：剑指 Offer
 mathjax: false

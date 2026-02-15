@@ -1,7 +1,7 @@
 ---
 title: 二分：剑指 Offer 53 - I. 在排序数组中查找数字 I
 date: 2023/04/24
-category: 
+categories: 
     - Algorithm
     - 题单：剑指 Offer
 mathjax: false

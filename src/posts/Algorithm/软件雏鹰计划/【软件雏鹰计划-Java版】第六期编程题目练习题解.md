@@ -1,7 +1,7 @@
 ---
 title: 6-【软件雏鹰计划-Java版】第六期编程题目练习题解
 date: 2024/05/13
-category: 
+categories: 
     - Algorithm
     - 软件雏鹰计划
 mathjax: false

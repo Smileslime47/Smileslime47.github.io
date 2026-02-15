@@ -1,7 +1,7 @@
 ---
 title: 动态规划：剑指 Offer 14- I. 剪绳子
 date: 2023/05/16
-category: 
+categories: 
     - Algorithm
     - 题单：剑指 Offer
 mathjax: true

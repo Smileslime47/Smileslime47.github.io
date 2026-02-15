@@ -1,7 +1,7 @@
 ---
 title: BST：剑指 Offer 36. 二叉搜索树与双向链表
 date: 2023/05/06
-category: 
+categories: 
     - Algorithm
     - 题单：剑指 Offer
 mathjax: false

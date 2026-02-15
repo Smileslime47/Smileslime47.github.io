@@ -1,7 +1,7 @@
 ---
 title: 模拟栈：剑指 Offer 31. 栈的压入、弹出序列
 date: 2023/05/18
-category: 
+categories: 
     - Algorithm
     - 题单：剑指 Offer
 mathjax: false

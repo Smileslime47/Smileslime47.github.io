@@ -1,7 +1,7 @@
 ---
 title: 优先队列：剑指 Offer 41. 数据流中的中位数
 date: 2023/05/11
-category: 
+categories: 
     - Algorithm
     - 题单：剑指 Offer
 mathjax: false

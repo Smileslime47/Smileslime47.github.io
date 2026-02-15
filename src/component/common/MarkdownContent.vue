@@ -23,46 +23,46 @@ const renderedHtml = computed(() => md.render(props.content))
 <style scoped lang="less">
 .markdown-content {
   color: var(--md-text);
-  line-height: 1.82;
-  font-size: 1.03rem;
+  line-height: 1.55;
+  font-size: 0.95rem;
 
   :deep(h1),
   :deep(h2),
   :deep(h3) {
     color: var(--md-heading);
-    line-height: 1.3;
-    margin: 1.4em 0 0.6em;
+    line-height: 1.2;
+    margin: 1em 0 0.35em;
     letter-spacing: -0.01em;
   }
 
   :deep(h1) {
-    font-size: clamp(1.8rem, 3.8vw, 2.35rem);
+    font-size: clamp(1.35rem, 2.8vw, 1.85rem);
     margin-top: 0;
   }
 
   :deep(h2) {
-    font-size: clamp(1.3rem, 2.6vw, 1.7rem);
-    padding-bottom: 0.35em;
+    font-size: clamp(1.08rem, 2vw, 1.32rem);
+    padding-bottom: 0.22em;
     border-bottom: 1px solid var(--md-divider);
   }
 
   :deep(h3) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   :deep(p) {
-    margin: 0.92em 0;
+    margin: 0.5em 0;
     color: var(--md-text);
   }
 
   :deep(ul),
   :deep(ol) {
-    margin: 0.8em 0 1em;
-    padding-left: 1.25em;
+    margin: 0.45em 0 0.6em;
+    padding-left: 1.1em;
   }
 
   :deep(li) {
-    margin: 0.3em 0;
+    margin: 0.16em 0;
   }
 
   :deep(a) {
@@ -77,8 +77,8 @@ const renderedHtml = computed(() => md.render(props.content))
   }
 
   :deep(code) {
-    padding: 0.16rem 0.45rem;
-    border-radius: 6px;
+    padding: 0.08rem 0.34rem;
+    border-radius: 4px;
     background: var(--md-inline-code-bg);
     color: var(--md-inline-code-text);
     font-family: var(--font-family-code), monospace;
@@ -86,9 +86,9 @@ const renderedHtml = computed(() => md.render(props.content))
   }
 
   :deep(pre) {
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 12px;
+    margin: 0.6rem 0;
+    padding: 0.7rem 0.8rem;
+    border-radius: 8px;
     overflow: auto;
     border: 1px solid var(--md-divider);
     background: var(--md-code-bg);
@@ -103,15 +103,15 @@ const renderedHtml = computed(() => md.render(props.content))
   }
 
   :deep(blockquote) {
-    margin: 1rem 0;
-    padding: 0.7rem 1rem;
+    margin: 0.55rem 0;
+    padding: 0.45rem 0.7rem;
     border-left: 3px solid var(--md-quote-border);
     background: var(--md-quote-bg);
     color: var(--md-text);
   }
 
   :deep(hr) {
-    margin: 1.6rem 0;
+    margin: 0.8rem 0;
     border: 0;
     border-top: 1px solid var(--md-divider);
   }

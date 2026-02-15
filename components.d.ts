@@ -12,6 +12,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AboutPage: typeof import('./src/pages/AboutPage.vue')['default']
+    ArchivePage: typeof import('./src/pages/ArchivePage.vue')['default']
     ContentPageLayout: typeof import('./src/component/common/ContentPageLayout.vue')['default']
     Footer: typeof import('./src/component/layout/Footer.vue')['default']
     GlassCard: typeof import('./src/component/common/GlassCard.vue')['default']
@@ -24,5 +25,6 @@ declare module 'vue' {
     PostsPage: typeof import('./src/pages/PostsPage.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TagsPage: typeof import('./src/pages/TagsPage.vue')['default']
   }
 }

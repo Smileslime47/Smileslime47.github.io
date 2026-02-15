@@ -1,7 +1,7 @@
 ﻿import { parseFrontmatter } from './frontmatter-parser'
 import { buildCategoryTree, buildPostSummaries } from './index-builder'
 import type { PostLoaderMap } from './loaders'
-import type { PostEntry, PostSummary, PostsService, CategoryNode } from './types'
+import type { PostEntry, PostSummary, PostsService, CategoryNode, PostMeta, FrontmatterValue } from './types'
 
 /**
  * 文章仓储实现（PostsService 的核心实现）。
@@ -22,6 +22,8 @@ export class PostRepository implements PostsService {
   private readonly loaderById: Map<string, () => Promise<string>>
   /** 文章详情缓存，避免重复请求和重复解析。 */
   private readonly postCache = new Map<string, Promise<PostEntry>>()
+  /** 全量元信息缓存，避免归档/标签页重复解析。 */
+  private allMetaCache?: Promise<PostMeta[]>
 
   /**
    * 构造阶段只做“轻量工作”：
@@ -40,6 +42,44 @@ export class PostRepository implements PostsService {
   /** 返回所有文章摘要（已排序）。 */
   getAllPosts(): PostSummary[] {
     return this.summaries
+  }
+
+  async loadAllPostMetas(): Promise<PostMeta[]> {
+    if (this.allMetaCache) return this.allMetaCache
+
+    this.allMetaCache = Promise.all(
+      this.summaries.map(async (summary) => {
+        const loader = this.loaderById.get(summary.id)
+        if (!loader) {
+          throw new Error(`Cannot find post loader for ${summary.id}`)
+        }
+
+        const raw = await loader()
+        const { frontmatter } = parseFrontmatter(raw)
+        const { publishedAt, publishedAtTs } = resolvePublishedAt(frontmatter)
+        const fmTitle = frontmatter.title
+        const title = typeof fmTitle === 'string' && fmTitle.trim() !== '' ? fmTitle : summary.title
+
+        return {
+          ...summary,
+          title,
+          frontmatter,
+          publishedAt,
+          publishedAtTs,
+        }
+      })
+    ).then((items) =>
+      items.sort((a, b) => {
+        if (a.publishedAtTs != null && b.publishedAtTs != null) {
+          return b.publishedAtTs - a.publishedAtTs
+        }
+        if (a.publishedAtTs != null) return -1
+        if (b.publishedAtTs != null) return 1
+        return a.title.localeCompare(b.title, 'zh-Hans-CN')
+      })
+    )
+
+    return this.allMetaCache
   }
 
   /** 返回分类树（已排序）。 */
@@ -133,4 +173,23 @@ export class PostRepository implements PostsService {
       return value
     }
   }
+}
+
+const DATE_KEYS = ['date', 'publishedAt', 'publishDate', 'createdAt'] as const
+
+function resolvePublishedAt(frontmatter: Record<string, FrontmatterValue>): {
+  publishedAt?: string
+  publishedAtTs: number | null
+} {
+  for (const key of DATE_KEYS) {
+    const raw = frontmatter[key]
+    if (typeof raw !== 'string' || raw.trim() === '') continue
+    const normalized = raw.trim()
+    const ts = Date.parse(normalized)
+    return {
+      publishedAt: normalized,
+      publishedAtTs: Number.isNaN(ts) ? null : ts,
+    }
+  }
+  return { publishedAtTs: null }
 }

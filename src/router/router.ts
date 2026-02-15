@@ -8,6 +8,8 @@ export const router = createRouter({
   routes: [
     { path: '/', component: () => import('@/pages/HomePage.vue') },
     { path: '/posts', component: () => import('@/pages/PostsPage.vue') },
+    { path: '/archive', component: () => import('@/pages/ArchivePage.vue') },
+    { path: '/tags', component: () => import('@/pages/TagsPage.vue') },
     { path: '/posts/:pathMatch(.*)*', component: () => import('@/pages/PostDetailPage.vue') },
     { path: '/about', component: () => import('@/pages/AboutPage.vue') },
   ],

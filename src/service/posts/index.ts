@@ -6,7 +6,7 @@ import type { PostsService } from './types'
  * 对外统一导出的类型。
  * 页面层/组件层优先从这里引用，避免跨文件直接耦合内部实现。
  */
-export type { PostEntry, PostSummary, CategoryNode, PostsService, FrontmatterValue } from './types'
+export type { PostEntry, PostSummary, CategoryNode, PostsService, FrontmatterValue, PostMeta } from './types'
 
 /**
  * 全局单例服务：

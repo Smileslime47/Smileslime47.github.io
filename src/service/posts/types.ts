@@ -41,6 +41,19 @@ export interface PostEntry extends PostSummary {
 }
 
 /**
+ * 文章元信息对象（中量对象）。
+ * 用于归档、标签页等需要 frontmatter 但不需要正文渲染的场景。
+ */
+export interface PostMeta extends PostSummary {
+  /** frontmatter 解析结果 */
+  frontmatter: Record<string, FrontmatterValue>
+  /** 解析出的发布时间（优先 date/publishedAt/publishDate/createdAt） */
+  publishedAt?: string
+  /** 发布时间的时间戳，便于排序；无有效日期时为 null */
+  publishedAtTs: number | null
+}
+
+/**
  * 分类树节点。
  * 每个节点既可能有子分类，也可能直接挂文章（posts）。
  */
@@ -62,6 +75,8 @@ export interface CategoryNode {
 export interface PostsService {
   /** 获取全部文章摘要（已排序）。 */
   getAllPosts(): PostSummary[]
+  /** 获取全量文章元信息（按发布日期倒序）。 */
+  loadAllPostMetas(): Promise<PostMeta[]>
   /** 获取分类树（已排序）。 */
   getCategoryTree(): CategoryNode[]
   /** 通过路由 segments 查询摘要。 */

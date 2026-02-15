@@ -1,14 +1,11 @@
-<script setup lang="ts">
-</script>
-
 <template>
-  <header class="glass-shell glass-shell--top">
-    <Header/>
-  </header>
-  <main>
-    <HomePage/>
-  </main>
-  <footer class="glass-shell glass-shell--bottom">
-    <Footer/>
-  </footer>
+    <header>
+        <Header class="glass-shell glass-shell--top"/>
+    </header>
+    <main>
+        <RouterView/>
+    </main>
+    <footer>
+        <Footer class="glass-shell glass-shell--bottom"/>
+    </footer>
 </template>

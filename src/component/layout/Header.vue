@@ -1,13 +1,52 @@
 <script setup lang="ts">
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+
+const HEADER_CONTENT_WIDTH = 920
+const HEADER_SHELL_PADDING = 28
+const HEADER_MAX_PROGRESS_SCROLL = 160
+
+const route = useRoute()
+const headerProgress = ref(0)
+
 const menuItems = [
     {name: '首页', path: '/'},
     {name: '归档', path: '/archives'},
     {name: '关于', path: '/about'},
 ]
+
+const updateHeaderProgress = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight
+    const normalizationBase = Math.max(1, Math.min(HEADER_MAX_PROGRESS_SCROLL, scrollable))
+    headerProgress.value = Math.min(window.scrollY / normalizationBase, 1)
+}
+
+const headerStyle = computed(() => ({
+    '--header-progress': String(headerProgress.value),
+    '--header-content-width': `${HEADER_CONTENT_WIDTH}px`,
+    '--header-shell-width': `${HEADER_CONTENT_WIDTH + HEADER_SHELL_PADDING}px`,
+}))
+
+onMounted(() => {
+    updateHeaderProgress()
+    window.addEventListener('scroll', updateHeaderProgress, { passive: true })
+})
+
+watch(
+    () => route.fullPath,
+    async () => {
+        await nextTick()
+        updateHeaderProgress()
+    }
+)
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', updateHeaderProgress)
+})
 </script>
 
 <template>
-    <div class="navigation">
+    <header class="navigation" :style="headerStyle">
         <div class="nav-inner">
             <router-link to="/" class="brand">
                 47Saikyo
@@ -26,25 +65,24 @@ const menuItems = [
                 <span>🌙</span>
             </div>
         </div>
-    </div>
+    </header>
 </template>
 
 <style lang="less" scoped>
 .navigation {
-    width: 100%;
     height: 60px;
+    padding: 0 8px;
 
     .center();
 
     .nav-inner {
-        width: 100%;
-        max-width: 1100px;
-        margin: 0 auto;
+        width: min(100%, var(--header-content-width, 920px));
+        min-width: 0;
         padding: 0 20px;
-
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: clamp(16px, 3vw, 36px);
     }
 
     .brand {
@@ -56,7 +94,7 @@ const menuItems = [
 
     .nav-links {
         display: flex;
-        gap: 20px; // 链接之间的间距
+        gap: clamp(12px, 2vw, 20px);
 
         .nav-item {
             color: rgba(255, 255, 255, 0.8);
@@ -68,12 +106,15 @@ const menuItems = [
                 color: white;
             }
 
-            // Vue Router 会自动给当前激活的链接加上这个类
             &.router-link-active {
                 color: white;
                 font-weight: bold;
             }
         }
+    }
+
+    .actions {
+        flex-shrink: 0;
     }
 }
 </style>

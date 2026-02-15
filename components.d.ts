@@ -19,6 +19,9 @@ declare module 'vue' {
     HomeContent: typeof import('./src/component/area/homepage/HomeContent.vue')['default']
     HomePage: typeof import('./src/pages/HomePage.vue')['default']
     MarkdownContent: typeof import('./src/component/common/MarkdownContent.vue')['default']
+    PostDetailPage: typeof import('./src/pages/PostDetailPage.vue')['default']
+    PostFolderTree: typeof import('./src/component/content/PostFolderTree.vue')['default']
+    PostsPage: typeof import('./src/pages/PostsPage.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

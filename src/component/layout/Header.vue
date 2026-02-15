@@ -13,7 +13,7 @@ const theme = ref<'dark' | 'light'>('dark')
 
 const menuItems = [
   { name: '首页', path: '/' },
-  { name: '归档', path: '/archives' },
+  { name: '文章', path: '/posts' },
   { name: '关于', path: '/about' },
 ]
 

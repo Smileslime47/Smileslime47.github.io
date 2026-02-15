@@ -7,18 +7,28 @@
       </div>
     </div>
     <HomeContent />
-    <div class="background-container" :class="{ blurred: isScrolled }"></div>
+    <div
+      class="background-container"
+      :class="{ blurred: isScrolled }"
+      :style="{ backgroundImage: `url(${backgroundImage})` }"
+    ></div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import bgDark from '@/assets/bg-dark.jpg';
+import bgLight from '@/assets/bg-light.jpg';
+import { computed, ref, onMounted, onUnmounted } from 'vue';
 
 const isScrolled = ref(false);
+const currentTheme = ref<'dark' | 'light'>('dark');
 const fullText = "and in that light, I find deliverance.";
 const displayedText = ref("");
 const showCursor = ref(true);
 let charIndex = 0;
+let themeObserver: MutationObserver | null = null;
+
+const backgroundImage = computed(() => (currentTheme.value === 'light' ? bgLight : bgDark));
 
 const typeText = () => {
   if (charIndex < fullText.length) {
@@ -38,12 +48,22 @@ const handleScroll = () => {
 };
 
 onMounted(() => {
+  const syncTheme = () => {
+    currentTheme.value = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+  };
+  syncTheme();
+  themeObserver = new MutationObserver(syncTheme);
+  themeObserver.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme'],
+  });
   window.addEventListener('scroll', handleScroll);
   typeText();
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
+  themeObserver?.disconnect();
 });
 </script>
 
@@ -58,7 +78,6 @@ onUnmounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../assets/bg-dark.jpg');
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -75,7 +94,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  color: white;
+  color: var(--surface-title);
   text-align: center;
 }
 
@@ -83,15 +102,17 @@ onUnmounted(() => {
   max-width: 600px;
 
   p {
-    display: inline;
+    color: var(--surface-text);
   }
+
+  p { display: inline; }
 }
 
 .cursor {
   display: inline-block;
   width: 2px;
   height: 1em;
-  background-color: white;
+  background-color: var(--surface-title);
   margin-left: 2px;
   transition: opacity 0.1s;
 }

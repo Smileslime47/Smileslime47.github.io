@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 import MarkdownIt from 'markdown-it'
 import { computed } from 'vue'
 
@@ -22,16 +22,16 @@ const renderedHtml = computed(() => md.render(props.content))
 
 <style scoped lang="less">
 .markdown-content {
-  color: #d5ddeb;
-  line-height: 1.85;
+  color: var(--md-text);
+  line-height: 1.82;
   font-size: 1.03rem;
 
   :deep(h1),
   :deep(h2),
   :deep(h3) {
-    color: #f3f6fc;
+    color: var(--md-heading);
     line-height: 1.3;
-    margin: 1.5em 0 0.6em;
+    margin: 1.4em 0 0.6em;
     letter-spacing: -0.01em;
   }
 
@@ -43,7 +43,7 @@ const renderedHtml = computed(() => md.render(props.content))
   :deep(h2) {
     font-size: clamp(1.3rem, 2.6vw, 1.7rem);
     padding-bottom: 0.35em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1px solid var(--md-divider);
   }
 
   :deep(h3) {
@@ -51,8 +51,8 @@ const renderedHtml = computed(() => md.render(props.content))
   }
 
   :deep(p) {
-    margin: 0.95em 0;
-    color: #d0d9e8;
+    margin: 0.92em 0;
+    color: var(--md-text);
   }
 
   :deep(ul),
@@ -62,25 +62,25 @@ const renderedHtml = computed(() => md.render(props.content))
   }
 
   :deep(li) {
-    margin: 0.35em 0;
+    margin: 0.3em 0;
   }
 
   :deep(a) {
-    color: #9ec5ff;
+    color: var(--md-link);
     text-decoration: none;
-    border-bottom: 1px dashed rgba(158, 197, 255, 0.52);
+    border-bottom: 1px dashed color-mix(in oklab, var(--md-link), transparent 52%);
   }
 
   :deep(a:hover) {
-    color: #c1dcff;
+    color: var(--md-link-hover);
     border-bottom-style: solid;
   }
 
   :deep(code) {
     padding: 0.16rem 0.45rem;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.12);
-    color: #f4f8ff;
+    background: var(--md-inline-code-bg);
+    color: var(--md-inline-code-text);
     font-family: var(--font-family-code), monospace;
     font-size: 0.9em;
   }
@@ -90,28 +90,30 @@ const renderedHtml = computed(() => md.render(props.content))
     padding: 1rem;
     border-radius: 12px;
     overflow: auto;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(6, 10, 16, 0.56);
+    border: 1px solid var(--md-divider);
+    background: var(--md-code-bg);
+    color: var(--md-code-text);
   }
 
   :deep(pre code) {
     padding: 0;
     background: transparent;
+    color: inherit;
     border-radius: 0;
   }
 
   :deep(blockquote) {
     margin: 1rem 0;
     padding: 0.7rem 1rem;
-    border-left: 3px solid rgba(159, 196, 255, 0.8);
-    background: rgba(255, 255, 255, 0.06);
-    color: #dce6f7;
+    border-left: 3px solid var(--md-quote-border);
+    background: var(--md-quote-bg);
+    color: var(--md-text);
   }
 
   :deep(hr) {
     margin: 1.6rem 0;
     border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid var(--md-divider);
   }
 }
 </style>

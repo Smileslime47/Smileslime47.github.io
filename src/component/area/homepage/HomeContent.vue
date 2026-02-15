@@ -60,9 +60,10 @@ const posts = ref([
 }
 
 .personal-info {
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  color: white;
+  background: var(--surface-bg);
+  backdrop-filter: blur(12px);
+  color: var(--surface-title);
+  border: 1px solid var(--surface-border);
   padding: 2rem;
   border-radius: var(--border-radius-md);
   text-align: center;
@@ -80,9 +81,11 @@ const posts = ref([
 }
 
 .post-card {
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  color: white;
+  background: var(--surface-bg);
+  backdrop-filter: blur(12px);
+  color: var(--surface-title);
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 10px 24px var(--surface-shadow);
   border-radius: var(--border-radius-md);
   margin-bottom: 2rem;
   overflow: hidden;
@@ -103,13 +106,13 @@ const posts = ref([
 
     p {
       font-size: 1rem;
-      color: rgba(255, 255, 255, 0.8);
+      color: var(--surface-text);
       margin: 0 0 1rem;
     }
 
     a {
       text-decoration: none;
-      color: #ff69b4;
+      color: var(--md-link);
       font-weight: bold;
     }
   }

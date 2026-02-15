@@ -5,11 +5,11 @@
     border-radius: var(--glass-radius, 0);
     background: linear-gradient(
         var(--glass-angle, 180deg),
-        rgba(20, 24, 32, 0.42) 0%,
-        rgba(20, 24, 32, 0.3) 100%
+        rgba(var(--glass-bg-start-rgb), var(--glass-bg-start-alpha)) 0%,
+        rgba(var(--glass-bg-end-rgb), var(--glass-bg-end-alpha)) 100%
     );
-    backdrop-filter: blur(18px) saturate(140%);
-    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    backdrop-filter: blur(18px) saturate(calc(var(--glass-saturate-start) * 1%));
+    -webkit-backdrop-filter: blur(18px) saturate(calc(var(--glass-saturate-start) * 1%));
 }
 
 .glass-shell::before {
@@ -20,11 +20,11 @@
     pointer-events: none;
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.18) 0%,
-        rgba(255, 255, 255, 0.04) 35%,
+        rgba(var(--glass-highlight-start-rgb), var(--glass-highlight-start-alpha)) 0%,
+        rgba(var(--glass-highlight-mid-rgb), var(--glass-highlight-mid-alpha)) 35%,
         rgba(255, 255, 255, 0) 100%
     );
-    opacity: 0.55;
+    opacity: var(--glass-highlight-opacity);
 }
 
 .glass-shell--top {
@@ -37,28 +37,28 @@
     z-index: 1000;
     --glass-angle: 180deg;
     --glass-radius: calc(2px + 26px * var(--header-progress, 0));
-    border: 1px solid rgba(255, 255, 255, calc(0.08 + 0.08 * var(--header-progress, 0)));
-    border-top-color: rgba(255, 255, 255, calc(0.02 + 0.08 * var(--header-progress, 0)));
+    border: 1px solid rgba(var(--glass-border-rgb), calc(0.14 + 0.12 * var(--header-progress, 0)));
+    border-top-color: rgba(var(--glass-top-border-rgb), calc(0.2 + 0.32 * var(--header-progress, 0)));
     backdrop-filter: blur(calc(14px + 8px * var(--header-progress, 0)))
-        saturate(calc(130% + 18% * var(--header-progress, 0)));
+        saturate(calc((var(--glass-saturate-start) + var(--glass-saturate-boost) * var(--header-progress, 0)) * 1%));
     -webkit-backdrop-filter: blur(calc(14px + 8px * var(--header-progress, 0)))
-        saturate(calc(130% + 18% * var(--header-progress, 0)));
+        saturate(calc((var(--glass-saturate-start) + var(--glass-saturate-boost) * var(--header-progress, 0)) * 1%));
     box-shadow: 0 calc(4px + 10px * var(--header-progress, 0))
         calc(14px + 18px * var(--header-progress, 0))
-        rgba(6, 8, 12, calc(0.1 + 0.12 * var(--header-progress, 0)));
+        rgba(var(--glass-shadow-rgb), calc(0.08 + 0.1 * var(--header-progress, 0)));
     transition: top 260ms ease, width 260ms ease, border-radius 260ms ease,
         box-shadow 260ms ease, border-color 260ms ease,
         backdrop-filter 260ms ease, -webkit-backdrop-filter 260ms ease;
 }
 
 .glass-shell--top::before {
-    opacity: calc(0.28 + 0.27 * var(--header-progress, 0));
+    opacity: calc(0.18 + 0.2 * var(--header-progress, 0));
 }
 
 .glass-shell--bottom {
     text-align: center;
     padding: 2rem 0;
     --glass-angle: 0deg;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 -8px 22px rgba(6, 8, 12, 0.14);
+    border-top: 1px solid rgba(var(--glass-border-rgb), 0.2);
+    box-shadow: 0 -8px 22px rgba(var(--glass-shadow-rgb), 0.1);
 }

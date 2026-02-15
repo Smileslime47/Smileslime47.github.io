@@ -1,21 +1,21 @@
 ï»¿<script setup lang="ts">
 const aboutMarkdown = `
-# ¹ØÓÚ
+# About
 
-»¶Ó­À´µ½ **47-blog**¡£ÕâÀïÊÇÒ»¸öÓÃÓÚÑİÊ¾ÄÚÈİÒ³ÑùÊ½Óë Markdown äÖÈ¾ÄÜÁ¦µÄÒ³Ãæ¡£
+Welcome to **47-blog**. This page demonstrates a readable content layout with Markdown rendering.
 
-## µ±Ç°Ö§³Ö
+## What It Supports
 
-- ±êÌâ¡¢¶ÎÂä¡¢ÁĞ±í
-- [Á´½Ó](https://47saikyo.moe)
-- ĞĞÄÚ´úÂë£º\`const hello = "world"\`
-- ÒıÓÃ¿é
+- Headings, paragraphs, lists
+- [Links](https://47saikyo.moe)
+- Inline code: \`const hello = "world"\`
+- Blockquote
 
-> Õâ¸öÒ³Ãæ¿ÉÒÔÖ±½Ó³ĞÔØ²©¿ÍÕıÎÄ£¬ºóĞø¿É½ÓÈë±¾µØ Markdown ÎÄ¼ş»ò API¡£
+> You can later load markdown from local files or an API and render it here.
 
-## ÏÂÒ»²½
+## Next Step
 
-Äã¿ÉÒÔ°ÑÃ¿ÆªÎÄÕÂµÄÕıÎÄÄÚÈİ°´ Markdown ×éÖ¯£¬ÔÙÍ¨¹ıÂ·ÓÉ²ÎÊı°´ÎÄÕÂ¶¯Ì¬äÖÈ¾¡£
+Build a post detail route and render markdown dynamically by slug.
 `
 </script>
 
@@ -24,7 +24,7 @@ const aboutMarkdown = `
     <section class="about-hero glass-shell">
       <p class="eyebrow">Content Page</p>
       <h1>About 47-blog</h1>
-      <p class="subtitle">Ò»¸ö¼ò½à¡¢¿ÉÀ©Õ¹¡¢Ö§³Ö Markdown µÄÄÚÈİÊµÑéÒ³¡£</p>
+      <p class="subtitle">Readable article layout with Markdown support.</p>
       <div class="tags">
         <span>Vue 3</span>
         <span>Markdown</span>
@@ -53,11 +53,12 @@ const aboutMarkdown = `
   width: min(920px, 100%);
   padding: clamp(18px, 3.6vw, 34px);
   --glass-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow: 0 12px 30px rgba(8, 10, 16, 0.2);
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 12px 30px var(--surface-shadow);
   background:
-    radial-gradient(circle at 90% 10%, rgba(159, 196, 255, 0.12), transparent 36%),
-    radial-gradient(circle at 0% 100%, rgba(255, 142, 194, 0.08), transparent 34%);
+    radial-gradient(circle at 90% 10%, rgba(115, 166, 240, 0.18), transparent 36%),
+    radial-gradient(circle at 0% 100%, rgba(255, 142, 194, 0.12), transparent 34%),
+    var(--surface-bg);
 }
 
 .eyebrow {
@@ -65,19 +66,19 @@ const aboutMarkdown = `
   font-size: 0.76rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(241, 245, 251, 0.62);
+  color: var(--surface-muted);
 }
 
 h1 {
   margin: 0;
-  color: #f3f6fc;
+  color: var(--surface-title);
   font-size: clamp(1.6rem, 3.4vw, 2.2rem);
   line-height: 1.2;
 }
 
 .subtitle {
   margin: 10px 0 0;
-  color: #ccd6e9;
+  color: var(--surface-text);
   font-size: 1rem;
 }
 
@@ -91,18 +92,24 @@ h1 {
 .tags span {
   padding: 4px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #dfe7f5;
+  border: 1px solid var(--tag-border);
+  color: var(--tag-text);
   font-size: 0.82rem;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--tag-bg);
 }
 
 .about-card {
   width: min(920px, 100%);
   padding: clamp(18px, 3.6vw, 38px);
   --glass-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 14px 36px rgba(8, 10, 16, 0.24);
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 14px 36px var(--surface-shadow);
+  background: var(--surface-bg);
+}
+
+.about-hero::before,
+.about-card::before {
+  opacity: 0.22;
 }
 
 @media (max-width: 768px) {

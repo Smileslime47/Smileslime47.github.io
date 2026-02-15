@@ -1,17 +1,49 @@
-<script setup lang="ts">
-import { computed } from 'vue'
+﻿<script setup lang="ts">
+import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { getPostBySegments } from '@/content/posts'
+import { postsService, type PostEntry } from '@/service/posts'
 
 const route = useRoute()
+const post = ref<PostEntry | null>(null)
+const loading = ref(false)
+const notFound = ref(false)
+const loadError = ref('')
 
-const post = computed(() => {
-  const param = route.params.pathMatch
-  const segments = Array.isArray(param) ? param : typeof param === 'string' ? [param] : []
-  return getPostBySegments(segments.map((segment) => decodeURIComponent(segment)))
+const title = computed(() => {
+  if (loading.value) return '加载中...'
+  if (notFound.value) return '未找到文章'
+  return post.value?.title ?? '文章'
 })
 
-const title = computed(() => post.value?.title ?? '未找到文章')
+const loadCurrentPost = async () => {
+  const param = route.params.pathMatch
+  const segments = Array.isArray(param) ? param : typeof param === 'string' ? [param] : []
+  const decoded = segments.map((segment) => decodeURIComponent(segment))
+
+  loading.value = true
+  notFound.value = false
+  loadError.value = ''
+
+  try {
+    const result = await postsService.loadPostBySegments(decoded)
+    post.value = result ?? null
+    notFound.value = !result
+  } catch (error) {
+    post.value = null
+    notFound.value = false
+    loadError.value = error instanceof Error ? error.message : String(error)
+  } finally {
+    loading.value = false
+  }
+}
+
+watch(
+  () => route.fullPath,
+  () => {
+    void loadCurrentPost()
+  },
+  { immediate: true }
+)
 </script>
 
 <template>
@@ -26,7 +58,9 @@ const title = computed(() => post.value?.title ?? '未找到文章')
     </template>
 
     <template #default>
-      <MarkdownContent v-if="post" :content="post.content" />
+      <p v-if="loading" class="empty">正在加载文章内容...</p>
+      <p v-else-if="loadError" class="empty">文章加载失败：{{ loadError }}</p>
+      <MarkdownContent v-else-if="post" :content="post.content" />
       <p v-else class="empty">未找到对应文章，请返回文章目录检查路径。</p>
     </template>
   </ContentPageLayout>

@@ -1,10 +1,9 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 import { computed } from 'vue'
-import { getAllPosts, getCategoryTree } from '@/content/posts'
+import { postsService } from '@/service/posts'
 
-const posts = getAllPosts()
-const categoryTree = getCategoryTree()
-
+const posts = postsService.getAllPosts()
+const categoryTree = postsService.getCategoryTree()
 const totalPosts = computed(() => posts.length)
 </script>
 

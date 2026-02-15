@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CategoryNode } from '@/content/posts'
+import type { CategoryNode } from '@/service/posts'
 
 defineProps<{
   node: CategoryNode

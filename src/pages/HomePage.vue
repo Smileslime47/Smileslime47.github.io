@@ -6,18 +6,14 @@
         <p>{{ displayedText }}<span class="cursor" :class="{ 'cursor-hidden': !showCursor }"></span></p>
       </div>
     </div>
-    <div class="content">
-      <h2>About Me</h2>
-      <p>This is where the content about me will go.</p>
-      <!-- Add more content to make the page scrollable -->
-      <p style="height: 1000px"></p>
-    </div>
+    <HomeContent />
     <div class="background-container" :class="{ blurred: isScrolled }"></div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
+import HomeContent from '@/component/area/homepage/HomeContent.vue';
 
 const isScrolled = ref(false);
 const fullText = "and in that light, I find deliverance.";
@@ -103,14 +99,5 @@ onUnmounted(() => {
 
 .cursor-hidden {
   opacity: 0;
-}
-
-.content {
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-  backdrop-filter: blur(10px); /* Apply blur to the background of the content */
-  color: white;
-  margin: 0 2rem;
-  border-radius: var(--border-radius-md);
 }
 </style>

@@ -53,7 +53,7 @@ const menuItems = [
     }
 
     .brand {
-        font-size: 1.2rem;
+        font-size: 1.7rem;
         font-weight: bold;
         color: white;
         cursor: pointer;

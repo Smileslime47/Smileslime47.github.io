@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import HomePage from '@/pages/HomePage.vue'
-import Header from "@/component/layout/Header.vue";
-import Footer from "@/component/layout/Footer.vue";
 </script>
 
 <template>

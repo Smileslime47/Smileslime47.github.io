@@ -13,7 +13,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
-import HomeContent from '@/component/area/homepage/HomeContent.vue';
 
 const isScrolled = ref(false);
 const fullText = "and in that light, I find deliverance.";

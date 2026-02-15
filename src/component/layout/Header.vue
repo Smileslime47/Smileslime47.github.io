@@ -31,12 +31,7 @@ const menuItems = [
 
 <style lang="less" scoped>
 .navigation {
-    position: fixed;
     width: 100%;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     height: 60px;
 
     .center();

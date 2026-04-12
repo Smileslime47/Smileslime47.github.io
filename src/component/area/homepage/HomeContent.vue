@@ -25,49 +25,29 @@
 
         <GlassCard class="contact-card">
           <h3>47Saikyo</h3>
-          <p>希望对你有所帮助！</p>
+          <p>希望对你有所帮助。</p>
           <p>如果想了解更多关于我的事情，你也可以看看 About 页面。</p>
           <p>想要联系我的话，请尽量使用两个 Gmail 邮箱。</p>
           <p>Outlook 邮箱主要被我用来接收网站推送。</p>
 
           <div class="contact-handles">
-            <p>
-              <Icon icon="simple-icons:tencentqq" />
-              <span>QQ</span>
-              <strong>Talloran47</strong>
-            </p>
-            <p>
-              <Icon icon="simple-icons:wechat" />
-              <span>WeChat</span>
-              <strong>smile_slime_47</strong>
-            </p>
-            <p>
-              <Icon icon="simple-icons:telegram" />
-              <span>Telegram</span>
-              <strong>@Smile_slime_47</strong>
+            <p v-for="handle in contactHandles" :key="handle.label">
+              <Icon :icon="handle.icon" />
+              <span>{{ handle.label }}</span>
+              <strong>{{ handle.value }}</strong>
             </p>
           </div>
 
           <div class="contact-links">
-            <a href="mailto:smile_slime_47@outlook.com">
-              <Icon icon="simple-icons:microsoft" />
-              Outlook (Email)
-            </a>
-            <a href="mailto:smiling.slime.47@gmail.com">
-              <Icon icon="simple-icons:gmail" />
-              Gmail (Email)
-            </a>
-            <a href="mailto:lyb.compsci@gmail.com">
-              <Icon icon="simple-icons:gmail" />
-              Business (Email)
-            </a>
-            <a href="https://steamcommunity.com/id/47saikyo/" target="_blank" rel="noreferrer">
-              <Icon icon="simple-icons:steam" />
-              Steam
-            </a>
-            <a href="https://github.com/Smileslime47" target="_blank" rel="noreferrer">
-              <Icon icon="simple-icons:github" />
-              Github
+            <a
+              v-for="link in contactLinks"
+              :key="link.label"
+              :href="link.href"
+              :target="link.external ? '_blank' : undefined"
+              :rel="link.external ? 'noreferrer' : undefined"
+            >
+              <Icon :icon="link.icon" />
+              {{ link.label }}
             </a>
           </div>
         </GlassCard>
@@ -114,15 +94,19 @@
 </template>
 
 <script setup lang="ts">
-import { Icon, addCollection } from '@iconify/vue'
-import { icons as simpleIcons } from '@iconify-json/simple-icons'
-import { icons as mdiIcons } from '@iconify-json/mdi'
+import { Icon } from '@iconify/vue/offline'
 import { computed, nextTick, ref, watch } from 'vue'
 import { postsService } from '@/service/posts'
 import type { CategoryNode, FrontmatterValue, PostMeta } from '@/service/posts'
-
-addCollection(simpleIcons)
-addCollection(mdiIcons)
+import {
+  iconGithub,
+  iconGmail,
+  iconMicrosoft,
+  iconQq,
+  iconSteam,
+  iconTelegram,
+  iconWechat,
+} from './homeContactIcons'
 
 const PAGE_SIZE = 10
 
@@ -131,6 +115,20 @@ const posts = ref<PostMeta[]>([])
 const currentPage = ref(1)
 const postListRef = ref<HTMLElement | null>(null)
 const categoryTree = postsService.getCategoryTree()
+
+const contactHandles = [
+  { label: 'QQ', value: 'Talloran47', icon: iconQq },
+  { label: 'WeChat', value: 'smile_slime_47', icon: iconWechat },
+  { label: 'Telegram', value: '@Smile_slime_47', icon: iconTelegram },
+]
+
+const contactLinks = [
+  { label: 'Outlook (Email)', href: 'mailto:smile_slime_47@outlook.com', icon: iconMicrosoft, external: false },
+  { label: 'Gmail (Email)', href: 'mailto:smiling.slime.47@gmail.com', icon: iconGmail, external: false },
+  { label: 'Business (Email)', href: 'mailto:lyb.compsci@gmail.com', icon: iconGmail, external: false },
+  { label: 'Steam', href: 'https://steamcommunity.com/id/47saikyo/', icon: iconSteam, external: true },
+  { label: 'Github', href: 'https://github.com/Smileslime47', icon: iconGithub, external: true },
+]
 
 postsService
   .loadAllPostMetas()
@@ -350,17 +348,6 @@ function countCategoryNodes(nodes: CategoryNode[]): number {
   color: var(--surface-title);
 }
 
-.contact-handles a,
-.contact-links a {
-  color: var(--surface-title);
-  text-decoration: none;
-}
-
-.contact-handles a:hover,
-.contact-links a:hover {
-  color: var(--md-link-hover);
-}
-
 .contact-links {
   margin-top: 18px;
   display: flex;
@@ -368,7 +355,6 @@ function countCategoryNodes(nodes: CategoryNode[]): number {
   gap: 10px;
 }
 
-.contact-links span,
 .contact-links a {
   color: var(--surface-title);
   font-size: 0.94rem;
@@ -376,10 +362,15 @@ function countCategoryNodes(nodes: CategoryNode[]): number {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  text-decoration: none;
 }
 
-.contact-handles :deep(.iconify),
-.contact-links :deep(.iconify) {
+.contact-links a:hover {
+  color: var(--md-link-hover);
+}
+
+.contact-handles :deep(svg),
+.contact-links :deep(svg) {
   width: 1.05rem;
   height: 1.05rem;
   flex-shrink: 0;
@@ -526,7 +517,6 @@ function countCategoryNodes(nodes: CategoryNode[]): number {
   .intro,
   .contact-card > p,
   .contact-handles p,
-  .contact-links span,
   .contact-links a {
     font-size: 0.84rem;
   }

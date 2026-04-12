@@ -6,11 +6,11 @@
         <p>{{ displayedText }}<span class="cursor" :class="{ 'cursor-hidden': !showCursor }"></span></p>
       </div>
     </div>
-    <HomeContent />
+    <AsyncHomeContent />
     <div
       class="background-container"
-      :class="{ blurred: isScrolled }"
-      :style="{ backgroundImage: `url(${backgroundImage})` }"
+      :class="{ blurred: isScrolled, loaded: backgroundLoaded }"
+      :style="backgroundStyle"
     ></div>
   </div>
 </template>
@@ -18,17 +18,52 @@
 <script setup lang="ts">
 import bgDark from '@/assets/bg-dark.jpg';
 import bgLight from '@/assets/bg-light.jpg';
-import { computed, ref, onMounted, onUnmounted } from 'vue';
+import { computed, defineAsyncComponent, ref, onMounted, onUnmounted, watch } from 'vue';
+
+const AsyncHomeContent = defineAsyncComponent(() => import('@/component/area/homepage/HomeContent.vue'))
 
 const isScrolled = ref(false);
 const currentTheme = ref<'dark' | 'light'>('dark');
 const fullText = "and in that light, I find deliverance.";
 const displayedText = ref("");
 const showCursor = ref(true);
+const displayedBackground = ref('');
+const backgroundLoaded = ref(false);
 let charIndex = 0;
 let themeObserver: MutationObserver | null = null;
+let backgroundLoader: HTMLImageElement | null = null;
 
 const backgroundImage = computed(() => (currentTheme.value === 'light' ? bgLight : bgDark));
+const backgroundStyle = computed(() => (
+  displayedBackground.value
+    ? { backgroundImage: `url(${displayedBackground.value})` }
+    : undefined
+));
+
+const preloadBackground = (src: string) => {
+  backgroundLoaded.value = false;
+
+  const img = new Image();
+  backgroundLoader = img;
+  img.decoding = 'async';
+  img.src = src;
+
+  const markLoaded = () => {
+    if (backgroundLoader !== img) return;
+    displayedBackground.value = src;
+    requestAnimationFrame(() => {
+      backgroundLoaded.value = true;
+    });
+  };
+
+  if (img.complete) {
+    markLoaded();
+    return;
+  }
+
+  img.onload = markLoaded;
+  img.onerror = markLoaded;
+};
 
 const typeText = () => {
   if (charIndex < fullText.length) {
@@ -61,9 +96,14 @@ onMounted(() => {
   typeText();
 });
 
+watch(backgroundImage, (src) => {
+  preloadBackground(src);
+}, { immediate: true });
+
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
   themeObserver?.disconnect();
+  backgroundLoader = null;
 });
 </script>
 
@@ -78,11 +118,21 @@ onUnmounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: var(--theme-bg);
+  background-image:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 48%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.04));
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   z-index: -1;
-  transition: filter 0.3s ease;
+  opacity: 0;
+  transition: filter 0.3s ease, opacity 0.45s ease;
   transform: scale(1.05); /* Slightly scale up to hide edges */
+}
+
+.background-container.loaded {
+  opacity: 1;
 }
 
 .background-container.blurred {

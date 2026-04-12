@@ -1,13 +1,23 @@
 ﻿<script setup lang="ts">
-import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
+defineOptions({
+  inheritAttrs: false,
+})
+import { computed, nextTick, onMounted, onUnmounted, ref, useAttrs, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { postsService } from '@/service/posts'
+import type { PostMeta } from '@/service/posts'
 
 const HEADER_MAX_PROGRESS_SCROLL = 160
 const THEME_STORAGE_KEY = '47-blog-theme'
 
+const attrs = useAttrs()
 const route = useRoute()
+const router = useRouter()
 const headerProgress = ref(0)
 const theme = ref<'dark' | 'light'>('dark')
+const searchOpen = ref(false)
+const searchKeyword = ref('')
+const searchablePosts = ref<PostMeta[]>([])
 
 const menuItems = [
   { name: '首页', path: '/' },
@@ -33,9 +43,42 @@ const toggleTheme = () => {
   applyTheme(theme.value === 'dark' ? 'light' : 'dark')
 }
 
+const normalizedKeyword = computed(() => searchKeyword.value.trim().toLowerCase())
+const filteredPosts = computed(() => {
+  const keyword = normalizedKeyword.value
+  if (!keyword) return searchablePosts.value.slice(0, 12)
+
+  return searchablePosts.value
+    .filter((post) => {
+      const haystacks = [
+        post.title,
+        post.filePath,
+        post.categorySegments.join(' '),
+        post.excerpt,
+        post.publishedAt ?? '',
+      ]
+      return haystacks.some((value) => value.toLowerCase().includes(keyword))
+    })
+    .slice(0, 12)
+})
+
 const headerStyle = computed(() => ({
   '--header-progress': String(headerProgress.value),
 }))
+
+function openSearch() {
+  searchOpen.value = true
+}
+
+function closeSearch() {
+  searchOpen.value = false
+  searchKeyword.value = ''
+}
+
+async function jumpToPost(url: string) {
+  await router.push(url)
+  closeSearch()
+}
 
 onMounted(() => {
   const persisted = localStorage.getItem(THEME_STORAGE_KEY)
@@ -48,6 +91,9 @@ onMounted(() => {
 
   updateHeaderProgress()
   window.addEventListener('scroll', updateHeaderProgress, { passive: true })
+  void postsService.loadAllPostMetas().then((items) => {
+    searchablePosts.value = items
+  })
 })
 
 watch(
@@ -55,6 +101,7 @@ watch(
   async () => {
     await nextTick()
     updateHeaderProgress()
+    searchOpen.value = false
   }
 )
 
@@ -64,7 +111,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header class="navigation" :style="headerStyle">
+  <header v-bind="attrs" class="navigation" :style="headerStyle">
     <div class="nav-inner">
       <router-link to="/" class="brand">
         47Saikyo
@@ -80,12 +127,47 @@ onUnmounted(() => {
         </router-link>
       </nav>
       <div class="actions">
+        <button class="action-btn" type="button" @click="openSearch">
+          搜索
+        </button>
         <button class="theme-toggle" type="button" @click="toggleTheme">
           {{ theme === 'dark' ? 'Light' : 'Dark' }}
         </button>
       </div>
     </div>
   </header>
+
+  <teleport to="body">
+    <div v-if="searchOpen" class="search-overlay" @click.self="closeSearch">
+      <div class="search-modal glass-shell">
+        <div class="search-head">
+          <h2>搜索文章</h2>
+          <button class="close-btn" type="button" @click="closeSearch">关闭</button>
+        </div>
+        <input
+          v-model="searchKeyword"
+          class="search-input"
+          type="text"
+          placeholder="搜索标题、路径、摘要..."
+          autofocus
+        >
+        <div class="search-results">
+          <button
+            v-for="post in filteredPosts"
+            :key="post.id"
+            class="search-item"
+            type="button"
+            @click="jumpToPost(post.url)"
+          >
+            <span class="search-title">{{ post.title }}</span>
+            <span class="search-meta">{{ post.publishedAt || '未标注日期' }} · {{ post.filePath }}</span>
+            <span v-if="post.excerpt" class="search-excerpt">{{ post.excerpt }}</span>
+          </button>
+          <p v-if="filteredPosts.length === 0" class="search-empty">没有找到匹配的文章。</p>
+        </div>
+      </div>
+    </div>
+  </teleport>
 </template>
 
 <style lang="less" scoped>
@@ -134,9 +216,13 @@ onUnmounted(() => {
   }
 
   .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     flex-shrink: 0;
   }
 
+  .action-btn,
   .theme-toggle {
     border: 1px solid rgba(var(--glass-border-rgb), 0.3);
     background: rgba(var(--glass-bg-start-rgb), 0.42);
@@ -148,8 +234,126 @@ onUnmounted(() => {
     transition: background 180ms ease;
   }
 
+  .action-btn:hover,
   .theme-toggle:hover {
     background: rgba(var(--glass-bg-start-rgb), 0.66);
   }
 }
+
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 84px 16px 24px;
+  background: rgba(7, 10, 16, 0.34);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.search-modal {
+  width: min(760px, 100%);
+  padding: 16px;
+  border-radius: 22px;
+  border: 1px solid var(--surface-border);
+  background: var(--surface-bg);
+  box-shadow: 0 18px 44px var(--surface-shadow);
+}
+
+.search-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.search-head h2 {
+  margin: 0;
+  color: var(--surface-title);
+  font-size: 1.1rem;
+}
+
+.close-btn {
+  border: 1px solid var(--tag-border);
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border-radius: 999px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.search-input {
+  width: 100%;
+  margin-top: 12px;
+  border: 1px solid var(--surface-border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: color-mix(in oklab, var(--surface-bg) 88%, transparent);
+  color: var(--surface-title);
+  outline: none;
+}
+
+.search-results {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: min(60vh, 560px);
+  overflow: auto;
+}
+
+.search-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  border: 1px solid var(--surface-border);
+  border-radius: 14px;
+  padding: 12px 14px;
+  text-align: left;
+  background: color-mix(in oklab, var(--surface-bg) 92%, transparent);
+  cursor: pointer;
+}
+
+.search-item:hover {
+  background: color-mix(in oklab, var(--tag-bg) 70%, var(--surface-bg));
+}
+
+.search-title {
+  color: var(--surface-title);
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.search-meta,
+.search-excerpt,
+.search-empty {
+  color: var(--surface-text);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .navigation .nav-inner {
+    gap: 16px;
+    padding: 0 14px;
+  }
+
+  .navigation .brand {
+    font-size: 1.4rem;
+  }
+
+  .navigation .nav-links {
+    gap: 12px;
+    overflow: auto;
+  }
+
+  .navigation .nav-item {
+    white-space: nowrap;
+  }
+}
 </style>
+

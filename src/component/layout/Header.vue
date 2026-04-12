@@ -4,7 +4,9 @@ defineOptions({
 })
 import { computed, nextTick, onMounted, onUnmounted, ref, useAttrs, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { Icon } from '@iconify/vue/offline'
 import { postsService } from '@/service/posts'
+import { iconMoon, iconSearch, iconSun } from '@/component/layout/headerIcons'
 import type { PostMeta } from '@/service/posts'
 
 const HEADER_MAX_PROGRESS_SCROLL = 160
@@ -61,6 +63,8 @@ const filteredPosts = computed(() => {
     })
     .slice(0, 12)
 })
+
+const themeToggleLabel = computed(() => (theme.value === 'dark' ? '切换浅色模式' : '切换深色模式'))
 
 const headerStyle = computed(() => ({
   '--header-progress': String(headerProgress.value),
@@ -127,11 +131,11 @@ onUnmounted(() => {
         </router-link>
       </nav>
       <div class="actions">
-        <button class="action-btn" type="button" @click="openSearch">
-          搜索
+        <button class="action-btn icon-btn" type="button" aria-label="搜索" @click="openSearch">
+          <Icon class="action-icon" :icon="iconSearch" />
         </button>
-        <button class="theme-toggle" type="button" @click="toggleTheme">
-          {{ theme === 'dark' ? 'Light' : 'Dark' }}
+        <button class="theme-toggle icon-btn" type="button" :aria-label="themeToggleLabel" @click="toggleTheme">
+          <Icon class="action-icon" :icon="theme === 'dark' ? iconSun : iconMoon" />
         </button>
       </div>
     </div>
@@ -230,8 +234,23 @@ onUnmounted(() => {
     border-radius: 999px;
     padding: 4px 12px;
     font-size: 0.82rem;
+    line-height: 1;
     cursor: pointer;
     transition: background 180ms ease;
+  }
+
+  .icon-btn {
+    width: 34px;
+    height: 30px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .action-icon {
+    width: 17px;
+    height: 17px;
   }
 
   .action-btn:hover,
@@ -404,8 +423,14 @@ onUnmounted(() => {
 
   .navigation .action-btn,
   .navigation .theme-toggle {
-    padding: 4px 10px;
+    width: 32px;
+    height: 28px;
     font-size: 0.76rem;
+  }
+
+  .navigation .action-icon {
+    width: 16px;
+    height: 16px;
   }
 
   .search-overlay {

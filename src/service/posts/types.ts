@@ -51,6 +51,8 @@ export interface PostMeta extends PostSummary {
   publishedAt?: string
   /** 发布时间的时间戳，便于排序；无有效日期时为 null */
   publishedAtTs: number | null
+  /** 从正文提取的简短摘要 */
+  excerpt: string
 }
 
 /**

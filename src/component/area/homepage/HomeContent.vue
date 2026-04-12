@@ -1,24 +1,80 @@
 ﻿<template>
   <div class="home-content">
     <aside class="sidebar">
-      <GlassCard class="personal-info">
-        <img src="@/assets/enana.jpg" alt="Avatar" class="avatar">
-        <h2>47Saikyo</h2>
-        <p>Smile_slime_47 / 邦邦</p>
-        <p class="intro">记录代码、游戏、音乐和一些生活里的碎片化知识。</p>
-      </GlassCard>
+      <div class="sidebar-stack">
+        <GlassCard class="personal-info">
+          <img src="https://avatars.githubusercontent.com/u/77948910" alt="Smile_slime_47 Avatar" class="avatar">
+          <h2>Smile_slime_47</h2>
+          <p class="alias">a.k.a. 邦邦</p>
+          <p class="intro">记录代码、游戏、音乐和一些生活里的碎片化知识。</p>
+          <div class="summary-grid">
+            <div class="summary-item">
+              <strong>{{ totalTags }}</strong>
+              <span>Tags</span>
+            </div>
+            <div class="summary-item">
+              <strong>{{ totalCategories }}</strong>
+              <span>Categories</span>
+            </div>
+            <div class="summary-item">
+              <strong>{{ totalPosts }}</strong>
+              <span>Posts</span>
+            </div>
+          </div>
+        </GlassCard>
+
+        <GlassCard class="contact-card">
+          <h3>47Saikyo</h3>
+          <p>希望对你有所帮助！</p>
+          <p>如果想了解更多关于我的事情，你也可以看看 About 页面。</p>
+          <p>想要联系我的话，请尽量使用两个 Gmail 邮箱。</p>
+          <p>Outlook 邮箱主要被我用来接收网站推送。</p>
+
+          <div class="contact-handles">
+            <p>
+              <Icon icon="simple-icons:tencentqq" />
+              <span>QQ</span>
+              <strong>Talloran47</strong>
+            </p>
+            <p>
+              <Icon icon="simple-icons:wechat" />
+              <span>WeChat</span>
+              <strong>smile_slime_47</strong>
+            </p>
+            <p>
+              <Icon icon="simple-icons:telegram" />
+              <span>Telegram</span>
+              <strong>@Smile_slime_47</strong>
+            </p>
+          </div>
+
+          <div class="contact-links">
+            <a href="mailto:smile_slime_47@outlook.com">
+              <Icon icon="simple-icons:microsoft" />
+              Outlook (Email)
+            </a>
+            <a href="mailto:smiling.slime.47@gmail.com">
+              <Icon icon="simple-icons:gmail" />
+              Gmail (Email)
+            </a>
+            <a href="mailto:lyb.compsci@gmail.com">
+              <Icon icon="simple-icons:gmail" />
+              Business (Email)
+            </a>
+            <a href="https://steamcommunity.com/id/47saikyo/" target="_blank" rel="noreferrer">
+              <Icon icon="simple-icons:steam" />
+              Steam
+            </a>
+            <a href="https://github.com/Smileslime47" target="_blank" rel="noreferrer">
+              <Icon icon="simple-icons:github" />
+              Github
+            </a>
+          </div>
+        </GlassCard>
+      </div>
     </aside>
 
     <main class="main-content">
-      <GlassCard class="list-head">
-        <div>
-          <p class="eyebrow">Latest Posts</p>
-          <h2>最新文章</h2>
-          <p class="subtitle">按发布日期倒序展示，和归档页保持一致。</p>
-        </div>
-        <span class="count">共 {{ totalPosts }} 篇</span>
-      </GlassCard>
-
       <div v-if="loading" class="state-card">
         <GlassCard>正在加载文章列表...</GlassCard>
       </div>
@@ -35,6 +91,7 @@
             <span>{{ post.categorySegments.join(' / ') || '未分类目录' }}</span>
           </div>
           <router-link :to="post.url" class="post-title">{{ post.title }}</router-link>
+          <p v-if="post.excerpt" class="post-excerpt">{{ post.excerpt }}</p>
           <p class="post-path">{{ post.filePath }}</p>
         </GlassCard>
       </div>
@@ -57,15 +114,22 @@
 </template>
 
 <script setup lang="ts">
+import { Icon, addCollection } from '@iconify/vue'
+import { icons as simpleIcons } from '@iconify-json/simple-icons'
+import { icons as mdiIcons } from '@iconify-json/mdi'
 import { computed, ref, watch } from 'vue'
 import { postsService } from '@/service/posts'
-import type { PostMeta } from '@/service/posts'
+import type { CategoryNode, FrontmatterValue, PostMeta } from '@/service/posts'
+
+addCollection(simpleIcons)
+addCollection(mdiIcons)
 
 const PAGE_SIZE = 10
 
 const loading = ref(true)
 const posts = ref<PostMeta[]>([])
 const currentPage = ref(1)
+const categoryTree = postsService.getCategoryTree()
 
 postsService
   .loadAllPostMetas()
@@ -77,6 +141,16 @@ postsService
   })
 
 const totalPosts = computed(() => posts.value.length)
+const totalTags = computed(() => {
+  const tags = new Set<string>()
+  for (const post of posts.value) {
+    for (const tag of normalizeTagList(post.frontmatter.tags)) {
+      tags.add(tag)
+    }
+  }
+  return tags.size
+})
+const totalCategories = computed(() => countCategoryNodes(categoryTree))
 const totalPages = computed(() => Math.max(1, Math.ceil(totalPosts.value / PAGE_SIZE)))
 const pagedPosts = computed(() => {
   const start = (currentPage.value - 1) * PAGE_SIZE
@@ -103,6 +177,28 @@ function formatDate(value?: string): string {
     day: '2-digit',
   })
 }
+
+function normalizeTagList(raw: FrontmatterValue | undefined): string[] {
+  if (Array.isArray(raw)) {
+    return raw.map((item) => item.trim()).filter(Boolean)
+  }
+  if (typeof raw === 'string') {
+    return raw
+      .split(',')
+      .map((item) => item.trim())
+      .filter(Boolean)
+  }
+  return []
+}
+
+function countCategoryNodes(nodes: CategoryNode[]): number {
+  let total = 0
+  for (const node of nodes) {
+    total += 1
+    total += countCategoryNodes(node.children)
+  }
+  return total
+}
 </script>
 
 <style scoped lang="less">
@@ -121,22 +217,31 @@ function formatDate(value?: string): string {
   top: 84px;
 }
 
+.sidebar-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .personal-info {
-  padding: 18px;
+  padding: 22px 18px;
   color: var(--surface-title);
   text-align: center;
 }
 
 .avatar {
-  width: 108px;
-  height: 108px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  border: 1px solid var(--surface-border);
 }
 
 .personal-info h2 {
   margin: 0;
+  font-size: 1.45rem;
+  line-height: 1.15;
 }
 
 .personal-info p {
@@ -144,56 +249,133 @@ function formatDate(value?: string): string {
   color: var(--surface-text);
 }
 
+.alias {
+  font-size: 0.88rem;
+  color: var(--surface-muted);
+}
+
 .intro {
-  font-size: 0.92rem;
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.summary-item strong {
+  color: var(--surface-title);
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.summary-item span {
+  color: var(--surface-muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.contact-card {
+  padding: 18px 18px 20px;
+  text-align: center;
+  color: var(--surface-text);
+}
+
+.contact-card h3 {
+  margin: 0;
+  color: var(--surface-title);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.contact-card > p {
+  margin: 8px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--surface-text);
+}
+
+.contact-handles {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-handles p {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: var(--surface-text);
+  font-size: 0.9rem;
+  align-items: center;
+}
+
+.contact-handles span {
+  color: var(--surface-muted);
+}
+
+.contact-handles strong {
+  font-weight: 500;
+  color: var(--surface-title);
+}
+
+.contact-handles a,
+.contact-links a {
+  color: var(--surface-title);
+  text-decoration: none;
+}
+
+.contact-handles a:hover,
+.contact-links a:hover {
+  color: var(--md-link-hover);
+}
+
+.contact-links {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-links span,
+.contact-links a {
+  color: var(--surface-title);
+  font-size: 0.94rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.contact-handles :deep(.iconify),
+.contact-links :deep(.iconify) {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+  color: var(--surface-muted);
 }
 
 .main-content {
   min-width: 0;
 }
 
-.list-head,
 .post-card,
 .state-card :deep(.glass-card) {
   margin-bottom: 10px;
-}
-
-.list-head {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 16px 18px;
-}
-
-.eyebrow {
-  margin: 0 0 4px;
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--surface-muted);
-}
-
-.list-head h2 {
-  margin: 0;
-  color: var(--surface-title);
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-}
-
-.subtitle {
-  margin: 4px 0 0;
-  color: var(--surface-text);
-  font-size: 0.9rem;
-}
-
-.count {
-  flex-shrink: 0;
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid var(--tag-border);
-  color: var(--tag-text);
-  font-size: 0.74rem;
-  background: var(--tag-bg);
 }
 
 .post-list {
@@ -225,6 +407,13 @@ function formatDate(value?: string): string {
 
 .post-title:hover {
   color: var(--md-link-hover);
+}
+
+.post-excerpt {
+  margin: 10px 0 0;
+  color: var(--surface-text);
+  font-size: 0.92rem;
+  line-height: 1.65;
 }
 
 .post-path {
@@ -275,9 +464,8 @@ function formatDate(value?: string): string {
     position: static;
   }
 
-  .list-head {
-    flex-direction: column;
-    align-items: flex-start;
+  .personal-info h2 {
+    font-size: 1.35rem;
   }
 }
 </style>

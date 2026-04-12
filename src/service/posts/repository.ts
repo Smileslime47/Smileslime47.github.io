@@ -55,7 +55,7 @@ export class PostRepository implements PostsService {
         }
 
         const raw = await loader()
-        const { frontmatter } = parseFrontmatter(raw)
+        const { frontmatter, content } = parseFrontmatter(raw)
         const { publishedAt, publishedAtTs } = resolvePublishedAt(frontmatter)
         const fmTitle = frontmatter.title
         const title = typeof fmTitle === 'string' && fmTitle.trim() !== '' ? fmTitle : summary.title
@@ -66,6 +66,7 @@ export class PostRepository implements PostsService {
           frontmatter,
           publishedAt,
           publishedAtTs,
+          excerpt: buildExcerpt(content),
         }
       })
     ).then((items) =>
@@ -192,4 +193,22 @@ function resolvePublishedAt(frontmatter: Record<string, FrontmatterValue>): {
     }
   }
   return { publishedAtTs: null }
+}
+
+function buildExcerpt(content: string): string {
+  const normalized = content
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/`[^`]*`/g, ' ')
+    .replace(/!\[[^\]]*]\([^)]*\)/g, ' ')
+    .replace(/\[[^\]]*]\([^)]*\)/g, ' ')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/^>\s?/gm, '')
+    .replace(/^[-*+]\s+/gm, '')
+    .replace(/^\d+\.\s+/gm, '')
+    .replace(/\r?\n+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  if (normalized.length <= 120) return normalized
+  return `${normalized.slice(0, 120).trim()}...`
 }

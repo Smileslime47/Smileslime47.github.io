@@ -8,6 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.77",
+    "@iconify/vue": "^5.0.0",
     "less": "^4.5.1",
     "markdown-it": "^14.1.1",
     "vue": "^3.5.24",

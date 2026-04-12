@@ -7,11 +7,13 @@
       </div>
     </div>
     <AsyncHomeContent />
-    <div
-      class="background-container"
-      :class="{ blurred: isScrolled, loaded: backgroundLoaded }"
-      :style="backgroundStyle"
-    ></div>
+    <div class="background-container" :class="{ blurred: isScrolled }">
+      <div
+        class="background-image-layer"
+        :class="{ loaded: backgroundLoaded }"
+        :style="backgroundStyle"
+      ></div>
+    </div>
   </div>
 </template>
 
@@ -126,12 +128,22 @@ onUnmounted(() => {
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
-  opacity: 0;
-  transition: filter 0.3s ease, opacity 0.45s ease;
+  overflow: hidden;
+  transition: filter 0.3s ease;
   transform: scale(1.05); /* Slightly scale up to hide edges */
 }
 
-.background-container.loaded {
+.background-image-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.background-image-layer.loaded {
   opacity: 1;
 }
 

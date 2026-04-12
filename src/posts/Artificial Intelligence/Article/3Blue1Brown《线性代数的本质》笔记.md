@@ -2,9 +2,6 @@
 title: 3Blue1Brown《线性代数的本质》笔记
 author: Liu Yibang
 date: 2024/08/24
-categories: 
-    - Artificial Intelligence
-    - Article
 mathjax: true
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: Spring - 6.工厂模式
 date: 1919/08/10
-categories:
-  - Java
-  - Spring
+
 ---
 ## 配置beans
 当我们创建一个bean时可能需要调用一系列初始化方法，而bean的init-method只能支持传入一个**空参方法**，面对这种情况可以采用**工厂模式**，通过factory的get方法获取对应的bean

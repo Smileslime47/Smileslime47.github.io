@@ -1,9 +1,7 @@
 ---
 title: ClassLoader——类加载器
 date: 2023/03/11
-categories: 
-  - Java
-  - JVM底层原理
+
 ---
 ## class文件及Class对象简述
 ---

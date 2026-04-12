@@ -1,9 +1,7 @@
 ---
 title: MySQL随记
 date: 1919/08/10
-categories:
-  - Java
-  - Article
+
 ---
 ## 难点
 ---

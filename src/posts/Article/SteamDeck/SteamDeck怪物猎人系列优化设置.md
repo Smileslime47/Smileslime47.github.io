@@ -1,9 +1,7 @@
 ---
 title: SteamDeck怪物猎人系列优化设置
 date: 2024/06/21
-categories:
-  - Article
-  - SteamDeck
+
 ---
 
 ## Monster Hunter系列

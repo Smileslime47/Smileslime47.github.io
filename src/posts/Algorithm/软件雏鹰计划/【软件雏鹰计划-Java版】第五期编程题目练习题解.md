@@ -1,9 +1,6 @@
 ---
 title: 5-【软件雏鹰计划-Java版】第五期编程题目练习题解
 date: 2024/05/13
-categories: 
-    - Algorithm
-    - 软件雏鹰计划
 mathjax: false
 ---
 ## 简易 DHCP 服务器

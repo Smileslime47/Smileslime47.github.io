@@ -1,9 +1,7 @@
 ---
 title: Java知识体系整理
 date: 1919/08/10
-categories:
-  - Java
-  - Article
+
 ---
 ## 基本问题
 ### Java特点

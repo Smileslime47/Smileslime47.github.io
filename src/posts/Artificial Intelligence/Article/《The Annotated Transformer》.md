@@ -2,9 +2,6 @@
 title: 《The Annotated Transformer》
 author: Liu Yibang
 date: 2024/09/07
-categories: 
-    - Artificial Intelligence
-    - Article
 mathjax: true
 ---
 

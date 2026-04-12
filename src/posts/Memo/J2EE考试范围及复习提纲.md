@@ -1,8 +1,7 @@
 ---
 title: J2EE 考试范围及复习提纲
 date: 2023/12/27
-categories:
-  - Memo
+
 ---
 
 注：课程中SpringMVC部分主要采用**前后端不分离+JSP页面负责前端的数据传递和视图渲染**，Mybatis的Mapper和Spring的Bean注册主要基于**XML**进行配置，**不涉及关于前后端分离（Vue及Http网络请求）和SpringBoot的内容**

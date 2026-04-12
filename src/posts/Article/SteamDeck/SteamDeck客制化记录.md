@@ -1,9 +1,7 @@
 ---
 title: SteamDeck客制化记录
 date: 2024/06/19
-categories:
-  - Article
-  - SteamDeck
+
 ---
 
 后面也许还会考虑更换硬件（风扇、SSD、摇杆等），会另开文章再说

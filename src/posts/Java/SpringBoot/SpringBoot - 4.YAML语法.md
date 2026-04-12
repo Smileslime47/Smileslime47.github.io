@@ -1,9 +1,7 @@
 ---
 title: SpringBoot - 4.YAML语法
 date: 1919/08/10
-categories:
-  - Java
-  - SpringBoot
+
 ---
 ## 约定
 - k: v 表示键值对关系，**冒号后面必须有一个空格**

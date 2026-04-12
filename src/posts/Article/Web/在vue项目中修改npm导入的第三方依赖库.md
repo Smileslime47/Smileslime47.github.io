@@ -1,9 +1,6 @@
 ---
 title: 在vue项目中修改npm导入的第三方依赖库
 date: 2023/4/15
-categories:
-  - Article
-  - Web
 tags: 
   - Vitepress
   - Vue

@@ -1,9 +1,7 @@
 ---
 title: Spring - 1.Spring特性
 date: 1919/08/10
-categories:
-  - Java
-  - Spring
+
 ---
 Spring官网：https://spring.io/
 

@@ -1,9 +1,7 @@
 ---
 title: 在非443端口下配置HTTPS协议
 date: 2024/05/02
-categories:
-  - Article
-  - Web
+
 ---
 在HTTPS请求中嵌套HTTP请求会因为浏览器的MIXED_BLOCK问题导致JS和CSS等资源被拦截，这种情况在Nginx+Docker配置子域名反代的时候尤为常见——通常根域名的SSL证书由监听了80和443端口的Nginx容器管理，而子服务则监听服务器上的其他端口，由Nginx根据server_name字段来制定转发策略
 

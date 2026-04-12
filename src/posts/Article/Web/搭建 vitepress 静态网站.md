@@ -1,9 +1,6 @@
 ---
 title: 搭建 vitepress 静态网站
 date: 2022/10/30
-categories:
-  - Article
-  - Web
 tags: 
   - Vitepress
   - 记录 

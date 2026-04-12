@@ -1,9 +1,7 @@
 ---
 title: Spring - 5.引入配置文件
 date: 1919/08/10
-categories:
-  - Java
-  - Spring
+
 ---
 ## 引入properties配置文件
 ---

@@ -1,9 +1,7 @@
 ---
 title: SpringMybatis - 事务级操作
 date: 1919/08/10
-categories:
-  - Java
-  - Spring
+
 ---
 ## 事务
 ---

@@ -2,9 +2,6 @@
 title: 3Blue1Brown《直观解释Transformer》
 author: Liu Yibang
 date: 2024/09/17
-categories: 
-    - Artificial Intelligence
-    - Article
 mathjax: true
 ---
 

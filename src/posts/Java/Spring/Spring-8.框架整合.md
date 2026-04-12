@@ -1,9 +1,7 @@
 ---
 title: Spring - 8.框架整合
 date: 1919/08/10
-categories:
-  - Java
-  - Spring
+
 ---
 ## 整合JUnit
 ---

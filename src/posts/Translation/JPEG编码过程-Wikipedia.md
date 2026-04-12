@@ -1,8 +1,6 @@
 ---
 title: JPEG编码过程-Wikipedia
 date: 2023/04/30
-categories:
-  - Translation
 mathjax: true
 ---
 # JPEG压缩标准

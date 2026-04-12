@@ -1,9 +1,7 @@
 ---
 title: LENOVO_Y9000K_Hackintosh
 date: 2022/05/23
-categories:
-  - Projekt
-  - LENOVO_Y9000K_Hackintosh
+
 ---
 ![董绘名](/images/posts/banner.png)
 

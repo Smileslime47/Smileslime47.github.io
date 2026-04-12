@@ -1,9 +1,6 @@
 ---
 title: Vitepress Gitalk评论插件
 date: 2022/10/31
-categories:
-  - Article
-  - Web
 tags: 
   - Vitepress
   - 记录 

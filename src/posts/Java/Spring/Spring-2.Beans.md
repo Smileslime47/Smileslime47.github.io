@@ -1,9 +1,7 @@
 ---
 title: Spring - 2.Beans
 date: 1919/08/10
-categories:
-  - Java
-  - Spring
+
 ---
 ## Bean介绍
 

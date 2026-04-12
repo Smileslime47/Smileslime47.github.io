@@ -1,9 +1,6 @@
 ---
 title: 2-【软件雏鹰计划-Java版】第二周编程题目练习题解
 date: 2024/04/28
-categories: 
-    - Algorithm
-    - 软件雏鹰计划
 mathjax: false
 ---
 ## 表达式计算

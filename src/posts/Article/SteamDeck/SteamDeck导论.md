@@ -1,9 +1,7 @@
 ---
 title: SteamDeck导论
 date: 2024/07/07
-categories:
-  - Article
-  - SteamDeck
+
 ---
 
 ## 概述

@@ -1,9 +1,7 @@
 ---
 title: Spring - 4.Lombok
 date: 1919/08/10
-categories:
-  - Java
-  - Spring
+
 ---
 ## Lombok介绍
 ---

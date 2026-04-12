@@ -1,9 +1,7 @@
 ---
 title: Java集合体系整理
 date: 1919/08/10
-categories:
-  - Java
-  - Article
+
 ---
 ## 常见集合
 ### List、Set、Queue和Map区别

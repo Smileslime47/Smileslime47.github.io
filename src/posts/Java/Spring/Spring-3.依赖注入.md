@@ -1,9 +1,7 @@
 ---
 title: Spring - 3.依赖注入
 date: 1919/08/10
-categories:
-  - Java
-  - Spring
+
 ---
 ## 模块间的依赖关系
 ---

@@ -1,9 +1,7 @@
 ---
 title: Spring - 7.注解
 date: 1919/08/10
-categories:
-  - Java
-  - Spring
+
 ---
 ## 注解配置
 ---

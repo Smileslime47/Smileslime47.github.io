@@ -1,9 +1,7 @@
 ---
 title: 3.高阶函数和 Lambda
 date: 1919/8/10
-categories:
-  - Kotlin
-  - Kotlin基础
+
 ---
 ## 高阶函数
 **高阶函数**：接受函数作为参数，或者返回一个函数作为返回值

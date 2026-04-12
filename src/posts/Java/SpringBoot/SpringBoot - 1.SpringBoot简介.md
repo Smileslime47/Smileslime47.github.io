@@ -1,9 +1,7 @@
 ---
 title: SpringBoot - 1.SpringBoot简介
 date: 1919/08/10
-categories:
-  - Java
-  - SpringBoot
+
 ---
 ## SSM框架的问题
 基于Spring框架的Java项目开发确实解决了模块之间复杂的依赖问题，但是仍然需要对引入的各种模块进行大量的配置。当我们想要对一个Spring项目引入Mybatis、Tomcat等开发常用的框架时，每一个框架都需要单独配置注入以及配置选项等。

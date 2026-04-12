@@ -1,9 +1,6 @@
 ---
 title: 使用Studio One的频谱仪
 date: 2023/01/27
-categories:
-  - Article
-  - Audio
 tags: 
   - 数字音频工作站(DAW)
   - 快速傅里叶变换

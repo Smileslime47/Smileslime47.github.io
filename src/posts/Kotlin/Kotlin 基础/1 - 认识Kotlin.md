@@ -1,9 +1,7 @@
 ---
 title: 1.认识 Kotlin
 date: 1919/8/10
-categories:
-  - Kotlin
-  - Kotlin基础
+
 ---
 ## 函数式编程
 - **Complicated**：复杂的，指一个事物由许多子部件组成，每一个子部件都有各自的用途

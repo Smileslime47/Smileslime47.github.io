@@ -1,9 +1,7 @@
 ---
 title: LeetCodeInputHelper
 date: 2023/05/18
-categories:
-  - Projekt
-  - LeetCodeInputHelper
+
 ---
 
 [项目地址](https://github.com/Smileslime47/LeetCodeInputHelper)

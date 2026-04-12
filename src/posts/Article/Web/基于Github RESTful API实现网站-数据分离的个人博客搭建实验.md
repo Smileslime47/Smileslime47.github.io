@@ -1,9 +1,6 @@
 ---
 title: 基于Github RESTful API实现网站-数据分离的个人博客搭建实验
 date: 2024/01/31
-categories:
-  - Article
-  - Web
 mathjax: true
 ---
 ## 概要

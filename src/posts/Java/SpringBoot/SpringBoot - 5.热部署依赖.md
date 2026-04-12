@@ -1,9 +1,7 @@
 ---
 title: SpringBoot - 5.热部署依赖
 date: 1919/08/10
-categories:
-  - Java
-  - SpringBoot
+
 ---
 ## dev-tools
 SpringBoot支持热部署，即在修改代码内容后自动重新运行程序，这样在浏览器上可以实时观察到效果，而不需要手动地重新运行，且重启速度要优于手动重新运行，这一点是基于SpringBoot的dev-tools实现的

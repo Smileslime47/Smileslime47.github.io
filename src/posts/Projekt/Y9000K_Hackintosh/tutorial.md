@@ -1,9 +1,7 @@
 ---
 title: LENOVO_Y9000K_Hackintosh 教程
 date: 2022/05/23
-categories:
-  - Projekt
-  - LENOVO_Y9000K_Hackintosh
+
 ---
 本人的EFI仅供参考，由于缺少测试，有一些ACPI可能是冗余的，config的参数配置也无法保证绝对合理，有一些功能仍然缺少（如麦克风）  
 这篇文章仅用于总结自己安装的历程并帮助一些人少踩一部分坑，在有能力的情况下请尽量自己根据情况配置efi  

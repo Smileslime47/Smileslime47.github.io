@@ -1,9 +1,7 @@
 ---
 title: Java内存模型
 date: 1919/08/10
-categories: 
-  - Java
-  - Java语言特性
+
 ---
 ## 概述
 **Java内存模型**（Java Memory Model）是为了避免不同操作系统之间内存模型的不同，从而导致多线程工作时的结果不一致问题。

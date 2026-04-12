@@ -1,9 +1,6 @@
 ---
 title: AI为何到底还没有替代人类 —— 关于软件设计、达达主义与人类的不可替代性
 date: 2026/02/06
-categories:
-  - Article
-  - Essay
 tags: 
   - 人工智能
 ---

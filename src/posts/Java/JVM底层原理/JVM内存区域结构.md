@@ -1,9 +1,7 @@
 ---
 title: JVM内存区域结构
 date: 1919/08/10
-categories: 
-  - Java
-  - JVM底层原理
+
 ---
 
 ## 运行时数据区域

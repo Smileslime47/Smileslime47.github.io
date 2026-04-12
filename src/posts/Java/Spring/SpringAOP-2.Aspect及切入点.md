@@ -1,9 +1,7 @@
 ---
 title: SpringAOP - 2.Aspect及切入点
 date: 1919/08/10
-categories:
-  - Java
-  - Spring
+
 ---
 
 ## AOP概念

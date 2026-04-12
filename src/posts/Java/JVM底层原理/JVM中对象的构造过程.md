@@ -1,9 +1,7 @@
 ---
 title: JVM中对象的构造过程
 date: 2023/03/12
-categories: 
-  - Java
-  - JVM底层原理
+
 ---
 # JVM中对象的构造过程
 ## new的过程

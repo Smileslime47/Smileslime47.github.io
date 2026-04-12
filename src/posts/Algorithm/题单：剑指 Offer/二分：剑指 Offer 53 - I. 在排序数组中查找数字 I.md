@@ -1,9 +1,6 @@
 ---
 title: 二分：剑指 Offer 53 - I. 在排序数组中查找数字 I
 date: 2023/04/24
-categories: 
-    - Algorithm
-    - 题单：剑指 Offer
 mathjax: false
 ---
 原题地址：https://leetcode.cn/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/

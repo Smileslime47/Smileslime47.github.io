@@ -2,9 +2,6 @@
 title: 《Attention Is All You Need》精读报告
 author: Liu Yibang
 date: 2024/08/21
-categories: 
-    - Artificial Intelligence
-    - Article
 mathjax: true
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: SpringBoot - 6.框架整合
 date: 1919/08/10
-categories:
-  - Java
-  - SpringBoot
+
 ---
 ## JUnit
 ### 引入依赖

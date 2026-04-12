@@ -1,9 +1,7 @@
 ---
 title: Java并发体系整理
 date: 1919/08/10
-categories:
-  - Java
-  - Article
+
 ---
 ## 多线程
 ### 线程和进程的区别

@@ -1,9 +1,7 @@
 ---
 title: SpringAOP - 1.面向切面编程
 date: 1919/08/10
-categories:
-  - Java
-  - Spring
+
 ---
 
 ## 面向切面编程

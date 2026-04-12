@@ -1,9 +1,6 @@
 ---
 title: JPEG Compressor
 date: 2023/05/22
-categories:
-  - Projekt
-  - JPEG Compressor
 mathjax: true
 ---
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

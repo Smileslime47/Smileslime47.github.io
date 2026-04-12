@@ -44,6 +44,7 @@
 .footer-content p {
   margin: 0;
   color: var(--footer-text-muted);
+  text-align: center;
 }
 
 .cc-link {
@@ -83,6 +84,34 @@
 
   .footer-powered {
     justify-self: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-content {
+    gap: 6px;
+  }
+
+  .footer-content p {
+    font-size: 0.84rem;
+    line-height: 1.6;
+  }
+
+  .cc-link {
+    margin-left: 6px;
+  }
+
+  .cc-link img {
+    width: 72px;
+    height: auto;
+  }
+
+  .footer-powered {
+    font-size: 10px;
+    padding: 4px 8px;
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
   }
 }
 </style>

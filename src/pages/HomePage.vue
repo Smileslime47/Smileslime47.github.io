@@ -93,16 +93,24 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100svh;
+  padding: 96px 18px 32px;
   color: var(--surface-title);
   text-align: center;
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: min(600px, 100%);
+
+  h1 {
+    font-size: clamp(2.2rem, 8vw, 4.5rem);
+    line-height: 1.05;
+  }
 
   p {
     color: var(--surface-text);
+    font-size: clamp(0.98rem, 2.5vw, 1.18rem);
+    line-height: 1.7;
   }
 
   p { display: inline; }
@@ -119,5 +127,16 @@ onUnmounted(() => {
 
 .cursor-hidden {
   opacity: 0;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 112px;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
 }
 </style>

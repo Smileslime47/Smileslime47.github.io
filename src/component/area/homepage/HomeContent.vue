@@ -481,8 +481,110 @@ function countCategoryNodes(nodes: CategoryNode[]): number {
     position: static;
   }
 
+  .sidebar-stack {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .post-card {
+    padding: 14px 16px;
+  }
+
   .personal-info h2 {
     font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-content {
+    gap: 10px;
+    padding-bottom: 24px;
+  }
+
+  .sidebar-stack {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .personal-info,
+  .contact-card {
+    padding: 16px 14px;
+  }
+
+  .avatar {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 12px;
+  }
+
+  .personal-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .alias,
+  .intro,
+  .contact-card > p,
+  .contact-handles p,
+  .contact-links span,
+  .contact-links a {
+    font-size: 0.84rem;
+  }
+
+  .summary-grid {
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .summary-item strong {
+    font-size: 1.38rem;
+  }
+
+  .summary-item span {
+    font-size: 0.74rem;
+  }
+
+  .post-card {
+    padding: 12px 14px;
+  }
+
+  .post-meta {
+    gap: 6px 10px;
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+
+  .post-title {
+    font-size: 0.98rem;
+    line-height: 1.4;
+  }
+
+  .post-excerpt {
+    margin-top: 8px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .post-path {
+    font-size: 0.8rem;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 4px;
+  }
+
+  .pagination span {
+    width: 100%;
+    text-align: center;
+    font-size: 0.84rem;
+  }
+
+  .pagination button {
+    min-width: 96px;
+    padding: 6px 12px;
+    font-size: 0.82rem;
   }
 }
 </style>

@@ -46,13 +46,23 @@ withDefaults(defineProps<{
 
 @media (max-width: 768px) {
   .content-page {
-    padding-top: 82px;
+    padding: 92px 10px 20px;
     gap: 8px;
   }
 
   .content-page-hero,
   .content-page-card {
     padding: 12px 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .content-page-hero {
+    padding: 12px 12px;
+  }
+
+  .content-page-card {
+    padding: 14px 12px;
   }
 }
 </style>

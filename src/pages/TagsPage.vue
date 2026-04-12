@@ -17,13 +17,13 @@ postsService
     const map = new Map<string, PostMeta[]>()
 
     for (const post of items) {
-      const categories = normalizeCategories(post.frontmatter.categories)
-      const effectiveCategories = categories.length > 0 ? categories : ['未分类']
+      const tags = normalizeTags(post.frontmatter.tags)
+      if (tags.length === 0) continue
 
-      for (const category of effectiveCategories) {
-        const list = map.get(category) ?? []
+      for (const tag of tags) {
+        const list = map.get(tag) ?? []
         list.push(post)
-        map.set(category, list)
+        map.set(tag, list)
       }
     }
 
@@ -40,7 +40,7 @@ postsService
 
 const totalGroups = computed(() => groups.value.length)
 
-function normalizeCategories(raw: FrontmatterValue | undefined): string[] {
+function normalizeTags(raw: FrontmatterValue | undefined): string[] {
   if (Array.isArray(raw)) {
     return raw.map((item) => item.trim()).filter(Boolean)
   }
@@ -58,16 +58,16 @@ function normalizeCategories(raw: FrontmatterValue | undefined): string[] {
   <ContentPageLayout>
     <template #hero>
       <p class="eyebrow">标签</p>
-      <h1>标签分类</h1>
-      <p class="subtitle">根据 frontmatter 的 `categories` 字段聚类展示。</p>
+      <h1>标签播放列表</h1>
+      <p class="subtitle">仅展示写了 `tags` 的文章，每个标签像一个主题播放列表。</p>
       <div class="meta">
-        <span>分类组数 {{ totalGroups }}</span>
+        <span>标签组数 {{ totalGroups }}</span>
       </div>
     </template>
 
     <template #default>
       <div v-if="loading" class="state">正在加载标签...</div>
-      <div v-else class="group-list">
+      <div v-else-if="groups.length > 0" class="group-list">
         <section v-for="group in groups" :key="group.name" class="group">
           <div class="group-header">
             <h2>{{ group.name }}</h2>
@@ -85,6 +85,7 @@ function normalizeCategories(raw: FrontmatterValue | undefined): string[] {
           </div>
         </section>
       </div>
+      <div v-else class="state">当前还没有可展示的标签组，请先在文章 frontmatter 里填写 `tags`。</div>
     </template>
   </ContentPageLayout>
 </template>

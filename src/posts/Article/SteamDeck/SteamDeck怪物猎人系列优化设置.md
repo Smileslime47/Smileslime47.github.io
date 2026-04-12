@@ -66,9 +66,9 @@ date: 2024/06/21
 
 ### 画面设置
 
-![](/images/posts/mhw-setting-1.jpg)
+![](image/SteamDeck怪物猎人系列优化设置/mhw-setting-1.jpg)
 
-![](/images/posts/mhw-setting-2.jpg)
+![](image/SteamDeck怪物猎人系列优化设置/mhw-setting-2.jpg)
 
 ## Monster Hunter Generations Ultimate
 

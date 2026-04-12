@@ -3,7 +3,7 @@ title: LENOVO_Y9000K_Hackintosh
 date: 2022/05/23
 
 ---
-![董绘名](/images/posts/banner.png)
+![董绘名](image/Y9000K_Hackintosh/banner.png)
 
 [Github项目地址](https://github.com/Smileslime47/LENOVO_Y9000K_Hackintosh)
 OpenCore官方项目网址：https://github.com/acidanthera/OpenCorePkg  
@@ -57,8 +57,8 @@ bash -c "$(curl -fsSL https://gitee.com/YasuStudio/fix-speaker-y9000x/raw/master
 -y9000k2020用的网卡是cnvio协议的M.2双天线Intel AX201，电脑内预留的空间极小，博通有**BCM94360Z和BCM94352Z和dw系列**网卡可以兼容，但是千万不要买BCM94360CD之类的长款网卡，如果是其他型号的电脑强烈建议先拆开看看主板的预留空间是否足够。  
 用itlwm驱动intel网卡需要搭配附带的Heliport app，airportitlwm配合bluetoolfix可以驱动蓝牙和wifi，但蓝牙的被发现功能失效无法正常使用通用控制。  
 下图980上方左侧即为Y9000K主板的网卡空间  
-<img src="/images/posts/y9000kmotherboard_1.jpg" alt="主板空间" width="350">
-<img src="/images/posts/y9000kmotherboard_2.jpg" alt="主板空间" width="350">
+![主板空间](image/Y9000K_Hackintosh/y9000kmotherboard_1.jpg)
+![主板空间](image/Y9000K_Hackintosh/y9000kmotherboard_2.jpg)
 
 ## 显示器
 -macOS自身的亮度控制是针对苹果显示器适配的，如果不能正常工作建议在appstore下载Brightness Slider

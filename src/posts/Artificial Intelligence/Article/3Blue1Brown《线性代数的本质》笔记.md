@@ -42,7 +42,7 @@ $$
 
 ### 向量相加
 
-![](/images/posts/linear-vector-1.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-vector-1.png)
 
 以 $\vec{v}+\vec{w}$ 为例，即将 $\vec{w}$ 平移，使其起点对准 $\vec{v}$ 的终点，最终画一条从 $\vec{v}$ 起点指向 $\vec{w}$ 终点的向量
 - 将向量看作空间上的移动，向量的加法则代表了移动的累加
@@ -71,7 +71,7 @@ $$
 
 ### 向量数乘（缩放）
 
-![](/images/posts/linear-vector-2.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-vector-2.png)
 
 向量数乘即将原向量延长\缩短为原本的n倍，当n为负数时，则说明运算结果的向量方向与原向量相反
 
@@ -101,7 +101,7 @@ $$
 
 于是，我们可以将向量的坐标看作**一组标量**，分别描述了该向量是**i帽和j帽分别经过何种缩放后，再进行相加得到的**
 
-![](/images/posts/linear-vector-3.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-vector-3.png)
 
 因此，当我们用坐标描述一个向量，它同样依赖于我们**正在使用的基向量**，不同的基向量会导致不同的结果（例如，平面锐角坐标系）
 
@@ -140,11 +140,11 @@ $$
 - 线性（Linear）指空间中的所有直线在变换后仍然是直线，且原点的位置没有发生改变
 - 变换（Transformation）本质上是函数（function）的花哨说法，但与函数不同的是，**变换**一词在刻意地暗示你可以**用可视化的运动来思考这个过程**
 
-![](/images/posts/linear-matrix-1.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-matrix-1.png)
 
 这张图看似直线没有被弯曲，但是在加上对角线后就会发现对角线变得弯曲了，因此仍然不属于线性变换
 
-![](/images/posts/linear-matrix-2.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-matrix-2.png)
 
 总的来说，线性变换要保证**网格线平行且等距分布**，在这个大前提下，我们有一个重要的推论
 - 变换前的向量 $\vec{v}$ 是**i帽与j帽**的线性组合 $a\hat{i_1} + b\hat{j_1}$，那么变换后的 $\vec{v}$ 仍是**变换后的i帽与j帽**的相同线性组合 $a\hat{i_2} + b\hat{j_2}$
@@ -515,7 +515,7 @@ det
 \right) = (a+b)(c+d) - ac - bd - 2bc = ad - bc
 $$
 
-![Alt text](/images/posts/linear-determinant-1.png)
+![Alt text](image/3Blue1Brown《线性代数的本质》笔记/linear-determinant-1.png)
 
 当一个由 $\hat{i}$ 和 $\hat{j}$ 围成的正方形（面积为1）被变换成如图所示的平行四边形时，可以结合上图看出平行四边形的面积计算公式
 
@@ -679,7 +679,7 @@ $$
 - 当然，点积是满足交换律的，因此该几何含义中将 $\vec{v}$ 和 $\vec{w}$ 的顺序调换也是可以的
 - 其中点积为负数表示即 $\vec{w}$ 在 $\vec{v}$ 上的投影与 $\vec{v}$ 的方向相反
 
-![](/images/posts/linear-dotproduct-1.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-dotproduct-1.png)
 
 但是为什么点积的几何含义会和向量的投影联系起来？这里需要引入一个叫做**对偶性**的概念
 
@@ -726,7 +726,7 @@ $$
 
 假设存在这样一个变换，将二维空间中的点投影到一条过原点的直线上，我们定义该直线上的基向量为 $\hat{u}$。显然地，这是一个接受二维向量并输出一维向量（数）的降维变换
 
-![](/images/posts/linear-dotproduct-2.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-dotproduct-2.png)
 
 要注意的是，图中的点表示二维向量的终点坐标，而不是点，你可以认为每个点都是一个**从原点出发指向该点的向量**
 
@@ -740,11 +740,11 @@ $$
 
 其中 $a$ 和 $b$ 分别代表了 $\hat{i}$ 和 $\hat{j}$ 投影到该直线上的坐标
 
-![](/images/posts/linear-dotproduct-3.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-dotproduct-3.png)
 
 首先考虑 $a$，即 $\hat{i}$ 的部分，由于 $\hat{i}$ 和 $\hat{u}$均为单位向量，他们之间存在一条对称轴将其分开，使之完全对称 —— 这导致了 $\hat{i}$ 在 $\hat{u}$ 上的投影长度等于  $\hat{u}$ 在 $\hat{i}$ 上的投影长度，而后者恰好是 $\hat{u}$ 的 x 轴坐标，即 $u_x$
 
-![](/images/posts/linear-dotproduct-4.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-dotproduct-4.png)
 
 将其推广到 $b$，即 $\hat{j}$ 的部分，不难得出 $\hat{j}$ 在 $\hat{u}$ 上的投影长度为 $u_y$
 
@@ -803,7 +803,7 @@ $$
 - 要注意这里只是叉积的两个属性如何求得，并非叉积的定义
 - 和点积不同的是，叉积的数值是不满足交换律的，有 $\vec{v} \times \vec{w} = -\vec{v} \times \vec{w}$
 
-![](/images/posts/linear-crossproduct-1.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-crossproduct-1.png)
 
 不难注意到，叉积的计算方式和**行列式**的计算方式类似，实际上，我们有如下公式：
 
@@ -1087,7 +1087,7 @@ $$
 - 其中向量 $\vec{p}$ 的长度等于向量 $\vec{v}$ 和 $\vec{w}$ 围成的平行四边形的面积，方向垂直于平行四边形
 - 而未知向量在向量 $\vec{p}$ 上的投影长度则是**和该平行四边形底面对应的高**
 
-![](/images/posts/linear-crossproduct-2.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-crossproduct-2.png)
 
 由此我们可以得出，向量 $\vec{v}$ 和 $\vec{w}$ 的叉积所得到的向量 $\vec{p}$ 有如下性质：将 $\vec{p}$ 与另一个输入向量 $\vec{u}$ 作点积，得到的数即为向量 $\vec{u},\vec{v},\vec{w}$ 三个向量围成的平行六面体的体积  
 
@@ -1205,11 +1205,11 @@ $$
 
 但是和先前的描述中有一点不同的是，这里的 $\vec{v}$ 是以新的基向量为基准描述的，要得到以旧的基向量为基准描述的 $\vec{v}$ ，我们需要先想出一个错误的，以以旧的基向量为基准描述的 $\vec{u}$，该向量的坐标和 $\vec{v}$ 完全相同
 
-![](/images/posts/linear-basis-1.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-basis-1.png)
 
 对 $\vec{u}$ 应用该线性变换，即可得到以旧的基向量为基准描述的 $\vec{v}$
 
-![](/images/posts/linear-basis-2.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-basis-2.png)
 
 反过来说，如果给定了一个以坐标系A的基向量表示的向量，求该向量在坐标系B的基向量表示，那么我们应当对该向量应用**从坐标系A到坐标系B的线性变换矩阵的逆矩阵**，或者说**从坐标系B到坐标系A的线性变换矩阵**
 
@@ -1321,18 +1321,18 @@ $$
 
 而言，基向量 $\hat{i}$ 就停留在了它张成的空间上，仅仅在长度上进行了缩放
 
-![](/images/posts/linear-eigen-1.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-eigen-1.png)
 
 实际上，对于该线性变换，整个x轴上的向量以及对角线上的向量都有该特殊性质——仅在长度上进行了缩放，而没有离开它张成的直线
 
-![](/images/posts/linear-eigen-2.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-eigen-2.png)
 
 
 具有这些特殊性质的向量我们称作**特征向量**，其中特征向量变换前后缩放的比例（上图中的2倍和3倍）叫做**特征值**，即衡量特征向量在变换中拉伸或压缩比例的因子
 
 对于一个三维坐标系中的旋转变换，其特征向量是该旋转的**旋转轴**
 
-![](/images/posts/linear-eigen-3.png)
+![](image/3Blue1Brown《线性代数的本质》笔记/linear-eigen-3.png)
 
 显然地，描述该变换绕 $[2 ,3 ,1]^T$ 向量旋转30度比一个复杂的线性变换矩阵要直观得多，此外，对于旋转而言，其特征值必然为1
 

@@ -14,7 +14,7 @@ Spring官网：https://spring.io/
 在实现控制反转后，对象的管理权和创建权**被移交给框架**，类彼此之间复杂的依赖关系**由框架来解决**，我们只需要从容器中获取对应类即可
 
 ## Spring构成
-![](/images/posts/jvme0c60b4606711fc4a0b6faf03230247a.png)
+![](image/Spring-1.Spring特性/jvme0c60b4606711fc4a0b6faf03230247a.png)
 
 ## 配置
 ---

@@ -15,19 +15,19 @@ CentreRepo要求GroupID必须是发布者拥有的域名，所以至少要拥有
 
 点击右上角的头像，选择**View Namespaces**->**Register New Namespace**
 
-![SonaType 菜单页](/images/posts/gradle-maven-central-sonatype-menu.png)
+![SonaType 菜单页](image/最新如何通过Gradle发布代码库到MavenCentral上/gradle-maven-central-sonatype-menu.png)
 
 填写你自己的域名，这里它会让你在DNS里加一条TXT记录，来验证你域名的合法性
 
-![验证命名空间的 DNS 记录提示](/images/posts/gradle-maven-central-verify-namespace.png)
+![验证命名空间的 DNS 记录提示](image/最新如何通过Gradle发布代码库到MavenCentral上/gradle-maven-central-verify-namespace.png)
 
 我这里直接通过CloudFlare添加了对应的TXT记录
 
-![添加 TXT 记录示例](/images/posts/gradle-maven-central-add-txt-record.png)
+![添加 TXT 记录示例](image/最新如何通过Gradle发布代码库到MavenCentral上/gradle-maven-central-add-txt-record.png)
 
 添加完毕后，回到SonaType，点击浮窗的**Confirm**
 
-![命名空间验证状态页](/images/posts/gradle-maven-central-sonatype-namespaces.png)
+![命名空间验证状态页](image/最新如何通过Gradle发布代码库到MavenCentral上/gradle-maven-central-sonatype-namespaces.png)
 
 正常来说，不用等太久刷新一下，就能看到这里是Verified了
 
@@ -37,7 +37,7 @@ CentreRepo要求GroupID必须是发布者拥有的域名，所以至少要拥有
 
 随后会弹出一个浮窗，记住这里的Username和Password
 
-![生成 User Token 的弹窗](/images/posts/gradle-maven-central-sonatype-usertoken.png)
+![生成 User Token 的弹窗](image/最新如何通过Gradle发布代码库到MavenCentral上/gradle-maven-central-sonatype-usertoken.png)
 
 ## 创建GPG签名
 
@@ -213,12 +213,12 @@ signing {
 
 如果没问题，确认后即可看到**VALIDATED**的标签，表示已通过审核，如果仍有其他问题，可以根据报错信息进一步调试（网上搜索或者问AI都可以）
 
-![上传发布包后的 VALIDATED 状态](/images/posts/gradle-maven-central-sonatype-deployment.png)
+![上传发布包后的 VALIDATED 状态](image/最新如何通过Gradle发布代码库到MavenCentral上/gradle-maven-central-sonatype-deployment.png)
 
 确认没有问题后，点击**Publish**按钮，此时**VALIDATED**标签会变为**PUBLISHING**
 
 等待约10分钟后，再次刷新可以看到标签变为**PUBLISHED**，此时已经发布成功，并能看到相应的Repo连接
 
-![发布完成后的 PUBLISHED 状态](/images/posts/gradle-maven-central-sonatype-published.png)
+![发布完成后的 PUBLISHED 状态](image/最新如何通过Gradle发布代码库到MavenCentral上/gradle-maven-central-sonatype-published.png)
 
 等待半天到一天后，基本上就能在[mvnrepository](https://mvnrepository.com/)看到自己的仓库了，这个并不是Maven Central官方，所以更新会慢一些

@@ -140,13 +140,13 @@ tags:
 文章里需要引用图片时，建议放到：
 
 ```text
-public/images/posts/
+src/posts/Article/Web/image/搭建 vitepress 静态网站/
 ```
 
 然后在 Markdown 中使用类似路径引用：
 
 ```md
-![示例图片](/images/posts/example.png)
+![示例图片](image/搭建 vitepress 静态网站/example.png)
 ```
 
 `public` 下的资源会按站点根路径直接提供访问。
@@ -374,7 +374,7 @@ src/component/common/ContentPageLayout.vue
 - 新文章优先放到合适的目录层级里，保持分类清晰
 - 想让归档页正确排序，最好始终填写日期字段
 - 想让标签页正常聚合，最好始终填写 `tags`
-- 图片尽量统一放到 `public/images/posts/`，避免资源路径分散
+- 图片尽量统一放到 `src/posts/Article/Web/image/搭建 vitepress 静态网站/`，避免资源路径分散
 - `categories` 现在更适合作为历史字段保留，后续新文章可以不再填写
 
 ## 常用命令

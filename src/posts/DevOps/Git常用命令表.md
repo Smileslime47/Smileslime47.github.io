@@ -4,4 +4,4 @@ date: 2024/07/06
 
 ---
 
-![](/images/posts/Git-Cheet-Sheet-ByGeekHour.png)
+![](image/Git常用命令表/Git-Cheet-Sheet-ByGeekHour.png)

@@ -70,7 +70,7 @@ watch(
     <template #default>
       <p v-if="loading" class="empty">正在加载文章内容...</p>
       <p v-else-if="loadError" class="empty">文章加载失败：{{ loadError }}</p>
-      <MarkdownContent v-else-if="post" :content="post.content" :enable-math="enableMath" />
+      <MarkdownContent v-else-if="post" :content="post.content" :enable-math="enableMath" :post-id="post.id" />
       <p v-else class="empty">未找到对应文章，请返回文章目录检查路径。</p>
     </template>
   </ContentPageLayout>

@@ -3,16 +3,19 @@ import hljs from 'highlight.js/lib/common'
 import MarkdownIt from 'markdown-it'
 import markdownItMathjax3 from 'markdown-it-mathjax3'
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { resolvePostAssetUrl } from '@/service/posts/asset-resolver'
 
 const props = withDefaults(defineProps<{
   content: string
   enableMath?: boolean
+  postId?: string
 }>(), {
   enableMath: false,
+  postId: undefined,
 })
 
 const articleRef = ref<HTMLElement | null>(null)
-const renderedHtml = computed(() => createMarkdownRenderer(props.enableMath).render(props.content))
+const renderedHtml = computed(() => createMarkdownRenderer(props.enableMath, props.postId).render(props.content))
 
 watch(renderedHtml, async () => {
   await nextTick()
@@ -26,7 +29,7 @@ onBeforeUnmount(() => {
   articleRef.value?.removeEventListener('click', onArticleClick)
 })
 
-function createMarkdownRenderer(enableMath: boolean): MarkdownIt {
+function createMarkdownRenderer(enableMath: boolean, postId?: string): MarkdownIt {
   const md = new MarkdownIt({
     html: false,
     linkify: true,
@@ -50,6 +53,19 @@ function createMarkdownRenderer(enableMath: boolean): MarkdownIt {
     const codeLines = buildCodeLines(highlighted)
 
     return `<div class="code-block"><div class="code-block__toolbar"><span class="code-block__language">${escapeHtml(displayLanguage)}</span><button class="code-block__copy" type="button" data-copy-code="${encodeURIComponent(code)}">复制</button></div><pre class="code-block__pre hljs"><code>${codeLines}</code></pre></div>`
+  }
+
+  const defaultImageRenderer = md.renderer.rules.image ?? ((tokens, idx, options, _env, self) => {
+    return self.renderToken(tokens, idx, options)
+  })
+
+  md.renderer.rules.image = (tokens, idx, options, env, self) => {
+    const token = tokens[idx]
+    const rawSrc = token?.attrGet('src')
+    if (token && rawSrc) {
+      token.attrSet('src', resolvePostAssetUrl(postId, rawSrc))
+    }
+    return defaultImageRenderer(tokens, idx, options, env, self)
   }
 
   return md
@@ -180,6 +196,16 @@ async function onArticleClick(event: Event): Promise<void> {
     color: var(--md-inline-code-text);
     font-family: var(--font-family-code), monospace;
     font-size: 0.9em;
+  }
+
+  :deep(img) {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 0.9rem auto;
+    border-radius: 12px;
+    object-fit: contain;
   }
 
   :deep(.code-block) {

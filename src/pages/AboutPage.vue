@@ -23,8 +23,6 @@ JNU / Computer Science
 - Functional Programming
 - Reactive Programming
 
-
-
 ## 爱好
 
 ### Gaming

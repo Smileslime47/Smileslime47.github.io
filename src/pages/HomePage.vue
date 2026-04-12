@@ -8,11 +8,11 @@
     </div>
     <AsyncHomeContent />
     <div class="background-container" :class="{ blurred: isScrolled }">
-      <div
+      <img
         class="background-image-layer"
-        :class="{ loaded: backgroundLoaded }"
-        :style="backgroundStyle"
-      ></div>
+        :src="backgroundImage"
+        alt="site background"
+      />
     </div>
   </div>
 </template>
@@ -20,7 +20,7 @@
 <script setup lang="ts">
 import bgDark from '@/assets/bg-dark.jpg';
 import bgLight from '@/assets/bg-light.jpg';
-import { computed, defineAsyncComponent, ref, onMounted, onUnmounted, watch } from 'vue';
+import { computed, defineAsyncComponent, ref, onMounted, onUnmounted } from 'vue';
 
 const AsyncHomeContent = defineAsyncComponent(() => import('@/component/area/homepage/HomeContent.vue'))
 
@@ -29,43 +29,11 @@ const currentTheme = ref<'dark' | 'light'>('dark');
 const fullText = "and in that light, I find deliverance.";
 const displayedText = ref("");
 const showCursor = ref(true);
-const displayedBackground = ref('');
-const backgroundLoaded = ref(false);
 let charIndex = 0;
 let themeObserver: MutationObserver | null = null;
-let backgroundLoader: HTMLImageElement | null = null;
 
+// 直接通过计算属性拿到当前的图片源，交给 img 标签自己去下载和展现渐进式
 const backgroundImage = computed(() => (currentTheme.value === 'light' ? bgLight : bgDark));
-const backgroundStyle = computed(() => (
-  displayedBackground.value
-    ? { backgroundImage: `url(${displayedBackground.value})` }
-    : undefined
-));
-
-const preloadBackground = (src: string) => {
-  backgroundLoaded.value = false;
-
-  const img = new Image();
-  backgroundLoader = img;
-  img.decoding = 'async';
-  img.src = src;
-
-  const markLoaded = () => {
-    if (backgroundLoader !== img) return;
-    displayedBackground.value = src;
-    requestAnimationFrame(() => {
-      backgroundLoaded.value = true;
-    });
-  };
-
-  if (img.complete) {
-    markLoaded();
-    return;
-  }
-
-  img.onload = markLoaded;
-  img.onerror = markLoaded;
-};
 
 const typeText = () => {
   if (charIndex < fullText.length) {
@@ -98,14 +66,9 @@ onMounted(() => {
   typeText();
 });
 
-watch(backgroundImage, (src) => {
-  preloadBackground(src);
-}, { immediate: true });
-
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
   themeObserver?.disconnect();
-  backgroundLoader = null;
 });
 </script>
 
@@ -124,27 +87,22 @@ onUnmounted(() => {
   background-image:
     radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 48%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0.04));
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   z-index: -1;
   overflow: hidden;
   transition: filter 0.3s ease;
   transform: scale(1.05); /* Slightly scale up to hide edges */
 }
 
+/* 重新定义的图片层，用 object-fit 完美替代 background-size: cover */
 .background-image-layer {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 0.45s ease;
-}
-
-.background-image-layer.loaded {
-  opacity: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
+  z-index: -1;
+  /* 去掉了之前的 opacity 控制，让它从第一字节就开始渲染，展现真正的渐进式加载！ */
 }
 
 .background-container.blurred {

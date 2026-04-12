@@ -18,11 +18,13 @@ withDefaults(defineProps<{
   padding: 1.5rem;
   border-radius: var(--glass-radius);
   border: 1px solid var(--surface-border);
-  box-shadow: 0 14px 36px var(--surface-shadow);
+  box-shadow: 0 10px 24px var(--surface-shadow);
   background: var(--surface-bg);
+  backdrop-filter: blur(14px) saturate(100%);
+  -webkit-backdrop-filter: blur(14px) saturate(100%);
 }
 
 .glass-card::before {
-  opacity: 0.22;
+  content: none;
 }
 </style>

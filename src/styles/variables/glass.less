@@ -32,7 +32,7 @@
     top: calc(12px * var(--header-progress, 0));
     left: 50%;
     transform: translateX(-50%);
-    --capsule-target-width: min(var(--header-shell-width, 968px), calc(100% - 20px));
+    --capsule-target-width: min(var(--page-content-max-width, 1440px), calc(100% - var(--page-content-side-gap, 28px)));
     width: calc(100% + (var(--capsule-target-width) - 100%) * var(--header-progress, 0));
     z-index: 1000;
     --glass-angle: 180deg;

@@ -2,8 +2,6 @@
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 
-const HEADER_CONTENT_WIDTH = 920
-const HEADER_SHELL_PADDING = 28
 const HEADER_MAX_PROGRESS_SCROLL = 160
 const THEME_STORAGE_KEY = '47-blog-theme'
 
@@ -37,8 +35,6 @@ const toggleTheme = () => {
 
 const headerStyle = computed(() => ({
   '--header-progress': String(headerProgress.value),
-  '--header-content-width': `${HEADER_CONTENT_WIDTH}px`,
-  '--header-shell-width': `${HEADER_CONTENT_WIDTH + HEADER_SHELL_PADDING}px`,
 }))
 
 onMounted(() => {
@@ -100,7 +96,7 @@ onUnmounted(() => {
   .center();
 
   .nav-inner {
-    width: min(100%, var(--header-content-width, 920px));
+    width: min(var(--page-content-max-width, 1440px), calc(100% - var(--page-content-side-gap, 28px)));
     min-width: 0;
     padding: 0 20px;
     display: flex;

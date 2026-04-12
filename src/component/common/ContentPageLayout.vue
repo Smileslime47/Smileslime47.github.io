@@ -2,7 +2,7 @@
 withDefaults(defineProps<{
   maxWidth?: string
 }>(), {
-  maxWidth: '920px',
+  maxWidth: 'var(--page-content-max-width, 1440px)',
 })
 </script>
 

@@ -47,8 +47,8 @@ export class PostRepository implements PostsService {
   async loadAllPostMetas(): Promise<PostMeta[]> {
     if (this.allMetaCache) return this.allMetaCache
 
-    this.allMetaCache = Promise.all(
-      this.summaries.map(async (summary) => {
+    this.allMetaCache = Promise.allSettled(
+      this.summaries.map(async (summary): Promise<PostMeta> => {
         const loader = this.loaderById.get(summary.id)
         if (!loader) {
           throw new Error(`Cannot find post loader for ${summary.id}`)
@@ -69,16 +69,28 @@ export class PostRepository implements PostsService {
           excerpt: buildExcerpt(content),
         }
       })
-    ).then((items) =>
-      items.sort((a, b) => {
-        if (a.publishedAtTs != null && b.publishedAtTs != null) {
-          return b.publishedAtTs - a.publishedAtTs
-        }
-        if (a.publishedAtTs != null) return -1
-        if (b.publishedAtTs != null) return 1
-        return a.title.localeCompare(b.title, 'zh-Hans-CN')
-      })
-    )
+    ).then((results) => {
+      const failed = results.filter((result): result is PromiseRejectedResult => result.status === 'rejected')
+      if (failed.length > 0) {
+        console.warn(
+          '[postsService] Failed to load some post metas:',
+          failed.map((result) => result.reason)
+        )
+      }
+
+      const succeeded = results.filter((result): result is PromiseFulfilledResult<PostMeta> => result.status === 'fulfilled')
+
+      return succeeded
+        .map((result) => result.value)
+        .sort((a, b) => {
+          if (a.publishedAtTs != null && b.publishedAtTs != null) {
+            return b.publishedAtTs - a.publishedAtTs
+          }
+          if (a.publishedAtTs != null) return -1
+          if (b.publishedAtTs != null) return 1
+          return a.title.localeCompare(b.title, 'zh-Hans-CN')
+        })
+    })
 
     return this.allMetaCache
   }

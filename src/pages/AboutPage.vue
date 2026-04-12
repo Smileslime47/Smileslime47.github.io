@@ -1,34 +1,66 @@
 ﻿<script setup lang="ts">
 const aboutMarkdown = `
-# About
+> 本博客仅用于归档我日常生活中总结的碎片化知识，不建议初学者用于进行系统性的学习。
 
-Welcome to **47-blog**. This page demonstrates a readable content layout with Markdown rendering.
+Smile_slime_47 a.k.a. 邦邦
 
-## What It Supports
+JNU / Computer Science
 
-- Headings, paragraphs, lists
-- [Links](https://47saikyo.moe)
-- Inline code: \`const hello = "world"\`
-- Blockquote
+没有其他社交媒体平台账号。
 
-> You can later load markdown from local files or an API and render it here.
+平时博客写得比较少，大部分文章都是上学时期写的了，现在偶尔还会忙里偷闲写两篇。
 
-## Next Step
+## 开发
 
-Build a post detail route and render markdown dynamically by slug.
+### Language
+- Kotlin
+- Java
+- TypeScript
+- Python
+
+### Paradigm
+
+- Functional Programming
+- Reactive Programming
+
+
+
+## 爱好
+
+### Gaming
+
+SteamID: Smile slime 47
+
+不怎么玩电子竞技类多人游戏，更偏向单机、动作、角色扮演或者能自己慢慢研究系统的游戏
+
+### Anime
+
+广泛的动漫爱好者，很久没有追新番了，但是还是会对各种二次元游戏感兴趣
+
+### Music
+
+- J-Pop
+- Vocaloid
+- Hard Rock
+- Hifi
+
+### Photography
+
+- 索尼爱好者
+- 什么都拍，除了人像
 `
 </script>
 
 <template>
   <ContentPageLayout class="about-page-layout">
     <template #hero>
-      <p class="eyebrow">Content Page</p>
-      <h1>About 47-blog</h1>
-      <p class="subtitle">Readable article layout with Markdown support.</p>
+      <p class="eyebrow">About</p>
+      <h1>关于我</h1>
+      <p class="subtitle">一个写代码、写博客，也写一点生活碎片的人。</p>
       <div class="tags">
-        <span>Vue 3</span>
-        <span>Markdown</span>
-        <span>Glass UI</span>
+        <span>全栈开发</span>
+        <span>Kotlin/函数式编程</span>
+        <span>动漫 / 游戏 / 音乐 / 摄影</span>
       </div>
     </template>
 
@@ -41,8 +73,8 @@ Build a post detail route and render markdown dynamically by slug.
 <style scoped lang="less">
 .about-page-layout {
   --content-page-hero-bg:
-    radial-gradient(circle at 90% 10%, rgba(115, 166, 240, 0.18), transparent 36%),
-    radial-gradient(circle at 0% 100%, rgba(255, 142, 194, 0.12), transparent 34%),
+    radial-gradient(circle at 85% 12%, rgba(112, 173, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 0% 100%, rgba(255, 184, 120, 0.14), transparent 32%),
     var(--surface-bg);
 }
 
@@ -82,5 +114,4 @@ h1 {
   font-size: 0.74rem;
   background: var(--tag-bg);
 }
-
 </style>

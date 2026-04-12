@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="home-content">
     <aside class="sidebar">
       <div class="sidebar-stack">
@@ -74,7 +74,7 @@
       </div>
     </aside>
 
-    <main class="main-content">
+    <main ref="postListRef" class="main-content">
       <div v-if="loading" class="state-card">
         <GlassCard>正在加载文章列表...</GlassCard>
       </div>
@@ -117,7 +117,7 @@
 import { Icon, addCollection } from '@iconify/vue'
 import { icons as simpleIcons } from '@iconify-json/simple-icons'
 import { icons as mdiIcons } from '@iconify-json/mdi'
-import { computed, ref, watch } from 'vue'
+import { computed, nextTick, ref, watch } from 'vue'
 import { postsService } from '@/service/posts'
 import type { CategoryNode, FrontmatterValue, PostMeta } from '@/service/posts'
 
@@ -129,6 +129,7 @@ const PAGE_SIZE = 10
 const loading = ref(true)
 const posts = ref<PostMeta[]>([])
 const currentPage = ref(1)
+const postListRef = ref<HTMLElement | null>(null)
 const categoryTree = postsService.getCategoryTree()
 
 postsService
@@ -163,8 +164,24 @@ watch(totalPages, (value) => {
   }
 })
 
-function goToPage(page: number) {
-  currentPage.value = Math.min(Math.max(page, 1), totalPages.value)
+async function goToPage(page: number) {
+  const nextPage = Math.min(Math.max(page, 1), totalPages.value)
+  if (nextPage === currentPage.value) return
+
+  currentPage.value = nextPage
+  await nextTick()
+  scrollPostListIntoView()
+}
+
+function scrollPostListIntoView() {
+  const element = postListRef.value
+  if (!element) return
+
+  const targetTop = element.getBoundingClientRect().top + window.scrollY - 92
+  window.scrollTo({
+    top: Math.max(targetTop, 0),
+    behavior: 'smooth',
+  })
 }
 
 function formatDate(value?: string): string {

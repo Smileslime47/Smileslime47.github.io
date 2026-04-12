@@ -1,4 +1,4 @@
-﻿<script setup lang="ts">
+<script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { postsService, type PostEntry } from '@/service/posts'
@@ -14,6 +14,9 @@ const title = computed(() => {
   if (notFound.value) return '未找到文章'
   return post.value?.title ?? '文章'
 })
+
+const categoryTrail = computed(() => post.value?.categorySegments ?? [])
+const enableMath = computed(() => post.value?.frontmatter.mathjax !== 'false')
 
 const loadCurrentPost = async () => {
   const param = route.params.pathMatch
@@ -52,15 +55,22 @@ watch(
       <p class="eyebrow">Post</p>
       <h1>{{ title }}</h1>
       <p v-if="post" class="subtitle">{{ post.filePath }}</p>
-      <div class="breadcrumbs" v-if="post && post.categorySegments.length > 0">
-        <span v-for="segment in post.categorySegments" :key="segment">{{ segment }}</span>
+      <div v-if="categoryTrail.length > 0" class="category-panel">
+        <span class="category-panel__label">分类路径</span>
+        <div class="category-panel__trail">
+          <span class="category-panel__root">posts</span>
+          <template v-for="(segment, index) in categoryTrail" :key="`${segment}-${index}`">
+            <span class="category-panel__separator">/</span>
+            <span class="category-panel__item">{{ segment }}</span>
+          </template>
+        </div>
       </div>
     </template>
 
     <template #default>
       <p v-if="loading" class="empty">正在加载文章内容...</p>
       <p v-else-if="loadError" class="empty">文章加载失败：{{ loadError }}</p>
-      <MarkdownContent v-else-if="post" :content="post.content" />
+      <MarkdownContent v-else-if="post" :content="post.content" :enable-math="enableMath" />
       <p v-else class="empty">未找到对应文章，请返回文章目录检查路径。</p>
     </template>
   </ContentPageLayout>
@@ -88,20 +98,49 @@ h1 {
   font-size: 0.88rem;
 }
 
-.breadcrumbs {
-  margin-top: 8px;
+.category-panel {
+  margin-top: 12px;
   display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid color-mix(in oklab, var(--surface-border), transparent 10%);
+  background: color-mix(in oklab, var(--surface-bg), white 3%);
 }
 
-.breadcrumbs span {
-  padding: 2px 8px;
-  border-radius: 999px;
-  border: 1px solid var(--tag-border);
-  color: var(--tag-text);
+.category-panel__label {
+  color: var(--surface-muted);
   font-size: 0.72rem;
-  background: var(--tag-bg);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.category-panel__trail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.45;
+}
+
+.category-panel__root,
+.category-panel__item {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--tag-border), transparent 10%);
+  background: color-mix(in oklab, var(--tag-bg), white 4%);
+  color: var(--surface-title);
+  font-size: 0.78rem;
+}
+
+.category-panel__root {
+  color: var(--surface-muted);
+}
+
+.category-panel__separator {
+  color: var(--surface-muted);
+  font-size: 0.78rem;
 }
 
 .empty {

@@ -2,6 +2,7 @@
 import { computed, ref } from 'vue'
 import { postsService } from '@/service/posts'
 import type { PostMeta } from '@/service/posts'
+import { toDayKey, toMonthKey } from '@/utils/date'
 
 type DayGroup = {
   dayKey: string
@@ -35,11 +36,8 @@ function buildMonthGroups(source: PostMeta[]): MonthGroup[] {
   const monthMap = new Map<string, Map<string, PostMeta[]>>()
 
   for (const post of source) {
-    const date = toValidDate(post.publishedAt)
-    const monthKey = date ? `${date.getFullYear()}-${pad2(date.getMonth() + 1)}` : 'unknown-month'
-    const dayKey = date
-      ? `${date.getFullYear()}-${pad2(date.getMonth() + 1)}-${pad2(date.getDate())}`
-      : 'unknown-day'
+    const monthKey = toMonthKey(post.publishedAt)
+    const dayKey = toDayKey(post.publishedAt)
 
     const monthBucket = monthMap.get(monthKey) ?? new Map<string, PostMeta[]>()
     const dayBucket = monthBucket.get(dayKey) ?? []
@@ -74,15 +72,6 @@ function compareTimeKeyDesc(a: string, b: string): number {
   return b.localeCompare(a, 'zh-Hans-CN')
 }
 
-function toValidDate(value?: string): Date | null {
-  if (!value) return null
-  const date = new Date(value)
-  return Number.isNaN(date.getTime()) ? null : date
-}
-
-function pad2(value: number): string {
-  return String(value).padStart(2, '0')
-}
 </script>
 
 <template>

@@ -1,8 +1,9 @@
 ﻿import { parseFrontmatter } from './frontmatter-parser'
 import { buildCategoryTree, buildPostSummaries } from './index-builder'
 import type { PostLoaderMap } from './loaders'
+import { buildExcerpt, resolvePublishedAtFromValue } from './meta-utils'
 import { LazyResourceService } from './resource-loader'
-import type { PostEntry, PostSummary, PostsService, CategoryNode, PostMeta, PostMetaLite, FrontmatterValue } from './types'
+import type { PostEntry, PostSummary, PostsService, CategoryNode, PostMeta, PostMetaLite } from './types'
 import { postMetaManifest } from './meta-manifest.generated'
 
 /**
@@ -210,59 +211,4 @@ export class PostRepository implements PostsService {
       return value
     }
   }
-}
-
-const DATE_KEYS = ['date', 'publishedAt', 'publishDate', 'createdAt'] as const
-
-function resolvePublishedAt(frontmatter: Record<string, FrontmatterValue>): {
-  publishedAt?: string
-  publishedAtTs: number | null
-} {
-  for (const key of DATE_KEYS) {
-    const raw = frontmatter[key]
-    if (typeof raw !== 'string' || raw.trim() === '') continue
-    const normalized = raw.trim()
-    const ts = Date.parse(normalized)
-    return {
-      publishedAt: normalized,
-      publishedAtTs: Number.isNaN(ts) ? null : ts,
-    }
-  }
-  return { publishedAtTs: null }
-}
-
-function resolvePublishedAtFromValue(
-  publishedAtFromManifest: string | undefined,
-  frontmatter: Record<string, FrontmatterValue>
-): {
-  publishedAt?: string
-  publishedAtTs: number | null
-} {
-  if (publishedAtFromManifest && publishedAtFromManifest.trim() !== '') {
-    const normalized = publishedAtFromManifest.trim()
-    const ts = Date.parse(normalized)
-    return {
-      publishedAt: normalized,
-      publishedAtTs: Number.isNaN(ts) ? null : ts,
-    }
-  }
-  return resolvePublishedAt(frontmatter)
-}
-
-function buildExcerpt(content: string): string {
-  const normalized = content
-    .replace(/```[\s\S]*?```/g, ' ')
-    .replace(/`[^`]*`/g, ' ')
-    .replace(/!\[[^\]]*]\([^)]*\)/g, ' ')
-    .replace(/\[[^\]]*]\([^)]*\)/g, ' ')
-    .replace(/^#{1,6}\s+/gm, '')
-    .replace(/^>\s?/gm, '')
-    .replace(/^[-*+]\s+/gm, '')
-    .replace(/^\d+\.\s+/gm, '')
-    .replace(/\r?\n+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-
-  if (normalized.length <= 120) return normalized
-  return `${normalized.slice(0, 120).trim()}...`
 }

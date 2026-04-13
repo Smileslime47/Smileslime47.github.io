@@ -30,6 +30,7 @@
 import bgDark from '@/assets/bg-dark.jpg'
 import bgLight from '@/assets/bg-light.jpg'
 import { computed, defineAsyncComponent, onMounted, onUnmounted, ref } from 'vue'
+import { runWhenIdle } from '@/utils/scheduling'
 
 const HERO_TEXT = 'and in that light, I find deliverance.'
 const SCROLL_BLUR_TRIGGER = 50
@@ -48,18 +49,9 @@ let scrollFrame = 0
 const backgroundImage = computed(() => (currentTheme.value === 'light' ? bgLight : bgDark))
 
 function queueHomeContentRender() {
-  const render = () => {
+  runWhenIdle(() => {
     shouldRenderHomeContent.value = true
-  }
-
-  if ('requestIdleCallback' in window) {
-    ;(window as Window & {
-      requestIdleCallback: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number
-    }).requestIdleCallback(() => render(), { timeout: 1200 })
-    return
-  }
-
-  setTimeout(render, 180)
+  })
 }
 
 function onHighResLoad() {

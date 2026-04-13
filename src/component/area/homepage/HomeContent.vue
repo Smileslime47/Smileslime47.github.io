@@ -67,7 +67,7 @@
           class="post-card"
         >
           <div class="post-meta">
-            <span>{{ formatDate(post.id) }}</span>
+            <span>{{ formatZhDate(post.publishedAt) }}</span>
             <span>{{ post.categorySegments.join(' / ') || '未分类目录' }}</span>
           </div>
           <router-link :to="post.url" class="post-title">{{ post.title }}</router-link>
@@ -106,6 +106,7 @@ import {
   iconTelegram,
   iconWechat,
 } from '@/component/iconify/icons'
+import { formatZhDate } from '@/utils/date'
 
 const PAGE_SIZE = 10
 
@@ -161,18 +162,6 @@ function scrollPostListIntoView() {
   window.scrollTo({
     top: Math.max(targetTop, 0),
     behavior: 'smooth',
-  })
-}
-
-function formatDate(postId: string): string {
-  const value = posts.value.find((post) => post.id === postId)?.publishedAt
-  if (!value) return '未标注日期'
-  const date = new Date(value)
-  if (Number.isNaN(date.getTime())) return value
-  return date.toLocaleDateString('zh-CN', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
   })
 }
 

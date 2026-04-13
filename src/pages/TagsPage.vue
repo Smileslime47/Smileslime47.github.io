@@ -1,7 +1,8 @@
 ﻿<script setup lang="ts">
 import { computed, ref } from 'vue'
 import { postsService } from '@/service/posts'
-import type { FrontmatterValue, PostMeta } from '@/service/posts'
+import type { PostMeta } from '@/service/posts'
+import { normalizeTags } from '@/service/posts/meta-utils'
 
 type TagGroup = {
   name: string
@@ -40,18 +41,6 @@ postsService
 
 const totalGroups = computed(() => groups.value.length)
 
-function normalizeTags(raw: FrontmatterValue | undefined): string[] {
-  if (Array.isArray(raw)) {
-    return raw.map((item) => item.trim()).filter(Boolean)
-  }
-  if (typeof raw === 'string') {
-    return raw
-      .split(',')
-      .map((item) => item.trim())
-      .filter(Boolean)
-  }
-  return []
-}
 </script>
 
 <template>

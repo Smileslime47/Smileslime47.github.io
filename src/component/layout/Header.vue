@@ -7,15 +7,15 @@ import { useRoute, useRouter } from 'vue-router'
 import { Icon } from '@iconify/vue/offline'
 import { iconMoon, iconSearch, iconSun } from '@/component/iconify/icons'
 import type { PostMeta } from '@/service/posts'
+import { applyThemeToDocument, resolveThemePreference, type ThemeMode } from '@/utils/theme'
 
 const HEADER_MAX_PROGRESS_SCROLL = 160
-const THEME_STORAGE_KEY = '47-blog-theme'
 
 const attrs = useAttrs()
 const route = useRoute()
 const router = useRouter()
 const headerProgress = ref(0)
-const theme = ref<'dark' | 'light'>('dark')
+const theme = ref<ThemeMode>('dark')
 const searchOpen = ref(false)
 const searchKeyword = ref('')
 const searchablePosts = ref<PostMeta[]>([])
@@ -36,10 +36,9 @@ const updateHeaderProgress = () => {
   headerProgress.value = Math.min(window.scrollY / normalizationBase, 1)
 }
 
-const applyTheme = (nextTheme: 'dark' | 'light') => {
+const applyTheme = (nextTheme: ThemeMode) => {
   theme.value = nextTheme
-  document.documentElement.setAttribute('data-theme', nextTheme)
-  localStorage.setItem(THEME_STORAGE_KEY, nextTheme)
+  applyThemeToDocument(nextTheme)
 }
 
 const toggleTheme = () => {
@@ -105,13 +104,7 @@ async function ensureSearchablePostsLoaded(): Promise<void> {
 }
 
 onMounted(() => {
-  const persisted = localStorage.getItem(THEME_STORAGE_KEY)
-  if (persisted === 'dark' || persisted === 'light') {
-    applyTheme(persisted)
-  } else {
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    applyTheme(systemPrefersDark ? 'dark' : 'light')
-  }
+  applyTheme(resolveThemePreference())
 
   updateHeaderProgress()
   window.addEventListener('scroll', updateHeaderProgress, { passive: true })

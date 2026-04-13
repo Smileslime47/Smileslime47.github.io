@@ -6,7 +6,7 @@ import { computed, nextTick, onMounted, onUnmounted, ref, useAttrs, watch } from
 import { useRoute, useRouter } from 'vue-router'
 import { Icon } from '@iconify/vue/offline'
 import { postsService } from '@/service/posts'
-import { iconMoon, iconSearch, iconSun } from '@/component/layout/headerIcons'
+import { iconMoon, iconSearch, iconSun } from '@/component/iconify/icons'
 import type { PostMeta } from '@/service/posts'
 
 const HEADER_MAX_PROGRESS_SCROLL = 160

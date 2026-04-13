@@ -5,9 +5,17 @@ defineOptions({
 import { computed, nextTick, onMounted, onUnmounted, ref, useAttrs, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Icon } from '@iconify/vue/offline'
-import { postsService } from '@/service/posts'
 import { iconMoon, iconSearch, iconSun } from '@/component/iconify/icons'
-import type { PostMeta } from '@/service/posts'
+
+type SearchablePost = {
+  id: string
+  title: string
+  url: string
+  filePath: string
+  categorySegments: string[]
+  excerpt: string
+  publishedAt?: string
+}
 
 const HEADER_MAX_PROGRESS_SCROLL = 160
 const THEME_STORAGE_KEY = '47-blog-theme'
@@ -19,7 +27,9 @@ const headerProgress = ref(0)
 const theme = ref<'dark' | 'light'>('dark')
 const searchOpen = ref(false)
 const searchKeyword = ref('')
-const searchablePosts = ref<PostMeta[]>([])
+const searchablePosts = ref<SearchablePost[]>([])
+const searchLoaded = ref(false)
+const searchLoading = ref(false)
 
 const menuItems = [
   { name: '首页', path: '/' },
@@ -72,6 +82,7 @@ const headerStyle = computed(() => ({
 
 function openSearch() {
   searchOpen.value = true
+  void ensureSearchDataLoaded()
 }
 
 function closeSearch() {
@@ -82,6 +93,18 @@ function closeSearch() {
 async function jumpToPost(url: string) {
   await router.push(url)
   closeSearch()
+}
+
+async function ensureSearchDataLoaded() {
+  if (searchLoaded.value || searchLoading.value) return
+  searchLoading.value = true
+  try {
+    const { postsService } = await import('@/service/posts')
+    searchablePosts.value = await postsService.loadAllPostMetas()
+    searchLoaded.value = true
+  } finally {
+    searchLoading.value = false
+  }
 }
 
 onMounted(() => {
@@ -95,9 +118,6 @@ onMounted(() => {
 
   updateHeaderProgress()
   window.addEventListener('scroll', updateHeaderProgress, { passive: true })
-  void postsService.loadAllPostMetas().then((items) => {
-    searchablePosts.value = items
-  })
 })
 
 watch(
@@ -468,4 +488,3 @@ onUnmounted(() => {
   }
 }
 </style>
-

@@ -9,7 +9,7 @@
           <p class="intro">记录代码、游戏、音乐和一些生活里的碎片化知识。</p>
           <div class="summary-grid">
             <div class="summary-item">
-              <strong>{{ totalTags }}</strong>
+              <strong>{{ totalTagsLabel }}</strong>
               <span>Tags</span>
             </div>
             <div class="summary-item">
@@ -67,11 +67,10 @@
           class="post-card"
         >
           <div class="post-meta">
-            <span>{{ formatDate(post.publishedAt) }}</span>
+            <span>点击标题查看详情</span>
             <span>{{ post.categorySegments.join(' / ') || '未分类目录' }}</span>
           </div>
           <router-link :to="post.url" class="post-title">{{ post.title }}</router-link>
-          <p v-if="post.excerpt" class="post-excerpt">{{ post.excerpt }}</p>
           <p class="post-path">{{ post.filePath }}</p>
         </GlassCard>
       </div>
@@ -95,9 +94,7 @@
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue/offline'
-import { computed, nextTick, ref, watch } from 'vue'
-import { postsService } from '@/service/posts'
-import type { CategoryNode, FrontmatterValue, PostMeta } from '@/service/posts'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import {
   iconGithub,
   iconGmail,
@@ -110,11 +107,25 @@ import {
 
 const PAGE_SIZE = 10
 
+type PostSummary = {
+  id: string
+  title: string
+  url: string
+  filePath: string
+  categorySegments: string[]
+}
+
+type PostsManifest = {
+  totalCategories: number
+  posts: PostSummary[]
+}
+
 const loading = ref(true)
-const posts = ref<PostMeta[]>([])
+const posts = ref<PostSummary[]>([])
 const currentPage = ref(1)
 const postListRef = ref<HTMLElement | null>(null)
-const categoryTree = postsService.getCategoryTree()
+const totalTagsLabel = ref('--')
+const totalCategories = ref(0)
 
 const contactHandles = [
   { label: 'QQ', value: 'Talloran47', icon: iconQq },
@@ -130,30 +141,22 @@ const contactLinks = [
   { label: 'Github', href: 'https://github.com/Smileslime47', icon: iconGithub, external: true },
 ]
 
-postsService
-  .loadAllPostMetas()
-  .then((items) => {
-    posts.value = items
-  })
-  .finally(() => {
-    loading.value = false
-  })
-
 const totalPosts = computed(() => posts.value.length)
-const totalTags = computed(() => {
-  const tags = new Set<string>()
-  for (const post of posts.value) {
-    for (const tag of normalizeTagList(post.frontmatter.tags)) {
-      tags.add(tag)
-    }
-  }
-  return tags.size
-})
-const totalCategories = computed(() => countCategoryNodes(categoryTree))
 const totalPages = computed(() => Math.max(1, Math.ceil(totalPosts.value / PAGE_SIZE)))
 const pagedPosts = computed(() => {
   const start = (currentPage.value - 1) * PAGE_SIZE
   return posts.value.slice(start, start + PAGE_SIZE)
+})
+
+onMounted(async () => {
+  try {
+    const response = await fetch('/posts-manifest.json')
+    const manifest = (await response.json()) as PostsManifest
+    posts.value = manifest.posts
+    totalCategories.value = manifest.totalCategories
+  } finally {
+    loading.value = false
+  }
 })
 
 watch(totalPages, (value) => {
@@ -182,38 +185,6 @@ function scrollPostListIntoView() {
   })
 }
 
-function formatDate(value?: string): string {
-  if (!value) return '未标注日期'
-  const date = new Date(value)
-  if (Number.isNaN(date.getTime())) return value
-  return date.toLocaleDateString('zh-CN', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  })
-}
-
-function normalizeTagList(raw: FrontmatterValue | undefined): string[] {
-  if (Array.isArray(raw)) {
-    return raw.map((item) => item.trim()).filter(Boolean)
-  }
-  if (typeof raw === 'string') {
-    return raw
-      .split(',')
-      .map((item) => item.trim())
-      .filter(Boolean)
-  }
-  return []
-}
-
-function countCategoryNodes(nodes: CategoryNode[]): number {
-  let total = 0
-  for (const node of nodes) {
-    total += 1
-    total += countCategoryNodes(node.children)
-  }
-  return total
-}
 </script>
 
 <style scoped lang="less">

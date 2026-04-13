@@ -1,0 +1,3102 @@
+{
+  "generatedAt": "2026-04-13T08:03:01.907Z",
+  "totalPosts": 207,
+  "totalCategories": 43,
+  "posts": [
+    {
+      "id": "Artificial Intelligence/Article/《The Annotated Transformer》.md",
+      "filePath": "Artificial Intelligence/Article/《The Annotated Transformer》.md",
+      "title": "《The Annotated Transformer》",
+      "url": "/posts/Artificial%20Intelligence/Article/%E3%80%8AThe%20Annotated%20Transformer%E3%80%8B",
+      "segments": [
+        "Artificial Intelligence",
+        "Article",
+        "《The Annotated Transformer》"
+      ],
+      "categorySegments": [
+        "Artificial Intelligence",
+        "Article"
+      ]
+    },
+    {
+      "id": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第二周编程题目练习题解.md",
+      "filePath": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第二周编程题目练习题解.md",
+      "title": "【软件雏鹰计划-Java版】第二周编程题目练习题解",
+      "url": "/posts/Algorithm/%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92/%E3%80%90%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92-Java%E7%89%88%E3%80%91%E7%AC%AC%E4%BA%8C%E5%91%A8%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0%E9%A2%98%E8%A7%A3",
+      "segments": [
+        "Algorithm",
+        "软件雏鹰计划",
+        "【软件雏鹰计划-Java版】第二周编程题目练习题解"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "软件雏鹰计划"
+      ]
+    },
+    {
+      "id": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第六期编程题目练习题解.md",
+      "filePath": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第六期编程题目练习题解.md",
+      "title": "【软件雏鹰计划-Java版】第六期编程题目练习题解",
+      "url": "/posts/Algorithm/%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92/%E3%80%90%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92-Java%E7%89%88%E3%80%91%E7%AC%AC%E5%85%AD%E6%9C%9F%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0%E9%A2%98%E8%A7%A3",
+      "segments": [
+        "Algorithm",
+        "软件雏鹰计划",
+        "【软件雏鹰计划-Java版】第六期编程题目练习题解"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "软件雏鹰计划"
+      ]
+    },
+    {
+      "id": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第三周编程题目练习题解.md",
+      "filePath": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第三周编程题目练习题解.md",
+      "title": "【软件雏鹰计划-Java版】第三周编程题目练习题解",
+      "url": "/posts/Algorithm/%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92/%E3%80%90%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92-Java%E7%89%88%E3%80%91%E7%AC%AC%E4%B8%89%E5%91%A8%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0%E9%A2%98%E8%A7%A3",
+      "segments": [
+        "Algorithm",
+        "软件雏鹰计划",
+        "【软件雏鹰计划-Java版】第三周编程题目练习题解"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "软件雏鹰计划"
+      ]
+    },
+    {
+      "id": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第四周编程题目练习题解.md",
+      "filePath": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第四周编程题目练习题解.md",
+      "title": "【软件雏鹰计划-Java版】第四周编程题目练习题解",
+      "url": "/posts/Algorithm/%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92/%E3%80%90%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92-Java%E7%89%88%E3%80%91%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0%E9%A2%98%E8%A7%A3",
+      "segments": [
+        "Algorithm",
+        "软件雏鹰计划",
+        "【软件雏鹰计划-Java版】第四周编程题目练习题解"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "软件雏鹰计划"
+      ]
+    },
+    {
+      "id": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第五期编程题目练习题解.md",
+      "filePath": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第五期编程题目练习题解.md",
+      "title": "【软件雏鹰计划-Java版】第五期编程题目练习题解",
+      "url": "/posts/Algorithm/%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92/%E3%80%90%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92-Java%E7%89%88%E3%80%91%E7%AC%AC%E4%BA%94%E6%9C%9F%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0%E9%A2%98%E8%A7%A3",
+      "segments": [
+        "Algorithm",
+        "软件雏鹰计划",
+        "【软件雏鹰计划-Java版】第五期编程题目练习题解"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "软件雏鹰计划"
+      ]
+    },
+    {
+      "id": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第一周编程题目练习题解.md",
+      "filePath": "Algorithm/软件雏鹰计划/【软件雏鹰计划-Java版】第一周编程题目练习题解.md",
+      "title": "【软件雏鹰计划-Java版】第一周编程题目练习题解",
+      "url": "/posts/Algorithm/%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92/%E3%80%90%E8%BD%AF%E4%BB%B6%E9%9B%8F%E9%B9%B0%E8%AE%A1%E5%88%92-Java%E7%89%88%E3%80%91%E7%AC%AC%E4%B8%80%E5%91%A8%E7%BC%96%E7%A8%8B%E9%A2%98%E7%9B%AE%E7%BB%83%E4%B9%A0%E9%A2%98%E8%A7%A3",
+      "segments": [
+        "Algorithm",
+        "软件雏鹰计划",
+        "【软件雏鹰计划-Java版】第一周编程题目练习题解"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "软件雏鹰计划"
+      ]
+    },
+    {
+      "id": "Java/Article/0815随记.md",
+      "filePath": "Java/Article/0815随记.md",
+      "title": "0815随记",
+      "url": "/posts/Java/Article/0815%E9%9A%8F%E8%AE%B0",
+      "segments": [
+        "Java",
+        "Article",
+        "0815随记"
+      ],
+      "categorySegments": [
+        "Java",
+        "Article"
+      ]
+    },
+    {
+      "id": "Kotlin/Kotlin 基础/1 - 认识Kotlin.md",
+      "filePath": "Kotlin/Kotlin 基础/1 - 认识Kotlin.md",
+      "title": "1 - 认识Kotlin",
+      "url": "/posts/Kotlin/Kotlin%20%E5%9F%BA%E7%A1%80/1%20-%20%E8%AE%A4%E8%AF%86Kotlin",
+      "segments": [
+        "Kotlin",
+        "Kotlin 基础",
+        "1 - 认识Kotlin"
+      ],
+      "categorySegments": [
+        "Kotlin",
+        "Kotlin 基础"
+      ]
+    },
+    {
+      "id": "Java/Mybatis/1.介绍和配置文件.md",
+      "filePath": "Java/Mybatis/1.介绍和配置文件.md",
+      "title": "1.介绍和配置文件",
+      "url": "/posts/Java/Mybatis/1.%E4%BB%8B%E7%BB%8D%E5%92%8C%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6",
+      "segments": [
+        "Java",
+        "Mybatis",
+        "1.介绍和配置文件"
+      ],
+      "categorySegments": [
+        "Java",
+        "Mybatis"
+      ]
+    },
+    {
+      "id": "Algorithm/贪心/1003. 检查替换后的词是否有效 - Java 贪心 栈 字符串.md",
+      "filePath": "Algorithm/贪心/1003. 检查替换后的词是否有效 - Java 贪心 栈 字符串.md",
+      "title": "1003. 检查替换后的词是否有效 - Java 贪心 栈 字符串",
+      "url": "/posts/Algorithm/%E8%B4%AA%E5%BF%83/1003.%20%E6%A3%80%E6%9F%A5%E6%9B%BF%E6%8D%A2%E5%90%8E%E7%9A%84%E8%AF%8D%E6%98%AF%E5%90%A6%E6%9C%89%E6%95%88%20-%20Java%20%E8%B4%AA%E5%BF%83%20%E6%A0%88%20%E5%AD%97%E7%AC%A6%E4%B8%B2",
+      "segments": [
+        "Algorithm",
+        "贪心",
+        "1003. 检查替换后的词是否有效 - Java 贪心 栈 字符串"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "贪心"
+      ]
+    },
+    {
+      "id": "Algorithm/单调栈/1019.链表中的下一个更大节点.md",
+      "filePath": "Algorithm/单调栈/1019.链表中的下一个更大节点.md",
+      "title": "1019.链表中的下一个更大节点",
+      "url": "/posts/Algorithm/%E5%8D%95%E8%B0%83%E6%A0%88/1019.%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E8%8A%82%E7%82%B9",
+      "segments": [
+        "Algorithm",
+        "单调栈",
+        "1019.链表中的下一个更大节点"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "单调栈"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/1031. 两个非重叠子数组的最大和 - Java 动态规划+前缀和.md",
+      "filePath": "Algorithm/动态规划/1031. 两个非重叠子数组的最大和 - Java 动态规划+前缀和.md",
+      "title": "1031. 两个非重叠子数组的最大和 - Java 动态规划+前缀和",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/1031.%20%E4%B8%A4%E4%B8%AA%E9%9D%9E%E9%87%8D%E5%8F%A0%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C%20-%20Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%2B%E5%89%8D%E7%BC%80%E5%92%8C",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "1031. 两个非重叠子数组的最大和 - Java 动态规划+前缀和"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/模拟/1041.困于环中的机器人 - 模拟 官方题解思路.md",
+      "filePath": "Algorithm/模拟/1041.困于环中的机器人 - 模拟 官方题解思路.md",
+      "title": "1041.困于环中的机器人 - 模拟 官方题解思路",
+      "url": "/posts/Algorithm/%E6%A8%A1%E6%8B%9F/1041.%E5%9B%B0%E4%BA%8E%E7%8E%AF%E4%B8%AD%E7%9A%84%E6%9C%BA%E5%99%A8%E4%BA%BA%20-%20%E6%A8%A1%E6%8B%9F%20%E5%AE%98%E6%96%B9%E9%A2%98%E8%A7%A3%E6%80%9D%E8%B7%AF",
+      "segments": [
+        "Algorithm",
+        "模拟",
+        "1041.困于环中的机器人 - 模拟 官方题解思路"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "模拟"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/1043. 分隔数组以得到最大和 - Java 动态规划.md",
+      "filePath": "Algorithm/动态规划/1043. 分隔数组以得到最大和 - Java 动态规划.md",
+      "title": "1043. 分隔数组以得到最大和 - Java 动态规划",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/1043.%20%E5%88%86%E9%9A%94%E6%95%B0%E7%BB%84%E4%BB%A5%E5%BE%97%E5%88%B0%E6%9C%80%E5%A4%A7%E5%92%8C%20-%20Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "1043. 分隔数组以得到最大和 - Java 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1048. 最长字符串链.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1048. 最长字符串链.md",
+      "title": "1048. 最长字符串链",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1048.%20%E6%9C%80%E9%95%BF%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%93%BE",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1048. 最长字符串链"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/贪心/1054. 距离相等的条形码 - Java 贪心算法 任务调度思想.md",
+      "filePath": "Algorithm/贪心/1054. 距离相等的条形码 - Java 贪心算法 任务调度思想.md",
+      "title": "1054. 距离相等的条形码 - Java 贪心算法 任务调度思想",
+      "url": "/posts/Algorithm/%E8%B4%AA%E5%BF%83/1054.%20%E8%B7%9D%E7%A6%BB%E7%9B%B8%E7%AD%89%E7%9A%84%E6%9D%A1%E5%BD%A2%E7%A0%81%20-%20Java%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95%20%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E6%80%9D%E6%83%B3",
+      "segments": [
+        "Algorithm",
+        "贪心",
+        "1054. 距离相等的条形码 - Java 贪心算法 任务调度思想"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "贪心"
+      ]
+    },
+    {
+      "id": "Algorithm/BFS&DFS/1091.二进制矩阵中的最短路径 - Java 基于BFS的层次遍历.md",
+      "filePath": "Algorithm/BFS&DFS/1091.二进制矩阵中的最短路径 - Java 基于BFS的层次遍历.md",
+      "title": "1091.二进制矩阵中的最短路径 - Java 基于BFS的层次遍历",
+      "url": "/posts/Algorithm/BFS%26DFS/1091.%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%20-%20Java%20%E5%9F%BA%E4%BA%8EBFS%E7%9A%84%E5%B1%82%E6%AC%A1%E9%81%8D%E5%8E%86",
+      "segments": [
+        "Algorithm",
+        "BFS&DFS",
+        "1091.二进制矩阵中的最短路径 - Java 基于BFS的层次遍历"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "BFS&DFS"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/1105. 填充书架 - Java 动态规划.md",
+      "filePath": "Algorithm/动态规划/1105. 填充书架 - Java 动态规划.md",
+      "title": "1105. 填充书架 - Java 动态规划",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/1105.%20%E5%A1%AB%E5%85%85%E4%B9%A6%E6%9E%B6%20-%20Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "1105. 填充书架 - Java 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/BFS&DFS/1123. 最深叶节点的最近公共祖先 - Kotlin DFS 深度优先搜索 递归+分类讨论.md",
+      "filePath": "Algorithm/BFS&DFS/1123. 最深叶节点的最近公共祖先 - Kotlin DFS 深度优先搜索 递归+分类讨论.md",
+      "title": "1123. 最深叶节点的最近公共祖先 - Kotlin DFS 深度优先搜索 递归+分类讨论",
+      "url": "/posts/Algorithm/BFS%26DFS/1123.%20%E6%9C%80%E6%B7%B1%E5%8F%B6%E8%8A%82%E7%82%B9%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88%20-%20Kotlin%20DFS%20%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%20%E9%80%92%E5%BD%92%2B%E5%88%86%E7%B1%BB%E8%AE%A8%E8%AE%BA",
+      "segments": [
+        "Algorithm",
+        "BFS&DFS",
+        "1123. 最深叶节点的最近公共祖先 - Kotlin DFS 深度优先搜索 递归+分类讨论"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "BFS&DFS"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/1143. 最长公共子序列 - Java 动态规划.md",
+      "filePath": "Algorithm/动态规划/1143. 最长公共子序列 - Java 动态规划.md",
+      "title": "1143. 最长公共子序列 - Java 动态规划",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/1143.%20%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%20-%20Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "1143. 最长公共子序列 - Java 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/双指针/1147.段式回文 - Java 贪心 双指针.md",
+      "filePath": "Algorithm/双指针/1147.段式回文 - Java 贪心 双指针.md",
+      "title": "1147.段式回文 - Java 贪心 双指针",
+      "url": "/posts/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/1147.%E6%AE%B5%E5%BC%8F%E5%9B%9E%E6%96%87%20-%20Java%20%E8%B4%AA%E5%BF%83%20%E5%8F%8C%E6%8C%87%E9%92%88",
+      "segments": [
+        "Algorithm",
+        "双指针",
+        "1147.段式回文 - Java 贪心 双指针"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "双指针"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/115. 不同的子序列 - Kotlin 二维字符串DP.md",
+      "filePath": "Algorithm/动态规划/115. 不同的子序列 - Kotlin 二维字符串DP.md",
+      "title": "115. 不同的子序列 - Kotlin 二维字符串DP",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/115.%20%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%90%E5%BA%8F%E5%88%97%20-%20Kotlin%20%E4%BA%8C%E7%BB%B4%E5%AD%97%E7%AC%A6%E4%B8%B2DP",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "115. 不同的子序列 - Kotlin 二维字符串DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/双指针/1163. 按字典序排在最后的子串 - Java 双指针.md",
+      "filePath": "Algorithm/双指针/1163. 按字典序排在最后的子串 - Java 双指针.md",
+      "title": "1163. 按字典序排在最后的子串 - Java 双指针",
+      "url": "/posts/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/1163.%20%E6%8C%89%E5%AD%97%E5%85%B8%E5%BA%8F%E6%8E%92%E5%9C%A8%E6%9C%80%E5%90%8E%E7%9A%84%E5%AD%90%E4%B8%B2%20-%20Java%20%E5%8F%8C%E6%8C%87%E9%92%88",
+      "segments": [
+        "Algorithm",
+        "双指针",
+        "1163. 按字典序排在最后的子串 - Java 双指针"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "双指针"
+      ]
+    },
+    {
+      "id": "Algorithm/位运算/1198. 找出所有行中最小公共元素 - Kotlin 与运算.md",
+      "filePath": "Algorithm/位运算/1198. 找出所有行中最小公共元素 - Kotlin 与运算.md",
+      "title": "1198. 找出所有行中最小公共元素 - Kotlin 与运算",
+      "url": "/posts/Algorithm/%E4%BD%8D%E8%BF%90%E7%AE%97/1198.%20%E6%89%BE%E5%87%BA%E6%89%80%E6%9C%89%E8%A1%8C%E4%B8%AD%E6%9C%80%E5%B0%8F%E5%85%AC%E5%85%B1%E5%85%83%E7%B4%A0%20-%20Kotlin%20%E4%B8%8E%E8%BF%90%E7%AE%97",
+      "segments": [
+        "Algorithm",
+        "位运算",
+        "1198. 找出所有行中最小公共元素 - Kotlin 与运算"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "位运算"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/121.买卖股票的最佳时机.md",
+      "filePath": "Algorithm/动态规划/121.买卖股票的最佳时机.md",
+      "title": "121.买卖股票的最佳时机",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/121.%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "121.买卖股票的最佳时机"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/122. 买卖股票的最佳时机 II - Java 动态规划+优化.md",
+      "filePath": "Algorithm/动态规划/122. 买卖股票的最佳时机 II - Java 动态规划+优化.md",
+      "title": "122. 买卖股票的最佳时机 II - Java 动态规划+优化",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/122.%20%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%20II%20-%20Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%2B%E4%BC%98%E5%8C%96",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "122. 买卖股票的最佳时机 II - Java 动态规划+优化"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/123. 买卖股票的最佳时机 III - Java 动态规划.md",
+      "filePath": "Algorithm/动态规划/123. 买卖股票的最佳时机 III - Java 动态规划.md",
+      "title": "123. 买卖股票的最佳时机 III - Java 动态规划",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/123.%20%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%20III%20-%20Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "123. 买卖股票的最佳时机 III - Java 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1230. 抛掷硬币 - Kotlin 二维DP.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1230. 抛掷硬币 - Kotlin 二维DP.md",
+      "title": "1230. 抛掷硬币 - Kotlin 二维DP",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1230.%20%E6%8A%9B%E6%8E%B7%E7%A1%AC%E5%B8%81%20-%20Kotlin%20%E4%BA%8C%E7%BB%B4DP",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1230. 抛掷硬币 - Kotlin 二维DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/BFS&DFS/124. 二叉树中的最大路径和 - Kotlin 深度优先搜索.md",
+      "filePath": "Algorithm/BFS&DFS/124. 二叉树中的最大路径和 - Kotlin 深度优先搜索.md",
+      "title": "124. 二叉树中的最大路径和 - Kotlin 深度优先搜索",
+      "url": "/posts/Algorithm/BFS%26DFS/124.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E8%B7%AF%E5%BE%84%E5%92%8C%20-%20Kotlin%20%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2",
+      "segments": [
+        "Algorithm",
+        "BFS&DFS",
+        "124. 二叉树中的最大路径和 - Kotlin 深度优先搜索"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "BFS&DFS"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1259. 不相交的握手 - Kotlin 动态规划 一维DP.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1259. 不相交的握手 - Kotlin 动态规划 一维DP.md",
+      "title": "1259. 不相交的握手 - Kotlin 动态规划 一维DP",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1259.%20%E4%B8%8D%E7%9B%B8%E4%BA%A4%E7%9A%84%E6%8F%A1%E6%89%8B%20-%20Kotlin%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20%E4%B8%80%E7%BB%B4DP",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1259. 不相交的握手 - Kotlin 动态规划 一维DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/BFS&DFS/1263. 推箱子 - Kotlin 两层BFS.md",
+      "filePath": "Algorithm/BFS&DFS/1263. 推箱子 - Kotlin 两层BFS.md",
+      "title": "1263. 推箱子 - Kotlin 两层BFS",
+      "url": "/posts/Algorithm/BFS%26DFS/1263.%20%E6%8E%A8%E7%AE%B1%E5%AD%90%20-%20Kotlin%20%E4%B8%A4%E5%B1%82BFS",
+      "segments": [
+        "Algorithm",
+        "BFS&DFS",
+        "1263. 推箱子 - Kotlin 两层BFS"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "BFS&DFS"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1335. 工作计划的最低难度.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1335. 工作计划的最低难度.md",
+      "title": "1335. 工作计划的最低难度",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1335.%20%E5%B7%A5%E4%BD%9C%E8%AE%A1%E5%88%92%E7%9A%84%E6%9C%80%E4%BD%8E%E9%9A%BE%E5%BA%A6",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1335. 工作计划的最低难度"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1339. 分裂二叉树的最大乘积 - Kotlin 动态规划 线段树思想.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1339. 分裂二叉树的最大乘积 - Kotlin 动态规划 线段树思想.md",
+      "title": "1339. 分裂二叉树的最大乘积 - Kotlin 动态规划 线段树思想",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1339.%20%E5%88%86%E8%A3%82%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF%20-%20Kotlin%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20%E7%BA%BF%E6%AE%B5%E6%A0%91%E6%80%9D%E6%83%B3",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1339. 分裂二叉树的最大乘积 - Kotlin 动态规划 线段树思想"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/139. 单词拆分 - Java 动态规划.md",
+      "filePath": "Algorithm/动态规划/139. 单词拆分 - Java 动态规划.md",
+      "title": "139. 单词拆分 - Java 动态规划",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/139.%20%E5%8D%95%E8%AF%8D%E6%8B%86%E5%88%86%20-%20Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "139. 单词拆分 - Java 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1416. 恢复数组.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1416. 恢复数组.md",
+      "title": "1416. 恢复数组",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1416.%20%E6%81%A2%E5%A4%8D%E6%95%B0%E7%BB%84",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1416. 恢复数组"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/双指针/142. 环形链表 II - Kotlin 双指针 提供一个更简洁的公式(2n-2a)-(n-a).md",
+      "filePath": "Algorithm/双指针/142. 环形链表 II - Kotlin 双指针 提供一个更简洁的公式(2n-2a)-(n-a).md",
+      "title": "142. 环形链表 II - Kotlin 双指针 提供一个更简洁的公式(2n-2a)-(n-a)",
+      "url": "/posts/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/142.%20%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8%20II%20-%20Kotlin%20%E5%8F%8C%E6%8C%87%E9%92%88%20%E6%8F%90%E4%BE%9B%E4%B8%80%E4%B8%AA%E6%9B%B4%E7%AE%80%E6%B4%81%E7%9A%84%E5%85%AC%E5%BC%8F(2n-2a)-(n-a)",
+      "segments": [
+        "Algorithm",
+        "双指针",
+        "142. 环形链表 II - Kotlin 双指针 提供一个更简洁的公式(2n-2a)-(n-a)"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "双指针"
+      ]
+    },
+    {
+      "id": "Algorithm/BFS&DFS/1448. 统计二叉树中好节点的数目 - Kotlin 深度优先搜索.md",
+      "filePath": "Algorithm/BFS&DFS/1448. 统计二叉树中好节点的数目 - Kotlin 深度优先搜索.md",
+      "title": "1448. 统计二叉树中好节点的数目 - Kotlin 深度优先搜索",
+      "url": "/posts/Algorithm/BFS%26DFS/1448.%20%E7%BB%9F%E8%AE%A1%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%A5%BD%E8%8A%82%E7%82%B9%E7%9A%84%E6%95%B0%E7%9B%AE%20-%20Kotlin%20%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2",
+      "segments": [
+        "Algorithm",
+        "BFS&DFS",
+        "1448. 统计二叉树中好节点的数目 - Kotlin 深度优先搜索"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "BFS&DFS"
+      ]
+    },
+    {
+      "id": "Algorithm/数据结构/146. LRU 缓存 - Java 双向链表+哈希表.md",
+      "filePath": "Algorithm/数据结构/146. LRU 缓存 - Java 双向链表+哈希表.md",
+      "title": "146. LRU 缓存 - Java 双向链表+哈希表",
+      "url": "/posts/Algorithm/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/146.%20LRU%20%E7%BC%93%E5%AD%98%20-%20Java%20%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%2B%E5%93%88%E5%B8%8C%E8%A1%A8",
+      "segments": [
+        "Algorithm",
+        "数据结构",
+        "146. LRU 缓存 - Java 双向链表+哈希表"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "数据结构"
+      ]
+    },
+    {
+      "id": "Algorithm/拓扑排序/1462. 课程表 IV - Kotlin 拓扑排序 BFS 分治.md",
+      "filePath": "Algorithm/拓扑排序/1462. 课程表 IV - Kotlin 拓扑排序 BFS 分治.md",
+      "title": "1462. 课程表 IV - Kotlin 拓扑排序 BFS 分治",
+      "url": "/posts/Algorithm/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/1462.%20%E8%AF%BE%E7%A8%8B%E8%A1%A8%20IV%20-%20Kotlin%20%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%20BFS%20%E5%88%86%E6%B2%BB",
+      "segments": [
+        "Algorithm",
+        "拓扑排序",
+        "1462. 课程表 IV - Kotlin 拓扑排序 BFS 分治"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "拓扑排序"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1463. 摘樱桃 II - Kotlin 多维DP.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1463. 摘樱桃 II - Kotlin 多维DP.md",
+      "title": "1463. 摘樱桃 II - Kotlin 多维DP",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1463.%20%E6%91%98%E6%A8%B1%E6%A1%83%20II%20-%20Kotlin%20%E5%A4%9A%E7%BB%B4DP",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1463. 摘樱桃 II - Kotlin 多维DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/双指针/15.三数之和 - Java 双指针 贪心.md",
+      "filePath": "Algorithm/双指针/15.三数之和 - Java 双指针 贪心.md",
+      "title": "15.三数之和 - Java 双指针 贪心",
+      "url": "/posts/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/15.%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C%20-%20Java%20%E5%8F%8C%E6%8C%87%E9%92%88%20%E8%B4%AA%E5%BF%83",
+      "segments": [
+        "Algorithm",
+        "双指针",
+        "15.三数之和 - Java 双指针 贪心"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "双指针"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1547. 切棍子的最小成本 - Kotlin 二维DP.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1547. 切棍子的最小成本 - Kotlin 二维DP.md",
+      "title": "1547. 切棍子的最小成本 - Kotlin 二维DP",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1547.%20%E5%88%87%E6%A3%8D%E5%AD%90%E7%9A%84%E6%9C%80%E5%B0%8F%E6%88%90%E6%9C%AC%20-%20Kotlin%20%E4%BA%8C%E7%BB%B4DP",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1547. 切棍子的最小成本 - Kotlin 二维DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1575. 统计所有可行路径 - Kotlin 基于BFS的动态规划.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1575. 统计所有可行路径 - Kotlin 基于BFS的动态规划.md",
+      "title": "1575. 统计所有可行路径 - Kotlin 基于BFS的动态规划",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1575.%20%E7%BB%9F%E8%AE%A1%E6%89%80%E6%9C%89%E5%8F%AF%E8%A1%8C%E8%B7%AF%E5%BE%84%20-%20Kotlin%20%E5%9F%BA%E4%BA%8EBFS%E7%9A%84%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1575. 统计所有可行路径 - Kotlin 基于BFS的动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/滑动窗口/159. 至多包含两个不同字符的最长子串.md",
+      "filePath": "Algorithm/滑动窗口/159. 至多包含两个不同字符的最长子串.md",
+      "title": "159. 至多包含两个不同字符的最长子串",
+      "url": "/posts/Algorithm/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/159.%20%E8%87%B3%E5%A4%9A%E5%8C%85%E5%90%AB%E4%B8%A4%E4%B8%AA%E4%B8%8D%E5%90%8C%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2",
+      "segments": [
+        "Algorithm",
+        "滑动窗口",
+        "159. 至多包含两个不同字符的最长子串"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "滑动窗口"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1626. 无矛盾的最佳球队 - Kotlin 背包DP.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1626. 无矛盾的最佳球队 - Kotlin 背包DP.md",
+      "title": "1626. 无矛盾的最佳球队 - Kotlin 背包DP",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1626.%20%E6%97%A0%E7%9F%9B%E7%9B%BE%E7%9A%84%E6%9C%80%E4%BD%B3%E7%90%83%E9%98%9F%20-%20Kotlin%20%E8%83%8C%E5%8C%85DP",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1626. 无矛盾的最佳球队 - Kotlin 背包DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1639. 通过给定词典构造目标字符串的方案数 - Kotlin 二维DP+前缀和优化 双百.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1639. 通过给定词典构造目标字符串的方案数 - Kotlin 二维DP+前缀和优化 双百.md",
+      "title": "1639. 通过给定词典构造目标字符串的方案数 - Kotlin 二维DP+前缀和优化 双百",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1639.%20%E9%80%9A%E8%BF%87%E7%BB%99%E5%AE%9A%E8%AF%8D%E5%85%B8%E6%9E%84%E9%80%A0%E7%9B%AE%E6%A0%87%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%96%B9%E6%A1%88%E6%95%B0%20-%20Kotlin%20%E4%BA%8C%E7%BB%B4DP%2B%E5%89%8D%E7%BC%80%E5%92%8C%E4%BC%98%E5%8C%96%20%E5%8F%8C%E7%99%BE",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1639. 通过给定词典构造目标字符串的方案数 - Kotlin 二维DP+前缀和优化 双百"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/BFS&DFS/1654. 到家的最少跳跃次数 - Kotlin 广度优先搜索.md",
+      "filePath": "Algorithm/BFS&DFS/1654. 到家的最少跳跃次数 - Kotlin 广度优先搜索.md",
+      "title": "1654. 到家的最少跳跃次数 - Kotlin 广度优先搜索",
+      "url": "/posts/Algorithm/BFS%26DFS/1654.%20%E5%88%B0%E5%AE%B6%E7%9A%84%E6%9C%80%E5%B0%91%E8%B7%B3%E8%B7%83%E6%AC%A1%E6%95%B0%20-%20Kotlin%20%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2",
+      "segments": [
+        "Algorithm",
+        "BFS&DFS",
+        "1654. 到家的最少跳跃次数 - Kotlin 广度优先搜索"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "BFS&DFS"
+      ]
+    },
+    {
+      "id": "Algorithm/双指针/167.两数之和 II - 输入有序数组 - 双指针+哈希数组.md",
+      "filePath": "Algorithm/双指针/167.两数之和 II - 输入有序数组 - 双指针+哈希数组.md",
+      "title": "167.两数之和 II - 输入有序数组 - 双指针+哈希数组",
+      "url": "/posts/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/167.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C%20II%20-%20%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%20-%20%E5%8F%8C%E6%8C%87%E9%92%88%2B%E5%93%88%E5%B8%8C%E6%95%B0%E7%BB%84",
+      "segments": [
+        "Algorithm",
+        "双指针",
+        "167.两数之和 II - 输入有序数组 - 双指针+哈希数组"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "双指针"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/1749. 任意子数组和的绝对值的最大值 - Kotlin 动态规划 最大(小)子数组和.md",
+      "filePath": "Algorithm/动态规划/1749. 任意子数组和的绝对值的最大值 - Kotlin 动态规划 最大(小)子数组和.md",
+      "title": "1749. 任意子数组和的绝对值的最大值 - Kotlin 动态规划 最大(小)子数组和",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/1749.%20%E4%BB%BB%E6%84%8F%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C%E7%9A%84%E7%BB%9D%E5%AF%B9%E5%80%BC%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC%20-%20Kotlin%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20%E6%9C%80%E5%A4%A7(%E5%B0%8F)%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "1749. 任意子数组和的绝对值的最大值 - Kotlin 动态规划 最大(小)子数组和"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/1770. 执行乘法运算的最大分数 - Kotlin 多维DP到一维DP.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/1770. 执行乘法运算的最大分数 - Kotlin 多维DP到一维DP.md",
+      "title": "1770. 执行乘法运算的最大分数 - Kotlin 多维DP到一维DP",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/1770.%20%E6%89%A7%E8%A1%8C%E4%B9%98%E6%B3%95%E8%BF%90%E7%AE%97%E7%9A%84%E6%9C%80%E5%A4%A7%E5%88%86%E6%95%B0%20-%20Kotlin%20%E5%A4%9A%E7%BB%B4DP%E5%88%B0%E4%B8%80%E7%BB%B4DP",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "1770. 执行乘法运算的最大分数 - Kotlin 多维DP到一维DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/双指针/18. 四数之和 - Kotlin 双指针.md",
+      "filePath": "Algorithm/双指针/18. 四数之和 - Kotlin 双指针.md",
+      "title": "18. 四数之和 - Kotlin 双指针",
+      "url": "/posts/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/18.%20%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C%20-%20Kotlin%20%E5%8F%8C%E6%8C%87%E9%92%88",
+      "segments": [
+        "Algorithm",
+        "双指针",
+        "18. 四数之和 - Kotlin 双指针"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "双指针"
+      ]
+    },
+    {
+      "id": "Algorithm/双指针/186. 反转字符串中的单词 II - Kotlin 两次翻转.md",
+      "filePath": "Algorithm/双指针/186. 反转字符串中的单词 II - Kotlin 两次翻转.md",
+      "title": "186. 反转字符串中的单词 II - Kotlin 两次翻转",
+      "url": "/posts/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/186.%20%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D%20II%20-%20Kotlin%20%E4%B8%A4%E6%AC%A1%E7%BF%BB%E8%BD%AC",
+      "segments": [
+        "Algorithm",
+        "双指针",
+        "186. 反转字符串中的单词 II - Kotlin 两次翻转"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "双指针"
+      ]
+    },
+    {
+      "id": "Algorithm/双指针/189.轮转数组.md",
+      "filePath": "Algorithm/双指针/189.轮转数组.md",
+      "title": "189.轮转数组",
+      "url": "/posts/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/189.%E8%BD%AE%E8%BD%AC%E6%95%B0%E7%BB%84",
+      "segments": [
+        "Algorithm",
+        "双指针",
+        "189.轮转数组"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "双指针"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/1911. 最大子序列交替和 - Kotlin 逆序DP.md",
+      "filePath": "Algorithm/动态规划/1911. 最大子序列交替和 - Kotlin 逆序DP.md",
+      "title": "1911. 最大子序列交替和 - Kotlin 逆序DP",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/1911.%20%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%88%97%E4%BA%A4%E6%9B%BF%E5%92%8C%20-%20Kotlin%20%E9%80%86%E5%BA%8FDP",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "1911. 最大子序列交替和 - Kotlin 逆序DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/1964. 找出到每个位置为止最长的有效障碍赛跑路线 - Kotlin 二分查找 最长单调子序列.md",
+      "filePath": "Algorithm/动态规划/1964. 找出到每个位置为止最长的有效障碍赛跑路线 - Kotlin 二分查找 最长单调子序列.md",
+      "title": "1964. 找出到每个位置为止最长的有效障碍赛跑路线 - Kotlin 二分查找 最长单调子序列",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/1964.%20%E6%89%BE%E5%87%BA%E5%88%B0%E6%AF%8F%E4%B8%AA%E4%BD%8D%E7%BD%AE%E4%B8%BA%E6%AD%A2%E6%9C%80%E9%95%BF%E7%9A%84%E6%9C%89%E6%95%88%E9%9A%9C%E7%A2%8D%E8%B5%9B%E8%B7%91%E8%B7%AF%E7%BA%BF%20-%20Kotlin%20%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%20%E6%9C%80%E9%95%BF%E5%8D%95%E8%B0%83%E5%AD%90%E5%BA%8F%E5%88%97",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "1964. 找出到每个位置为止最长的有效障碍赛跑路线 - Kotlin 二分查找 最长单调子序列"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/198&213&337.打家劫舍I&II&III.md",
+      "filePath": "Algorithm/动态规划/198&213&337.打家劫舍I&II&III.md",
+      "title": "198&213&337.打家劫舍I&II&III",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/198%26213%26337.%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8DI%26II%26III",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "198&213&337.打家劫舍I&II&III"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Kotlin/Kotlin 基础/2 - 基础语法.md",
+      "filePath": "Kotlin/Kotlin 基础/2 - 基础语法.md",
+      "title": "2 - 基础语法",
+      "url": "/posts/Kotlin/Kotlin%20%E5%9F%BA%E7%A1%80/2%20-%20%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95",
+      "segments": [
+        "Kotlin",
+        "Kotlin 基础",
+        "2 - 基础语法"
+      ],
+      "categorySegments": [
+        "Kotlin",
+        "Kotlin 基础"
+      ]
+    },
+    {
+      "id": "Java/Mybatis/2.映射中的参数.md",
+      "filePath": "Java/Mybatis/2.映射中的参数.md",
+      "title": "2.映射中的参数",
+      "url": "/posts/Java/Mybatis/2.%E6%98%A0%E5%B0%84%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0",
+      "segments": [
+        "Java",
+        "Mybatis",
+        "2.映射中的参数"
+      ],
+      "categorySegments": [
+        "Java",
+        "Mybatis"
+      ]
+    },
+    {
+      "id": "Algorithm/拓扑排序/2050. 并行课程 III - Kotlin 拓扑排序+动态规划.md",
+      "filePath": "Algorithm/拓扑排序/2050. 并行课程 III - Kotlin 拓扑排序+动态规划.md",
+      "title": "2050. 并行课程 III - Kotlin 拓扑排序+动态规划",
+      "url": "/posts/Algorithm/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/2050.%20%E5%B9%B6%E8%A1%8C%E8%AF%BE%E7%A8%8B%20III%20-%20Kotlin%20%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%2B%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "拓扑排序",
+        "2050. 并行课程 III - Kotlin 拓扑排序+动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "拓扑排序"
+      ]
+    },
+    {
+      "id": "Algorithm/拓扑排序/207. 课程表 - Java 拓扑排序 Kahn算法.md",
+      "filePath": "Algorithm/拓扑排序/207. 课程表 - Java 拓扑排序 Kahn算法.md",
+      "title": "207. 课程表 - Java 拓扑排序 Kahn算法",
+      "url": "/posts/Algorithm/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/207.%20%E8%AF%BE%E7%A8%8B%E8%A1%A8%20-%20Java%20%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%20Kahn%E7%AE%97%E6%B3%95",
+      "segments": [
+        "Algorithm",
+        "拓扑排序",
+        "207. 课程表 - Java 拓扑排序 Kahn算法"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "拓扑排序"
+      ]
+    },
+    {
+      "id": "Algorithm/滑动窗口/209.长度最小的子数组 - Java 滑动窗口.md",
+      "filePath": "Algorithm/滑动窗口/209.长度最小的子数组 - Java 滑动窗口.md",
+      "title": "209.长度最小的子数组 - Java 滑动窗口",
+      "url": "/posts/Algorithm/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/209.%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%20-%20Java%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3",
+      "segments": [
+        "Algorithm",
+        "滑动窗口",
+        "209.长度最小的子数组 - Java 滑动窗口"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "滑动窗口"
+      ]
+    },
+    {
+      "id": "Algorithm/拓扑排序/210. 课程表 II - Java 拓扑排序 Kahn算法.md",
+      "filePath": "Algorithm/拓扑排序/210. 课程表 II - Java 拓扑排序 Kahn算法.md",
+      "title": "210. 课程表 II - Java 拓扑排序 Kahn算法",
+      "url": "/posts/Algorithm/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/210.%20%E8%AF%BE%E7%A8%8B%E8%A1%A8%20II%20-%20Java%20%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F%20Kahn%E7%AE%97%E6%B3%95",
+      "segments": [
+        "Algorithm",
+        "拓扑排序",
+        "210. 课程表 II - Java 拓扑排序 Kahn算法"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "拓扑排序"
+      ]
+    },
+    {
+      "id": "Algorithm/前缀和/2106. 摘水果 - Java 前缀和.md",
+      "filePath": "Algorithm/前缀和/2106. 摘水果 - Java 前缀和.md",
+      "title": "2106. 摘水果 - Java 前缀和",
+      "url": "/posts/Algorithm/%E5%89%8D%E7%BC%80%E5%92%8C/2106.%20%E6%91%98%E6%B0%B4%E6%9E%9C%20-%20Java%20%E5%89%8D%E7%BC%80%E5%92%8C",
+      "segments": [
+        "Algorithm",
+        "前缀和",
+        "2106. 摘水果 - Java 前缀和"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "前缀和"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/221. 最大正方形 - Kotlin 动态规划.md",
+      "filePath": "Algorithm/动态规划/221. 最大正方形 - Kotlin 动态规划.md",
+      "title": "221. 最大正方形 - Kotlin 动态规划",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/221.%20%E6%9C%80%E5%A4%A7%E6%AD%A3%E6%96%B9%E5%BD%A2%20-%20Kotlin%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "221. 最大正方形 - Kotlin 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/2240. 买钢笔和铅笔的方案数 - Kotlin 完全背包问题 求组合方案数.md",
+      "filePath": "Algorithm/动态规划/2240. 买钢笔和铅笔的方案数 - Kotlin 完全背包问题 求组合方案数.md",
+      "title": "2240. 买钢笔和铅笔的方案数 - Kotlin 完全背包问题 求组合方案数",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/2240.%20%E4%B9%B0%E9%92%A2%E7%AC%94%E5%92%8C%E9%93%85%E7%AC%94%E7%9A%84%E6%96%B9%E6%A1%88%E6%95%B0%20-%20Kotlin%20%E5%AE%8C%E5%85%A8%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%20%E6%B1%82%E7%BB%84%E5%90%88%E6%96%B9%E6%A1%88%E6%95%B0",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "2240. 买钢笔和铅笔的方案数 - Kotlin 完全背包问题 求组合方案数"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/2328. 网格图中递增路径的数目 - Kotlin 有向图的路径数量 二维DP.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/2328. 网格图中递增路径的数目 - Kotlin 有向图的路径数量 二维DP.md",
+      "title": "2328. 网格图中递增路径的数目 - Kotlin 有向图的路径数量 二维DP",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/2328.%20%E7%BD%91%E6%A0%BC%E5%9B%BE%E4%B8%AD%E9%80%92%E5%A2%9E%E8%B7%AF%E5%BE%84%E7%9A%84%E6%95%B0%E7%9B%AE%20-%20Kotlin%20%E6%9C%89%E5%90%91%E5%9B%BE%E7%9A%84%E8%B7%AF%E5%BE%84%E6%95%B0%E9%87%8F%20%E4%BA%8C%E7%BB%B4DP",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "2328. 网格图中递增路径的数目 - Kotlin 有向图的路径数量 二维DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/模拟/2409. 统计共同度过的日子数 - Java 模拟.md",
+      "filePath": "Algorithm/模拟/2409. 统计共同度过的日子数 - Java 模拟.md",
+      "title": "2409. 统计共同度过的日子数 - Java 模拟",
+      "url": "/posts/Algorithm/%E6%A8%A1%E6%8B%9F/2409.%20%E7%BB%9F%E8%AE%A1%E5%85%B1%E5%90%8C%E5%BA%A6%E8%BF%87%E7%9A%84%E6%97%A5%E5%AD%90%E6%95%B0%20-%20Java%20%E6%A8%A1%E6%8B%9F",
+      "segments": [
+        "Algorithm",
+        "模拟",
+        "2409. 统计共同度过的日子数 - Java 模拟"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "模拟"
+      ]
+    },
+    {
+      "id": "Algorithm/前缀和/2488.统计中位数为 K 的子数组 - 哈希表+前缀和.md",
+      "filePath": "Algorithm/前缀和/2488.统计中位数为 K 的子数组 - 哈希表+前缀和.md",
+      "title": "2488.统计中位数为 K 的子数组 - 哈希表+前缀和",
+      "url": "/posts/Algorithm/%E5%89%8D%E7%BC%80%E5%92%8C/2488.%E7%BB%9F%E8%AE%A1%E4%B8%AD%E4%BD%8D%E6%95%B0%E4%B8%BA%20K%20%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%20-%20%E5%93%88%E5%B8%8C%E8%A1%A8%2B%E5%89%8D%E7%BC%80%E5%92%8C",
+      "segments": [
+        "Algorithm",
+        "前缀和",
+        "2488.统计中位数为 K 的子数组 - 哈希表+前缀和"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "前缀和"
+      ]
+    },
+    {
+      "id": "Algorithm/数据结构/249. 移位字符串分组 - Kotlin 哈希表.md",
+      "filePath": "Algorithm/数据结构/249. 移位字符串分组 - Kotlin 哈希表.md",
+      "title": "249. 移位字符串分组 - Kotlin 哈希表",
+      "url": "/posts/Algorithm/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/249.%20%E7%A7%BB%E4%BD%8D%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%86%E7%BB%84%20-%20Kotlin%20%E5%93%88%E5%B8%8C%E8%A1%A8",
+      "segments": [
+        "Algorithm",
+        "数据结构",
+        "249. 移位字符串分组 - Kotlin 哈希表"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "数据结构"
+      ]
+    },
+    {
+      "id": "Algorithm/模拟/2532. 过桥的时间 - Kotlin 复杂模拟+优先队列.md",
+      "filePath": "Algorithm/模拟/2532. 过桥的时间 - Kotlin 复杂模拟+优先队列.md",
+      "title": "2532. 过桥的时间 - Kotlin 复杂模拟+优先队列",
+      "url": "/posts/Algorithm/%E6%A8%A1%E6%8B%9F/2532.%20%E8%BF%87%E6%A1%A5%E7%9A%84%E6%97%B6%E9%97%B4%20-%20Kotlin%20%E5%A4%8D%E6%9D%82%E6%A8%A1%E6%8B%9F%2B%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97",
+      "segments": [
+        "Algorithm",
+        "模拟",
+        "2532. 过桥的时间 - Kotlin 复杂模拟+优先队列"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "模拟"
+      ]
+    },
+    {
+      "id": "Algorithm/数据结构/2569. 更新数组后处理求和查询 - Kotlin 线段树.md",
+      "filePath": "Algorithm/数据结构/2569. 更新数组后处理求和查询 - Kotlin 线段树.md",
+      "title": "2569. 更新数组后处理求和查询 - Kotlin 线段树",
+      "url": "/posts/Algorithm/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2569.%20%E6%9B%B4%E6%96%B0%E6%95%B0%E7%BB%84%E5%90%8E%E5%A4%84%E7%90%86%E6%B1%82%E5%92%8C%E6%9F%A5%E8%AF%A2%20-%20Kotlin%20%E7%BA%BF%E6%AE%B5%E6%A0%91",
+      "segments": [
+        "Algorithm",
+        "数据结构",
+        "2569. 更新数组后处理求和查询 - Kotlin 线段树"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "数据结构"
+      ]
+    },
+    {
+      "id": "Algorithm/模拟/2605. 从两个数字数组里生成最小数字 - Kotlin 模拟 分类讨论.md",
+      "filePath": "Algorithm/模拟/2605. 从两个数字数组里生成最小数字 - Kotlin 模拟 分类讨论.md",
+      "title": "2605. 从两个数字数组里生成最小数字 - Kotlin 模拟 分类讨论",
+      "url": "/posts/Algorithm/%E6%A8%A1%E6%8B%9F/2605.%20%E4%BB%8E%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97%E6%95%B0%E7%BB%84%E9%87%8C%E7%94%9F%E6%88%90%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97%20-%20Kotlin%20%E6%A8%A1%E6%8B%9F%20%E5%88%86%E7%B1%BB%E8%AE%A8%E8%AE%BA",
+      "segments": [
+        "Algorithm",
+        "模拟",
+        "2605. 从两个数字数组里生成最小数字 - Kotlin 模拟 分类讨论"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "模拟"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：30 天 JavaScript 挑战/2620. 计数器 - 闭包.md",
+      "filePath": "Algorithm/题单：30 天 JavaScript 挑战/2620. 计数器 - 闭包.md",
+      "title": "2620. 计数器 - 闭包",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A30%20%E5%A4%A9%20JavaScript%20%E6%8C%91%E6%88%98/2620.%20%E8%AE%A1%E6%95%B0%E5%99%A8%20-%20%E9%97%AD%E5%8C%85",
+      "segments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战",
+        "2620. 计数器 - 闭包"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：30 天 JavaScript 挑战/2626. 数组归约运算 - 基本数组转换.md",
+      "filePath": "Algorithm/题单：30 天 JavaScript 挑战/2626. 数组归约运算 - 基本数组转换.md",
+      "title": "2626. 数组归约运算 - 基本数组转换",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A30%20%E5%A4%A9%20JavaScript%20%E6%8C%91%E6%88%98/2626.%20%E6%95%B0%E7%BB%84%E5%BD%92%E7%BA%A6%E8%BF%90%E7%AE%97%20-%20%E5%9F%BA%E6%9C%AC%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2",
+      "segments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战",
+        "2626. 数组归约运算 - 基本数组转换"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：30 天 JavaScript 挑战/2634. 过滤数组中的元素 - 基本数组转换.md",
+      "filePath": "Algorithm/题单：30 天 JavaScript 挑战/2634. 过滤数组中的元素 - 基本数组转换.md",
+      "title": "2634. 过滤数组中的元素 - 基本数组转换",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A30%20%E5%A4%A9%20JavaScript%20%E6%8C%91%E6%88%98/2634.%20%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%20-%20%E5%9F%BA%E6%9C%AC%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2",
+      "segments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战",
+        "2634. 过滤数组中的元素 - 基本数组转换"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：30 天 JavaScript 挑战/2635. 转换数组中的每个元素 - 基本数组转换.md",
+      "filePath": "Algorithm/题单：30 天 JavaScript 挑战/2635. 转换数组中的每个元素 - 基本数组转换.md",
+      "title": "2635. 转换数组中的每个元素 - 基本数组转换",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A30%20%E5%A4%A9%20JavaScript%20%E6%8C%91%E6%88%98/2635.%20%E8%BD%AC%E6%8D%A2%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0%20-%20%E5%9F%BA%E6%9C%AC%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2",
+      "segments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战",
+        "2635. 转换数组中的每个元素 - 基本数组转换"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战"
+      ]
+    },
+    {
+      "id": "Algorithm/BFS&DFS/2641. 二叉树的堂兄弟节点 II - Java 广度优先搜索 两次 BFS +一次 BFS 优化.md",
+      "filePath": "Algorithm/BFS&DFS/2641. 二叉树的堂兄弟节点 II - Java 广度优先搜索 两次 BFS +一次 BFS 优化.md",
+      "title": "2641. 二叉树的堂兄弟节点 II - Java 广度优先搜索 两次 BFS +一次 BFS 优化",
+      "url": "/posts/Algorithm/BFS%26DFS/2641.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%A0%82%E5%85%84%E5%BC%9F%E8%8A%82%E7%82%B9%20II%20-%20Java%20%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%20%E4%B8%A4%E6%AC%A1%20BFS%20%2B%E4%B8%80%E6%AC%A1%20BFS%20%E4%BC%98%E5%8C%96",
+      "segments": [
+        "Algorithm",
+        "BFS&DFS",
+        "2641. 二叉树的堂兄弟节点 II - Java 广度优先搜索 两次 BFS +一次 BFS 优化"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "BFS&DFS"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：30 天 JavaScript 挑战/2665. 计数器 II - 闭包.md",
+      "filePath": "Algorithm/题单：30 天 JavaScript 挑战/2665. 计数器 II - 闭包.md",
+      "title": "2665. 计数器 II - 闭包",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A30%20%E5%A4%A9%20JavaScript%20%E6%8C%91%E6%88%98/2665.%20%E8%AE%A1%E6%95%B0%E5%99%A8%20II%20-%20%E9%97%AD%E5%8C%85",
+      "segments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战",
+        "2665. 计数器 II - 闭包"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：30 天 JavaScript 挑战/2667. 创建 Hello World 函数 - 闭包.md",
+      "filePath": "Algorithm/题单：30 天 JavaScript 挑战/2667. 创建 Hello World 函数 - 闭包.md",
+      "title": "2667. 创建 Hello World 函数 - 闭包",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A30%20%E5%A4%A9%20JavaScript%20%E6%8C%91%E6%88%98/2667.%20%E5%88%9B%E5%BB%BA%20Hello%20World%20%E5%87%BD%E6%95%B0%20-%20%E9%97%AD%E5%8C%85",
+      "segments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战",
+        "2667. 创建 Hello World 函数 - 闭包"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战"
+      ]
+    },
+    {
+      "id": "Algorithm/双指针/27. 移除元素 - Kotlin 双指针.md",
+      "filePath": "Algorithm/双指针/27. 移除元素 - Kotlin 双指针.md",
+      "title": "27. 移除元素 - Kotlin 双指针",
+      "url": "/posts/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/27.%20%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0%20-%20Kotlin%20%E5%8F%8C%E6%8C%87%E9%92%88",
+      "segments": [
+        "Algorithm",
+        "双指针",
+        "27. 移除元素 - Kotlin 双指针"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "双指针"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：30 天 JavaScript 挑战/2704. 相等还是不相等 - 闭包.md",
+      "filePath": "Algorithm/题单：30 天 JavaScript 挑战/2704. 相等还是不相等 - 闭包.md",
+      "title": "2704. 相等还是不相等 - 闭包",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A30%20%E5%A4%A9%20JavaScript%20%E6%8C%91%E6%88%98/2704.%20%E7%9B%B8%E7%AD%89%E8%BF%98%E6%98%AF%E4%B8%8D%E7%9B%B8%E7%AD%89%20-%20%E9%97%AD%E5%8C%85",
+      "segments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战",
+        "2704. 相等还是不相等 - 闭包"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：30 天 JavaScript 挑战"
+      ]
+    },
+    {
+      "id": "Kotlin/Kotlin 基础/3 - 高阶函数和Labmda.md",
+      "filePath": "Kotlin/Kotlin 基础/3 - 高阶函数和Labmda.md",
+      "title": "3 - 高阶函数和Labmda",
+      "url": "/posts/Kotlin/Kotlin%20%E5%9F%BA%E7%A1%80/3%20-%20%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%E5%92%8CLabmda",
+      "segments": [
+        "Kotlin",
+        "Kotlin 基础",
+        "3 - 高阶函数和Labmda"
+      ],
+      "categorySegments": [
+        "Kotlin",
+        "Kotlin 基础"
+      ]
+    },
+    {
+      "id": "Algorithm/滑动窗口/3. 无重复字符的最长子串 - Java 滑动窗口.md",
+      "filePath": "Algorithm/滑动窗口/3. 无重复字符的最长子串 - Java 滑动窗口.md",
+      "title": "3. 无重复字符的最长子串 - Java 滑动窗口",
+      "url": "/posts/Algorithm/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/3.%20%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2%20-%20Java%20%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3",
+      "segments": [
+        "Algorithm",
+        "滑动窗口",
+        "3. 无重复字符的最长子串 - Java 滑动窗口"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "滑动窗口"
+      ]
+    },
+    {
+      "id": "Java/Mybatis/3.CRUD操作.md",
+      "filePath": "Java/Mybatis/3.CRUD操作.md",
+      "title": "3.CRUD操作",
+      "url": "/posts/Java/Mybatis/3.CRUD%E6%93%8D%E4%BD%9C",
+      "segments": [
+        "Java",
+        "Mybatis",
+        "3.CRUD操作"
+      ],
+      "categorySegments": [
+        "Java",
+        "Mybatis"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/300. 最长递增子序列 -Java 动态规划.md",
+      "filePath": "Algorithm/动态规划/300. 最长递增子序列 -Java 动态规划.md",
+      "title": "300. 最长递增子序列 -Java 动态规划",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/300.%20%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97%20-Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "300. 最长递增子序列 -Java 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/32. 最长有效括号.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/32. 最长有效括号.md",
+      "title": "32. 最长有效括号",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/32.%20%E6%9C%80%E9%95%BF%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "32. 最长有效括号"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/322. 零钱兑换 - Java 动态规划 背包DP.md",
+      "filePath": "Algorithm/动态规划/322. 零钱兑换 - Java 动态规划 背包DP.md",
+      "title": "322. 零钱兑换 - Java 动态规划 背包DP",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/322.%20%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2%20-%20Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20%E8%83%8C%E5%8C%85DP",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "322. 零钱兑换 - Java 动态规划 背包DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/二分查找/33.搜索旋转排序数组 - Java 二分查找.md",
+      "filePath": "Algorithm/二分查找/33.搜索旋转排序数组 - Java 二分查找.md",
+      "title": "33.搜索旋转排序数组 - Java 二分查找",
+      "url": "/posts/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/33.%E6%90%9C%E7%B4%A2%E6%97%8B%E8%BD%AC%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%20-%20Java%20%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE",
+      "segments": [
+        "Algorithm",
+        "二分查找",
+        "33.搜索旋转排序数组 - Java 二分查找"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "二分查找"
+      ]
+    },
+    {
+      "id": "Algorithm/二分查找/34.在排序数组中查找元素的第一个和最后一个位置 - Java 二分查找.md",
+      "filePath": "Algorithm/二分查找/34.在排序数组中查找元素的第一个和最后一个位置 - Java 二分查找.md",
+      "title": "34.在排序数组中查找元素的第一个和最后一个位置 - Java 二分查找",
+      "url": "/posts/Algorithm/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/34.%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%85%83%E7%B4%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%92%8C%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E4%BD%8D%E7%BD%AE%20-%20Java%20%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE",
+      "segments": [
+        "Algorithm",
+        "二分查找",
+        "34.在排序数组中查找元素的第一个和最后一个位置 - Java 二分查找"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "二分查找"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/343. 整数拆分 - Java 动态规划 背包DP.md",
+      "filePath": "Algorithm/动态规划/343. 整数拆分 - Java 动态规划 背包DP.md",
+      "title": "343. 整数拆分 - Java 动态规划 背包DP",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/343.%20%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86%20-%20Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20%E8%83%8C%E5%8C%85DP",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "343. 整数拆分 - Java 动态规划 背包DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/354. 俄罗斯套娃信封问题 - Kotlin 常规DP+二分DP.md",
+      "filePath": "Algorithm/动态规划/354. 俄罗斯套娃信封问题 - Kotlin 常规DP+二分DP.md",
+      "title": "354. 俄罗斯套娃信封问题 - Kotlin 常规DP+二分DP",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/354.%20%E4%BF%84%E7%BD%97%E6%96%AF%E5%A5%97%E5%A8%83%E4%BF%A1%E5%B0%81%E9%97%AE%E9%A2%98%20-%20Kotlin%20%E5%B8%B8%E8%A7%84DP%2B%E4%BA%8C%E5%88%86DP",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "354. 俄罗斯套娃信封问题 - Kotlin 常规DP+二分DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/377. 组合总和 Ⅳ - Kotlin 背包DP.md",
+      "filePath": "Algorithm/动态规划/377. 组合总和 Ⅳ - Kotlin 背包DP.md",
+      "title": "377. 组合总和 Ⅳ - Kotlin 背包DP",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/377.%20%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C%20%E2%85%A3%20-%20Kotlin%20%E8%83%8C%E5%8C%85DP",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "377. 组合总和 Ⅳ - Kotlin 背包DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Artificial Intelligence/Article/3Blue1Brown《线性代数的本质》笔记.md",
+      "filePath": "Artificial Intelligence/Article/3Blue1Brown《线性代数的本质》笔记.md",
+      "title": "3Blue1Brown《线性代数的本质》笔记",
+      "url": "/posts/Artificial%20Intelligence/Article/3Blue1Brown%E3%80%8A%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9A%84%E6%9C%AC%E8%B4%A8%E3%80%8B%E7%AC%94%E8%AE%B0",
+      "segments": [
+        "Artificial Intelligence",
+        "Article",
+        "3Blue1Brown《线性代数的本质》笔记"
+      ],
+      "categorySegments": [
+        "Artificial Intelligence",
+        "Article"
+      ]
+    },
+    {
+      "id": "Artificial Intelligence/Article/3Blue1Brown《直观解释Transformer》.md",
+      "filePath": "Artificial Intelligence/Article/3Blue1Brown《直观解释Transformer》.md",
+      "title": "3Blue1Brown《直观解释Transformer》",
+      "url": "/posts/Artificial%20Intelligence/Article/3Blue1Brown%E3%80%8A%E7%9B%B4%E8%A7%82%E8%A7%A3%E9%87%8ATransformer%E3%80%8B",
+      "segments": [
+        "Artificial Intelligence",
+        "Article",
+        "3Blue1Brown《直观解释Transformer》"
+      ],
+      "categorySegments": [
+        "Artificial Intelligence",
+        "Article"
+      ]
+    },
+    {
+      "id": "Kotlin/Kotlin 基础/4 - 面向表达式编程.md",
+      "filePath": "Kotlin/Kotlin 基础/4 - 面向表达式编程.md",
+      "title": "4 - 面向表达式编程",
+      "url": "/posts/Kotlin/Kotlin%20%E5%9F%BA%E7%A1%80/4%20-%20%E9%9D%A2%E5%90%91%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BC%96%E7%A8%8B",
+      "segments": [
+        "Kotlin",
+        "Kotlin 基础",
+        "4 - 面向表达式编程"
+      ],
+      "categorySegments": [
+        "Kotlin",
+        "Kotlin 基础"
+      ]
+    },
+    {
+      "id": "Java/Mybatis/4.日志输出.md",
+      "filePath": "Java/Mybatis/4.日志输出.md",
+      "title": "4.日志输出",
+      "url": "/posts/Java/Mybatis/4.%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA",
+      "segments": [
+        "Java",
+        "Mybatis",
+        "4.日志输出"
+      ],
+      "categorySegments": [
+        "Java",
+        "Mybatis"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/403. 青蛙过河.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/403. 青蛙过河.md",
+      "title": "403. 青蛙过河",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/403.%20%E9%9D%92%E8%9B%99%E8%BF%87%E6%B2%B3",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "403. 青蛙过河"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/贪心/435. 无重叠区间 - Java+Kotlin 贪心算法.md",
+      "filePath": "Algorithm/贪心/435. 无重叠区间 - Java+Kotlin 贪心算法.md",
+      "title": "435. 无重叠区间 - Java+Kotlin 贪心算法",
+      "url": "/posts/Algorithm/%E8%B4%AA%E5%BF%83/435.%20%E6%97%A0%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4%20-%20Java%2BKotlin%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95",
+      "segments": [
+        "Algorithm",
+        "贪心",
+        "435. 无重叠区间 - Java+Kotlin 贪心算法"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "贪心"
+      ]
+    },
+    {
+      "id": "Algorithm/BFS&DFS/449. 序列化和反序列化二叉搜索树 - Kotlin 深度优先搜索.md",
+      "filePath": "Algorithm/BFS&DFS/449. 序列化和反序列化二叉搜索树 - Kotlin 深度优先搜索.md",
+      "title": "449. 序列化和反序列化二叉搜索树 - Kotlin 深度优先搜索",
+      "url": "/posts/Algorithm/BFS%26DFS/449.%20%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%20-%20Kotlin%20%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2",
+      "segments": [
+        "Algorithm",
+        "BFS&DFS",
+        "449. 序列化和反序列化二叉搜索树 - Kotlin 深度优先搜索"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "BFS&DFS"
+      ]
+    },
+    {
+      "id": "Algorithm/贪心/452. 用最少数量的箭引爆气球 - Java+Kotlin 贪心算法.md",
+      "filePath": "Algorithm/贪心/452. 用最少数量的箭引爆气球 - Java+Kotlin 贪心算法.md",
+      "title": "452. 用最少数量的箭引爆气球 - Java+Kotlin 贪心算法",
+      "url": "/posts/Algorithm/%E8%B4%AA%E5%BF%83/452.%20%E7%94%A8%E6%9C%80%E5%B0%91%E6%95%B0%E9%87%8F%E7%9A%84%E7%AE%AD%E5%BC%95%E7%88%86%E6%B0%94%E7%90%83%20-%20Java%2BKotlin%20%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95",
+      "segments": [
+        "Algorithm",
+        "贪心",
+        "452. 用最少数量的箭引爆气球 - Java+Kotlin 贪心算法"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "贪心"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/474. 一和零 - Kotlin 0-1背包DP问题.md",
+      "filePath": "Algorithm/动态规划/474. 一和零 - Kotlin 0-1背包DP问题.md",
+      "title": "474. 一和零 - Kotlin 0-1背包DP问题",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/474.%20%E4%B8%80%E5%92%8C%E9%9B%B6%20-%20Kotlin%200-1%E8%83%8C%E5%8C%85DP%E9%97%AE%E9%A2%98",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "474. 一和零 - Kotlin 0-1背包DP问题"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Kotlin/Kotlin 基础/5 - 字符串入门.md",
+      "filePath": "Kotlin/Kotlin 基础/5 - 字符串入门.md",
+      "title": "5 - 字符串入门",
+      "url": "/posts/Kotlin/Kotlin%20%E5%9F%BA%E7%A1%80/5%20-%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%85%A5%E9%97%A8",
+      "segments": [
+        "Kotlin",
+        "Kotlin 基础",
+        "5 - 字符串入门"
+      ],
+      "categorySegments": [
+        "Kotlin",
+        "Kotlin 基础"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/518. 零钱兑换 II - Kotlin 背包DP.md",
+      "filePath": "Algorithm/动态规划/518. 零钱兑换 II - Kotlin 背包DP.md",
+      "title": "518. 零钱兑换 II - Kotlin 背包DP",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/518.%20%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2%20II%20-%20Kotlin%20%E8%83%8C%E5%8C%85DP",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "518. 零钱兑换 II - Kotlin 背包DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/BFS&DFS/547. 省份数量 - Java BFS.md",
+      "filePath": "Algorithm/BFS&DFS/547. 省份数量 - Java BFS.md",
+      "title": "547. 省份数量 - Java BFS",
+      "url": "/posts/Algorithm/BFS%26DFS/547.%20%E7%9C%81%E4%BB%BD%E6%95%B0%E9%87%8F%20-%20Java%20BFS",
+      "segments": [
+        "Algorithm",
+        "BFS&DFS",
+        "547. 省份数量 - Java BFS"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "BFS&DFS"
+      ]
+    },
+    {
+      "id": "Algorithm/贪心/55. 跳跃游戏 - Java 贪心.md",
+      "filePath": "Algorithm/贪心/55. 跳跃游戏 - Java 贪心.md",
+      "title": "55. 跳跃游戏 - Java 贪心",
+      "url": "/posts/Algorithm/%E8%B4%AA%E5%BF%83/55.%20%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%20-%20Java%20%E8%B4%AA%E5%BF%83",
+      "segments": [
+        "Algorithm",
+        "贪心",
+        "55. 跳跃游戏 - Java 贪心"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "贪心"
+      ]
+    },
+    {
+      "id": "Algorithm/模拟/57. 插入区间 - Kotlin 合并区间 模拟.md",
+      "filePath": "Algorithm/模拟/57. 插入区间 - Kotlin 合并区间 模拟.md",
+      "title": "57. 插入区间 - Kotlin 合并区间 模拟",
+      "url": "/posts/Algorithm/%E6%A8%A1%E6%8B%9F/57.%20%E6%8F%92%E5%85%A5%E5%8C%BA%E9%97%B4%20-%20Kotlin%20%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4%20%E6%A8%A1%E6%8B%9F",
+      "segments": [
+        "Algorithm",
+        "模拟",
+        "57. 插入区间 - Kotlin 合并区间 模拟"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "模拟"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/583. 两个字符串的删除操作 - Java 动态规划.md",
+      "filePath": "Algorithm/动态规划/583. 两个字符串的删除操作 - Java 动态规划.md",
+      "title": "583. 两个字符串的删除操作 - Java 动态规划",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/583.%20%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C%20-%20Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "583. 两个字符串的删除操作 - Java 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/62. 不同路径.md",
+      "filePath": "Algorithm/动态规划/62. 不同路径.md",
+      "title": "62. 不同路径",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/62.%20%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "62. 不同路径"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/63. 不同路径 II.md",
+      "filePath": "Algorithm/动态规划/63. 不同路径 II.md",
+      "title": "63. 不同路径 II",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/63.%20%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84%20II",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "63. 不同路径 II"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/前缀和/6334. 一个数组所有前缀的分数 - Java 前缀和.md",
+      "filePath": "Algorithm/前缀和/6334. 一个数组所有前缀的分数 - Java 前缀和.md",
+      "title": "6334. 一个数组所有前缀的分数 - Java 前缀和",
+      "url": "/posts/Algorithm/%E5%89%8D%E7%BC%80%E5%92%8C/6334.%20%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E6%89%80%E6%9C%89%E5%89%8D%E7%BC%80%E7%9A%84%E5%88%86%E6%95%B0%20-%20Java%20%E5%89%8D%E7%BC%80%E5%92%8C",
+      "segments": [
+        "Algorithm",
+        "前缀和",
+        "6334. 一个数组所有前缀的分数 - Java 前缀和"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "前缀和"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/639. 解码方法 II.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/639. 解码方法 II.md",
+      "title": "639. 解码方法 II",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/639.%20%E8%A7%A3%E7%A0%81%E6%96%B9%E6%B3%95%20II",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "639. 解码方法 II"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/贪心/646. 最长数对链 - Kotlin 动态规划+贪心.md",
+      "filePath": "Algorithm/贪心/646. 最长数对链 - Kotlin 动态规划+贪心.md",
+      "title": "646. 最长数对链 - Kotlin 动态规划+贪心",
+      "url": "/posts/Algorithm/%E8%B4%AA%E5%BF%83/646.%20%E6%9C%80%E9%95%BF%E6%95%B0%E5%AF%B9%E9%93%BE%20-%20Kotlin%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%2B%E8%B4%AA%E5%BF%83",
+      "segments": [
+        "Algorithm",
+        "贪心",
+        "646. 最长数对链 - Kotlin 动态规划+贪心"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "贪心"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/651. 4键键盘.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/651. 4键键盘.md",
+      "title": "651. 4键键盘",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/651.%204%E9%94%AE%E9%94%AE%E7%9B%98",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "651. 4键键盘"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/673. 最长递增子序列的个数 - Java 动态规划.md",
+      "filePath": "Algorithm/动态规划/673. 最长递增子序列的个数 - Java 动态规划.md",
+      "title": "673. 最长递增子序列的个数 - Java 动态规划",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/673.%20%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97%E7%9A%84%E4%B8%AA%E6%95%B0%20-%20Java%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "673. 最长递增子序列的个数 - Java 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/数据结构/684. 冗余连接 - Java 并查集.md",
+      "filePath": "Algorithm/数据结构/684. 冗余连接 - Java 并查集.md",
+      "title": "684. 冗余连接 - Java 并查集",
+      "url": "/posts/Algorithm/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/684.%20%E5%86%97%E4%BD%99%E8%BF%9E%E6%8E%A5%20-%20Java%20%E5%B9%B6%E6%9F%A5%E9%9B%86",
+      "segments": [
+        "Algorithm",
+        "数据结构",
+        "684. 冗余连接 - Java 并查集"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "数据结构"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/688. 骑士在棋盘上的概率 - Kotlin 动态规划.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/688. 骑士在棋盘上的概率 - Kotlin 动态规划.md",
+      "title": "688. 骑士在棋盘上的概率 - Kotlin 动态规划",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/688.%20%E9%AA%91%E5%A3%AB%E5%9C%A8%E6%A3%8B%E7%9B%98%E4%B8%8A%E7%9A%84%E6%A6%82%E7%8E%87%20-%20Kotlin%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "688. 骑士在棋盘上的概率 - Kotlin 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/72. 编辑距离.md",
+      "filePath": "Algorithm/动态规划/72. 编辑距离.md",
+      "title": "72. 编辑距离",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/72.%20%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "72. 编辑距离"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/模拟/722. 删除注释 - Kotlin 模拟.md",
+      "filePath": "Algorithm/模拟/722. 删除注释 - Kotlin 模拟.md",
+      "title": "722. 删除注释 - Kotlin 模拟",
+      "url": "/posts/Algorithm/%E6%A8%A1%E6%8B%9F/722.%20%E5%88%A0%E9%99%A4%E6%B3%A8%E9%87%8A%20-%20Kotlin%20%E6%A8%A1%E6%8B%9F",
+      "segments": [
+        "Algorithm",
+        "模拟",
+        "722. 删除注释 - Kotlin 模拟"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "模拟"
+      ]
+    },
+    {
+      "id": "Algorithm/回溯算法/79.单词搜索 - Java 回溯算法.md",
+      "filePath": "Algorithm/回溯算法/79.单词搜索 - Java 回溯算法.md",
+      "title": "79.单词搜索 - Java 回溯算法",
+      "url": "/posts/Algorithm/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/79.%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2%20-%20Java%20%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95",
+      "segments": [
+        "Algorithm",
+        "回溯算法",
+        "79.单词搜索 - Java 回溯算法"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "回溯算法"
+      ]
+    },
+    {
+      "id": "Algorithm/双指针/823. 带因子的二叉树 - Kotlin 动态规划+双指针.md",
+      "filePath": "Algorithm/双指针/823. 带因子的二叉树 - Kotlin 动态规划+双指针.md",
+      "title": "823. 带因子的二叉树 - Kotlin 动态规划+双指针",
+      "url": "/posts/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/823.%20%E5%B8%A6%E5%9B%A0%E5%AD%90%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91%20-%20Kotlin%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%2B%E5%8F%8C%E6%8C%87%E9%92%88",
+      "segments": [
+        "Algorithm",
+        "双指针",
+        "823. 带因子的二叉树 - Kotlin 动态规划+双指针"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "双指针"
+      ]
+    },
+    {
+      "id": "Algorithm/模拟/833. 字符串中的查找与替换 - Kotlin 排序+模拟.md",
+      "filePath": "Algorithm/模拟/833. 字符串中的查找与替换 - Kotlin 排序+模拟.md",
+      "title": "833. 字符串中的查找与替换 - Kotlin 排序+模拟",
+      "url": "/posts/Algorithm/%E6%A8%A1%E6%8B%9F/833.%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE%E4%B8%8E%E6%9B%BF%E6%8D%A2%20-%20Kotlin%20%E6%8E%92%E5%BA%8F%2B%E6%A8%A1%E6%8B%9F",
+      "segments": [
+        "Algorithm",
+        "模拟",
+        "833. 字符串中的查找与替换 - Kotlin 排序+模拟"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "模拟"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/837. 新 21 点 - Kotlin 动态规划.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/837. 新 21 点 - Kotlin 动态规划.md",
+      "title": "837. 新 21 点 - Kotlin 动态规划",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/837.%20%E6%96%B0%2021%20%E7%82%B9%20-%20Kotlin%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "837. 新 21 点 - Kotlin 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/单调栈/84. 柱状图中最大的矩形.md",
+      "filePath": "Algorithm/单调栈/84. 柱状图中最大的矩形.md",
+      "title": "84. 柱状图中最大的矩形",
+      "url": "/posts/Algorithm/%E5%8D%95%E8%B0%83%E6%A0%88/84.%20%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2",
+      "segments": [
+        "Algorithm",
+        "单调栈",
+        "84. 柱状图中最大的矩形"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "单调栈"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/88. 买卖股票的最佳时机 IV - Kotlin 动态规划.md",
+      "filePath": "Algorithm/动态规划/88. 买卖股票的最佳时机 IV - Kotlin 动态规划.md",
+      "title": "88. 买卖股票的最佳时机 IV - Kotlin 动态规划",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/88.%20%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BA%20IV%20-%20Kotlin%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "88. 买卖股票的最佳时机 IV - Kotlin 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：动态规划（进阶版）/894. 所有可能的真二叉树 - Kotlin 动态规划.md",
+      "filePath": "Algorithm/题单：动态规划（进阶版）/894. 所有可能的真二叉树 - Kotlin 动态规划.md",
+      "title": "894. 所有可能的真二叉树 - Kotlin 动态规划",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%88%E8%BF%9B%E9%98%B6%E7%89%88%EF%BC%89/894.%20%E6%89%80%E6%9C%89%E5%8F%AF%E8%83%BD%E7%9A%84%E7%9C%9F%E4%BA%8C%E5%8F%89%E6%A0%91%20-%20Kotlin%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92",
+      "segments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）",
+        "894. 所有可能的真二叉树 - Kotlin 动态规划"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：动态规划（进阶版）"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/91. 解码方法.md",
+      "filePath": "Algorithm/动态规划/91. 解码方法.md",
+      "title": "91. 解码方法",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/91.%20%E8%A7%A3%E7%A0%81%E6%96%B9%E6%B3%95",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "91. 解码方法"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/918. 环形子数组的最大和 - Kotlin 最大子数组和+最小子数组和 DP.md",
+      "filePath": "Algorithm/动态规划/918. 环形子数组的最大和 - Kotlin 最大子数组和+最小子数组和 DP.md",
+      "title": "918. 环形子数组的最大和 - Kotlin 最大子数组和+最小子数组和 DP",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/918.%20%E7%8E%AF%E5%BD%A2%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C%20-%20Kotlin%20%E6%9C%80%E5%A4%A7%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C%2B%E6%9C%80%E5%B0%8F%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C%20DP",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "918. 环形子数组的最大和 - Kotlin 最大子数组和+最小子数组和 DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/动态规划/97. 交错字符串 - Kotlin 二维DP.md",
+      "filePath": "Algorithm/动态规划/97. 交错字符串 - Kotlin 二维DP.md",
+      "title": "97. 交错字符串 - Kotlin 二维DP",
+      "url": "/posts/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/97.%20%E4%BA%A4%E9%94%99%E5%AD%97%E7%AC%A6%E4%B8%B2%20-%20Kotlin%20%E4%BA%8C%E7%BB%B4DP",
+      "segments": [
+        "Algorithm",
+        "动态规划",
+        "97. 交错字符串 - Kotlin 二维DP"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "动态规划"
+      ]
+    },
+    {
+      "id": "Algorithm/BFS&DFS/979. 在二叉树中分配硬币 - Kotlin 深度优先搜索 递归.md",
+      "filePath": "Algorithm/BFS&DFS/979. 在二叉树中分配硬币 - Kotlin 深度优先搜索 递归.md",
+      "title": "979. 在二叉树中分配硬币 - Kotlin 深度优先搜索 递归",
+      "url": "/posts/Algorithm/BFS%26DFS/979.%20%E5%9C%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%88%86%E9%85%8D%E7%A1%AC%E5%B8%81%20-%20Kotlin%20%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2%20%E9%80%92%E5%BD%92",
+      "segments": [
+        "Algorithm",
+        "BFS&DFS",
+        "979. 在二叉树中分配硬币 - Kotlin 深度优先搜索 递归"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "BFS&DFS"
+      ]
+    },
+    {
+      "id": "Algorithm/双指针/986.区间列表的交集 - Java 双指针.md",
+      "filePath": "Algorithm/双指针/986.区间列表的交集 - Java 双指针.md",
+      "title": "986.区间列表的交集 - Java 双指针",
+      "url": "/posts/Algorithm/%E5%8F%8C%E6%8C%87%E9%92%88/986.%E5%8C%BA%E9%97%B4%E5%88%97%E8%A1%A8%E7%9A%84%E4%BA%A4%E9%9B%86%20-%20Java%20%E5%8F%8C%E6%8C%87%E9%92%88",
+      "segments": [
+        "Algorithm",
+        "双指针",
+        "986.区间列表的交集 - Java 双指针"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "双指针"
+      ]
+    },
+    {
+      "id": "Article/Essay/从函数式编程的角度解析领域特定语言的本质.md",
+      "filePath": "Article/Essay/从函数式编程的角度解析领域特定语言的本质.md",
+      "title": "从函数式编程的角度解析领域特定语言的本质",
+      "url": "/posts/Article/Essay/%E4%BB%8E%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E7%9A%84%E8%A7%92%E5%BA%A6%E8%A7%A3%E6%9E%90%E9%A2%86%E5%9F%9F%E7%89%B9%E5%AE%9A%E8%AF%AD%E8%A8%80%E7%9A%84%E6%9C%AC%E8%B4%A8",
+      "segments": [
+        "Article",
+        "Essay",
+        "从函数式编程的角度解析领域特定语言的本质"
+      ],
+      "categorySegments": [
+        "Article",
+        "Essay"
+      ]
+    },
+    {
+      "id": "Article/Web/搭建 vitepress 静态网站.md",
+      "filePath": "Article/Web/搭建 vitepress 静态网站.md",
+      "title": "搭建 vitepress 静态网站",
+      "url": "/posts/Article/Web/%E6%90%AD%E5%BB%BA%20vitepress%20%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99",
+      "segments": [
+        "Article",
+        "Web",
+        "搭建 vitepress 静态网站"
+      ],
+      "categorySegments": [
+        "Article",
+        "Web"
+      ]
+    },
+    {
+      "id": "Article/Audio/电吉他中的阻抗匹配和线性失真.md",
+      "filePath": "Article/Audio/电吉他中的阻抗匹配和线性失真.md",
+      "title": "电吉他中的阻抗匹配和线性失真",
+      "url": "/posts/Article/Audio/%E7%94%B5%E5%90%89%E4%BB%96%E4%B8%AD%E7%9A%84%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D%E5%92%8C%E7%BA%BF%E6%80%A7%E5%A4%B1%E7%9C%9F",
+      "segments": [
+        "Article",
+        "Audio",
+        "电吉他中的阻抗匹配和线性失真"
+      ],
+      "categorySegments": [
+        "Article",
+        "Audio"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/动态规划：剑指 Offer 14- I. 剪绳子.md",
+      "filePath": "Algorithm/题单：剑指 Offer/动态规划：剑指 Offer 14- I. 剪绳子.md",
+      "title": "动态规划：剑指 Offer 14- I. 剪绳子",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%9A%E5%89%91%E6%8C%87%20Offer%2014-%20I.%20%E5%89%AA%E7%BB%B3%E5%AD%90",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "动态规划：剑指 Offer 14- I. 剪绳子"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "Java/JVM底层原理/对象的生命周期和可回收性判断.md",
+      "filePath": "Java/JVM底层原理/对象的生命周期和可回收性判断.md",
+      "title": "对象的生命周期和可回收性判断",
+      "url": "/posts/Java/JVM%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%92%8C%E5%8F%AF%E5%9B%9E%E6%94%B6%E6%80%A7%E5%88%A4%E6%96%AD",
+      "segments": [
+        "Java",
+        "JVM底层原理",
+        "对象的生命周期和可回收性判断"
+      ],
+      "categorySegments": [
+        "Java",
+        "JVM底层原理"
+      ]
+    },
+    {
+      "id": "Java/Java语言特性/多线程-锁.md",
+      "filePath": "Java/Java语言特性/多线程-锁.md",
+      "title": "多线程-锁",
+      "url": "/posts/Java/Java%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7/%E5%A4%9A%E7%BA%BF%E7%A8%8B-%E9%94%81",
+      "segments": [
+        "Java",
+        "Java语言特性",
+        "多线程-锁"
+      ],
+      "categorySegments": [
+        "Java",
+        "Java语言特性"
+      ]
+    },
+    {
+      "id": "Java/Java语言特性/多线程基础.md",
+      "filePath": "Java/Java语言特性/多线程基础.md",
+      "title": "多线程基础",
+      "url": "/posts/Java/Java%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80",
+      "segments": [
+        "Java",
+        "Java语言特性",
+        "多线程基础"
+      ],
+      "categorySegments": [
+        "Java",
+        "Java语言特性"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/二叉树遍历：剑指 Offer 07. 重建二叉树.md",
+      "filePath": "Algorithm/题单：剑指 Offer/二叉树遍历：剑指 Offer 07. 重建二叉树.md",
+      "title": "二叉树遍历：剑指 Offer 07. 重建二叉树",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%EF%BC%9A%E5%89%91%E6%8C%87%20Offer%2007.%20%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "二叉树遍历：剑指 Offer 07. 重建二叉树"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/二分：剑指 Offer 53 - I. 在排序数组中查找数字 I.md",
+      "filePath": "Algorithm/题单：剑指 Offer/二分：剑指 Offer 53 - I. 在排序数组中查找数字 I.md",
+      "title": "二分：剑指 Offer 53 - I. 在排序数组中查找数字 I",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/%E4%BA%8C%E5%88%86%EF%BC%9A%E5%89%91%E6%8C%87%20Offer%2053%20-%20I.%20%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97%20I",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "二分：剑指 Offer 53 - I. 在排序数组中查找数字 I"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "Java/Java语言特性/反射.md",
+      "filePath": "Java/Java语言特性/反射.md",
+      "title": "反射",
+      "url": "/posts/Java/Java%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7/%E5%8F%8D%E5%B0%84",
+      "segments": [
+        "Java",
+        "Java语言特性",
+        "反射"
+      ],
+      "categorySegments": [
+        "Java",
+        "Java语言特性"
+      ]
+    },
+    {
+      "id": "Java/Java语言特性/反射-动态代理.md",
+      "filePath": "Java/Java语言特性/反射-动态代理.md",
+      "title": "反射-动态代理",
+      "url": "/posts/Java/Java%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7/%E5%8F%8D%E5%B0%84-%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86",
+      "segments": [
+        "Java",
+        "Java语言特性",
+        "反射-动态代理"
+      ],
+      "categorySegments": [
+        "Java",
+        "Java语言特性"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/回溯：剑指 Offer 34. 二叉树中和为某一值的路径.md",
+      "filePath": "Algorithm/题单：剑指 Offer/回溯：剑指 Offer 34. 二叉树中和为某一值的路径.md",
+      "title": "回溯：剑指 Offer 34. 二叉树中和为某一值的路径",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/%E5%9B%9E%E6%BA%AF%EF%BC%9A%E5%89%91%E6%8C%87%20Offer%2034.%20%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "回溯：剑指 Offer 34. 二叉树中和为某一值的路径"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "Article/Web/基于Github RESTful API实现网站-数据分离的个人博客搭建实验.md",
+      "filePath": "Article/Web/基于Github RESTful API实现网站-数据分离的个人博客搭建实验.md",
+      "title": "基于Github RESTful API实现网站-数据分离的个人博客搭建实验",
+      "url": "/posts/Article/Web/%E5%9F%BA%E4%BA%8EGithub%20RESTful%20API%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99-%E6%95%B0%E6%8D%AE%E5%88%86%E7%A6%BB%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%9E%E9%AA%8C",
+      "segments": [
+        "Article",
+        "Web",
+        "基于Github RESTful API实现网站-数据分离的个人博客搭建实验"
+      ],
+      "categorySegments": [
+        "Article",
+        "Web"
+      ]
+    },
+    {
+      "id": "Java/Article/计算机网络知识体系.md",
+      "filePath": "Java/Article/计算机网络知识体系.md",
+      "title": "计算机网络知识体系",
+      "url": "/posts/Java/Article/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB",
+      "segments": [
+        "Java",
+        "Article",
+        "计算机网络知识体系"
+      ],
+      "categorySegments": [
+        "Java",
+        "Article"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/剑指 Offer 35. 复杂链表的复制.md",
+      "filePath": "Algorithm/题单：剑指 Offer/剑指 Offer 35. 复杂链表的复制.md",
+      "title": "剑指 Offer 35. 复杂链表的复制",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/%E5%89%91%E6%8C%87%20Offer%2035.%20%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "剑指 Offer 35. 复杂链表的复制"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "Java/Java语言特性/快读快写模板.md",
+      "filePath": "Java/Java语言特性/快读快写模板.md",
+      "title": "快读快写模板",
+      "url": "/posts/Java/Java%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7/%E5%BF%AB%E8%AF%BB%E5%BF%AB%E5%86%99%E6%A8%A1%E6%9D%BF",
+      "segments": [
+        "Java",
+        "Java语言特性",
+        "快读快写模板"
+      ],
+      "categorySegments": [
+        "Java",
+        "Java语言特性"
+      ]
+    },
+    {
+      "id": "Article/Games/龙之信条1&2全成就资料.md",
+      "filePath": "Article/Games/龙之信条1&2全成就资料.md",
+      "title": "龙之信条1&2全成就资料",
+      "url": "/posts/Article/Games/%E9%BE%99%E4%B9%8B%E4%BF%A1%E6%9D%A11%262%E5%85%A8%E6%88%90%E5%B0%B1%E8%B5%84%E6%96%99",
+      "segments": [
+        "Article",
+        "Games",
+        "龙之信条1&2全成就资料"
+      ],
+      "categorySegments": [
+        "Article",
+        "Games"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/模拟：剑指 Offer 29. 顺时针打印矩阵.md",
+      "filePath": "Algorithm/题单：剑指 Offer/模拟：剑指 Offer 29. 顺时针打印矩阵.md",
+      "title": "模拟：剑指 Offer 29. 顺时针打印矩阵",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/%E6%A8%A1%E6%8B%9F%EF%BC%9A%E5%89%91%E6%8C%87%20Offer%2029.%20%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "模拟：剑指 Offer 29. 顺时针打印矩阵"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/模拟栈：剑指 Offer 31. 栈的压入、弹出序列.md",
+      "filePath": "Algorithm/题单：剑指 Offer/模拟栈：剑指 Offer 31. 栈的压入、弹出序列.md",
+      "title": "模拟栈：剑指 Offer 31. 栈的压入、弹出序列",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/%E6%A8%A1%E6%8B%9F%E6%A0%88%EF%BC%9A%E5%89%91%E6%8C%87%20Offer%2031.%20%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "模拟栈：剑指 Offer 31. 栈的压入、弹出序列"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "Artificial Intelligence/Article/深度学习《Attention Is All You Need》精读报告.md",
+      "filePath": "Artificial Intelligence/Article/深度学习《Attention Is All You Need》精读报告.md",
+      "title": "深度学习《Attention Is All You Need》精读报告",
+      "url": "/posts/Artificial%20Intelligence/Article/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E3%80%8AAttention%20Is%20All%20You%20Need%E3%80%8B%E7%B2%BE%E8%AF%BB%E6%8A%A5%E5%91%8A",
+      "segments": [
+        "Artificial Intelligence",
+        "Article",
+        "深度学习《Attention Is All You Need》精读报告"
+      ],
+      "categorySegments": [
+        "Artificial Intelligence",
+        "Article"
+      ]
+    },
+    {
+      "id": "Article/Audio/使用Studio One的频谱仪.md",
+      "filePath": "Article/Audio/使用Studio One的频谱仪.md",
+      "title": "使用Studio One的频谱仪",
+      "url": "/posts/Article/Audio/%E4%BD%BF%E7%94%A8Studio%20One%E7%9A%84%E9%A2%91%E8%B0%B1%E4%BB%AA",
+      "segments": [
+        "Article",
+        "Audio",
+        "使用Studio One的频谱仪"
+      ],
+      "categorySegments": [
+        "Article",
+        "Audio"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：尊享面试 100 题/双指针：161. 相隔为 1 的编辑距离.md",
+      "filePath": "Algorithm/题单：尊享面试 100 题/双指针：161. 相隔为 1 的编辑距离.md",
+      "title": "双指针：161. 相隔为 1 的编辑距离",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%B0%8A%E4%BA%AB%E9%9D%A2%E8%AF%95%20100%20%E9%A2%98/%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%9A161.%20%E7%9B%B8%E9%9A%94%E4%B8%BA%201%20%E7%9A%84%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB",
+      "segments": [
+        "Algorithm",
+        "题单：尊享面试 100 题",
+        "双指针：161. 相隔为 1 的编辑距离"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：尊享面试 100 题"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/双指针：剑指 Offer 22. 链表中倒数第k个节点.md",
+      "filePath": "Algorithm/题单：剑指 Offer/双指针：剑指 Offer 22. 链表中倒数第k个节点.md",
+      "title": "双指针：剑指 Offer 22. 链表中倒数第k个节点",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%9A%E5%89%91%E6%8C%87%20Offer%2022.%20%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "双指针：剑指 Offer 22. 链表中倒数第k个节点"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "Java/JVM底层原理/通过Unsafe验证字符串常量池结构.md",
+      "filePath": "Java/JVM底层原理/通过Unsafe验证字符串常量池结构.md",
+      "title": "通过Unsafe验证字符串常量池结构",
+      "url": "/posts/Java/JVM%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/%E9%80%9A%E8%BF%87Unsafe%E9%AA%8C%E8%AF%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E6%B1%A0%E7%BB%93%E6%9E%84",
+      "segments": [
+        "Java",
+        "JVM底层原理",
+        "通过Unsafe验证字符串常量池结构"
+      ],
+      "categorySegments": [
+        "Java",
+        "JVM底层原理"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/位运算：剑指 Offer 56 - I. 数组中数字出现的次数.md",
+      "filePath": "Algorithm/题单：剑指 Offer/位运算：剑指 Offer 56 - I. 数组中数字出现的次数.md",
+      "title": "位运算：剑指 Offer 56 - I. 数组中数字出现的次数",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/%E4%BD%8D%E8%BF%90%E7%AE%97%EF%BC%9A%E5%89%91%E6%8C%87%20Offer%2056%20-%20I.%20%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "位运算：剑指 Offer 56 - I. 数组中数字出现的次数"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "Article/Audio/线性失真和运算放大器的应用.md",
+      "filePath": "Article/Audio/线性失真和运算放大器的应用.md",
+      "title": "线性失真和运算放大器的应用",
+      "url": "/posts/Article/Audio/%E7%BA%BF%E6%80%A7%E5%A4%B1%E7%9C%9F%E5%92%8C%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8",
+      "segments": [
+        "Article",
+        "Audio",
+        "线性失真和运算放大器的应用"
+      ],
+      "categorySegments": [
+        "Article",
+        "Audio"
+      ]
+    },
+    {
+      "id": "Article/Audio/音频信号系统中常用的分贝.md",
+      "filePath": "Article/Audio/音频信号系统中常用的分贝.md",
+      "title": "音频信号系统中常用的分贝",
+      "url": "/posts/Article/Audio/%E9%9F%B3%E9%A2%91%E4%BF%A1%E5%8F%B7%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%88%86%E8%B4%9D",
+      "segments": [
+        "Article",
+        "Audio",
+        "音频信号系统中常用的分贝"
+      ],
+      "categorySegments": [
+        "Article",
+        "Audio"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/优先队列：剑指 Offer 41. 数据流中的中位数.md",
+      "filePath": "Algorithm/题单：剑指 Offer/优先队列：剑指 Offer 41. 数据流中的中位数.md",
+      "title": "优先队列：剑指 Offer 41. 数据流中的中位数",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97%EF%BC%9A%E5%89%91%E6%8C%87%20Offer%2041.%20%E6%95%B0%E6%8D%AE%E6%B5%81%E4%B8%AD%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "优先队列：剑指 Offer 41. 数据流中的中位数"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "Article/Web/在非443端口下配置HTTPS协议.md",
+      "filePath": "Article/Web/在非443端口下配置HTTPS协议.md",
+      "title": "在非443端口下配置HTTPS协议",
+      "url": "/posts/Article/Web/%E5%9C%A8%E9%9D%9E443%E7%AB%AF%E5%8F%A3%E4%B8%8B%E9%85%8D%E7%BD%AEHTTPS%E5%8D%8F%E8%AE%AE",
+      "segments": [
+        "Article",
+        "Web",
+        "在非443端口下配置HTTPS协议"
+      ],
+      "categorySegments": [
+        "Article",
+        "Web"
+      ]
+    },
+    {
+      "id": "Article/Web/在vue项目中修改npm导入的第三方依赖库.md",
+      "filePath": "Article/Web/在vue项目中修改npm导入的第三方依赖库.md",
+      "title": "在vue项目中修改npm导入的第三方依赖库",
+      "url": "/posts/Article/Web/%E5%9C%A8vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BF%AE%E6%94%B9npm%E5%AF%BC%E5%85%A5%E7%9A%84%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BE%9D%E8%B5%96%E5%BA%93",
+      "segments": [
+        "Article",
+        "Web",
+        "在vue项目中修改npm导入的第三方依赖库"
+      ],
+      "categorySegments": [
+        "Article",
+        "Web"
+      ]
+    },
+    {
+      "id": "Java/Java语言特性/注解.md",
+      "filePath": "Java/Java语言特性/注解.md",
+      "title": "注解",
+      "url": "/posts/Java/Java%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7/%E6%B3%A8%E8%A7%A3",
+      "segments": [
+        "Java",
+        "Java语言特性",
+        "注解"
+      ],
+      "categorySegments": [
+        "Java",
+        "Java语言特性"
+      ]
+    },
+    {
+      "id": "DevOps/最新如何通过Gradle发布代码库到MavenCentral上.md",
+      "filePath": "DevOps/最新如何通过Gradle发布代码库到MavenCentral上.md",
+      "title": "最新如何通过Gradle发布代码库到MavenCentral上",
+      "url": "/posts/DevOps/%E6%9C%80%E6%96%B0%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87Gradle%E5%8F%91%E5%B8%83%E4%BB%A3%E7%A0%81%E5%BA%93%E5%88%B0MavenCentral%E4%B8%8A",
+      "segments": [
+        "DevOps",
+        "最新如何通过Gradle发布代码库到MavenCentral上"
+      ],
+      "categorySegments": [
+        "DevOps"
+      ]
+    },
+    {
+      "id": "Article/Essay/AI为何到底还没有替代人类 —— 关于软件设计、达达主义与人类的不可替代性.md",
+      "filePath": "Article/Essay/AI为何到底还没有替代人类 —— 关于软件设计、达达主义与人类的不可替代性.md",
+      "title": "AI为何到底还没有替代人类 —— 关于软件设计、达达主义与人类的不可替代性",
+      "url": "/posts/Article/Essay/AI%E4%B8%BA%E4%BD%95%E5%88%B0%E5%BA%95%E8%BF%98%E6%B2%A1%E6%9C%89%E6%9B%BF%E4%BB%A3%E4%BA%BA%E7%B1%BB%20%E2%80%94%E2%80%94%20%E5%85%B3%E4%BA%8E%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E3%80%81%E8%BE%BE%E8%BE%BE%E4%B8%BB%E4%B9%89%E4%B8%8E%E4%BA%BA%E7%B1%BB%E7%9A%84%E4%B8%8D%E5%8F%AF%E6%9B%BF%E4%BB%A3%E6%80%A7",
+      "segments": [
+        "Article",
+        "Essay",
+        "AI为何到底还没有替代人类 —— 关于软件设计、达达主义与人类的不可替代性"
+      ],
+      "categorySegments": [
+        "Article",
+        "Essay"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/BST：剑指 Offer 36. 二叉搜索树与双向链表.md",
+      "filePath": "Algorithm/题单：剑指 Offer/BST：剑指 Offer 36. 二叉搜索树与双向链表.md",
+      "title": "BST：剑指 Offer 36. 二叉搜索树与双向链表",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/BST%EF%BC%9A%E5%89%91%E6%8C%87%20Offer%2036.%20%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8E%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "BST：剑指 Offer 36. 二叉搜索树与双向链表"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "Java/JVM底层原理/Class对象及ClassLoader.md",
+      "filePath": "Java/JVM底层原理/Class对象及ClassLoader.md",
+      "title": "Class对象及ClassLoader",
+      "url": "/posts/Java/JVM%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/Class%E5%AF%B9%E8%B1%A1%E5%8F%8AClassLoader",
+      "segments": [
+        "Java",
+        "JVM底层原理",
+        "Class对象及ClassLoader"
+      ],
+      "categorySegments": [
+        "Java",
+        "JVM底层原理"
+      ]
+    },
+    {
+      "id": "Algorithm/题单：剑指 Offer/DFS：剑指 Offer 13. 机器人的运动范围.md",
+      "filePath": "Algorithm/题单：剑指 Offer/DFS：剑指 Offer 13. 机器人的运动范围.md",
+      "title": "DFS：剑指 Offer 13. 机器人的运动范围",
+      "url": "/posts/Algorithm/%E9%A2%98%E5%8D%95%EF%BC%9A%E5%89%91%E6%8C%87%20Offer/DFS%EF%BC%9A%E5%89%91%E6%8C%87%20Offer%2013.%20%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4",
+      "segments": [
+        "Algorithm",
+        "题单：剑指 Offer",
+        "DFS：剑指 Offer 13. 机器人的运动范围"
+      ],
+      "categorySegments": [
+        "Algorithm",
+        "题单：剑指 Offer"
+      ]
+    },
+    {
+      "id": "DevOps/Git常用命令表.md",
+      "filePath": "DevOps/Git常用命令表.md",
+      "title": "Git常用命令表",
+      "url": "/posts/DevOps/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%A8",
+      "segments": [
+        "DevOps",
+        "Git常用命令表"
+      ],
+      "categorySegments": [
+        "DevOps"
+      ]
+    },
+    {
+      "id": "DevOps/Gradle学习笔记 & 一站式入土速成教程.md",
+      "filePath": "DevOps/Gradle学习笔记 & 一站式入土速成教程.md",
+      "title": "Gradle学习笔记 & 一站式入土速成教程",
+      "url": "/posts/DevOps/Gradle%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%20%26%20%E4%B8%80%E7%AB%99%E5%BC%8F%E5%85%A5%E5%9C%9F%E9%80%9F%E6%88%90%E6%95%99%E7%A8%8B",
+      "segments": [
+        "DevOps",
+        "Gradle学习笔记 & 一站式入土速成教程"
+      ],
+      "categorySegments": [
+        "DevOps"
+      ]
+    },
+    {
+      "id": "Memo/J2EE考试范围及复习提纲.md",
+      "filePath": "Memo/J2EE考试范围及复习提纲.md",
+      "title": "J2EE考试范围及复习提纲",
+      "url": "/posts/Memo/J2EE%E8%80%83%E8%AF%95%E8%8C%83%E5%9B%B4%E5%8F%8A%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2",
+      "segments": [
+        "Memo",
+        "J2EE考试范围及复习提纲"
+      ],
+      "categorySegments": [
+        "Memo"
+      ]
+    },
+    {
+      "id": "Java/Article/Java并发体系整理.md",
+      "filePath": "Java/Article/Java并发体系整理.md",
+      "title": "Java并发体系整理",
+      "url": "/posts/Java/Article/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB%E6%95%B4%E7%90%86",
+      "segments": [
+        "Java",
+        "Article",
+        "Java并发体系整理"
+      ],
+      "categorySegments": [
+        "Java",
+        "Article"
+      ]
+    },
+    {
+      "id": "Java/Article/Java集合体系整理.md",
+      "filePath": "Java/Article/Java集合体系整理.md",
+      "title": "Java集合体系整理",
+      "url": "/posts/Java/Article/Java%E9%9B%86%E5%90%88%E4%BD%93%E7%B3%BB%E6%95%B4%E7%90%86",
+      "segments": [
+        "Java",
+        "Article",
+        "Java集合体系整理"
+      ],
+      "categorySegments": [
+        "Java",
+        "Article"
+      ]
+    },
+    {
+      "id": "Java/Java语言特性/Java内存模型.md",
+      "filePath": "Java/Java语言特性/Java内存模型.md",
+      "title": "Java内存模型",
+      "url": "/posts/Java/Java%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B",
+      "segments": [
+        "Java",
+        "Java语言特性",
+        "Java内存模型"
+      ],
+      "categorySegments": [
+        "Java",
+        "Java语言特性"
+      ]
+    },
+    {
+      "id": "Java/Article/Java知识体系整理.md",
+      "filePath": "Java/Article/Java知识体系整理.md",
+      "title": "Java知识体系整理",
+      "url": "/posts/Java/Article/Java%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E6%95%B4%E7%90%86",
+      "segments": [
+        "Java",
+        "Article",
+        "Java知识体系整理"
+      ],
+      "categorySegments": [
+        "Java",
+        "Article"
+      ]
+    },
+    {
+      "id": "Translation/JPEG编码过程-Wikipedia.md",
+      "filePath": "Translation/JPEG编码过程-Wikipedia.md",
+      "title": "JPEG编码过程-Wikipedia",
+      "url": "/posts/Translation/JPEG%E7%BC%96%E7%A0%81%E8%BF%87%E7%A8%8B-Wikipedia",
+      "segments": [
+        "Translation",
+        "JPEG编码过程-Wikipedia"
+      ],
+      "categorySegments": [
+        "Translation"
+      ]
+    },
+    {
+      "id": "Projekt/JPEGCompressor/JPEGCompressor.md",
+      "filePath": "Projekt/JPEGCompressor/JPEGCompressor.md",
+      "title": "JPEGCompressor",
+      "url": "/posts/Projekt/JPEGCompressor/JPEGCompressor",
+      "segments": [
+        "Projekt",
+        "JPEGCompressor",
+        "JPEGCompressor"
+      ],
+      "categorySegments": [
+        "Projekt",
+        "JPEGCompressor"
+      ]
+    },
+    {
+      "id": "Java/JVM底层原理/JVM垃圾回收过程.md",
+      "filePath": "Java/JVM底层原理/JVM垃圾回收过程.md",
+      "title": "JVM垃圾回收过程",
+      "url": "/posts/Java/JVM%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/JVM%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E8%BF%87%E7%A8%8B",
+      "segments": [
+        "Java",
+        "JVM底层原理",
+        "JVM垃圾回收过程"
+      ],
+      "categorySegments": [
+        "Java",
+        "JVM底层原理"
+      ]
+    },
+    {
+      "id": "Java/JVM底层原理/JVM内存区域结构.md",
+      "filePath": "Java/JVM底层原理/JVM内存区域结构.md",
+      "title": "JVM内存区域结构",
+      "url": "/posts/Java/JVM%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/JVM%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E7%BB%93%E6%9E%84",
+      "segments": [
+        "Java",
+        "JVM底层原理",
+        "JVM内存区域结构"
+      ],
+      "categorySegments": [
+        "Java",
+        "JVM底层原理"
+      ]
+    },
+    {
+      "id": "Java/JVM底层原理/JVM中对象的构造过程.md",
+      "filePath": "Java/JVM底层原理/JVM中对象的构造过程.md",
+      "title": "JVM中对象的构造过程",
+      "url": "/posts/Java/JVM%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/JVM%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%9E%84%E9%80%A0%E8%BF%87%E7%A8%8B",
+      "segments": [
+        "Java",
+        "JVM底层原理",
+        "JVM中对象的构造过程"
+      ],
+      "categorySegments": [
+        "Java",
+        "JVM底层原理"
+      ]
+    },
+    {
+      "id": "Java/Article/MySQL随记.md",
+      "filePath": "Java/Article/MySQL随记.md",
+      "title": "MySQL随记",
+      "url": "/posts/Java/Article/MySQL%E9%9A%8F%E8%AE%B0",
+      "segments": [
+        "Java",
+        "Article",
+        "MySQL随记"
+      ],
+      "categorySegments": [
+        "Java",
+        "Article"
+      ]
+    },
+    {
+      "id": "Projekt/LeetCodeInputHelper/README.md",
+      "filePath": "Projekt/LeetCodeInputHelper/README.md",
+      "title": "README",
+      "url": "/posts/Projekt/LeetCodeInputHelper/README",
+      "segments": [
+        "Projekt",
+        "LeetCodeInputHelper",
+        "README"
+      ],
+      "categorySegments": [
+        "Projekt",
+        "LeetCodeInputHelper"
+      ]
+    },
+    {
+      "id": "Java/Spring/Spring-1.Spring特性.md",
+      "filePath": "Java/Spring/Spring-1.Spring特性.md",
+      "title": "Spring-1.Spring特性",
+      "url": "/posts/Java/Spring/Spring-1.Spring%E7%89%B9%E6%80%A7",
+      "segments": [
+        "Java",
+        "Spring",
+        "Spring-1.Spring特性"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Java/Spring/Spring-2.Beans.md",
+      "filePath": "Java/Spring/Spring-2.Beans.md",
+      "title": "Spring-2.Beans",
+      "url": "/posts/Java/Spring/Spring-2.Beans",
+      "segments": [
+        "Java",
+        "Spring",
+        "Spring-2.Beans"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Java/Spring/Spring-3.依赖注入.md",
+      "filePath": "Java/Spring/Spring-3.依赖注入.md",
+      "title": "Spring-3.依赖注入",
+      "url": "/posts/Java/Spring/Spring-3.%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5",
+      "segments": [
+        "Java",
+        "Spring",
+        "Spring-3.依赖注入"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Java/Spring/Spring-4.Lombok.md",
+      "filePath": "Java/Spring/Spring-4.Lombok.md",
+      "title": "Spring-4.Lombok",
+      "url": "/posts/Java/Spring/Spring-4.Lombok",
+      "segments": [
+        "Java",
+        "Spring",
+        "Spring-4.Lombok"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Java/Spring/Spring-5.引入配置文件.md",
+      "filePath": "Java/Spring/Spring-5.引入配置文件.md",
+      "title": "Spring-5.引入配置文件",
+      "url": "/posts/Java/Spring/Spring-5.%E5%BC%95%E5%85%A5%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6",
+      "segments": [
+        "Java",
+        "Spring",
+        "Spring-5.引入配置文件"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Java/Spring/Spring-6.工厂模式.md",
+      "filePath": "Java/Spring/Spring-6.工厂模式.md",
+      "title": "Spring-6.工厂模式",
+      "url": "/posts/Java/Spring/Spring-6.%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F",
+      "segments": [
+        "Java",
+        "Spring",
+        "Spring-6.工厂模式"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Java/Spring/Spring-7.注解.md",
+      "filePath": "Java/Spring/Spring-7.注解.md",
+      "title": "Spring-7.注解",
+      "url": "/posts/Java/Spring/Spring-7.%E6%B3%A8%E8%A7%A3",
+      "segments": [
+        "Java",
+        "Spring",
+        "Spring-7.注解"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Java/Spring/Spring-8.框架整合.md",
+      "filePath": "Java/Spring/Spring-8.框架整合.md",
+      "title": "Spring-8.框架整合",
+      "url": "/posts/Java/Spring/Spring-8.%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88",
+      "segments": [
+        "Java",
+        "Spring",
+        "Spring-8.框架整合"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Java/Spring/SpringAOP-1.面向切面编程.md",
+      "filePath": "Java/Spring/SpringAOP-1.面向切面编程.md",
+      "title": "SpringAOP-1.面向切面编程",
+      "url": "/posts/Java/Spring/SpringAOP-1.%E9%9D%A2%E5%90%91%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B",
+      "segments": [
+        "Java",
+        "Spring",
+        "SpringAOP-1.面向切面编程"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Java/Spring/SpringAOP-2.Aspect及切入点.md",
+      "filePath": "Java/Spring/SpringAOP-2.Aspect及切入点.md",
+      "title": "SpringAOP-2.Aspect及切入点",
+      "url": "/posts/Java/Spring/SpringAOP-2.Aspect%E5%8F%8A%E5%88%87%E5%85%A5%E7%82%B9",
+      "segments": [
+        "Java",
+        "Spring",
+        "SpringAOP-2.Aspect及切入点"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Java/Spring/SpringAOP-3.通知.md",
+      "filePath": "Java/Spring/SpringAOP-3.通知.md",
+      "title": "SpringAOP-3.通知",
+      "url": "/posts/Java/Spring/SpringAOP-3.%E9%80%9A%E7%9F%A5",
+      "segments": [
+        "Java",
+        "Spring",
+        "SpringAOP-3.通知"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Java/SpringBoot/SpringBoot - 1.SpringBoot简介.md",
+      "filePath": "Java/SpringBoot/SpringBoot - 1.SpringBoot简介.md",
+      "title": "SpringBoot - 1.SpringBoot简介",
+      "url": "/posts/Java/SpringBoot/SpringBoot%20-%201.SpringBoot%E7%AE%80%E4%BB%8B",
+      "segments": [
+        "Java",
+        "SpringBoot",
+        "SpringBoot - 1.SpringBoot简介"
+      ],
+      "categorySegments": [
+        "Java",
+        "SpringBoot"
+      ]
+    },
+    {
+      "id": "Java/SpringBoot/SpringBoot - 2.版本控制.md",
+      "filePath": "Java/SpringBoot/SpringBoot - 2.版本控制.md",
+      "title": "SpringBoot - 2.版本控制",
+      "url": "/posts/Java/SpringBoot/SpringBoot%20-%202.%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6",
+      "segments": [
+        "Java",
+        "SpringBoot",
+        "SpringBoot - 2.版本控制"
+      ],
+      "categorySegments": [
+        "Java",
+        "SpringBoot"
+      ]
+    },
+    {
+      "id": "Java/SpringBoot/SpringBoot - 3.配置文件.md",
+      "filePath": "Java/SpringBoot/SpringBoot - 3.配置文件.md",
+      "title": "SpringBoot - 3.配置文件",
+      "url": "/posts/Java/SpringBoot/SpringBoot%20-%203.%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6",
+      "segments": [
+        "Java",
+        "SpringBoot",
+        "SpringBoot - 3.配置文件"
+      ],
+      "categorySegments": [
+        "Java",
+        "SpringBoot"
+      ]
+    },
+    {
+      "id": "Java/SpringBoot/SpringBoot - 4.YAML语法.md",
+      "filePath": "Java/SpringBoot/SpringBoot - 4.YAML语法.md",
+      "title": "SpringBoot - 4.YAML语法",
+      "url": "/posts/Java/SpringBoot/SpringBoot%20-%204.YAML%E8%AF%AD%E6%B3%95",
+      "segments": [
+        "Java",
+        "SpringBoot",
+        "SpringBoot - 4.YAML语法"
+      ],
+      "categorySegments": [
+        "Java",
+        "SpringBoot"
+      ]
+    },
+    {
+      "id": "Java/SpringBoot/SpringBoot - 5.热部署依赖.md",
+      "filePath": "Java/SpringBoot/SpringBoot - 5.热部署依赖.md",
+      "title": "SpringBoot - 5.热部署依赖",
+      "url": "/posts/Java/SpringBoot/SpringBoot%20-%205.%E7%83%AD%E9%83%A8%E7%BD%B2%E4%BE%9D%E8%B5%96",
+      "segments": [
+        "Java",
+        "SpringBoot",
+        "SpringBoot - 5.热部署依赖"
+      ],
+      "categorySegments": [
+        "Java",
+        "SpringBoot"
+      ]
+    },
+    {
+      "id": "Java/SpringBoot/SpringBoot - 6.框架整合.md",
+      "filePath": "Java/SpringBoot/SpringBoot - 6.框架整合.md",
+      "title": "SpringBoot - 6.框架整合",
+      "url": "/posts/Java/SpringBoot/SpringBoot%20-%206.%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88",
+      "segments": [
+        "Java",
+        "SpringBoot",
+        "SpringBoot - 6.框架整合"
+      ],
+      "categorySegments": [
+        "Java",
+        "SpringBoot"
+      ]
+    },
+    {
+      "id": "Java/Spring/SpringMybatis-事务级操作.md",
+      "filePath": "Java/Spring/SpringMybatis-事务级操作.md",
+      "title": "SpringMybatis-事务级操作",
+      "url": "/posts/Java/Spring/SpringMybatis-%E4%BA%8B%E5%8A%A1%E7%BA%A7%E6%93%8D%E4%BD%9C",
+      "segments": [
+        "Java",
+        "Spring",
+        "SpringMybatis-事务级操作"
+      ],
+      "categorySegments": [
+        "Java",
+        "Spring"
+      ]
+    },
+    {
+      "id": "Article/SteamDeck/SteamDeck艾尔登法环无法联网问题.md",
+      "filePath": "Article/SteamDeck/SteamDeck艾尔登法环无法联网问题.md",
+      "title": "SteamDeck艾尔登法环无法联网问题",
+      "url": "/posts/Article/SteamDeck/SteamDeck%E8%89%BE%E5%B0%94%E7%99%BB%E6%B3%95%E7%8E%AF%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E9%97%AE%E9%A2%98",
+      "segments": [
+        "Article",
+        "SteamDeck",
+        "SteamDeck艾尔登法环无法联网问题"
+      ],
+      "categorySegments": [
+        "Article",
+        "SteamDeck"
+      ]
+    },
+    {
+      "id": "Article/SteamDeck/SteamDeck导论.md",
+      "filePath": "Article/SteamDeck/SteamDeck导论.md",
+      "title": "SteamDeck导论",
+      "url": "/posts/Article/SteamDeck/SteamDeck%E5%AF%BC%E8%AE%BA",
+      "segments": [
+        "Article",
+        "SteamDeck",
+        "SteamDeck导论"
+      ],
+      "categorySegments": [
+        "Article",
+        "SteamDeck"
+      ]
+    },
+    {
+      "id": "Article/SteamDeck/SteamDeck怪物猎人系列优化设置.md",
+      "filePath": "Article/SteamDeck/SteamDeck怪物猎人系列优化设置.md",
+      "title": "SteamDeck怪物猎人系列优化设置",
+      "url": "/posts/Article/SteamDeck/SteamDeck%E6%80%AA%E7%89%A9%E7%8C%8E%E4%BA%BA%E7%B3%BB%E5%88%97%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE",
+      "segments": [
+        "Article",
+        "SteamDeck",
+        "SteamDeck怪物猎人系列优化设置"
+      ],
+      "categorySegments": [
+        "Article",
+        "SteamDeck"
+      ]
+    },
+    {
+      "id": "Article/SteamDeck/SteamDeck客制化记录.md",
+      "filePath": "Article/SteamDeck/SteamDeck客制化记录.md",
+      "title": "SteamDeck客制化记录",
+      "url": "/posts/Article/SteamDeck/SteamDeck%E5%AE%A2%E5%88%B6%E5%8C%96%E8%AE%B0%E5%BD%95",
+      "segments": [
+        "Article",
+        "SteamDeck",
+        "SteamDeck客制化记录"
+      ],
+      "categorySegments": [
+        "Article",
+        "SteamDeck"
+      ]
+    },
+    {
+      "id": "Projekt/Y9000K_Hackintosh/tutorial.md",
+      "filePath": "Projekt/Y9000K_Hackintosh/tutorial.md",
+      "title": "tutorial",
+      "url": "/posts/Projekt/Y9000K_Hackintosh/tutorial",
+      "segments": [
+        "Projekt",
+        "Y9000K_Hackintosh",
+        "tutorial"
+      ],
+      "categorySegments": [
+        "Projekt",
+        "Y9000K_Hackintosh"
+      ]
+    },
+    {
+      "id": "Projekt/JPEGCompressor/Tutorial.md",
+      "filePath": "Projekt/JPEGCompressor/Tutorial.md",
+      "title": "Tutorial",
+      "url": "/posts/Projekt/JPEGCompressor/Tutorial",
+      "segments": [
+        "Projekt",
+        "JPEGCompressor",
+        "Tutorial"
+      ],
+      "categorySegments": [
+        "Projekt",
+        "JPEGCompressor"
+      ]
+    },
+    {
+      "id": "Article/Web/Vitepress Gitalk插件的安装和配置.md",
+      "filePath": "Article/Web/Vitepress Gitalk插件的安装和配置.md",
+      "title": "Vitepress Gitalk插件的安装和配置",
+      "url": "/posts/Article/Web/Vitepress%20Gitalk%E6%8F%92%E4%BB%B6%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE",
+      "segments": [
+        "Article",
+        "Web",
+        "Vitepress Gitalk插件的安装和配置"
+      ],
+      "categorySegments": [
+        "Article",
+        "Web"
+      ]
+    },
+    {
+      "id": "Projekt/Y9000K_Hackintosh/Y9000K_Hackintosh.md",
+      "filePath": "Projekt/Y9000K_Hackintosh/Y9000K_Hackintosh.md",
+      "title": "Y9000K_Hackintosh",
+      "url": "/posts/Projekt/Y9000K_Hackintosh/Y9000K_Hackintosh",
+      "segments": [
+        "Projekt",
+        "Y9000K_Hackintosh",
+        "Y9000K_Hackintosh"
+      ],
+      "categorySegments": [
+        "Projekt",
+        "Y9000K_Hackintosh"
+      ]
+    }
+  ]
+}

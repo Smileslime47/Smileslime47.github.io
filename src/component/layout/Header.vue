@@ -5,7 +5,6 @@ defineOptions({
 import { computed, nextTick, onMounted, onUnmounted, ref, useAttrs, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Icon } from '@iconify/vue/offline'
-import { postsService } from '@/service/posts'
 import { iconMoon, iconSearch, iconSun } from '@/component/iconify/icons'
 import type { PostMeta } from '@/service/posts'
 
@@ -87,13 +86,13 @@ async function jumpToPost(url: string) {
   closeSearch()
 }
 
-function ensureSearchablePostsLoaded(): Promise<void> {
+async function ensureSearchablePostsLoaded(): Promise<void> {
   if (searchablePosts.value.length > 0) return Promise.resolve()
   if (searchablePostsPromise) return searchablePostsPromise
 
   searchMetaLoading.value = true
-  searchablePostsPromise = postsService
-    .loadAllPostMetas()
+  searchablePostsPromise = import('@/service/posts')
+    .then(({ postsService }) => postsService.loadAllPostMetas())
     .then((items) => {
       searchablePosts.value = items
     })

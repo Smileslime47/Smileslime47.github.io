@@ -9,7 +9,7 @@
           <p class="intro">记录代码、游戏、音乐和一些生活里的碎片化知识。</p>
           <div class="summary-grid">
             <div class="summary-item">
-              <strong>{{ totalTags }}</strong>
+              <strong>{{ totalTagsLabel }}</strong>
               <span>Tags</span>
             </div>
             <div class="summary-item">
@@ -67,11 +67,11 @@
           class="post-card"
         >
           <div class="post-meta">
-            <span>{{ formatDate(post.publishedAt) }}</span>
+            <span>{{ formatDate(post.id) }}</span>
             <span>{{ post.categorySegments.join(' / ') || '未分类目录' }}</span>
           </div>
           <router-link :to="post.url" class="post-title">{{ post.title }}</router-link>
-          <p v-if="post.excerpt" class="post-excerpt">{{ post.excerpt }}</p>
+          <p v-if="postMetaById[post.id]?.excerpt" class="post-excerpt">{{ postMetaById[post.id]?.excerpt }}</p>
           <p class="post-path">{{ post.filePath }}</p>
         </GlassCard>
       </div>
@@ -95,9 +95,9 @@
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue/offline'
-import { computed, nextTick, ref, watch } from 'vue'
+import { computed, nextTick, reactive, ref, watch } from 'vue'
 import { postsService } from '@/service/posts'
-import type { CategoryNode, FrontmatterValue, PostMeta } from '@/service/posts'
+import type { CategoryNode, FrontmatterValue, PostSummary } from '@/service/posts'
 import {
   iconGithub,
   iconGmail,
@@ -110,11 +110,14 @@ import {
 
 const PAGE_SIZE = 10
 
-const loading = ref(true)
-const posts = ref<PostMeta[]>([])
+const loading = ref(false)
+const posts = ref<PostSummary[]>(postsService.getAllPosts())
 const currentPage = ref(1)
 const postListRef = ref<HTMLElement | null>(null)
 const categoryTree = postsService.getCategoryTree()
+const postMetaById = reactive<Record<string, { publishedAt?: string; excerpt: string }>>({})
+const loadingPostMetaIds = new Set<string>()
+const totalTagsLabel = ref('--')
 
 const contactHandles = [
   { label: 'QQ', value: 'Talloran47', icon: iconQq },
@@ -130,25 +133,7 @@ const contactLinks = [
   { label: 'Github', href: 'https://github.com/Smileslime47', icon: iconGithub, external: true },
 ]
 
-postsService
-  .loadAllPostMetas()
-  .then((items) => {
-    posts.value = items
-  })
-  .finally(() => {
-    loading.value = false
-  })
-
 const totalPosts = computed(() => posts.value.length)
-const totalTags = computed(() => {
-  const tags = new Set<string>()
-  for (const post of posts.value) {
-    for (const tag of normalizeTagList(post.frontmatter.tags)) {
-      tags.add(tag)
-    }
-  }
-  return tags.size
-})
 const totalCategories = computed(() => countCategoryNodes(categoryTree))
 const totalPages = computed(() => Math.max(1, Math.ceil(totalPosts.value / PAGE_SIZE)))
 const pagedPosts = computed(() => {
@@ -161,6 +146,14 @@ watch(totalPages, (value) => {
     currentPage.value = value
   }
 })
+
+watch(
+  pagedPosts,
+  (items) => {
+    void Promise.all(items.map((item) => ensurePostMeta(item)))
+  },
+  { immediate: true }
+)
 
 async function goToPage(page: number) {
   const nextPage = Math.min(Math.max(page, 1), totalPages.value)
@@ -182,7 +175,8 @@ function scrollPostListIntoView() {
   })
 }
 
-function formatDate(value?: string): string {
+function formatDate(postId: string): string {
+  const value = postMetaById[postId]?.publishedAt
   if (!value) return '未标注日期'
   const date = new Date(value)
   if (Number.isNaN(date.getTime())) return value
@@ -191,6 +185,25 @@ function formatDate(value?: string): string {
     month: '2-digit',
     day: '2-digit',
   })
+}
+
+async function ensurePostMeta(post: PostSummary): Promise<void> {
+  if (postMetaById[post.id] || loadingPostMetaIds.has(post.id)) return
+
+  loadingPostMetaIds.add(post.id)
+  try {
+    const detail = await postsService.loadPostBySegments(post.segments)
+    if (!detail) return
+
+    const publishedAt = resolvePublishedAt(detail.frontmatter)
+    postMetaById[post.id] = {
+      publishedAt,
+      excerpt: buildExcerpt(detail.content),
+    }
+    updateTotalTagsLabel(detail.frontmatter.tags)
+  } finally {
+    loadingPostMetaIds.delete(post.id)
+  }
 }
 
 function normalizeTagList(raw: FrontmatterValue | undefined): string[] {
@@ -204,6 +217,37 @@ function normalizeTagList(raw: FrontmatterValue | undefined): string[] {
       .filter(Boolean)
   }
   return []
+}
+
+const seenTags = new Set<string>()
+function updateTotalTagsLabel(raw: FrontmatterValue | undefined): void {
+  for (const tag of normalizeTagList(raw)) {
+    seenTags.add(tag)
+  }
+  totalTagsLabel.value = String(seenTags.size)
+}
+
+const DATE_KEYS = ['date', 'publishedAt', 'publishDate', 'createdAt'] as const
+function resolvePublishedAt(frontmatter: Record<string, FrontmatterValue>): string | undefined {
+  for (const key of DATE_KEYS) {
+    const value = frontmatter[key]
+    if (typeof value === 'string' && value.trim() !== '') {
+      return value.trim()
+    }
+  }
+}
+
+function buildExcerpt(content: string): string {
+  return content
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/`[^`]*`/g, ' ')
+    .replace(/!\[[^\]]*]\([^)]*\)/g, ' ')
+    .replace(/\[[^\]]*]\([^)]*\)/g, ' ')
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/\r?\n+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 160)
 }
 
 function countCategoryNodes(nodes: CategoryNode[]): number {

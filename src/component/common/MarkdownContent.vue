@@ -3,7 +3,7 @@ import hljs from 'highlight.js/lib/common'
 import MarkdownIt from 'markdown-it'
 import markdownItMathjax3 from 'markdown-it-mathjax3'
 import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { resolvePostAssetUrls } from '@/service/posts/asset-resolver'
+import { rewritePostImageUrlsInHtml } from '@/service/posts/asset-resolver'
 
 const props = withDefaults(defineProps<{
   content: string
@@ -40,36 +40,15 @@ onBeforeUnmount(() => {
 
 async function renderMarkdown(): Promise<void> {
   const currentVersion = ++renderVersion
-  const resolvedImageSrcByRaw = await collectResolvedImageSrcMap(props.content, props.enableMath, props.postId)
-  const html = createMarkdownRenderer(props.enableMath, resolvedImageSrcByRaw).render(props.content)
+  const rawHtml = createMarkdownRenderer(props.enableMath).render(props.content)
+  const html = await rewritePostImageUrlsInHtml(props.postId, rawHtml)
   if (currentVersion !== renderVersion) return
   renderedHtml.value = html
 }
 
-async function collectResolvedImageSrcMap(
-  content: string,
-  _enableMath: boolean,
-  postId?: string
-): Promise<Map<string, string>> {
-  if (!postId || content.trim() === '') return new Map()
-  const rawSrcList = extractMarkdownImageUrls(content)
-  return resolvePostAssetUrls(postId, rawSrcList)
-}
-
-function extractMarkdownImageUrls(content: string): string[] {
-  const matches = content.matchAll(/!\[[^\]]*]\(([^)\n]+)\)/g)
-  const urls: string[] = []
-  for (const match of matches) {
-    const url = match[1]?.trim()
-    if (!url) continue
-    urls.push(url.replace(/^<|>$/g, ''))
-  }
-  return urls
-}
-
 function createMarkdownParser(enableMath: boolean): MarkdownIt {
   const md = new MarkdownIt({
-    html: false,
+    html: true,
     linkify: true,
     breaks: true,
     typographer: true,
@@ -82,7 +61,7 @@ function createMarkdownParser(enableMath: boolean): MarkdownIt {
   return md
 }
 
-function createMarkdownRenderer(enableMath: boolean, resolvedImageSrcByRaw: Map<string, string>): MarkdownIt {
+function createMarkdownRenderer(enableMath: boolean): MarkdownIt {
   const md = createMarkdownParser(enableMath)
 
   md.renderer.rules.fence = (tokens, idx) => {
@@ -97,22 +76,6 @@ function createMarkdownRenderer(enableMath: boolean, resolvedImageSrcByRaw: Map<
     const codeLines = buildCodeLines(highlighted)
 
     return `<div class="code-block"><div class="code-block__toolbar"><span class="code-block__language">${escapeHtml(displayLanguage)}</span><button class="code-block__copy" type="button" data-copy-code="${encodeURIComponent(code)}">复制</button></div><pre class="code-block__pre hljs"><code>${codeLines}</code></pre></div>`
-  }
-
-  const defaultImageRenderer = md.renderer.rules.image ?? ((tokens, idx, options, _env, self) => {
-    return self.renderToken(tokens, idx, options)
-  })
-
-  md.renderer.rules.image = (tokens, idx, options, env, self) => {
-    const token = tokens[idx]
-    const rawSrc = token?.attrGet('src')
-    if (token && rawSrc) {
-      const resolved = resolvedImageSrcByRaw.get(rawSrc)
-      if (resolved) {
-        token.attrSet('src', resolved)
-      }
-    }
-    return defaultImageRenderer(tokens, idx, options, env, self)
   }
 
   return md

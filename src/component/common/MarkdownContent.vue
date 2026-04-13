@@ -2,8 +2,8 @@
 import hljs from 'highlight.js/lib/common'
 import MarkdownIt from 'markdown-it'
 import markdownItMathjax3 from 'markdown-it-mathjax3'
-import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { resolvePostAssetUrl } from '@/service/posts/asset-resolver'
+import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { resolvePostAssetUrls } from '@/service/posts/asset-resolver'
 
 const props = withDefaults(defineProps<{
   content: string
@@ -15,7 +15,16 @@ const props = withDefaults(defineProps<{
 })
 
 const articleRef = ref<HTMLElement | null>(null)
-const renderedHtml = computed(() => createMarkdownRenderer(props.enableMath, props.postId).render(props.content))
+const renderedHtml = ref('')
+let renderVersion = 0
+
+watch(
+  () => [props.content, props.enableMath, props.postId],
+  () => {
+    void renderMarkdown()
+  },
+  { immediate: true }
+)
 
 watch(renderedHtml, async () => {
   await nextTick()
@@ -29,7 +38,36 @@ onBeforeUnmount(() => {
   articleRef.value?.removeEventListener('click', onArticleClick)
 })
 
-function createMarkdownRenderer(enableMath: boolean, postId?: string): MarkdownIt {
+async function renderMarkdown(): Promise<void> {
+  const currentVersion = ++renderVersion
+  const resolvedImageSrcByRaw = await collectResolvedImageSrcMap(props.content, props.enableMath, props.postId)
+  const html = createMarkdownRenderer(props.enableMath, resolvedImageSrcByRaw).render(props.content)
+  if (currentVersion !== renderVersion) return
+  renderedHtml.value = html
+}
+
+async function collectResolvedImageSrcMap(
+  content: string,
+  _enableMath: boolean,
+  postId?: string
+): Promise<Map<string, string>> {
+  if (!postId || content.trim() === '') return new Map()
+  const rawSrcList = extractMarkdownImageUrls(content)
+  return resolvePostAssetUrls(postId, rawSrcList)
+}
+
+function extractMarkdownImageUrls(content: string): string[] {
+  const matches = content.matchAll(/!\[[^\]]*]\(([^)\n]+)\)/g)
+  const urls: string[] = []
+  for (const match of matches) {
+    const url = match[1]?.trim()
+    if (!url) continue
+    urls.push(url.replace(/^<|>$/g, ''))
+  }
+  return urls
+}
+
+function createMarkdownParser(enableMath: boolean): MarkdownIt {
   const md = new MarkdownIt({
     html: false,
     linkify: true,
@@ -40,6 +78,12 @@ function createMarkdownRenderer(enableMath: boolean, postId?: string): MarkdownI
   if (enableMath) {
     md.use(markdownItMathjax3)
   }
+
+  return md
+}
+
+function createMarkdownRenderer(enableMath: boolean, resolvedImageSrcByRaw: Map<string, string>): MarkdownIt {
+  const md = createMarkdownParser(enableMath)
 
   md.renderer.rules.fence = (tokens, idx) => {
     const token = tokens[idx]
@@ -63,7 +107,10 @@ function createMarkdownRenderer(enableMath: boolean, postId?: string): MarkdownI
     const token = tokens[idx]
     const rawSrc = token?.attrGet('src')
     if (token && rawSrc) {
-      token.attrSet('src', resolvePostAssetUrl(postId, rawSrc))
+      const resolved = resolvedImageSrcByRaw.get(rawSrc)
+      if (resolved) {
+        token.attrSet('src', resolved)
+      }
     }
     return defaultImageRenderer(tokens, idx, options, env, self)
   }

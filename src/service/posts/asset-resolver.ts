@@ -1,10 +1,13 @@
-import { postAssetUrls } from './loaders'
+import { postAssetLoaders } from './loaders'
+import { LazyResourceService } from './resource-loader'
 
-const assetUrlByPath = new Map(
-  Object.entries(postAssetUrls).map(([virtualPath, assetUrl]) => [normalizeVirtualPath(virtualPath), assetUrl])
+const postAssetResource = new LazyResourceService<string>(
+  Object.fromEntries(
+    Object.entries(postAssetLoaders).map(([virtualPath, loader]) => [normalizeVirtualPath(virtualPath), loader])
+  )
 )
 
-export function resolvePostAssetUrl(postId: string | undefined, rawUrl: string): string {
+export async function resolvePostAssetUrl(postId: string | undefined, rawUrl: string): Promise<string> {
   const trimmed = rawUrl.trim()
   if (!postId || trimmed === '' || isExternalAssetUrl(trimmed)) {
     return rawUrl
@@ -14,9 +17,24 @@ export function resolvePostAssetUrl(postId: string | undefined, rawUrl: string):
   const [pathPart, suffix = ''] = splitUrlSuffix(unwrapped)
   const postDir = normalizeVirtualPath(`/src/posts/${postId}`).replace(/\/[^/]+$/, '')
   const resolvedVirtualPath = resolveRelativePath(postDir, pathPart)
-  const assetUrl = assetUrlByPath.get(resolvedVirtualPath)
+  const assetUrl = await postAssetResource.load(resolvedVirtualPath)
 
   return assetUrl ? `${assetUrl}${suffix}` : rawUrl
+}
+
+export async function resolvePostAssetUrls(postId: string | undefined, rawUrls: string[]): Promise<Map<string, string>> {
+  if (!postId || rawUrls.length === 0) return new Map()
+
+  const uniqueUrls = [...new Set(rawUrls)]
+  const pairs = await Promise.all(
+    uniqueUrls.map(async (rawUrl): Promise<[string, string] | undefined> => {
+      const resolved = await resolvePostAssetUrl(postId, rawUrl)
+      if (resolved === rawUrl) return undefined
+      return [rawUrl, resolved]
+    })
+  )
+
+  return new Map(pairs.filter((entry): entry is [string, string] => entry != null))
 }
 
 function isExternalAssetUrl(url: string): boolean {

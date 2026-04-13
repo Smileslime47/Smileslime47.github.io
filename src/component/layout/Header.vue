@@ -20,6 +20,8 @@ const theme = ref<'dark' | 'light'>('dark')
 const searchOpen = ref(false)
 const searchKeyword = ref('')
 const searchablePosts = ref<PostMeta[]>([])
+const searchMetaLoading = ref(false)
+let searchablePostsPromise: Promise<void> | null = null
 
 const menuItems = [
   { name: '首页', path: '/' },
@@ -72,6 +74,7 @@ const headerStyle = computed(() => ({
 
 function openSearch() {
   searchOpen.value = true
+  void ensureSearchablePostsLoaded()
 }
 
 function closeSearch() {
@@ -82,6 +85,24 @@ function closeSearch() {
 async function jumpToPost(url: string) {
   await router.push(url)
   closeSearch()
+}
+
+function ensureSearchablePostsLoaded(): Promise<void> {
+  if (searchablePosts.value.length > 0) return Promise.resolve()
+  if (searchablePostsPromise) return searchablePostsPromise
+
+  searchMetaLoading.value = true
+  searchablePostsPromise = postsService
+    .loadAllPostMetas()
+    .then((items) => {
+      searchablePosts.value = items
+    })
+    .finally(() => {
+      searchMetaLoading.value = false
+      searchablePostsPromise = null
+    })
+
+  return searchablePostsPromise
 }
 
 onMounted(() => {
@@ -95,9 +116,6 @@ onMounted(() => {
 
   updateHeaderProgress()
   window.addEventListener('scroll', updateHeaderProgress, { passive: true })
-  void postsService.loadAllPostMetas().then((items) => {
-    searchablePosts.value = items
-  })
 })
 
 watch(
@@ -156,6 +174,7 @@ onUnmounted(() => {
           autofocus
         >
         <div class="search-results">
+          <p v-if="searchMetaLoading" class="search-empty">正在加载文章索引...</p>
           <button
             v-for="post in filteredPosts"
             :key="post.id"
@@ -167,7 +186,7 @@ onUnmounted(() => {
             <span class="search-meta">{{ post.publishedAt || '未标注日期' }} · {{ post.filePath }}</span>
             <span v-if="post.excerpt" class="search-excerpt">{{ post.excerpt }}</span>
           </button>
-          <p v-if="filteredPosts.length === 0" class="search-empty">没有找到匹配的文章。</p>
+          <p v-if="!searchMetaLoading && filteredPosts.length === 0" class="search-empty">没有找到匹配的文章。</p>
         </div>
       </div>
     </div>

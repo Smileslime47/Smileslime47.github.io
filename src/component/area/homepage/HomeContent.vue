@@ -71,7 +71,6 @@
             <span>{{ post.categorySegments.join(' / ') || '未分类目录' }}</span>
           </div>
           <router-link :to="post.url" class="post-title">{{ post.title }}</router-link>
-          <p v-if="postMetaById[post.id]?.excerpt" class="post-excerpt">{{ postMetaById[post.id]?.excerpt }}</p>
           <p class="post-path">{{ post.filePath }}</p>
         </GlassCard>
       </div>
@@ -95,9 +94,9 @@
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue/offline'
-import { computed, nextTick, reactive, ref, watch } from 'vue'
+import { computed, nextTick, ref, watch } from 'vue'
 import { postsService } from '@/service/posts'
-import type { CategoryNode, FrontmatterValue, PostSummary } from '@/service/posts'
+import type { CategoryNode, PostSummary } from '@/service/posts'
 import {
   iconGithub,
   iconGmail,
@@ -115,9 +114,7 @@ const posts = ref<PostSummary[]>(postsService.getAllPosts())
 const currentPage = ref(1)
 const postListRef = ref<HTMLElement | null>(null)
 const categoryTree = postsService.getCategoryTree()
-const postMetaById = reactive<Record<string, { publishedAt?: string; excerpt: string }>>({})
-const loadingPostMetaIds = new Set<string>()
-const totalTagsLabel = ref('--')
+const totalTagsLabel = computed(() => String(new Set(posts.value.flatMap((post) => post.tags)).size))
 
 const contactHandles = [
   { label: 'QQ', value: 'Talloran47', icon: iconQq },
@@ -147,14 +144,6 @@ watch(totalPages, (value) => {
   }
 })
 
-watch(
-  pagedPosts,
-  (items) => {
-    void Promise.all(items.map((item) => ensurePostMeta(item)))
-  },
-  { immediate: true }
-)
-
 async function goToPage(page: number) {
   const nextPage = Math.min(Math.max(page, 1), totalPages.value)
   if (nextPage === currentPage.value) return
@@ -176,7 +165,7 @@ function scrollPostListIntoView() {
 }
 
 function formatDate(postId: string): string {
-  const value = postMetaById[postId]?.publishedAt
+  const value = posts.value.find((post) => post.id === postId)?.publishedAt
   if (!value) return '未标注日期'
   const date = new Date(value)
   if (Number.isNaN(date.getTime())) return value
@@ -185,69 +174,6 @@ function formatDate(postId: string): string {
     month: '2-digit',
     day: '2-digit',
   })
-}
-
-async function ensurePostMeta(post: PostSummary): Promise<void> {
-  if (postMetaById[post.id] || loadingPostMetaIds.has(post.id)) return
-
-  loadingPostMetaIds.add(post.id)
-  try {
-    const detail = await postsService.loadPostBySegments(post.segments)
-    if (!detail) return
-
-    const publishedAt = resolvePublishedAt(detail.frontmatter)
-    postMetaById[post.id] = {
-      publishedAt,
-      excerpt: buildExcerpt(detail.content),
-    }
-    updateTotalTagsLabel(detail.frontmatter.tags)
-  } finally {
-    loadingPostMetaIds.delete(post.id)
-  }
-}
-
-function normalizeTagList(raw: FrontmatterValue | undefined): string[] {
-  if (Array.isArray(raw)) {
-    return raw.map((item) => item.trim()).filter(Boolean)
-  }
-  if (typeof raw === 'string') {
-    return raw
-      .split(',')
-      .map((item) => item.trim())
-      .filter(Boolean)
-  }
-  return []
-}
-
-const seenTags = new Set<string>()
-function updateTotalTagsLabel(raw: FrontmatterValue | undefined): void {
-  for (const tag of normalizeTagList(raw)) {
-    seenTags.add(tag)
-  }
-  totalTagsLabel.value = String(seenTags.size)
-}
-
-const DATE_KEYS = ['date', 'publishedAt', 'publishDate', 'createdAt'] as const
-function resolvePublishedAt(frontmatter: Record<string, FrontmatterValue>): string | undefined {
-  for (const key of DATE_KEYS) {
-    const value = frontmatter[key]
-    if (typeof value === 'string' && value.trim() !== '') {
-      return value.trim()
-    }
-  }
-}
-
-function buildExcerpt(content: string): string {
-  return content
-    .replace(/```[\s\S]*?```/g, ' ')
-    .replace(/`[^`]*`/g, ' ')
-    .replace(/!\[[^\]]*]\([^)]*\)/g, ' ')
-    .replace(/\[[^\]]*]\([^)]*\)/g, ' ')
-    .replace(/^#{1,6}\s+/gm, '')
-    .replace(/\r?\n+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .slice(0, 160)
 }
 
 function countCategoryNodes(nodes: CategoryNode[]): number {

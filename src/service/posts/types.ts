@@ -25,6 +25,12 @@ export interface PostSummary {
   segments: string[]
   /** 分类段数组（去掉最后的文件名），例如 ['Article', 'Web'] */
   categorySegments: string[]
+  /** 发布日期（可选）。 */
+  publishedAt?: string
+  /** 发布时间戳（可选，便于排序）。 */
+  publishedAtTs: number | null
+  /** 标签列表（可选）。 */
+  tags: string[]
 }
 
 /**
@@ -56,6 +62,16 @@ export interface PostMeta extends PostSummary {
 }
 
 /**
+ * 文章轻量元信息对象。
+ * 不包含摘要提取结果，用于首页/归档/标签等轻量场景。
+ */
+export interface PostMetaLite extends PostSummary {
+  frontmatter: Record<string, FrontmatterValue>
+  publishedAt?: string
+  publishedAtTs: number | null
+}
+
+/**
  * 分类树节点。
  * 每个节点既可能有子分类，也可能直接挂文章（posts）。
  */
@@ -77,6 +93,8 @@ export interface CategoryNode {
 export interface PostsService {
   /** 获取全部文章摘要（已排序）。 */
   getAllPosts(): PostSummary[]
+  /** 获取全量文章轻量元信息（按发布日期倒序）。 */
+  loadAllPostMetaLite(): Promise<PostMetaLite[]>
   /** 获取全量文章元信息（按发布日期倒序）。 */
   loadAllPostMetas(): Promise<PostMeta[]>
   /** 获取分类树（已排序）。 */

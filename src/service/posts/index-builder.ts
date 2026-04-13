@@ -1,5 +1,6 @@
 ﻿import type { CategoryNode, PostSummary } from './types'
 import type { PostLoaderMap } from './loaders'
+import { postMetaManifest } from './meta-manifest.generated'
 
 /**
  * 从 markdown loaders 构建文章摘要列表。
@@ -8,7 +9,14 @@ import type { PostLoaderMap } from './loaders'
 export function buildPostSummaries(loaders: PostLoaderMap): PostSummary[] {
   return Object.keys(loaders)
     .map(toSummary)
-    .sort((a, b) => a.title.localeCompare(b.title, 'zh-Hans-CN'))
+    .sort((a, b) => {
+      if (a.publishedAtTs != null && b.publishedAtTs != null) {
+        return b.publishedAtTs - a.publishedAtTs
+      }
+      if (a.publishedAtTs != null) return -1
+      if (b.publishedAtTs != null) return 1
+      return a.title.localeCompare(b.title, 'zh-Hans-CN')
+    })
 }
 
 /**
@@ -57,15 +65,46 @@ function toSummary(filePath: string): PostSummary {
   const categorySegments = segments.slice(0, -1)
   const fallbackTitle = segments[segments.length - 1] ?? relativePath
   const url = `/posts/${segments.map((segment) => encodeURIComponent(segment)).join('/')}`
+  const manifest = postMetaManifest[relativePath]
+  const fmTitle = manifest?.frontmatter?.title
+  const title = typeof fmTitle === 'string' && fmTitle.trim() !== '' ? fmTitle : fallbackTitle
+  const publishedAt = manifest?.publishedAt
+  const publishedAtTs = parsePublishedAtTs(publishedAt)
+  const tags = normalizeTags(manifest?.frontmatter?.tags)
 
   return {
     id: relativePath,
-    title: fallbackTitle,
+    title,
     url,
     filePath: relativePath,
     segments,
     categorySegments,
+    publishedAt,
+    publishedAtTs,
+    tags,
   }
+}
+
+function parsePublishedAtTs(value: string | undefined): number | null {
+  if (!value) return null
+  const ts = Date.parse(value)
+  return Number.isNaN(ts) ? null : ts
+}
+
+function normalizeTags(raw: unknown): string[] {
+  if (Array.isArray(raw)) {
+    return raw
+      .filter((item): item is string => typeof item === 'string')
+      .map((item) => item.trim())
+      .filter(Boolean)
+  }
+  if (typeof raw === 'string') {
+    return raw
+      .split(',')
+      .map((item) => item.trim())
+      .filter(Boolean)
+  }
+  return []
 }
 
 /**

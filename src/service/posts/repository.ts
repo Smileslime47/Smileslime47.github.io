@@ -1,7 +1,9 @@
 ﻿import { parseFrontmatter } from './frontmatter-parser'
 import { buildCategoryTree, buildPostSummaries } from './index-builder'
 import type { PostLoaderMap } from './loaders'
-import type { PostEntry, PostSummary, PostsService, CategoryNode, PostMeta, FrontmatterValue } from './types'
+import { LazyResourceService } from './resource-loader'
+import type { PostEntry, PostSummary, PostsService, CategoryNode, PostMeta, PostMetaLite, FrontmatterValue } from './types'
+import { postMetaManifest } from './meta-manifest.generated'
 
 /**
  * 文章仓储实现（PostsService 的核心实现）。
@@ -18,10 +20,12 @@ export class PostRepository implements PostsService {
   private readonly categoryTree: CategoryNode[]
   /** 路由 key(segments.join('/')) -> 摘要映射，提升查找稳定性。 */
   private readonly summaryByKey: Map<string, PostSummary>
-  /** 文章 id -> loader 映射，用于详情页按需拉取正文。 */
-  private readonly loaderById: Map<string, () => Promise<string>>
+  /** 统一资源懒加载服务：按 id 拉取 markdown 原文。 */
+  private readonly postRawResource: LazyResourceService<string>
   /** 文章详情缓存，避免重复请求和重复解析。 */
   private readonly postCache = new Map<string, Promise<PostEntry>>()
+  /** 全量轻量元信息缓存。 */
+  private allMetaLiteCache?: Promise<PostMetaLite[]>
   /** 全量元信息缓存，避免归档/标签页重复解析。 */
   private allMetaCache?: Promise<PostMeta[]>
 
@@ -34,8 +38,8 @@ export class PostRepository implements PostsService {
     this.summaries = buildPostSummaries(loaders)
     this.categoryTree = buildCategoryTree(this.summaries)
     this.summaryByKey = new Map(this.summaries.map((post) => [post.segments.join('/'), post]))
-    this.loaderById = new Map(
-      Object.entries(loaders).map(([filePath, loader]) => [filePath.replace('/src/posts/', ''), loader])
+    this.postRawResource = new LazyResourceService(
+      Object.fromEntries(Object.entries(loaders).map(([filePath, loader]) => [filePath.replace('/src/posts/', ''), loader]))
     )
   }
 
@@ -44,19 +48,14 @@ export class PostRepository implements PostsService {
     return this.summaries
   }
 
-  async loadAllPostMetas(): Promise<PostMeta[]> {
-    if (this.allMetaCache) return this.allMetaCache
+  async loadAllPostMetaLite(): Promise<PostMetaLite[]> {
+    if (this.allMetaLiteCache) return this.allMetaLiteCache
 
-    this.allMetaCache = Promise.allSettled(
-      this.summaries.map(async (summary): Promise<PostMeta> => {
-        const loader = this.loaderById.get(summary.id)
-        if (!loader) {
-          throw new Error(`Cannot find post loader for ${summary.id}`)
-        }
-
-        const raw = await loader()
-        const { frontmatter, content } = parseFrontmatter(raw)
-        const { publishedAt, publishedAtTs } = resolvePublishedAt(frontmatter)
+    this.allMetaLiteCache = Promise.allSettled(
+      this.summaries.map(async (summary): Promise<PostMetaLite> => {
+        const manifest = postMetaManifest[summary.id]
+        const frontmatter = manifest?.frontmatter ?? {}
+        const { publishedAt, publishedAtTs } = resolvePublishedAtFromValue(manifest?.publishedAt, frontmatter)
         const fmTitle = frontmatter.title
         const title = typeof fmTitle === 'string' && fmTitle.trim() !== '' ? fmTitle : summary.title
 
@@ -66,7 +65,6 @@ export class PostRepository implements PostsService {
           frontmatter,
           publishedAt,
           publishedAtTs,
-          excerpt: buildExcerpt(content),
         }
       })
     ).then((results) => {
@@ -78,7 +76,7 @@ export class PostRepository implements PostsService {
         )
       }
 
-      const succeeded = results.filter((result): result is PromiseFulfilledResult<PostMeta> => result.status === 'fulfilled')
+      const succeeded = results.filter((result): result is PromiseFulfilledResult<PostMetaLite> => result.status === 'fulfilled')
 
       return succeeded
         .map((result) => result.value)
@@ -90,6 +88,30 @@ export class PostRepository implements PostsService {
           if (b.publishedAtTs != null) return 1
           return a.title.localeCompare(b.title, 'zh-Hans-CN')
         })
+    })
+
+    return this.allMetaLiteCache
+  }
+
+  async loadAllPostMetas(): Promise<PostMeta[]> {
+    if (this.allMetaCache) return this.allMetaCache
+
+    this.allMetaCache = this.loadAllPostMetaLite().then(async (liteItems) => {
+      const fullItems = await Promise.all(
+        liteItems.map(async (item): Promise<PostMeta> => {
+          const raw = await this.postRawResource.load(item.id)
+          if (!raw) {
+            throw new Error(`Cannot load raw post content for ${item.id}`)
+          }
+          const { content } = parseFrontmatter(raw)
+          return {
+            ...item,
+            excerpt: buildExcerpt(content),
+          }
+        })
+      )
+
+      return fullItems
     })
 
     return this.allMetaCache
@@ -131,10 +153,12 @@ export class PostRepository implements PostsService {
     const cached = this.postCache.get(summary.id)
     if (cached) return cached
 
-    const loader = this.loaderById.get(summary.id)
-    if (!loader) throw new Error(`Cannot find post loader for ${summary.id}`)
+    if (!this.postRawResource.has(summary.id)) throw new Error(`Cannot find post loader for ${summary.id}`)
 
-    const promise = loader().then((raw) => {
+    const promise = this.postRawResource.load(summary.id).then((raw) => {
+      if (!raw) {
+        throw new Error(`Cannot load raw post content for ${summary.id}`)
+      }
       const { frontmatter, content } = parseFrontmatter(raw)
       const fmTitle = frontmatter.title
       const title = typeof fmTitle === 'string' && fmTitle.trim() !== '' ? fmTitle : summary.title
@@ -205,6 +229,24 @@ function resolvePublishedAt(frontmatter: Record<string, FrontmatterValue>): {
     }
   }
   return { publishedAtTs: null }
+}
+
+function resolvePublishedAtFromValue(
+  publishedAtFromManifest: string | undefined,
+  frontmatter: Record<string, FrontmatterValue>
+): {
+  publishedAt?: string
+  publishedAtTs: number | null
+} {
+  if (publishedAtFromManifest && publishedAtFromManifest.trim() !== '') {
+    const normalized = publishedAtFromManifest.trim()
+    const ts = Date.parse(normalized)
+    return {
+      publishedAt: normalized,
+      publishedAtTs: Number.isNaN(ts) ? null : ts,
+    }
+  }
+  return resolvePublishedAt(frontmatter)
 }
 
 function buildExcerpt(content: string): string {

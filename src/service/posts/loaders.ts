@@ -12,11 +12,12 @@ export type PostLoader = () => Promise<string>
 export type PostLoaderMap = Record<string, PostLoader>
 
 /**
- * 文章内静态资源 URL 映射。
+ * 文章内静态资源懒加载函数。
  * key: 文件绝对虚拟路径（例如 /src/posts/xx/image/demo.png）
- * value: Vite 构建后的可访问 URL
+ * value: 返回 Promise<string>，值为 Vite 构建后的可访问 URL
  */
-export type PostAssetUrlMap = Record<string, string>
+export type PostAssetLoader = () => Promise<string>
+export type PostAssetLoaderMap = Record<string, PostAssetLoader>
 
 /**
  * Vite 提供的按需导入映射。
@@ -34,7 +35,6 @@ export const postLoaders = import.meta.glob('/src/posts/**/*.md', {
  * 文章目录下的图片等静态资源映射。
  * 这些资源允许在 markdown 里通过相对路径直接引用。
  */
-export const postAssetUrls = import.meta.glob('/src/posts/**/*.{png,jpg,jpeg,gif,webp,svg,avif}', {
-  eager: true,
+export const postAssetLoaders = import.meta.glob('/src/posts/**/*.{png,jpg,jpeg,gif,webp,svg,avif}', {
   import: 'default',
-}) as PostAssetUrlMap
+}) as PostAssetLoaderMap

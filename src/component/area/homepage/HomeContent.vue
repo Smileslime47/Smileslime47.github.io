@@ -106,7 +106,7 @@ import {
   iconSteam,
   iconTelegram,
   iconWechat,
-} from './homeContactIcons'
+} from '@/component/iconify/icons'
 
 const PAGE_SIZE = 10
 

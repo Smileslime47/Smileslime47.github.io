@@ -343,6 +343,56 @@ brew install --cask openinterminal-lite
 
 ![alt text](image/openinterminal-open.png)
 
+## CrossOver-兼容层
+
+首先毋庸置疑的一点是，在大部分情况下，你都不应当也没必要在Macintosh系统上运行Windows程序（如果你持反对意见的话，大概率Mac并不适合你），但是我们仍然在少数情况下需要运行Windows程序（对我而言，我想在Macintosh上运行一部分非3A的游戏，对于MacBook Pro来说并不存在性能问题，也能在外出的时候能让我玩到游戏）
+
+可以参考我的电脑配置是MacBook Pro(Μ5 Pro 48G)，要注意在过低配置的Mac上通过CrossOver玩游戏可能不会有太好的表现
+
+要想在Macintosh上运行Windows程序，尤其是运行Windows游戏，需要经过三层兼容层
+
+- **指令集**：将x86指令集翻译为Arm指令集
+  - 在Macintosh，苹果官方推出了**Rosetta2**负责这一步操作，和传统的指令集翻译不同的是，Rosetta2是一套软硬件协同的系统，M系列芯片专门有一套独立的电路模型用来支持Rosetta2的x86内存模型，因此对于苹果系统，指令集翻译的成本是极低的
+- **图形API**：将DirectX接口翻译为Metal接口
+  - 对于Linux，DXVK+VKD3D-Proton负责了这部分工作，将将DirectX转译为Vulkan接口，由于二者架构相似，Proton可以实现几乎和原生Windows同等的性能
+  - 对于Macintosh，苹果推出了GPTK来完成这部分工作，但是由于二者架构差异较大、缺失Proton那样的开源生态、苹果本身并不上心（GPTK只是一个开发者工具，苹果更希望开发者去手动适配MacOS而非用GPTK）等等一系列要素，GPTK本身会带来较大的性能损耗
+- **系统API**：将Windows的系统接口翻译为Unix/Linux的系统接口
+  - 对于这部分工作，不论是Macintosh还是Linux，都是基于Wine来实现的
+
+知道了以上的信息后，如果你还确定你有类似的需求，那么可以继续了解下面的内容
+
+之前有免费开源的Whisky也能实现一样的功能，但是由于Whisky本身的内核和CrossOver一样都是基于Wine的，加上CrossOver的开发团队恰好和Wine的开发团队是同一批人，作者认为不利于支持底层开发者，于是也EOM了，这里不再考虑
+
+CrossOver本身只有收费版（免费版仅提供14天试用期），因此也需要先考虑好是否认为这个价格值得
+
+### 下载
+
+在[下载界面](https://www.codeweavers.com/crossover/download)填写相关信息后可以下载试用版客户端
+
+### 配置容器
+
+CrossOver需要配置容器让程序运行在模拟环境下（注意并不是虚拟机），对于大部分主流应用，CrossOver也提供了开箱即用的预设，Steam也在其中
+
+如果你要安装的程序是预设里没有的，那么你需要在右上角点击**安装一个不在列表里的应用程序**，但是由于系统版本、运行环境等一系列都要自己来声明，相对使用门槛会高一些，这里不再赘述
+
+如果选择了Steam的预设，CrossOver会自动在初始化过程中安装依赖运行时环境，会和Windows一样有安装引导界面，需要你手动点击下一步来推进进度，否则CrossOver的初始化进度会停滞
+
+在安装完所有的环境和Steam本体后，容器就初始化完成了
+
+### 显示设置
+
+刚进入steam的时候你会发现画面比较糊，这是因为画面的DPI只有96的原因，但是这里并**不建议直接在CrossOver的Wine设置里拉高DPI或者开启高分辨率模式**，这会极大地增加输入的延迟
+
+更推荐的做法是进入游戏后，再在游戏的画面设置里调高分辨率
+
+### 实测效果
+
+为了测试延迟，打了一把晕晕电波症，可见即便是运行在CrossOver下，我也仍然能打出98.90%的ACC（考虑到我本人是4K苦手+一个月没有打+MacBook Pro的键盘手感本身将不合适）
+
+![alt text](image/crossover-test.png)
+
+可见，在CrossOver上运行一些非3A的游戏还是绰绰有余的
+
 ## 其他
 
 这里放一些不需要大篇幅描述的软件，但仍然算是我的一部分踩坑经验

@@ -91,8 +91,16 @@
 - `frontmatter-parser.ts`：frontmatter 解析
 - `repository.ts`：统一文章查询与缓存
 - `types.ts`：文章相关类型定义
+- `meta-manifest.generated.ts`：归档、标签、搜索等轻量元数据清单
 
 新增文章相关能力时，优先复用或扩展这一层，不要在页面里重复写一套解析逻辑。
+
+新增、删除、重命名文章，或修改文章 frontmatter 后，必须同步检查 `src/service/posts/meta-manifest.generated.ts`：
+
+- 优先运行 `node scripts/generate-post-meta-manifest.mjs` 更新清单
+- 提交前核对 diff，确认清单只包含本次文章相关的元数据变化
+- 如果生成脚本带出大量历史字段或排序变化，先收窄到本次必要条目，不要把无关清单刷新混进提交
+- 新文章必须确认清单中存在对应 `title` 与日期字段，否则 `/archive`、`/tags`、搜索等依赖元数据的页面可能不会按预期显示
 
 ### 3.3 frontmatter 约定
 
@@ -110,6 +118,7 @@
 - 分类主要由 `src/posts` 下的目录结构承担
 - `tags` 用于标签聚合
 - 日期字段用于归档和排序
+- 文章日期变更后，要同步核对 `meta-manifest.generated.ts` 中的 `publishedAt`
 
 ### 3.4 组件自动注册
 

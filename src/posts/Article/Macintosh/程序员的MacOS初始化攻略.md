@@ -87,6 +87,14 @@ brew install --cask font-jetbrains-mono-nerd-font
 #### 样式
 
 ```conf
+theme = light:Monokai Pro Light,dark:Monokai Pro Octagon
+```
+
+theme字段用于配置Ghostty的主题，在任意终端输入`ghostty +list-themes`可以查看当前所有可用主题，以及预览每个主题的应用效果
+
+theme字段的格式为`light:<主题名>,dark:<主题名>`
+
+```conf
 shell-integration-features = no-cursor
 cursor-style = bar
 cursor-style-blink = true

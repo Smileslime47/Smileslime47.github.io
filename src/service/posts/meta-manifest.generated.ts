@@ -1074,6 +1074,13 @@ export const postMetaManifest: Record<string, PostMetaManifestEntry> = {
     },
     "publishedAt": "2024/07/29"
   },
+  "Article/Macintosh/程序员的MacOS初始化攻略.md": {
+    "frontmatter": {
+      "title": "程序员的MacOS初始化攻略",
+      "date": "2026/05/23"
+    },
+    "publishedAt": "2026/05/23"
+  },
   "Article/SteamDeck/SteamDeck客制化记录.md": {
     "frontmatter": {
       "title": "SteamDeck客制化记录",

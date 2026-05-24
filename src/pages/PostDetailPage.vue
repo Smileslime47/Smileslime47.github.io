@@ -5,6 +5,7 @@ import { postsService, type PostEntry } from '@/service/posts'
 
 const TOC_STICKY_OFFSET = 92
 const TOC_COLUMN_WIDTH = 230
+const TOC_BOTTOM_GAP = 32
 
 const route = useRoute()
 const post = ref<PostEntry | null>(null)
@@ -79,7 +80,7 @@ const updateTocPosition = () => {
   }
 
   const rect = layout.getBoundingClientRect()
-  const shouldFix = rect.top <= TOC_STICKY_OFFSET && rect.bottom > TOC_STICKY_OFFSET + 120
+  const shouldFix = rect.top <= TOC_STICKY_OFFSET && rect.bottom > window.innerHeight - TOC_BOTTOM_GAP
   fixedTocActive.value = shouldFix
 
   if (!shouldFix) {
@@ -91,7 +92,7 @@ const updateTocPosition = () => {
     left: `${rect.right - TOC_COLUMN_WIDTH}px`,
     top: `${TOC_STICKY_OFFSET}px`,
     width: `${TOC_COLUMN_WIDTH}px`,
-    maxHeight: `calc(100vh - ${TOC_STICKY_OFFSET}px - 24px)`,
+    maxHeight: `${window.innerHeight - TOC_STICKY_OFFSET - TOC_BOTTOM_GAP}px`,
   }
 }
 

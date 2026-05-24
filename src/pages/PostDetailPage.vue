@@ -84,7 +84,7 @@ watch(
       <p v-if="loading" class="empty">正在加载文章内容...</p>
       <p v-else-if="loadError" class="empty">文章加载失败：{{ loadError }}</p>
       <div v-else-if="post" class="post-layout" :class="{ 'post-layout--with-toc': hasToc }">
-        <aside v-if="hasToc" class="post-toc" aria-label="文章目录">
+        <aside v-if="hasToc" class="post-toc post-toc--inline" aria-label="文章目录">
           <p class="post-toc__title">目录</p>
           <nav class="post-toc__nav">
             <a
@@ -107,6 +107,23 @@ watch(
         />
       </div>
       <p v-else class="empty">未找到对应文章，请返回文章目录检查路径。</p>
+
+      <Teleport to="body">
+        <aside v-if="post && hasToc" class="post-toc post-toc--fixed" aria-label="文章目录">
+          <p class="post-toc__title">目录</p>
+          <nav class="post-toc__nav">
+            <a
+              v-for="item in tocItems"
+              :key="item.id"
+              class="post-toc__link"
+              :class="`post-toc__link--level-${item.level}`"
+              :href="`#${item.id}`"
+            >
+              {{ item.text }}
+            </a>
+          </nav>
+        </aside>
+      </Teleport>
     </template>
   </ContentPageLayout>
 </template>
@@ -202,15 +219,23 @@ h1 {
 .post-toc {
   --post-toc-sticky-offset: clamp(118px, 22vh, 180px);
 
-  grid-column: 2;
-  grid-row: 1;
-  position: sticky;
-  top: var(--post-toc-sticky-offset);
-  max-height: calc(100vh - var(--post-toc-sticky-offset) - 24px);
   overflow: auto;
   padding: 12px 12px 12px 14px;
   border-left: 1px solid color-mix(in oklab, var(--surface-border), transparent 8%);
   color: var(--surface-text);
+}
+
+.post-toc--inline {
+  display: none;
+}
+
+.post-toc--fixed {
+  position: fixed;
+  z-index: 20;
+  top: var(--post-toc-sticky-offset);
+  right: max(30px, calc((100vw - var(--page-content-max-width, 1440px)) / 2 + 18px));
+  width: 230px;
+  max-height: calc(100vh - var(--post-toc-sticky-offset) - 24px);
 }
 
 .post-toc__title {
@@ -255,15 +280,22 @@ h1 {
   }
 
   .post-toc {
-    grid-column: auto;
-    grid-row: auto;
-    position: static;
     max-height: none;
-    order: -1;
     padding: 12px;
     border: 1px solid color-mix(in oklab, var(--surface-border), transparent 8%);
     border-radius: 12px;
     background: color-mix(in oklab, var(--surface-bg), white 3%);
+  }
+
+  .post-toc--inline {
+    display: block;
+    grid-column: auto;
+    grid-row: auto;
+    order: -1;
+  }
+
+  .post-toc--fixed {
+    display: none;
   }
 
   .post-layout__content {

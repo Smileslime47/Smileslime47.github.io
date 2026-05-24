@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch, type CSSProperties } from 'vue'
 import { useRoute } from 'vue-router'
 import { postsService, type PostEntry } from '@/service/posts'
+
+const TOC_STICKY_OFFSET = 92
+const TOC_COLUMN_WIDTH = 230
 
 const route = useRoute()
 const post = ref<PostEntry | null>(null)
@@ -9,6 +12,10 @@ const loading = ref(false)
 const notFound = ref(false)
 const loadError = ref('')
 const tocItems = ref<MarkdownTocItem[]>([])
+const postLayoutRef = ref<HTMLElement | null>(null)
+const fixedTocActive = ref(false)
+const fixedTocStyle = ref<CSSProperties>({})
+let tocFrame = 0
 
 interface MarkdownTocItem {
   id: string
@@ -51,15 +58,66 @@ const loadCurrentPost = async () => {
 
 const onTocReady = (items: MarkdownTocItem[]) => {
   tocItems.value = items
+  void nextTick(updateTocPosition)
+}
+
+const requestTocPositionUpdate = () => {
+  if (tocFrame > 0) return
+
+  tocFrame = window.requestAnimationFrame(() => {
+    tocFrame = 0
+    updateTocPosition()
+  })
+}
+
+const updateTocPosition = () => {
+  const layout = postLayoutRef.value
+  if (!layout || !hasToc.value || window.innerWidth <= 1080) {
+    fixedTocActive.value = false
+    fixedTocStyle.value = {}
+    return
+  }
+
+  const rect = layout.getBoundingClientRect()
+  const shouldFix = rect.top <= TOC_STICKY_OFFSET && rect.bottom > TOC_STICKY_OFFSET + 120
+  fixedTocActive.value = shouldFix
+
+  if (!shouldFix) {
+    fixedTocStyle.value = {}
+    return
+  }
+
+  fixedTocStyle.value = {
+    left: `${rect.right - TOC_COLUMN_WIDTH}px`,
+    top: `${TOC_STICKY_OFFSET}px`,
+    width: `${TOC_COLUMN_WIDTH}px`,
+    maxHeight: `calc(100vh - ${TOC_STICKY_OFFSET}px - 24px)`,
+  }
 }
 
 watch(
   () => route.fullPath,
   () => {
     void loadCurrentPost()
+    void nextTick(updateTocPosition)
   },
   { immediate: true }
 )
+
+onMounted(() => {
+  updateTocPosition()
+  window.addEventListener('scroll', requestTocPositionUpdate, { passive: true })
+  window.addEventListener('resize', requestTocPositionUpdate)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', requestTocPositionUpdate)
+  window.removeEventListener('resize', requestTocPositionUpdate)
+
+  if (tocFrame > 0) {
+    window.cancelAnimationFrame(tocFrame)
+  }
+})
 </script>
 
 <template>
@@ -83,8 +141,18 @@ watch(
     <template #default>
       <p v-if="loading" class="empty">正在加载文章内容...</p>
       <p v-else-if="loadError" class="empty">文章加载失败：{{ loadError }}</p>
-      <div v-else-if="post" class="post-layout" :class="{ 'post-layout--with-toc': hasToc }">
-        <aside v-if="hasToc" class="post-toc" aria-label="文章目录">
+      <div
+        v-else-if="post"
+        ref="postLayoutRef"
+        class="post-layout"
+        :class="{ 'post-layout--with-toc': hasToc }"
+      >
+        <aside
+          v-if="hasToc"
+          class="post-toc post-toc--inline"
+          :class="{ 'post-toc--placeholder': fixedTocActive }"
+          aria-label="文章目录"
+        >
           <p class="post-toc__title">目录</p>
           <nav class="post-toc__nav">
             <a
@@ -107,6 +175,28 @@ watch(
         />
       </div>
       <p v-else class="empty">未找到对应文章，请返回文章目录检查路径。</p>
+
+      <Teleport to="body">
+        <aside
+          v-if="post && hasToc && fixedTocActive"
+          class="post-toc post-toc--fixed"
+          :style="fixedTocStyle"
+          aria-label="文章目录"
+        >
+          <p class="post-toc__title">目录</p>
+          <nav class="post-toc__nav">
+            <a
+              v-for="item in tocItems"
+              :key="item.id"
+              class="post-toc__link"
+              :class="`post-toc__link--level-${item.level}`"
+              :href="`#${item.id}`"
+            >
+              {{ item.text }}
+            </a>
+          </nav>
+        </aside>
+      </Teleport>
     </template>
   </ContentPageLayout>
 </template>
@@ -200,17 +290,25 @@ h1 {
 }
 
 .post-toc {
-  --post-toc-sticky-offset: 92px;
-
-  grid-column: 2;
-  grid-row: 1;
-  position: sticky;
-  top: var(--post-toc-sticky-offset);
-  max-height: calc(100vh - var(--post-toc-sticky-offset) - 24px);
   overflow: auto;
   padding: 12px 12px 12px 14px;
   border-left: 1px solid color-mix(in oklab, var(--surface-border), transparent 8%);
   color: var(--surface-text);
+}
+
+.post-toc--inline {
+  grid-column: 2;
+  grid-row: 1;
+  max-height: calc(100vh - 116px);
+}
+
+.post-toc--placeholder {
+  visibility: hidden;
+}
+
+.post-toc--fixed {
+  position: fixed;
+  z-index: 20;
 }
 
 .post-toc__title {
@@ -255,15 +353,25 @@ h1 {
   }
 
   .post-toc {
-    grid-column: auto;
-    grid-row: auto;
-    position: static;
     max-height: none;
-    order: -1;
     padding: 12px;
     border: 1px solid color-mix(in oklab, var(--surface-border), transparent 8%);
     border-radius: 12px;
     background: color-mix(in oklab, var(--surface-bg), white 3%);
+  }
+
+  .post-toc--inline {
+    grid-column: auto;
+    grid-row: auto;
+    order: -1;
+  }
+
+  .post-toc--placeholder {
+    visibility: visible;
+  }
+
+  .post-toc--fixed {
+    display: none;
   }
 
   .post-layout__content {

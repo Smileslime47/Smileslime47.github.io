@@ -65,6 +65,13 @@ Ghostty遵循**零配置哲学**，不需要进行任何配置即可直接使用
 
 如果你在上文中开启了资源库，你应当能在`~/Library/Application Support/com.mitchellh.ghostty/config.ghostty`找到该文件
 
+#### 初始窗口
+
+```conf
+initial-window = false
+```
+
+
 #### 字体
 ```conf
 font-family = JetBrainsMono Nerd Font
@@ -392,6 +399,69 @@ CrossOver需要配置容器让程序运行在模拟环境下（注意并不是�
 ![alt text](image/crossover-test.png)
 
 可见，在CrossOver上运行一些非3A的游戏还是绰绰有余的
+
+## Launchd-常驻进程管理
+
+有些软件我们希望能够常驻在后台，比如需要常驻Ghostty来调用快速终端，或者常驻Gemini来调用快速会话。
+
+虽然可以通过隐藏Dock图标，或者平时关心不去关闭相关的进程来防止进程被杀死，但是难免有意外情况会导致软件被关闭，这时候要再手动打开软件再调用相关的快捷键会很烦，这时候将需要考虑能不能手动地将相关的进程加入到守护进程了
+
+Macintosh通过launchd这个服务来管理所有的后台进程，我们需要在`~/Library/LaunchAgents`里面手写XML配置文件来配置守护进程
+
+### Launchd-UI
+
+市面上有一些收费的，图形化的LaunchAgent配置工具，但是我找到了一个开源的图形化免费配置工具[LaunchUI](https://github.com/azu/launchd-ui)，首次运行时系统会提示不安全并禁止启动，需要在`设置->隐私与安全性->安全性`下面找到launchd-ui并点击**仍然打开**
+
+### 手动配置
+
+通过`launchctl list | grep -v com.apple`可以看到当前launchd管理的所有后台进程，通过grep筛选掉系统进程
+
+你可以在`~/Library/LaunchAgents`找到当前用户态配置的所有代理进程，命名通常是`包名.plist`
+
+要创建能够自动重启的系统进程，以配置Ghostty自动重启为例，XML配置文件参考下面我配置的`com.mitchellh.ghostty.plist`
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.mitchellh.ghostty</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Applications/Ghostty.app/Contents/MacOS/ghostty</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>AssociatedBundleIdentifiers</key>
+    <array>
+        <string>com.mitchellh.ghostty</string>
+    </array>
+</dict>
+</plist>
+```
+
+其中AssociatedBundleIdentifiers是用于让系统识别应用，因为我们是直接使用命令运行的二进制文件，所以系统并不能识别出所属的App，如果不加这个字段，在`系统设置->通用->登录项与扩展->App后台活动`时，只能看到一个没有图标的，以该应用开发者元数据命名的Agent。同理，如果你看到有的Agent没有图标，名字也没有正常显示，也可以找到对应的plist文件来手动补上**AssociatedBundleIdentifiers**字段，来修复这个问题
+
+配置完成后，在终端运行该命令来加载指定的plist
+
+```zsh
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.mitchellh.ghostty.plist
+```
+
+要重新加载或者卸载plist，运行该命令即可，然后根据实际情况决定要不要重新运行bootstrap命令
+
+```zsh
+launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.mitchellh.ghostty.plist
+```
+
+如果报错了**Bootstrap failed: 5: Input/output error**，尝试运行
+
+```zsh
+launchctl enable gui/$(id -u)/com.mitchellh.ghostty
+```
 
 ## 其他
 

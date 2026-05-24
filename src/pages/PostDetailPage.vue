@@ -200,11 +200,13 @@ h1 {
 }
 
 .post-toc {
+  --post-toc-sticky-offset: clamp(118px, 22vh, 180px);
+
   grid-column: 2;
   grid-row: 1;
   position: sticky;
-  top: 86px;
-  max-height: calc(100vh - 112px);
+  top: var(--post-toc-sticky-offset);
+  max-height: calc(100vh - var(--post-toc-sticky-offset) - 24px);
   overflow: auto;
   padding: 12px 12px 12px 14px;
   border-left: 1px solid color-mix(in oklab, var(--surface-border), transparent 8%);

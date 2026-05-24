@@ -194,10 +194,14 @@ h1 {
 }
 
 .post-layout__content {
+  grid-column: 1;
+  grid-row: 1;
   min-width: 0;
 }
 
 .post-toc {
+  grid-column: 2;
+  grid-row: 1;
   position: sticky;
   top: 86px;
   max-height: calc(100vh - 112px);
@@ -249,6 +253,8 @@ h1 {
   }
 
   .post-toc {
+    grid-column: auto;
+    grid-row: auto;
     position: static;
     max-height: none;
     order: -1;
@@ -256,6 +262,11 @@ h1 {
     border: 1px solid color-mix(in oklab, var(--surface-border), transparent 8%);
     border-radius: 12px;
     background: color-mix(in oklab, var(--surface-bg), white 3%);
+  }
+
+  .post-layout__content {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .post-toc__nav {

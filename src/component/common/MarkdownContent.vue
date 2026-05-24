@@ -5,6 +5,12 @@ import markdownItMathjax3 from 'markdown-it-mathjax3'
 import { nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { rewritePostImageUrlsInHtml } from '@/service/posts/asset-resolver'
 
+interface MarkdownTocItem {
+  id: string
+  text: string
+  level: 2 | 3
+}
+
 const props = withDefaults(defineProps<{
   content: string
   enableMath?: boolean
@@ -13,6 +19,10 @@ const props = withDefaults(defineProps<{
   enableMath: false,
   postId: undefined,
 })
+
+const emit = defineEmits<{
+  tocReady: [items: MarkdownTocItem[]]
+}>()
 
 const articleRef = ref<HTMLElement | null>(null)
 const renderedHtml = ref('')
@@ -40,10 +50,12 @@ onBeforeUnmount(() => {
 
 async function renderMarkdown(): Promise<void> {
   const currentVersion = ++renderVersion
-  const rawHtml = createMarkdownRenderer(props.enableMath).render(props.content)
+  const tocItems: MarkdownTocItem[] = []
+  const rawHtml = createMarkdownRenderer(props.enableMath, tocItems).render(props.content)
   const html = await rewritePostImageUrlsInHtml(props.postId, rawHtml)
   if (currentVersion !== renderVersion) return
   renderedHtml.value = html
+  emit('tocReady', tocItems)
 }
 
 function createMarkdownParser(enableMath: boolean): MarkdownIt {
@@ -61,8 +73,31 @@ function createMarkdownParser(enableMath: boolean): MarkdownIt {
   return md
 }
 
-function createMarkdownRenderer(enableMath: boolean): MarkdownIt {
+function createMarkdownRenderer(enableMath: boolean, tocItems: MarkdownTocItem[]): MarkdownIt {
   const md = createMarkdownParser(enableMath)
+  const headingCounts = new Map<string, number>()
+  const defaultHeadingOpen = md.renderer.rules.heading_open ?? ((tokens, idx, options, _env, self) => self.renderToken(tokens, idx, options))
+
+  md.renderer.rules.heading_open = (tokens, idx, options, env, self) => {
+    const token = tokens[idx]
+    if (!token) return ''
+
+    const level = Number(token?.tag?.replace('h', ''))
+    const nextToken = tokens[idx + 1]
+
+    if ((level === 2 || level === 3) && nextToken?.type === 'inline') {
+      const text = nextToken.content.trim()
+      const id = createHeadingId(text, headingCounts)
+      token.attrSet('id', id)
+      tocItems.push({
+        id,
+        text,
+        level,
+      })
+    }
+
+    return defaultHeadingOpen(tokens, idx, options, env, self)
+  }
 
   md.renderer.rules.fence = (tokens, idx) => {
     const token = tokens[idx]
@@ -79,6 +114,19 @@ function createMarkdownRenderer(enableMath: boolean): MarkdownIt {
   }
 
   return md
+}
+
+function createHeadingId(text: string, headingCounts: Map<string, number>): string {
+  const base = text
+    .toLowerCase()
+    .replace(/[\s]+/g, '-')
+    .replace(/[!"#$%&'()*+,./:;<=>?@[\\\]^`{|}~]+/g, '')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '') || 'heading'
+  const usedCount = headingCounts.get(base) ?? 0
+  headingCounts.set(base, usedCount + 1)
+
+  return usedCount === 0 ? base : `${base}-${usedCount + 1}`
 }
 
 function highlightCode(code: string, language: string): string {
@@ -171,6 +219,11 @@ async function onArticleClick(event: Event): Promise<void> {
 
   :deep(h3) {
     font-size: 1rem;
+  }
+
+  :deep(h2),
+  :deep(h3) {
+    scroll-margin-top: 92px;
   }
 
   :deep(p) {

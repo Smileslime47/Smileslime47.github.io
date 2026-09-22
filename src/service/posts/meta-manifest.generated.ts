@@ -1056,6 +1056,16 @@ export const postMetaManifest: Record<string, PostMetaManifestEntry> = {
     },
     "publishedAt": "2026/02/06"
   },
+  "Article/Essay/MCP —— 到底是原子能力的工具调用协议，还是打通多系统工作区的上下文工程.md": {
+    "frontmatter": {
+      "title": "MCP —— 到底是原子能力的工具调用协议，还是打通多系统工作区的上下文工程",
+      "date": "2026/08/14",
+      "tags": [
+        "人工智能"
+      ]
+    },
+    "publishedAt": "2026/08/14"
+  },
   "Article/Essay/从函数式编程的角度解析领域特定语言的本质.md": {
     "frontmatter": {
       "title": "从函数式编程的角度解析领域特定语言的本质",

@@ -19,11 +19,12 @@ async function walk(dir) {
 }
 
 function parseFrontmatter(raw) {
-  if (!raw.startsWith('---')) return {}
-  const end = raw.indexOf('\n---', 3)
+  const normalized = raw.replace(/\r\n?/g, '\n')
+  if (!normalized.startsWith('---')) return {}
+  const end = normalized.indexOf('\n---', 3)
   if (end < 0) return {}
-  const block = raw.slice(3, end).replace(/^\r?\n/, '')
-  const lines = block.split(/\r?\n/)
+  const block = normalized.slice(3, end).replace(/^\n/, '')
+  const lines = block.split('\n')
   const frontmatter = {}
   let currentKey = ''
 
@@ -49,6 +50,7 @@ function parseFrontmatter(raw) {
     }
   }
 
+  delete frontmatter.mathjax
   return frontmatter
 }
 

@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "generate:post-meta": "node scripts/generate-post-meta-manifest.mjs",
+    "predev": "npm run generate:post-meta",
     "dev": "vite",
+    "prebuild": "npm run generate:post-meta",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },

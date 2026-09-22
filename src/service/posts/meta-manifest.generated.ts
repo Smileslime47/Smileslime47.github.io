@@ -1046,26 +1046,6 @@ export const postMetaManifest: Record<string, PostMetaManifestEntry> = {
     },
     "publishedAt": "2023/01/25"
   },
-  "Article/Essay/AI为何到底还没有替代人类 —— 关于软件设计、达达主义与人类的不可替代性.md": {
-    "frontmatter": {
-      "title": "AI为何到底还没有替代人类 —— 关于软件设计、达达主义与人类的不可替代性",
-      "date": "2026/02/06",
-      "tags": [
-        "人工智能"
-      ]
-    },
-    "publishedAt": "2026/02/06"
-  },
-  "Article/Essay/MCP —— 到底是原子能力的工具调用协议，还是打通多系统工作区的上下文工程.md": {
-    "frontmatter": {
-      "title": "MCP —— 到底是原子能力的工具调用协议，还是打通多系统工作区的上下文工程",
-      "date": "2026/08/14",
-      "tags": [
-        "人工智能"
-      ]
-    },
-    "publishedAt": "2026/08/14"
-  },
   "Article/Essay/从函数式编程的角度解析领域特定语言的本质.md": {
     "frontmatter": {
       "title": "从函数式编程的角度解析领域特定语言的本质",
@@ -1167,7 +1147,37 @@ export const postMetaManifest: Record<string, PostMetaManifestEntry> = {
     },
     "publishedAt": "2022/10/30"
   },
-  "Artificial Intelligence/Article/3Blue1Brown《直观解释Transformer》.md": {
+  "Artificial Intelligence/Articles/AI为何到底还没有替代人类 —— 关于软件设计、达达主义与人类的不可替代性.md": {
+    "frontmatter": {
+      "title": "AI为何到底还没有替代人类 —— 关于软件设计、达达主义与人类的不可替代性",
+      "date": "2026/02/06",
+      "tags": [
+        "人工智能"
+      ]
+    },
+    "publishedAt": "2026/02/06"
+  },
+  "Artificial Intelligence/Articles/JEV 带来的一些思考.md": {
+    "frontmatter": {
+      "title": "JEV 带来的一些思考",
+      "date": "2026/09/22",
+      "tags": [
+        "人工智能"
+      ]
+    },
+    "publishedAt": "2026/09/22"
+  },
+  "Artificial Intelligence/Articles/MCP —— 到底是原子能力的工具调用协议，还是打通多系统工作区的上下文工程.md": {
+    "frontmatter": {
+      "title": "MCP —— 到底是原子能力的工具调用协议，还是打通多系统工作区的上下文工程",
+      "date": "2026/08/14",
+      "tags": [
+        "人工智能"
+      ]
+    },
+    "publishedAt": "2026/08/14"
+  },
+  "Artificial Intelligence/Notebooks/3Blue1Brown《直观解释Transformer》.md": {
     "frontmatter": {
       "title": "3Blue1Brown《直观解释Transformer》",
       "author": "Liu Yibang",
@@ -1175,7 +1185,7 @@ export const postMetaManifest: Record<string, PostMetaManifestEntry> = {
     },
     "publishedAt": "2024/09/17"
   },
-  "Artificial Intelligence/Article/3Blue1Brown《线性代数的本质》笔记.md": {
+  "Artificial Intelligence/Notebooks/3Blue1Brown《线性代数的本质》笔记.md": {
     "frontmatter": {
       "title": "3Blue1Brown《线性代数的本质》笔记",
       "author": "Liu Yibang",
@@ -1183,7 +1193,7 @@ export const postMetaManifest: Record<string, PostMetaManifestEntry> = {
     },
     "publishedAt": "2024/08/24"
   },
-  "Artificial Intelligence/Article/《The Annotated Transformer》.md": {
+  "Artificial Intelligence/Notebooks/《The Annotated Transformer》.md": {
     "frontmatter": {
       "title": "《The Annotated Transformer》",
       "author": "Liu Yibang",
@@ -1191,13 +1201,16 @@ export const postMetaManifest: Record<string, PostMetaManifestEntry> = {
     },
     "publishedAt": "2024/09/07"
   },
-  "Artificial Intelligence/Article/深度学习《Attention Is All You Need》精读报告.md": {
+  "Artificial Intelligence/Notebooks/深度学习《Attention Is All You Need》精读报告.md": {
     "frontmatter": {
       "title": "《Attention Is All You Need》精读报告",
       "author": "Liu Yibang",
       "date": "2024/08/21"
     },
     "publishedAt": "2024/08/21"
+  },
+  "Artificial Intelligence/Skiils/架构检视Skill.md": {
+    "frontmatter": {}
   },
   "DevOps/Git常用命令表.md": {
     "frontmatter": {
